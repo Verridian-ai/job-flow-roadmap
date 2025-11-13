@@ -13,6 +13,7 @@ export default defineSchema({
     phone: v.optional(v.string()),
     location: v.optional(v.string()),
     twoFactorEnabled: v.boolean(),
+    stripeCustomerId: v.optional(v.string()),
     privacySettings: v.object({
       profileVisible: v.boolean(),
       emailVisible: v.boolean(),

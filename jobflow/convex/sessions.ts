@@ -177,3 +177,70 @@ export const update = mutation({
     return args.id;
   },
 });
+
+// Get a session by ID
+export const get = query({
+  args: {
+    id: v.id("sessions"),
+  },
+  handler: async (ctx, args) => {
+    const identity = await ctx.auth.getUserIdentity();
+    if (!identity) {
+      throw new Error("Unauthorized");
+    }
+
+    const user = await ctx.db
+      .query("users")
+      .withIndex("by_auth_id", (q) => q.eq("authId", identity.subject))
+      .unique();
+
+    if (!user) {
+      throw new Error("User not found");
+    }
+
+    const session = await ctx.db.get(args.id);
+    if (!session) {
+      throw new Error("Session not found");
+    }
+
+    // Verify user owns this session or is the coach
+    let isAuthorized = session.userId === user._id;
+
+    if (!isAuthorized && user.role === "coach") {
+      const coachProfile = await ctx.db
+        .query("coaches")
+        .withIndex("by_user", (q) => q.eq("userId", user._id))
+        .unique();
+
+      if (coachProfile && session.coachId === coachProfile._id) {
+        isAuthorized = true;
+      }
+    }
+
+    if (!isAuthorized) {
+      throw new Error("Unauthorized");
+    }
+
+    return session;
+  },
+});
+
+// Confirm payment for session
+export const confirmPayment = mutation({
+  args: {
+    sessionId: v.id("sessions"),
+  },
+  handler: async (ctx, args) => {
+    const session = await ctx.db.get(args.sessionId);
+    if (!session) {
+      throw new Error("Session not found");
+    }
+
+    await ctx.db.patch(args.sessionId, {
+      status: "scheduled",
+      updatedAt: Date.now(),
+    });
+
+    return args.sessionId;
+  },
+});

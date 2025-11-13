@@ -275,3 +275,51 @@ export const acceptBid = mutation({
     return { taskId: bid.taskId };
   },
 });
+
+// Get a task by ID
+export const getTask = query({
+  args: {
+    taskId: v.id("verificationTasks"),
+  },
+  handler: async (ctx, args) => {
+    const identity = await ctx.auth.getUserIdentity();
+    if (!identity) {
+      throw new Error("Unauthorized");
+    }
+
+    const task = await ctx.db.get(args.taskId);
+    if (!task) {
+      throw new Error("Task not found");
+    }
+
+    return task;
+  },
+});
+
+// Update task status
+export const updateTaskStatus = mutation({
+  args: {
+    taskId: v.id("verificationTasks"),
+    status: v.union(
+      v.literal("open"),
+      v.literal("bidding"),
+      v.literal("assigned"),
+      v.literal("in_progress"),
+      v.literal("completed"),
+      v.literal("disputed")
+    ),
+  },
+  handler: async (ctx, args) => {
+    const task = await ctx.db.get(args.taskId);
+    if (!task) {
+      throw new Error("Task not found");
+    }
+
+    await ctx.db.patch(args.taskId, {
+      status: args.status,
+      updatedAt: Date.now(),
+    });
+
+    return args.taskId;
+  },
+});
