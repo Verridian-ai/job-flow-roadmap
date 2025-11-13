@@ -22,6 +22,13 @@ import AIResumeChat from './pages/AIResumeChat';
 import STARMemoryBank from './pages/STARMemoryBank';
 import AutomatedResumeGen from './pages/AutomatedResumeGen';
 import AIInterviewPrep from './pages/AIInterviewPrep';
+import HelpCenter from './pages/HelpCenter';
+import VideoTutorials from './components/VideoTutorials';
+import BillingPortal from './pages/BillingPortal';
+import PaymentReceipt from './pages/PaymentReceipt';
+import PrivacyDashboard from './pages/PrivacyDashboard';
+import CredentialVerification from './pages/coach/CredentialVerification';
+import DigitalIDVerification from './pages/coach/DigitalIDVerification';
 
 function App() {
   return (
@@ -253,6 +260,104 @@ function App() {
           <>
             <SignedIn>
               <AIInterviewPrep />
+            </SignedIn>
+            <SignedOut>
+              <RedirectToSignIn />
+            </SignedOut>
+          </>
+        }
+      />
+
+      <Route
+        path="/help"
+        element={
+          <>
+            <SignedIn>
+              <HelpCenter />
+            </SignedIn>
+            <SignedOut>
+              <RedirectToSignIn />
+            </SignedOut>
+          </>
+        }
+      />
+
+      <Route
+        path="/help/videos"
+        element={
+          <>
+            <SignedIn>
+              <VideoTutorials />
+            </SignedIn>
+            <SignedOut>
+              <RedirectToSignIn />
+            </SignedOut>
+          </>
+        }
+      />
+
+      <Route
+        path="/billing"
+        element={
+          <>
+            <SignedIn>
+              <BillingPortal />
+            </SignedIn>
+            <SignedOut>
+              <RedirectToSignIn />
+            </SignedOut>
+          </>
+        }
+      />
+
+      <Route
+        path="/receipt/:receiptId"
+        element={
+          <>
+            <SignedIn>
+              <PaymentReceipt />
+            </SignedIn>
+            <SignedOut>
+              <RedirectToSignIn />
+            </SignedOut>
+          </>
+        }
+      />
+
+      <Route
+        path="/privacy"
+        element={
+          <>
+            <SignedIn>
+              <PrivacyDashboard />
+            </SignedIn>
+            <SignedOut>
+              <RedirectToSignIn />
+            </SignedOut>
+          </>
+        }
+      />
+
+      <Route
+        path="/coach/credentials"
+        element={
+          <>
+            <SignedIn>
+              <CredentialVerification />
+            </SignedIn>
+            <SignedOut>
+              <RedirectToSignIn />
+            </SignedOut>
+          </>
+        }
+      />
+
+      <Route
+        path="/coach/verify-id"
+        element={
+          <>
+            <SignedIn>
+              <DigitalIDVerification />
             </SignedIn>
             <SignedOut>
               <RedirectToSignIn />
