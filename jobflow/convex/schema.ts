@@ -8,6 +8,12 @@ export default defineSchema({
     role: v.union(v.literal("job_seeker"), v.literal("coach"), v.literal("admin")),
     authId: v.string(),
     emailVerified: v.boolean(),
+    ssoProvider: v.optional(v.union(
+      v.literal("GoogleOAuth"),
+      v.literal("MicrosoftOAuth"),
+      v.literal("email")
+    )),
+    lastLoginAt: v.optional(v.number()),
     profilePhoto: v.optional(v.string()),
     bio: v.optional(v.string()),
     phone: v.optional(v.string()),
@@ -28,7 +34,8 @@ export default defineSchema({
   })
     .index("by_auth_id", ["authId"])
     .index("by_email", ["email"])
-    .index("by_role", ["role"]),
+    .index("by_role", ["role"])
+    .index("by_sso_provider", ["ssoProvider"]),
 
   starStories: defineTable({
     userId: v.id("users"),
@@ -305,4 +312,21 @@ export default defineSchema({
     .index("by_sender", ["senderId"])
     .index("by_receiver", ["receiverId"])
     .index("by_conversation", ["senderId", "receiverId"]),
+
+  authSessions: defineTable({
+    userId: v.id("users"),
+    sessionId: v.string(),
+    accessToken: v.string(),
+    refreshToken: v.optional(v.string()),
+    expiresAt: v.number(),
+    ipAddress: v.optional(v.string()),
+    userAgent: v.optional(v.string()),
+    active: v.boolean(),
+    createdAt: v.number(),
+    lastActivityAt: v.number(),
+  })
+    .index("by_user", ["userId"])
+    .index("by_session_id", ["sessionId"])
+    .index("by_active", ["active"])
+    .index("by_expires", ["expiresAt"]),
 });

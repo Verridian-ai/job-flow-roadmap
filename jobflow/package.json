@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@clerk/clerk-react": "^5.55.0",
+    "@workos-inc/node": "^7.72.2",
     "clsx": "^2.1.1",
     "convex": "^1.29.0",
     "convex-helpers": "^0.1.104",
