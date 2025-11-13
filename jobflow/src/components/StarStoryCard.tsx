@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useMutation } from 'convex/react';
 import { api } from '../../convex/_generated/api';
-import { Star, Edit2, Trash2, Save, X } from 'lucide-react';
+import { Star, Edit2, Trash2, Save, X, Sparkles, Copy, TrendingUp, CheckCircle, AlertCircle } from 'lucide-react';
 
 interface StarStory {
   _id: string;
@@ -11,6 +11,11 @@ interface StarStory {
   action: string;
   result: string;
   skills: string[];
+  qualityScore?: number;
+  completenessScore?: number;
+  impactScore?: number;
+  clarityScore?: number;
+  aiSuggestions?: string;
   _creationTime: number;
 }
 
@@ -20,6 +25,8 @@ interface Props {
 
 export default function StarStoryCard({ story }: Props) {
   const [isEditing, setIsEditing] = useState(false);
+  const [isScoring, setIsScoring] = useState(false);
+  const [showSuggestions, setShowSuggestions] = useState(false);
   const [formData, setFormData] = useState({
     title: story.title,
     situation: story.situation,
@@ -31,6 +38,8 @@ export default function StarStoryCard({ story }: Props) {
 
   const updateStory = useMutation(api.starStories.update);
   const deleteStory = useMutation(api.starStories.remove);
+  const scoreStory = useMutation(api.starStories.scoreWithAI);
+  const duplicateStory = useMutation(api.starStories.duplicate);
 
   const handleSave = async () => {
     await updateStory({
@@ -45,6 +54,33 @@ export default function StarStoryCard({ story }: Props) {
     if (confirm('Are you sure you want to delete this story?')) {
       await deleteStory({ id: story._id });
     }
+  };
+
+  const handleScore = async () => {
+    setIsScoring(true);
+    try {
+      await scoreStory({ id: story._id });
+    } finally {
+      setIsScoring(false);
+    }
+  };
+
+  const handleDuplicate = async () => {
+    await duplicateStory({ id: story._id });
+  };
+
+  const getScoreColor = (score?: number) => {
+    if (!score) return 'text-gray-400';
+    if (score >= 80) return 'text-green-400';
+    if (score >= 60) return 'text-yellow-400';
+    return 'text-red-400';
+  };
+
+  const getScoreIcon = (score?: number) => {
+    if (!score) return AlertCircle;
+    if (score >= 80) return CheckCircle;
+    if (score >= 60) return TrendingUp;
+    return AlertCircle;
   };
 
   if (isEditing) {
@@ -128,14 +164,16 @@ export default function StarStoryCard({ story }: Props) {
     );
   }
 
+  const ScoreIcon = getScoreIcon(story.qualityScore);
+
   return (
     <div className="bg-gray-800 rounded-lg border border-gray-700 p-6 hover:border-gray-600 transition">
       <div className="flex items-start justify-between mb-4">
-        <div className="flex items-start gap-3">
+        <div className="flex items-start gap-3 flex-1">
           <Star className="w-6 h-6 text-yellow-500 flex-shrink-0 mt-1" />
-          <div>
+          <div className="flex-1">
             <h3 className="text-xl font-semibold mb-2">{story.title}</h3>
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2 mb-3">
               {story.skills.map((skill) => (
                 <span
                   key={skill}
@@ -145,19 +183,96 @@ export default function StarStoryCard({ story }: Props) {
                 </span>
               ))}
             </div>
+
+            {/* AI Quality Score */}
+            {story.qualityScore !== undefined && (
+              <div className="flex items-center gap-4 mt-3 p-3 bg-gray-900/50 rounded-lg">
+                <div className="flex items-center gap-2">
+                  <ScoreIcon className={`w-5 h-5 ${getScoreColor(story.qualityScore)}`} />
+                  <span className="text-sm font-medium">Quality Score:</span>
+                  <span className={`text-lg font-bold ${getScoreColor(story.qualityScore)}`}>
+                    {story.qualityScore}/100
+                  </span>
+                </div>
+
+                {story.completenessScore !== undefined && (
+                  <div className="flex items-center gap-2 text-sm">
+                    <span className="text-gray-400">Completeness:</span>
+                    <span className={getScoreColor(story.completenessScore)}>
+                      {story.completenessScore}
+                    </span>
+                  </div>
+                )}
+
+                {story.impactScore !== undefined && (
+                  <div className="flex items-center gap-2 text-sm">
+                    <span className="text-gray-400">Impact:</span>
+                    <span className={getScoreColor(story.impactScore)}>
+                      {story.impactScore}
+                    </span>
+                  </div>
+                )}
+
+                {story.clarityScore !== undefined && (
+                  <div className="flex items-center gap-2 text-sm">
+                    <span className="text-gray-400">Clarity:</span>
+                    <span className={getScoreColor(story.clarityScore)}>
+                      {story.clarityScore}
+                    </span>
+                  </div>
+                )}
+
+                {story.aiSuggestions && (
+                  <button
+                    onClick={() => setShowSuggestions(!showSuggestions)}
+                    className="ml-auto px-3 py-1 text-sm bg-purple-500/20 text-purple-400 rounded-lg hover:bg-purple-500/30 transition"
+                  >
+                    {showSuggestions ? 'Hide' : 'View'} AI Suggestions
+                  </button>
+                )}
+              </div>
+            )}
+
+            {/* AI Suggestions */}
+            {showSuggestions && story.aiSuggestions && (
+              <div className="mt-3 p-4 bg-purple-500/10 border border-purple-500/30 rounded-lg">
+                <h4 className="text-sm font-semibold text-purple-400 mb-2 flex items-center gap-2">
+                  <Sparkles className="w-4 h-4" />
+                  AI Suggestions
+                </h4>
+                <p className="text-sm text-gray-300">{story.aiSuggestions}</p>
+              </div>
+            )}
           </div>
         </div>
 
-        <div className="flex gap-2">
+        <div className="flex gap-2 ml-4">
+          <button
+            onClick={handleScore}
+            disabled={isScoring}
+            className="p-2 text-gray-400 hover:text-purple-400 transition disabled:opacity-50"
+            title="Score with AI"
+          >
+            <Sparkles className={`w-5 h-5 ${isScoring ? 'animate-spin' : ''}`} />
+          </button>
+          <button
+            onClick={handleDuplicate}
+            className="p-2 text-gray-400 hover:text-blue-400 transition"
+            title="Duplicate story"
+          >
+            <Copy className="w-5 h-5" />
+          </button>
           <button
             onClick={() => setIsEditing(true)}
             className="p-2 text-gray-400 hover:text-yellow-500 transition"
+            title="Edit story"
           >
             <Edit2 className="w-5 h-5" />
           </button>
           <button
             onClick={handleDelete}
             className="p-2 text-gray-400 hover:text-red-500 transition"
+            title="Delete story"
           >
             <Trash2 className="w-5 h-5" />
           </button>
