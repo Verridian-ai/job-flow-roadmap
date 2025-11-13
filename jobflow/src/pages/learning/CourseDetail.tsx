@@ -30,7 +30,7 @@ export default function CourseDetail() {
     price: '$299',
     originalPrice: '$399',
     rating: 4.8,
-    reviews: 12500,
+    reviewCount: 12500,
     students: 50000,
     lastUpdated: 'January 2024',
     language: 'English',
@@ -254,7 +254,7 @@ export default function CourseDetail() {
                     <div className="flex items-center gap-1">
                       <Star className="w-5 h-5 text-yellow-500 fill-yellow-500" />
                       <span className="text-white font-semibold">{course.rating}</span>
-                      <span className="text-gray-400 text-sm">({course.reviews.toLocaleString()} ratings)</span>
+                      <span className="text-gray-400 text-sm">({course.reviewCount.toLocaleString()} ratings)</span>
                     </div>
                     <div className="flex items-center gap-2 text-gray-400">
                       <Users className="w-4 h-4" />
