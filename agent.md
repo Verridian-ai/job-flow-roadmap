@@ -66,10 +66,11 @@
 ### US-AUTH-007: Row-Level Security
 - [x] ⏳ Pending
 - [x] 🔄 Started: Agent-1
-- [ ] ✅ Complete: Agent-___
+- [x] ✅ Complete: Agent-1
 - **Priority**: P0
 - **Points**: 3
 - **Worktree**: `worktrees/agent1-auth-rls`
+- **PR**: https://github.com/Verridian-ai/job-flow-roadmap/pull/23
 
 ### US-AUTH-008: Security Audit Logging
 - [ ] ⏳ Pending
