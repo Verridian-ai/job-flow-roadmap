@@ -62,7 +62,19 @@ import AdminDashboard from './pages/admin/AdminDashboard';
 import UserManagement from './pages/admin/UserManagement';
 import Roadmap from './pages/Roadmap';
 function App() {  return (
-    <Routes>
+// Career Development Pages
+import CareerInsights from './pages/career/CareerInsights';
+import CareerTimeline from './pages/career/CareerTimeline';
+import Certificates from './pages/career/Certificates';
+import SkillGapAnalysis from './pages/career/SkillGapAnalysis';
+import SkillProgression from './pages/career/SkillProgression';
+// Learning Pages
+import LearningJourney from './pages/learning/LearningJourney';
+import RecommendedPaths from './pages/learning/RecommendedPaths';
+import CourseDetail from './pages/learning/CourseDetail';
+import CourseProgress from './pages/learning/CourseProgress';
+function App() {
+return (    <Routes>
       <Route path="/" element={<Landing />} />
 
       {/* Authentication Routes */}
@@ -424,7 +436,7 @@ function App() {  return (
         }
       />
 
-      <Route
+<Route
 path="/ai-resume-chat"
         element={
           <>
@@ -661,7 +673,15 @@ path="/networking/groups"
           <>
             <SignedIn>
               <Groups />            </SignedIn>
-            <SignedOut>
+
+{/* Career Development Routes */}
+      <Route
+        path="/career/insights"
+        element={
+          <>
+            <SignedIn>
+              <CareerInsights />
+            </SignedIn>            <SignedOut>
               <RedirectToSignIn />
             </SignedOut>
           </>
@@ -681,7 +701,14 @@ path="/session-followup"
           <>
             <SignedIn>
               <SessionFollowup />            </SignedIn>
-            <SignedOut>
+
+<Route
+        path="/career/timeline"
+        element={
+          <>
+            <SignedIn>
+              <CareerTimeline />
+            </SignedIn>            <SignedOut>
               <RedirectToSignIn />
             </SignedOut>
           </>
@@ -690,7 +717,107 @@ path="/session-followup"
 
 >>>>>>> d6f06c33 (feat: UI Sprint 2 - Professional Networking & Social Features (P2))
 =======      <Route path="*" element={<Navigate to="/" replace />} />
-    </Routes>
+
+<Route
+        path="/career/certificates"
+        element={
+          <>
+            <SignedIn>
+              <Certificates />
+            </SignedIn>
+            <SignedOut>
+              <RedirectToSignIn />
+            </SignedOut>
+          </>
+        }
+      />
+
+      <Route
+        path="/career/skill-gap"
+        element={
+          <>
+            <SignedIn>
+              <SkillGapAnalysis />
+            </SignedIn>
+            <SignedOut>
+              <RedirectToSignIn />
+            </SignedOut>
+          </>
+        }
+      />
+
+      <Route
+        path="/career/skills"
+        element={
+          <>
+            <SignedIn>
+              <SkillProgression />
+            </SignedIn>
+            <SignedOut>
+              <RedirectToSignIn />
+            </SignedOut>
+          </>
+        }
+      />
+
+      {/* Learning Routes */}
+      <Route
+        path="/learning"
+        element={
+          <>
+            <SignedIn>
+              <LearningJourney />
+            </SignedIn>
+            <SignedOut>
+              <RedirectToSignIn />
+            </SignedOut>
+          </>
+        }
+      />
+
+      <Route
+        path="/learning/paths"
+        element={
+          <>
+            <SignedIn>
+              <RecommendedPaths />
+            </SignedIn>
+            <SignedOut>
+              <RedirectToSignIn />
+            </SignedOut>
+          </>
+        }
+      />
+
+      <Route
+        path="/learning/course/:courseId"
+        element={
+          <>
+            <SignedIn>
+              <CourseDetail />
+            </SignedIn>
+            <SignedOut>
+              <RedirectToSignIn />
+            </SignedOut>
+          </>
+        }
+      />
+
+      <Route
+        path="/learning/course/:courseId/progress"
+        element={
+          <>
+            <SignedIn>
+              <CourseProgress />
+            </SignedIn>
+            <SignedOut>
+              <RedirectToSignIn />
+            </SignedOut>
+          </>
+        }
+      />
+
+      <Route path="*" element={<Navigate to="/" replace />} />    </Routes>
   );
 }
 
