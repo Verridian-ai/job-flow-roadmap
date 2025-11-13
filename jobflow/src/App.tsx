@@ -33,6 +33,11 @@ import PaymentReceipt from './pages/PaymentReceipt';
 import PrivacyDashboard from './pages/PrivacyDashboard';
 import CredentialVerification from './pages/coach/CredentialVerification';
 import DigitalIDVerification from './pages/coach/DigitalIDVerification';
+import ProfileCreationWizard from './pages/coach/ProfileCreationWizard';
+import CoachProfileEditor from './pages/coach/CoachProfileEditor';
+import ClientOverview from './pages/coach/ClientOverview';
+import SharedWorkspace from './pages/coach/SharedWorkspace';
+import PortfolioBuilder from './pages/coach/PortfolioBuilder';
 
 function App() {
   return (
@@ -222,6 +227,76 @@ function App() {
           <>
             <SignedIn>
               <CoachOnboarding />
+            </SignedIn>
+            <SignedOut>
+              <RedirectToSignIn />
+            </SignedOut>
+          </>
+        }
+      />
+
+      <Route
+        path="/coach/profile-wizard"
+        element={
+          <>
+            <SignedIn>
+              <ProfileCreationWizard />
+            </SignedIn>
+            <SignedOut>
+              <RedirectToSignIn />
+            </SignedOut>
+          </>
+        }
+      />
+
+      <Route
+        path="/coach/profile-editor"
+        element={
+          <>
+            <SignedIn>
+              <CoachProfileEditor />
+            </SignedIn>
+            <SignedOut>
+              <RedirectToSignIn />
+            </SignedOut>
+          </>
+        }
+      />
+
+      <Route
+        path="/coach/clients/:clientId"
+        element={
+          <>
+            <SignedIn>
+              <ClientOverview />
+            </SignedIn>
+            <SignedOut>
+              <RedirectToSignIn />
+            </SignedOut>
+          </>
+        }
+      />
+
+      <Route
+        path="/coach/workspace/:workspaceId"
+        element={
+          <>
+            <SignedIn>
+              <SharedWorkspace />
+            </SignedIn>
+            <SignedOut>
+              <RedirectToSignIn />
+            </SignedOut>
+          </>
+        }
+      />
+
+      <Route
+        path="/coach/portfolio-builder"
+        element={
+          <>
+            <SignedIn>
+              <PortfolioBuilder />
             </SignedIn>
             <SignedOut>
               <RedirectToSignIn />
