@@ -13,6 +13,14 @@ import Marketplace from './pages/Marketplace';
 import Sessions from './pages/Sessions';
 import Settings from './pages/Settings';
 import CoachDashboard from './pages/CoachDashboard';
+import ProfileCreationBasics from './pages/coach/ProfileCreationBasics';
+import ProfileCreationExperience from './pages/coach/ProfileCreationExperience';
+import ProfileCreationSkills from './pages/coach/ProfileCreationSkills';
+import ProfileCreationPreferences from './pages/coach/ProfileCreationPreferences';
+import ProfileCreationSecurity from './pages/coach/ProfileCreationSecurity';
+import ProfileCreationReview from './pages/coach/ProfileCreationReview';
+import CoachDashboardEnhanced from './pages/coach/CoachDashboardEnhanced';
+import ClientOverview from './pages/coach/ClientOverview';
 
 function App() {
   return (
@@ -137,6 +145,118 @@ function App() {
           <>
             <SignedIn>
               <CoachOnboarding />
+            </SignedIn>
+            <SignedOut>
+              <RedirectToSignIn />
+            </SignedOut>
+          </>
+        }
+      />
+
+      <Route
+        path="/coach/profile-creation/basics"
+        element={
+          <>
+            <SignedIn>
+              <ProfileCreationBasics />
+            </SignedIn>
+            <SignedOut>
+              <RedirectToSignIn />
+            </SignedOut>
+          </>
+        }
+      />
+
+      <Route
+        path="/coach/profile-creation/experience"
+        element={
+          <>
+            <SignedIn>
+              <ProfileCreationExperience />
+            </SignedIn>
+            <SignedOut>
+              <RedirectToSignIn />
+            </SignedOut>
+          </>
+        }
+      />
+
+      <Route
+        path="/coach/profile-creation/skills"
+        element={
+          <>
+            <SignedIn>
+              <ProfileCreationSkills />
+            </SignedIn>
+            <SignedOut>
+              <RedirectToSignIn />
+            </SignedOut>
+          </>
+        }
+      />
+
+      <Route
+        path="/coach/profile-creation/preferences"
+        element={
+          <>
+            <SignedIn>
+              <ProfileCreationPreferences />
+            </SignedIn>
+            <SignedOut>
+              <RedirectToSignIn />
+            </SignedOut>
+          </>
+        }
+      />
+
+      <Route
+        path="/coach/profile-creation/security"
+        element={
+          <>
+            <SignedIn>
+              <ProfileCreationSecurity />
+            </SignedIn>
+            <SignedOut>
+              <RedirectToSignIn />
+            </SignedOut>
+          </>
+        }
+      />
+
+      <Route
+        path="/coach/profile-creation/review"
+        element={
+          <>
+            <SignedIn>
+              <ProfileCreationReview />
+            </SignedIn>
+            <SignedOut>
+              <RedirectToSignIn />
+            </SignedOut>
+          </>
+        }
+      />
+
+      <Route
+        path="/coach/dashboard-enhanced"
+        element={
+          <>
+            <SignedIn>
+              <CoachDashboardEnhanced />
+            </SignedIn>
+            <SignedOut>
+              <RedirectToSignIn />
+            </SignedOut>
+          </>
+        }
+      />
+
+      <Route
+        path="/coach/clients/:clientId"
+        element={
+          <>
+            <SignedIn>
+              <ClientOverview />
             </SignedIn>
             <SignedOut>
               <RedirectToSignIn />
