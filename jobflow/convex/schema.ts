@@ -268,16 +268,24 @@ export default defineSchema({
       v.literal("pending"),
       v.literal("succeeded"),
       v.literal("failed"),
-      v.literal("refunded")
+      v.literal("refunded"),
+      v.literal("held_in_escrow"),
+      v.literal("released"),
+      v.literal("cancelled")
     ),
     stripePaymentIntentId: v.optional(v.string()),
     taskId: v.optional(v.id("verificationTasks")),
     sessionId: v.optional(v.id("sessions")),
+    coachId: v.optional(v.id("coaches")),
+    escrowHeldAt: v.optional(v.number()),
+    escrowReleasedAt: v.optional(v.number()),
+    transferId: v.optional(v.string()),
     createdAt: v.number(),
   })
     .index("by_user", ["userId"])
     .index("by_status", ["status"])
-    .index("by_type", ["type"]),
+    .index("by_type", ["type"])
+    .index("by_coach", ["coachId"]),
 
   subscriptions: defineTable({
     userId: v.id("users"),
