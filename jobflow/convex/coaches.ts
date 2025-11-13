@@ -84,7 +84,7 @@ export const create = mutation({
   },
 });
 
-// List all coaches (public)
+// List all coaches (public) with user data
 export const list = query({
   args: {
     verificationStatus: v.optional(
@@ -96,22 +96,43 @@ export const list = query({
     ),
   },
   handler: async (ctx, args) => {
+    let coaches;
+
     if (args.verificationStatus) {
-      return await ctx.db
+      coaches = await ctx.db
         .query("coaches")
         .withIndex("by_verification_status", (q) =>
           q.eq("verificationStatus", args.verificationStatus)
         )
         .collect();
+    } else {
+      // Default: return only approved coaches for public listing
+      coaches = await ctx.db
+        .query("coaches")
+        .withIndex("by_verification_status", (q) =>
+          q.eq("verificationStatus", "approved")
+        )
+        .collect();
     }
 
-    // Default: return only approved coaches for public listing
-    return await ctx.db
-      .query("coaches")
-      .withIndex("by_verification_status", (q) =>
-        q.eq("verificationStatus", "approved")
-      )
-      .collect();
+    // Fetch user data for each coach
+    const coachesWithUserData = await Promise.all(
+      coaches.map(async (coach) => {
+        const user = await ctx.db.get(coach.userId);
+        return {
+          ...coach,
+          name: user?.name || "Unknown",
+          bio: user?.bio || "",
+          location: user?.location,
+          profilePhoto: user?.profilePhoto,
+          verified: coach.verificationStatus === "approved",
+          specialties: coach.specialty,
+          yearsExperience: parseInt(coach.experience) || 0,
+        };
+      })
+    );
+
+    return coachesWithUserData;
   },
 });
 
@@ -127,6 +148,32 @@ export const get = query({
     }
 
     return coach;
+  },
+});
+
+// Get a single coach profile with user data
+export const getById = query({
+  args: {
+    id: v.string(),
+  },
+  handler: async (ctx, args) => {
+    const coach = await ctx.db.get(args.id as any);
+    if (!coach) {
+      throw new Error("Coach not found");
+    }
+
+    const user = await ctx.db.get(coach.userId);
+
+    return {
+      ...coach,
+      name: user?.name || "Unknown",
+      bio: user?.bio || "",
+      location: user?.location,
+      profilePhoto: user?.profilePhoto,
+      verified: coach.verificationStatus === "approved",
+      specialties: coach.specialty,
+      yearsExperience: parseInt(coach.experience) || 0,
+    };
   },
 });
 
@@ -204,7 +251,7 @@ export const update = mutation({
   },
 });
 
-// Search coaches by specialty or industry
+// Search coaches by specialty or industry with user data
 export const search = query({
   args: {
     specialty: v.optional(v.string()),
@@ -243,7 +290,24 @@ export const search = query({
       coaches = coaches.filter((coach) => coach.rating >= args.minRating!);
     }
 
-    return coaches;
+    // Fetch user data for each coach
+    const coachesWithUserData = await Promise.all(
+      coaches.map(async (coach) => {
+        const user = await ctx.db.get(coach.userId);
+        return {
+          ...coach,
+          name: user?.name || "Unknown",
+          bio: user?.bio || "",
+          location: user?.location,
+          profilePhoto: user?.profilePhoto,
+          verified: coach.verificationStatus === "approved",
+          specialties: coach.specialty,
+          yearsExperience: parseInt(coach.experience) || 0,
+        };
+      })
+    );
+
+    return coachesWithUserData;
   },
 });
 

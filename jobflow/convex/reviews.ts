@@ -145,6 +145,33 @@ export const listByCoach = query({
   },
 });
 
+// Get reviews by coach ID (string) with user data
+export const getByCoach = query({
+  args: {
+    coachId: v.string(),
+  },
+  handler: async (ctx, args) => {
+    const reviews = await ctx.db
+      .query("reviews")
+      .withIndex("by_coach", (q) => q.eq("coachId", args.coachId as any))
+      .collect();
+
+    // Fetch user data for each review
+    const reviewsWithUserData = await Promise.all(
+      reviews.map(async (review) => {
+        const user = await ctx.db.get(review.userId);
+        return {
+          ...review,
+          userName: user?.name || "Anonymous",
+          userPhoto: user?.profilePhoto,
+        };
+      })
+    );
+
+    return reviewsWithUserData;
+  },
+});
+
 // List reviews by user
 export const listByUser = query({
   args: {},
