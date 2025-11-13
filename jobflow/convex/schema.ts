@@ -306,4 +306,26 @@ export default defineSchema({
     .index("by_sender", ["senderId"])
     .index("by_receiver", ["receiverId"])
     .index("by_conversation", ["senderId", "receiverId"]),
+
+  payouts: defineTable({
+    coachId: v.id("coaches"),
+    taskId: v.optional(v.id("verificationTasks")),
+    sessionId: v.optional(v.id("sessions")),
+    amount: v.number(),
+    platformFee: v.number(),
+    status: v.union(
+      v.literal("pending"),
+      v.literal("paid"),
+      v.literal("failed"),
+      v.literal("cancelled")
+    ),
+    stripeTransferId: v.optional(v.string()),
+    stripePayoutId: v.optional(v.string()),
+    createdAt: v.number(),
+    paidAt: v.optional(v.number()),
+  })
+    .index("by_coach", ["coachId"])
+    .index("by_status", ["status"])
+    .index("by_task", ["taskId"])
+    .index("by_session", ["sessionId"]),
 });

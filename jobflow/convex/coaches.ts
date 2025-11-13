@@ -246,3 +246,39 @@ export const search = query({
     return coaches;
   },
 });
+
+// Update coach's Stripe Connect account ID
+export const updateStripeAccount = mutation({
+  args: {
+    coachId: v.id("coaches"),
+    stripeAccountId: v.string(),
+  },
+  handler: async (ctx, args) => {
+    const identity = await ctx.auth.getUserIdentity();
+    if (!identity) {
+      throw new Error("Unauthorized");
+    }
+
+    const coach = await ctx.db.get(args.coachId);
+    if (!coach) {
+      throw new Error("Coach not found");
+    }
+
+    // Verify user owns this coach profile
+    const user = await ctx.db
+      .query("users")
+      .withIndex("by_auth_id", (q) => q.eq("authId", identity.subject))
+      .unique();
+
+    if (!user || coach.userId !== user._id) {
+      throw new Error("Unauthorized");
+    }
+
+    await ctx.db.patch(args.coachId, {
+      stripeAccountId: args.stripeAccountId,
+      updatedAt: Date.now(),
+    });
+
+    return args.coachId;
+  },
+});
