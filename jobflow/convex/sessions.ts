@@ -48,6 +48,52 @@ export const create = mutation({
   },
 });
 
+// Request a coaching session (for simple booking without specific time)
+export const request = mutation({
+  args: {
+    coachId: v.string(),
+    type: v.string(),
+    duration: v.number(),
+    notes: v.optional(v.string()),
+  },
+  handler: async (ctx, args) => {
+    const identity = await ctx.auth.getUserIdentity();
+    if (!identity) {
+      throw new Error("Unauthorized");
+    }
+
+    const user = await ctx.db
+      .query("users")
+      .withIndex("by_auth_id", (q) => q.eq("authId", identity.subject))
+      .unique();
+
+    if (!user) {
+      throw new Error("User not found");
+    }
+
+    // Verify coach exists
+    const coach = await ctx.db.get(args.coachId as any);
+    if (!coach) {
+      throw new Error("Coach not found");
+    }
+
+    const now = Date.now();
+    // Create a session with a placeholder time (to be scheduled later)
+    const sessionId = await ctx.db.insert("sessions", {
+      userId: user._id,
+      coachId: args.coachId as any,
+      scheduledTime: now,
+      duration: args.duration,
+      status: "scheduled",
+      notes: args.notes || `Session type: ${args.type}`,
+      createdAt: now,
+      updatedAt: now,
+    });
+
+    return sessionId;
+  },
+});
+
 // List all sessions for the current user (as job seeker or coach)
 export const list = query({
   args: {
