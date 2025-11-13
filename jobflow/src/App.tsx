@@ -5,6 +5,10 @@ import Dashboard from './pages/Dashboard';
 import StarStories from './pages/StarStories';
 import ResumeBuilder from './pages/ResumeBuilder';
 import Resumes from './pages/Resumes';
+import ResumeRefinement from './pages/ResumeRefinement';
+import ResumeTemplates from './pages/ResumeTemplates';
+import ResumeVersions from './pages/ResumeVersions';
+import ATSOptimization from './pages/ATSOptimization';
 import Jobs from './pages/Jobs';
 import JobTracking from './pages/JobTracking';
 import JobMatchExplorer from './pages/JobMatchExplorer';
@@ -122,7 +126,63 @@ function App() {
           </>
         }
       />
-      
+
+      <Route
+        path="/resume-refinement"
+        element={
+          <>
+            <SignedIn>
+              <ResumeRefinement />
+            </SignedIn>
+            <SignedOut>
+              <RedirectToSignIn />
+            </SignedOut>
+          </>
+        }
+      />
+
+      <Route
+        path="/resume-templates"
+        element={
+          <>
+            <SignedIn>
+              <ResumeTemplates />
+            </SignedIn>
+            <SignedOut>
+              <RedirectToSignIn />
+            </SignedOut>
+          </>
+        }
+      />
+
+      <Route
+        path="/resume-versions"
+        element={
+          <>
+            <SignedIn>
+              <ResumeVersions />
+            </SignedIn>
+            <SignedOut>
+              <RedirectToSignIn />
+            </SignedOut>
+          </>
+        }
+      />
+
+      <Route
+        path="/ats-optimization"
+        element={
+          <>
+            <SignedIn>
+              <ATSOptimization />
+            </SignedIn>
+            <SignedOut>
+              <RedirectToSignIn />
+            </SignedOut>
+          </>
+        }
+      />
+
       <Route
         path="/jobs"
         element={
