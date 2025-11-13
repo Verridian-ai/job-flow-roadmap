@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Coach Profile Creation - Branding &amp; Media</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f9d406",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#23200f",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<div class="px-4 sm:px-8 md:px-16 lg:px-24 xl:px-40 flex flex-1 justify-center py-5 sm:py-10">
+<div class="layout-content-container flex flex-col w-full max-w-[960px] flex-1">
+<!-- Progress Bar -->
+<div class="flex flex-col gap-3 p-4 mb-8">
+<div class="flex gap-6 justify-between">
+<p class="text-gray-600 dark:text-gray-300 text-base font-medium leading-normal">Step 5 of 6</p>
+</div>
+<div class="flex space-x-2">
+<div class="h-2 flex-1 rounded-full bg-primary/30"><div class="h-2 rounded-full bg-primary"></div></div>
+<div class="h-2 flex-1 rounded-full bg-primary/30"><div class="h-2 rounded-full bg-primary"></div></div>
+<div class="h-2 flex-1 rounded-full bg-primary/30"><div class="h-2 rounded-full bg-primary"></div></div>
+<div class="h-2 flex-1 rounded-full bg-primary/30"><div class="h-2 rounded-full bg-primary"></div></div>
+<div class="h-2 flex-1 rounded-full bg-primary/30"><div class="h-2 w-full rounded-full bg-primary"></div></div>
+<div class="h-2 flex-1 rounded-full bg-primary/30"></div>
+</div>
+</div>
+<!-- Page Heading -->
+<div class="flex flex-wrap justify-between gap-3 p-4 mb-8">
+<div class="flex min-w-72 flex-col gap-3">
+<p class="text-gray-900 dark:text-white text-4xl font-black leading-tight tracking-[-0.033em]">Branding &amp; Media</p>
+<p class="text-gray-500 dark:text-gray-400 text-base font-normal leading-normal">Showcase your brand. Upload your profile picture, banner, and an intro video.</p>
+</div>
+</div>
+<!-- Media Upload Sections -->
+<div class="flex flex-col gap-10 p-4">
+<!-- Profile Picture Section -->
+<div>
+<h3 class="text-gray-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] pb-2">Profile Picture</h3>
+<p class="text-gray-600 dark:text-gray-400 text-sm font-normal leading-normal pb-3 pt-1">Must be a JPG or PNG, at least 400x400px, and under 5MB. This will be displayed in a circle.</p>
+<div class="flex flex-col sm:flex-row items-center gap-6 rounded-lg border border-gray-200 dark:border-gray-700 p-6 bg-white/50 dark:bg-black/20">
+<div class="relative h-40 w-40">
+<div class="absolute inset-0 flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-800">
+<span class="material-symbols-outlined text-gray-400 dark:text-gray-500 !text-6xl">person</span>
+</div>
+</div>
+<div class="flex flex-col items-center sm:items-start gap-4 flex-1">
+<p class="text-gray-700 dark:text-gray-300 text-center sm:text-left">Drag &amp; drop your picture here or click to upload.</p>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">
+<span class="truncate">Upload Picture</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Banner Image Section -->
+<div>
+<h3 class="text-gray-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] pb-2">Profile Banner</h3>
+<p class="text-gray-600 dark:text-gray-400 text-sm font-normal leading-normal pb-3 pt-1">Recommended size 1500x500px. Must be a JPG or PNG, under 10MB.</p>
+<div class="flex flex-col items-center gap-6 rounded-lg border-2 border-dashed border-gray-300 dark:border-gray-700 px-6 py-10">
+<div class="flex flex-col items-center gap-3 text-center">
+<span class="material-symbols-outlined text-primary !text-5xl">image</span>
+<p class="text-gray-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Upload Banner Image</p>
+<p class="text-gray-600 dark:text-gray-400 text-sm font-normal leading-normal">Drag &amp; drop or click to upload</p>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">
+<span class="truncate">Upload Banner</span>
+</button>
+</div>
+</div>
+<!-- Video Introduction Section -->
+<div>
+<h3 class="text-gray-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] pb-2">Video Introduction</h3>
+<p class="text-gray-600 dark:text-gray-400 text-sm font-normal leading-normal pb-3 pt-1">Introduce yourself to potential clients. MP4 format, max 2 minutes, under 100MB.</p>
+<div class="flex flex-col items-center gap-6 rounded-lg border-2 border-dashed border-gray-300 dark:border-gray-700 px-6 py-10">
+<div class="flex flex-col items-center gap-3 text-center">
+<span class="material-symbols-outlined text-primary !text-5xl">videocam</span>
+<p class="text-gray-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Upload Video Introduction</p>
+<p class="text-gray-600 dark:text-gray-400 text-sm font-normal leading-normal">Drag &amp; drop or click to upload</p>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">
+<span class="truncate">Upload Video</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Navigation Buttons -->
+<div class="flex justify-between p-4 mt-12">
+<button class="flex items-center justify-center rounded-lg h-11 px-6 border border-gray-300 dark:border-gray-700 bg-transparent text-gray-800 dark:text-white text-base font-bold leading-normal hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+<span>Back</span>
+</button>
+<button class="flex items-center justify-center rounded-lg h-11 px-6 bg-primary text-background-dark text-base font-bold leading-normal hover:bg-yellow-400 transition-colors">
+<span>Next</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body></html>

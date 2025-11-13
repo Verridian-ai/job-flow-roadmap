@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI Resume Agent - Coach Review</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ffd900",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#23200f",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+        }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-[#2C2C2C] text-[#F5F5F5]">
+<div class="flex flex-col h-screen w-full">
+<!-- TopNavBar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[#4A4A4A] px-6 py-3 shrink-0">
+<div class="flex items-center gap-4 text-white">
+<div class="size-6 text-primary">
+<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 4H30.6666V17.3334H17.3334V30.6666H4V44H44V4Z"></path>
+</svg>
+</div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">AI Resume Agent</h2>
+</div>
+<!-- Breadcrumbs -->
+<div class="flex flex-wrap gap-2">
+<a class="text-gray-400 hover:text-white text-sm font-medium leading-normal" href="#">Dashboard</a>
+<span class="text-gray-400 text-sm font-medium leading-normal">/</span>
+<span class="text-white text-sm font-medium leading-normal">Taylor Smith's Resume</span>
+</div>
+<div class="flex flex-1 justify-end gap-4 items-center">
+<button class="flex cursor-pointer items-center justify-center rounded-lg h-10 w-10 bg-[#4A4A4A] text-white">
+<span class="material-symbols-outlined text-xl">notifications</span>
+</button>
+<button class="flex cursor-pointer items-center justify-center rounded-lg h-10 w-10 bg-[#4A4A4A] text-white">
+<span class="material-symbols-outlined text-xl">history</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="Coach's profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDzefldzh4fl7XwiyIoe3Uj5OqXJRnHClAnmYm6Mjmn8Cjja7GqYcOae8uV2ThD8n1f_tYb1XQu6sMjI8BRHQb0zzPp_kMacfy2py4A0Lq1dU3lI4qVRQGg2WcVQKUFajbzvsWjsXHInk7HwxBCrPz9lnHiUAwOntv-fS2rJE-PfG2jsh_A6dZY8J9GR3iA6uYKwlvb27-lbiRXAqn2yLthqpylKhq2WABTNWuODm0aI8ILGcQAUKooDjWOMd4ZCyWMGs6EuLRDTP0");'></div>
+</div>
+</header>
+<div class="flex grow overflow-hidden">
+<!-- Left Sidebar -->
+<aside class="w-64 shrink-0 flex flex-col justify-between bg-[#4A4A4A]/20 p-4 border-r border-[#4A4A4A]">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12" data-alt="Profile picture of Taylor Smith" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCN-2CJ5U7057uH9m_pqjRrQnvVAH58xLthQNxJmaR2p1ObZBnRs1g1EhpUZu3IDBiV0UOmIzaj-TngUYbjyIr8lrZTI4P6ZssXkOC7vveulwX2cjrHqwEiS2pz-mSrU4gLHpGOvANAFyAPzFWjdCQ7zOPVpYs7H49LeXycry6kOgfM4HPQ6lcVffzSMQ2QSLk4znYyXMe6EzgH-JvzjXUc8PX2bS6GKoh1jDHn4JiIGKc9Kh7mtcN9n4JPD4LfY-4u1PkoFWHuY9k");'></div>
+<div class="flex flex-col">
+<h1 class="text-white text-base font-medium leading-normal">Taylor Smith</h1>
+<p class="text-gray-400 text-sm font-normal leading-normal">Reviewing Resume</p>
+</div>
+</div>
+<div class="flex flex-col gap-2 mt-4">
+<div class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/20 text-primary cursor-pointer">
+<span class="material-symbols-outlined text-2xl">format_ink_highlighter</span>
+<p class="text-sm font-medium leading-normal">Highlight</p>
+</div>
+<div class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#4A4A4A]/50 cursor-pointer">
+<span class="material-symbols-outlined text-2xl">add_comment</span>
+<p class="text-white text-sm font-medium leading-normal">Add Comment</p>
+</div>
+<div class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#4A4A4A]/50 cursor-pointer">
+<span class="material-symbols-outlined text-2xl">auto_awesome</span>
+<p class="text-white text-sm font-medium leading-normal">AI Suggest Rewrite</p>
+</div>
+<div class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#4A4A4A]/50 cursor-pointer">
+<span class="material-symbols-outlined text-2xl text-green-500">check_circle</span>
+<p class="text-white text-sm font-medium leading-normal">Approve Section</p>
+</div>
+<div class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#4A4A4A]/50 cursor-pointer">
+<span class="material-symbols-outlined text-2xl text-red-500">cancel</span>
+<p class="text-white text-sm font-medium leading-normal">Request Revision</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col overflow-y-auto p-8">
+<div class="bg-[#4A4A4A]/20 rounded-xl flex-1 flex flex-col p-8">
+<div class="space-y-6">
+<div class="border-b border-[#4A4A4A] pb-4">
+<h2 class="text-2xl font-bold text-white">Taylor Smith</h2>
+<p class="text-gray-300">Software Engineer | San Francisco, CA | (123) 456-7890 | taylor.s@email.com</p>
+</div>
+<div class="space-y-2">
+<h3 class="text-lg font-semibold text-primary">Summary</h3>
+<p class="text-gray-300 leading-relaxed">
+                                Innovative Software Engineer with 5+ years of experience in developing scalable web applications. Proficient in JavaScript, React, and Node.js. Passionate about creating efficient, user-friendly solutions and collaborating in agile environments to deliver high-quality software products.
+                            </p>
+</div>
+<div class="p-4 rounded-lg border-2 border-primary/50 bg-primary/10 space-y-2">
+<div class="flex justify-between items-center">
+<h3 class="text-lg font-semibold text-primary">Work Experience</h3>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-green-500 cursor-pointer text-2xl">check_circle</span>
+<span class="material-symbols-outlined text-red-500 cursor-pointer text-2xl">cancel</span>
+</div>
+</div>
+<h4 class="font-bold text-white">Senior Frontend Developer | Tech Solutions Inc. | 2020 - Present</h4>
+<p class="text-gray-300 leading-relaxed pl-4">
+                                Led the development of a new customer-facing dashboard using React and Redux, resulting in a 20% increase in user engagement. <mark class="bg-primary text-black px-1 rounded">Mentored junior developers</mark> and conducted code reviews to maintain high-quality standards.
+                            </p>
+</div>
+<div class="space-y-2">
+<h3 class="text-lg font-semibold text-primary">Education</h3>
+<h4 class="font-bold text-white">B.S. in Computer Science | State University | 2015 - 2019</h4>
+<p class="text-gray-300 leading-relaxed">Graduated with Honors, GPA: 3.8</p>
+</div>
+<div class="space-y-2">
+<h3 class="text-lg font-semibold text-primary">Skills</h3>
+<p class="text-gray-300 leading-relaxed">JavaScript, React, Node.js, Python, SQL, AWS, Docker, Git</p>
+</div>
+</div>
+</div>
+<div class="flex flex-1 gap-3 flex-wrap px-4 py-4 justify-end">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#4A4A4A] text-white text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Quick Approve Rest</span>
+</button>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-[#181710] text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Submit Review</span>
+</button>
+</div>
+</main>
+<!-- Right Sidebar -->
+<aside class="w-80 shrink-0 bg-[#4A4A4A]/20 p-4 border-l border-[#4A4A4A] overflow-y-auto">
+<div class="flex flex-col gap-6">
+<!-- User Profile Card -->
+<div>
+<h3 class="text-sm font-semibold uppercase tracking-wider text-gray-400 mb-2">User Profile</h3>
+<div class="p-4 bg-[#4A4A4A]/30 rounded-lg">
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="Profile picture of Taylor Smith" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB0TT7WwZbLYIvM_E-AzZo6oVAx2S_a8kLNZYVSc-__tUGKmRE52DW4CiVqTfOCvwQBMYw6gJzAkty6Pth7PHhXBcBi2GvxgUqeQwDhRIx-TNmrycL5JKCdQTqX1ywmsCIkmRKoUMX9-eRGwg62O7bm91E74ya8v2BZvmsnNbx7MszcegDMHiuaouwWVuPUavx8keNdPMb9JWib2jS4fpxT6KRieoAcQx-QtVL-GmlDUtZTUSll9AZw3_Ms4s6RC1g-R6ZSQH9TFQE");'></div>
+<div class="flex flex-col">
+<h4 class="text-white font-medium">Taylor Smith</h4>
+<p class="text-gray-400 text-sm">Software Engineer</p>
+</div>
+</div>
+<p class="text-sm text-gray-300 mt-3 border-t border-[#4A4A4A] pt-3">
+<strong class="text-white">Career Objective:</strong> To secure a challenging role as a Senior Software Engineer at a product-driven company.
+                            </p>
+</div>
+</div>
+<!-- Story Bank -->
+<div>
+<h3 class="text-sm font-semibold uppercase tracking-wider text-gray-400 mb-2">Story Bank</h3>
+<div class="p-4 bg-[#4A4A4A]/30 rounded-lg max-h-60 overflow-y-auto">
+<ul class="space-y-3">
+<li class="text-sm text-gray-300 hover:text-white cursor-pointer">Led Q3 Project to Success</li>
+<li class="text-sm text-gray-300 hover:text-white cursor-pointer">Resolved Major Customer Conflict</li>
+<li class="text-sm text-gray-300 hover:text-white cursor-pointer">Optimized Database Performance</li>
+<li class="text-sm text-gray-300 hover:text-white cursor-pointer">Streamlined CI/CD Pipeline</li>
+<li class="text-sm text-gray-300 hover:text-white cursor-pointer">Onboarded New Team Members</li>
+</ul>
+</div>
+</div>
+<!-- Job Description -->
+<div>
+<h3 class="text-sm font-semibold uppercase tracking-wider text-gray-400 mb-2">Target Job Description</h3>
+<div class="p-4 bg-[#4A4A4A]/30 rounded-lg max-h-80 overflow-y-auto">
+<h4 class="font-bold text-white mb-2">Senior Frontend Engineer at Innovate Corp.</h4>
+<p class="text-sm text-gray-300 leading-relaxed">
+                                We are looking for an experienced Frontend Engineer to join our team. You will be responsible for building the 'client-side' of our web applications. You should be able to translate our company and customer needs into functional and appealing interactive applications.
+                                <br/><br/>
+                                Responsibilities include:
+                                </p><ul class="list-disc pl-5 mt-2 space-y-1">
+<li>Developing new user-facing features</li>
+<li>Building reusable code and libraries</li>
+<li>Ensuring the technical feasibility of UI/UX designs</li>
+</ul>
+<p></p>
+</div>
+</div>
+</div>
+</aside>
+</div>
+</div>
+</body></html>

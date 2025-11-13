@@ -1,0 +1,385 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
+    />
+
+    <title>Stitch Design</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  </head>
+  <body>
+    <div class="relative flex h-auto min-h-screen w-full flex-col bg-[#181711] dark group/design-root overflow-x-hidden" style='font-family: Inter, "Noto Sans", sans-serif;'>
+      <div class="layout-container flex h-full grow flex-col">
+        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#393728] px-10 py-3">
+          <div class="flex items-center gap-4 text-white">
+            <div class="size-4">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_6_319)">
+                  <path
+                    d="M8.57829 8.57829C5.52816 11.6284 3.451 15.5145 2.60947 19.7452C1.76794 23.9758 2.19984 28.361 3.85056 32.3462C5.50128 36.3314 8.29667 39.7376 11.8832 42.134C15.4698 44.5305 19.6865 45.8096 24 45.8096C28.3135 45.8096 32.5302 44.5305 36.1168 42.134C39.7033 39.7375 42.4987 36.3314 44.1494 32.3462C45.8002 28.361 46.2321 23.9758 45.3905 19.7452C44.549 15.5145 42.4718 11.6284 39.4217 8.57829L24 24L8.57829 8.57829Z"
+                    fill="currentColor"
+                  ></path>
+                </g>
+                <defs>
+                  <clipPath id="clip0_6_319"><rect width="48" height="48" fill="white"></rect></clipPath>
+                </defs>
+              </svg>
+            </div>
+            <h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">Careersu</h2>
+          </div>
+          <div class="flex flex-1 justify-end gap-8">
+            <div class="flex items-center gap-9">
+              <a class="text-white text-sm font-medium leading-normal" href="#">Dashboard</a>
+              <a class="text-white text-sm font-medium leading-normal" href="#">Clients</a>
+              <a class="text-white text-sm font-medium leading-normal" href="#">Tasks</a>
+              <a class="text-white text-sm font-medium leading-normal" href="#">Documents</a>
+              <a class="text-white text-sm font-medium leading-normal" href="#">Billing</a>
+            </div>
+            <button
+              class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-[#393728] text-white gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5"
+            >
+              <div class="text-white" data-icon="Bell" data-size="20px" data-weight="regular">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                  <path
+                    d="M221.8,175.94C216.25,166.38,208,139.33,208,104a80,80,0,1,0-160,0c0,35.34-8.26,62.38-13.81,71.94A16,16,0,0,0,48,200H88.81a40,40,0,0,0,78.38,0H208a16,16,0,0,0,13.8-24.06ZM128,216a24,24,0,0,1-22.62-16h45.24A24,24,0,0,1,128,216ZM48,184c7.7-13.24,16-43.92,16-80a64,64,0,1,1,128,0c0,36.05,8.28,66.73,16,80Z"
+                  ></path>
+                </svg>
+              </div>
+            </button>
+            <div
+              class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
+              style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAX5-6bkz3NQRItGQfosozoMkoSJKuwZ6RrUQgQxufy_QHGErEKCrz4ujx88Jxx2THnahtSSBaK4ekgaCskGwkruZdab1AkYevU2UQ9Qw_bPwgbZKua86_FQYUMpMQj_Ik3WHe-wVPRJ9Ttzkw6tuqtlwduk5J51Pn1RxTB91Mm09Wq260EC-GvqVhCU7ytMUdw7axxQPsnbqsgs_U4wsOu5gsggpYt57cjo0OKMt2Di-XtzJTJVGPfOZRVIhNCLCmnsk8AQFh14xY");'
+            ></div>
+          </div>
+        </header>
+        <div class="px-40 flex flex-1 justify-center py-5">
+          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+            <div class="flex flex-wrap justify-between gap-3 p-4">
+              <div class="flex min-w-72 flex-col gap-3">
+                <p class="text-white tracking-light text-[32px] font-bold leading-tight">Client Overview</p>
+                <p class="text-[#bab59c] text-sm font-normal leading-normal">Comprehensive view of client's financial status, tasks, and engagement details.</p>
+              </div>
+            </div>
+            <div class="flex p-4 @container">
+              <div class="flex w-full flex-col gap-4 @[520px]:flex-row @[520px]:justify-between @[520px]:items-center">
+                <div class="flex gap-4">
+                  <div
+                    class="bg-center bg-no-repeat aspect-square bg-cover rounded-full min-h-32 w-32"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBgcAdPT3bJ2j_PaDtnvkdfJL0nhlChCRelDrGotd9DKWZ-FmVAIFXqmodXib_fRt6Yo68Fv2TgSQQP-s10FQpE1i3CRc5KF17BBbTpoQ5nuw6NEYVK0NEw2k6jCAgEbd5er1iZ4gMhEohvLwnTintG63Jnp8izH_hkfZZKOyT7fL-jBQkuJw8gktH6a7tuAJzZS59a1YgWdxdSSvTPr_bufJCsirBkR8BIGiXae-yD0YDjg9cC-zyOeMGAkVneyaVeePy0J2Ua5NE");'
+                  ></div>
+                  <div class="flex flex-col justify-center">
+                    <p class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em]">Sophia Carter</p>
+                    <p class="text-[#bab59c] text-base font-normal leading-normal">Annual Tax Client</p>
+                    <p class="text-[#bab59c] text-base font-normal leading-normal">Verified Business/Personal ID</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Key Financial Status Indicators</h2>
+            <div class="flex flex-wrap gap-4 p-4">
+              <div class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-lg p-6 bg-[#393728]">
+                <p class="text-white text-base font-medium leading-normal">Current Net Worth</p>
+                <p class="text-white tracking-light text-2xl font-bold leading-tight">$500,000</p>
+              </div>
+              <div class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-lg p-6 bg-[#393728]">
+                <p class="text-white text-base font-medium leading-normal">Monthly Income</p>
+                <p class="text-white tracking-light text-2xl font-bold leading-tight">$15,000</p>
+              </div>
+              <div class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-lg p-6 bg-[#393728]">
+                <p class="text-white text-base font-medium leading-normal">Monthly Expenses</p>
+                <p class="text-white tracking-light text-2xl font-bold leading-tight">$8,000</p>
+              </div>
+            </div>
+            <div class="flex flex-wrap gap-4 px-4 py-6">
+              <div class="flex min-w-72 flex-1 flex-col gap-2 rounded-lg border border-[#54503b] p-6">
+                <p class="text-white text-base font-medium leading-normal">Cash Flow Trend</p>
+                <p class="text-white tracking-light text-[32px] font-bold leading-tight truncate">+12%</p>
+                <div class="flex gap-1">
+                  <p class="text-[#bab59c] text-base font-normal leading-normal">Last 6 Months</p>
+                  <p class="text-[#0bda20] text-base font-medium leading-normal">+12%</p>
+                </div>
+                <div class="flex min-h-[180px] flex-1 flex-col gap-8 py-4">
+                  <svg width="100%" height="148" viewBox="-3 0 478 150" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                    <path
+                      d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25V149H326.769H0V109Z"
+                      fill="url(#paint0_linear_1131_5935)"
+                    ></path>
+                    <path
+                      d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25"
+                      stroke="#bab59c"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                    ></path>
+                    <defs>
+                      <linearGradient id="paint0_linear_1131_5935" x1="236" y1="1" x2="236" y2="149" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#393728"></stop>
+                        <stop offset="1" stop-color="#393728" stop-opacity="0"></stop>
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                  <div class="flex justify-around">
+                    <p class="text-[#bab59c] text-[13px] font-bold leading-normal tracking-[0.015em]">Jan</p>
+                    <p class="text-[#bab59c] text-[13px] font-bold leading-normal tracking-[0.015em]">Feb</p>
+                    <p class="text-[#bab59c] text-[13px] font-bold leading-normal tracking-[0.015em]">Mar</p>
+                    <p class="text-[#bab59c] text-[13px] font-bold leading-normal tracking-[0.015em]">Apr</p>
+                    <p class="text-[#bab59c] text-[13px] font-bold leading-normal tracking-[0.015em]">May</p>
+                    <p class="text-[#bab59c] text-[13px] font-bold leading-normal tracking-[0.015em]">Jun</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-wrap gap-4 p-4">
+              <div class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-lg p-6 bg-[#393728]">
+                <p class="text-white text-base font-medium leading-normal">Tax Liability Estimate</p>
+                <p class="text-white tracking-light text-2xl font-bold leading-tight">$10,000</p>
+              </div>
+              <div class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-lg p-6 bg-[#393728]">
+                <p class="text-white text-base font-medium leading-normal">Account Balances</p>
+                <p class="text-white tracking-light text-2xl font-bold leading-tight">$25,000</p>
+              </div>
+            </div>
+            <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Pending Accounting Tasks &amp; Deadlines</h2>
+            <div class="px-4 py-3 @container">
+              <div class="flex overflow-hidden rounded-lg border border-[#54503b] bg-[#181711]">
+                <table class="flex-1">
+                  <thead>
+                    <tr class="bg-[#27251b]">
+                      <th class="table-8fdbbcf0-956a-4da3-b8cd-46bb3279f8d1-column-120 px-4 py-3 text-left text-white w-[400px] text-sm font-medium leading-normal">Task</th>
+                      <th class="table-8fdbbcf0-956a-4da3-b8cd-46bb3279f8d1-column-240 px-4 py-3 text-left text-white w-[400px] text-sm font-medium leading-normal">Due Date</th>
+                      <th class="table-8fdbbcf0-956a-4da3-b8cd-46bb3279f8d1-column-360 px-4 py-3 text-left text-white w-60 text-sm font-medium leading-normal">Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="border-t border-t-[#54503b]">
+                      <td class="table-8fdbbcf0-956a-4da3-b8cd-46bb3279f8d1-column-120 h-[72px] px-4 py-2 w-[400px] text-white text-sm font-normal leading-normal">
+                        Q4 Accounts Review
+                      </td>
+                      <td class="table-8fdbbcf0-956a-4da3-b8cd-46bb3279f8d1-column-240 h-[72px] px-4 py-2 w-[400px] text-[#bab59c] text-sm font-normal leading-normal">
+                        2024-12-31
+                      </td>
+                      <td class="table-8fdbbcf0-956a-4da3-b8cd-46bb3279f8d1-column-360 h-[72px] px-4 py-2 w-60 text-sm font-normal leading-normal">
+                        <button
+                          class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 bg-[#393728] text-white text-sm font-medium leading-normal w-full"
+                        >
+                          <span class="truncate">In Progress</span>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr class="border-t border-t-[#54503b]">
+                      <td class="table-8fdbbcf0-956a-4da3-b8cd-46bb3279f8d1-column-120 h-[72px] px-4 py-2 w-[400px] text-white text-sm font-normal leading-normal">
+                        VAT Return Filing
+                      </td>
+                      <td class="table-8fdbbcf0-956a-4da3-b8cd-46bb3279f8d1-column-240 h-[72px] px-4 py-2 w-[400px] text-[#bab59c] text-sm font-normal leading-normal">
+                        2024-11-20
+                      </td>
+                      <td class="table-8fdbbcf0-956a-4da3-b8cd-46bb3279f8d1-column-360 h-[72px] px-4 py-2 w-60 text-sm font-normal leading-normal">
+                        <button
+                          class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 bg-[#393728] text-white text-sm font-medium leading-normal w-full"
+                        >
+                          <span class="truncate">Pending</span>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr class="border-t border-t-[#54503b]">
+                      <td class="table-8fdbbcf0-956a-4da3-b8cd-46bb3279f8d1-column-120 h-[72px] px-4 py-2 w-[400px] text-white text-sm font-normal leading-normal">
+                        Annual Tax Filing
+                      </td>
+                      <td class="table-8fdbbcf0-956a-4da3-b8cd-46bb3279f8d1-column-240 h-[72px] px-4 py-2 w-[400px] text-[#bab59c] text-sm font-normal leading-normal">
+                        2025-04-15
+                      </td>
+                      <td class="table-8fdbbcf0-956a-4da3-b8cd-46bb3279f8d1-column-360 h-[72px] px-4 py-2 w-60 text-sm font-normal leading-normal">
+                        <button
+                          class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 bg-[#393728] text-white text-sm font-medium leading-normal w-full"
+                        >
+                          <span class="truncate">Not Started</span>
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <style>
+                          @container(max-width:120px){.table-8fdbbcf0-956a-4da3-b8cd-46bb3279f8d1-column-120{display: none;}}
+                @container(max-width:240px){.table-8fdbbcf0-956a-4da3-b8cd-46bb3279f8d1-column-240{display: none;}}
+                @container(max-width:360px){.table-8fdbbcf0-956a-4da3-b8cd-46bb3279f8d1-column-360{display: none;}}
+              </style>
+            </div>
+            <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Shared Financial Documents</h2>
+            <div class="px-4 py-3 @container">
+              <div class="flex overflow-hidden rounded-lg border border-[#54503b] bg-[#181711]">
+                <table class="flex-1">
+                  <thead>
+                    <tr class="bg-[#27251b]">
+                      <th class="table-1220f9c4-c15f-44ee-b8d5-ba5a247170d1-column-120 px-4 py-3 text-left text-white w-[400px] text-sm font-medium leading-normal">Document</th>
+                      <th class="table-1220f9c4-c15f-44ee-b8d5-ba5a247170d1-column-240 px-4 py-3 text-left text-white w-[400px] text-sm font-medium leading-normal">Uploaded By</th>
+                      <th class="table-1220f9c4-c15f-44ee-b8d5-ba5a247170d1-column-360 px-4 py-3 text-left text-white w-[400px] text-sm font-medium leading-normal">Date</th>
+                      <th class="table-1220f9c4-c15f-44ee-b8d5-ba5a247170d1-column-480 px-4 py-3 text-left text-white w-60 text-[#bab59c] text-sm font-medium leading-normal">
+                        Action
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="border-t border-t-[#54503b]">
+                      <td class="table-1220f9c4-c15f-44ee-b8d5-ba5a247170d1-column-120 h-[72px] px-4 py-2 w-[400px] text-white text-sm font-normal leading-normal">
+                        Bank Statements
+                      </td>
+                      <td class="table-1220f9c4-c15f-44ee-b8d5-ba5a247170d1-column-240 h-[72px] px-4 py-2 w-[400px] text-[#bab59c] text-sm font-normal leading-normal">Client</td>
+                      <td class="table-1220f9c4-c15f-44ee-b8d5-ba5a247170d1-column-360 h-[72px] px-4 py-2 w-[400px] text-[#bab59c] text-sm font-normal leading-normal">
+                        2024-10-26
+                      </td>
+                      <td class="table-1220f9c4-c15f-44ee-b8d5-ba5a247170d1-column-480 h-[72px] px-4 py-2 w-60 text-[#bab59c] text-sm font-bold leading-normal tracking-[0.015em]">
+                        View/Download
+                      </td>
+                    </tr>
+                    <tr class="border-t border-t-[#54503b]">
+                      <td class="table-1220f9c4-c15f-44ee-b8d5-ba5a247170d1-column-120 h-[72px] px-4 py-2 w-[400px] text-white text-sm font-normal leading-normal">Invoices</td>
+                      <td class="table-1220f9c4-c15f-44ee-b8d5-ba5a247170d1-column-240 h-[72px] px-4 py-2 w-[400px] text-[#bab59c] text-sm font-normal leading-normal">Client</td>
+                      <td class="table-1220f9c4-c15f-44ee-b8d5-ba5a247170d1-column-360 h-[72px] px-4 py-2 w-[400px] text-[#bab59c] text-sm font-normal leading-normal">
+                        2024-10-20
+                      </td>
+                      <td class="table-1220f9c4-c15f-44ee-b8d5-ba5a247170d1-column-480 h-[72px] px-4 py-2 w-60 text-[#bab59c] text-sm font-bold leading-normal tracking-[0.015em]">
+                        View/Download
+                      </td>
+                    </tr>
+                    <tr class="border-t border-t-[#54503b]">
+                      <td class="table-1220f9c4-c15f-44ee-b8d5-ba5a247170d1-column-120 h-[72px] px-4 py-2 w-[400px] text-white text-sm font-normal leading-normal">Receipts</td>
+                      <td class="table-1220f9c4-c15f-44ee-b8d5-ba5a247170d1-column-240 h-[72px] px-4 py-2 w-[400px] text-[#bab59c] text-sm font-normal leading-normal">Client</td>
+                      <td class="table-1220f9c4-c15f-44ee-b8d5-ba5a247170d1-column-360 h-[72px] px-4 py-2 w-[400px] text-[#bab59c] text-sm font-normal leading-normal">
+                        2024-10-15
+                      </td>
+                      <td class="table-1220f9c4-c15f-44ee-b8d5-ba5a247170d1-column-480 h-[72px] px-4 py-2 w-60 text-[#bab59c] text-sm font-bold leading-normal tracking-[0.015em]">
+                        View/Download
+                      </td>
+                    </tr>
+                    <tr class="border-t border-t-[#54503b]">
+                      <td class="table-1220f9c4-c15f-44ee-b8d5-ba5a247170d1-column-120 h-[72px] px-4 py-2 w-[400px] text-white text-sm font-normal leading-normal">
+                        Previous Tax Returns
+                      </td>
+                      <td class="table-1220f9c4-c15f-44ee-b8d5-ba5a247170d1-column-240 h-[72px] px-4 py-2 w-[400px] text-[#bab59c] text-sm font-normal leading-normal">
+                        Accountant
+                      </td>
+                      <td class="table-1220f9c4-c15f-44ee-b8d5-ba5a247170d1-column-360 h-[72px] px-4 py-2 w-[400px] text-[#bab59c] text-sm font-normal leading-normal">
+                        2024-09-30
+                      </td>
+                      <td class="table-1220f9c4-c15f-44ee-b8d5-ba5a247170d1-column-480 h-[72px] px-4 py-2 w-60 text-[#bab59c] text-sm font-bold leading-normal tracking-[0.015em]">
+                        View/Download
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <style>
+                          @container(max-width:120px){.table-1220f9c4-c15f-44ee-b8d5-ba5a247170d1-column-120{display: none;}}
+                @container(max-width:240px){.table-1220f9c4-c15f-44ee-b8d5-ba5a247170d1-column-240{display: none;}}
+                @container(max-width:360px){.table-1220f9c4-c15f-44ee-b8d5-ba5a247170d1-column-360{display: none;}}
+                @container(max-width:480px){.table-1220f9c4-c15f-44ee-b8d5-ba5a247170d1-column-480{display: none;}}
+              </style>
+            </div>
+            <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Timeline or Activity Feed</h2>
+            <div class="grid grid-cols-[40px_1fr] gap-x-2 px-4">
+              <div class="flex flex-col items-center gap-1 pt-3">
+                <div class="text-white" data-icon="File" data-size="24px" data-weight="regular">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                    <path
+                      d="M213.66,82.34l-56-56A8,8,0,0,0,152,24H56A16,16,0,0,0,40,40V216a16,16,0,0,0,16,16H200a16,16,0,0,0,16-16V88A8,8,0,0,0,213.66,82.34ZM160,51.31,188.69,80H160ZM200,216H56V40h88V88a8,8,0,0,0,8,8h48V216Z"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="w-[1.5px] bg-[#54503b] h-2 grow"></div>
+              </div>
+              <div class="flex flex-1 flex-col py-3">
+                <p class="text-white text-base font-medium leading-normal">Document Uploaded</p>
+                <p class="text-[#bab59c] text-base font-normal leading-normal">Bank Statements uploaded by client</p>
+              </div>
+              <div class="flex flex-col items-center gap-1">
+                <div class="w-[1.5px] bg-[#54503b] h-2"></div>
+                <div class="text-white" data-icon="Check" data-size="24px" data-weight="regular">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                    <path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"></path>
+                  </svg>
+                </div>
+                <div class="w-[1.5px] bg-[#54503b] h-2 grow"></div>
+              </div>
+              <div class="flex flex-1 flex-col py-3">
+                <p class="text-white text-base font-medium leading-normal">Task Completed</p>
+                <p class="text-[#bab59c] text-base font-normal leading-normal">Q3 Accounts Review completed</p>
+              </div>
+              <div class="flex flex-col items-center gap-1 pb-3">
+                <div class="w-[1.5px] bg-[#54503b] h-2"></div>
+                <div class="text-white" data-icon="ChatCircleDots" data-size="24px" data-weight="regular">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                    <path
+                      d="M140,128a12,12,0,1,1-12-12A12,12,0,0,1,140,128ZM84,116a12,12,0,1,0,12,12A12,12,0,0,0,84,116Zm88,0a12,12,0,1,0,12,12A12,12,0,0,0,172,116Zm60,12A104,104,0,0,1,79.12,219.82L45.07,231.17a16,16,0,0,1-20.24-20.24l11.35-34.05A104,104,0,1,1,232,128Zm-16,0A88,88,0,1,0,51.81,172.06a8,8,0,0,1,.66,6.54L40,216,77.4,203.53a7.85,7.85,0,0,1,2.53-.42,8,8,0,0,1,4,1.08A88,88,0,0,0,216,128Z"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+              <div class="flex flex-1 flex-col py-3">
+                <p class="text-white text-base font-medium leading-normal">Accountant Feedback</p>
+                <p class="text-[#bab59c] text-base font-normal leading-normal">Provided feedback on Q3 review</p>
+              </div>
+            </div>
+            <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Accounting Goals &amp; Notes</h2>
+            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+              <label class="flex flex-col min-w-40 flex-1">
+                <p class="text-white text-base font-medium leading-normal pb-2">Accounting Goals</p>
+                <textarea
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-0 border border-[#54503b] bg-[#27251b] focus:border-[#54503b] min-h-36 placeholder:text-[#bab59c] p-[15px] text-base font-normal leading-normal"
+                ></textarea>
+              </label>
+            </div>
+            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+              <label class="flex flex-col min-w-40 flex-1">
+                <p class="text-white text-base font-medium leading-normal pb-2">Notes (Accountant Only)</p>
+                <textarea
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-0 border border-[#54503b] bg-[#27251b] focus:border-[#54503b] min-h-36 placeholder:text-[#bab59c] p-[15px] text-base font-normal leading-normal"
+                ></textarea>
+              </label>
+            </div>
+            <div class="flex justify-stretch">
+              <div class="flex flex-1 gap-3 flex-wrap px-4 py-3 justify-start">
+                <button
+                  class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#f2d00d] text-[#181711] text-sm font-bold leading-normal tracking-[0.015em]"
+                >
+                  <span class="truncate">Message Client</span>
+                </button>
+                <button
+                  class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#393728] text-white text-sm font-bold leading-normal tracking-[0.015em]"
+                >
+                  <span class="truncate">View Job Seeker Profile</span>
+                </button>
+              </div>
+            </div>
+            <div class="flex justify-stretch">
+              <div class="flex flex-1 gap-3 flex-wrap px-4 py-3 justify-start">
+                <button
+                  class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#393728] text-white text-sm font-bold leading-normal tracking-[0.015em]"
+                >
+                  <span class="truncate">Financial Dashboard</span>
+                </button>
+                <button
+                  class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#393728] text-white text-sm font-bold leading-normal tracking-[0.015em]"
+                >
+                  <span class="truncate">Billing Portal</span>
+                </button>
+              </div>
+            </div>
+            <div class="flex px-4 py-3 justify-start">
+              <button
+                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#393728] text-white text-sm font-bold leading-normal tracking-[0.015em]"
+              >
+                <span class="truncate">Initiate Tax Calculation</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

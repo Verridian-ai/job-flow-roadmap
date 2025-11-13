@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI Resume Agent</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#ffd900",
+              "background-light": "#f8f8f5",
+              "background-dark": "#2C2C2C",
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-white">
+<div class="relative flex h-screen w-full flex-col overflow-hidden">
+<!-- Top Nav Bar -->
+<header class="absolute top-0 left-0 right-0 z-20 flex items-center justify-between whitespace-nowrap px-6 py-4 lg:px-10">
+<div class="flex items-center gap-4">
+<div class="text-primary size-6">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 4H30.6666V17.3334H17.3334V30.6666H4V44H44V4Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-white text-xl font-bold tracking-tight">AI Resume Agent</h2>
+</div>
+<div class="flex items-center gap-4">
+<button class="flex h-10 w-10 cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-white/10 text-white transition-colors hover:bg-white/20">
+<span class="material-symbols-outlined text-2xl">settings</span>
+</button>
+<button class="flex h-10 w-10 cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-white/10 text-white transition-colors hover:bg-white/20">
+<span class="material-symbols-outlined text-2xl">help</span>
+</button>
+<div class="size-10 rounded-full bg-cover bg-center" data-alt="User's profile picture, an abstract colorful pattern" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBuZZRCksFqmgjO9MULKDiQzsHnxxEzjq9mzrtciEoNv12y_DoPuIgyvdpq67gCyunlAO97clWRp_Tb5QCNX1m9G_hEj0es5GtGJS9rUuk-1L5QDGJZXLHfWP_I9F0mm9fW3NDuUbk6-YqSRf2FT6urtO1d0TI0LuuGTJzZgRqAD4L8ELVn0ZipHDywnUpbOWm8PMR74gQ5Ggc8yS2p6uaB7svwaNeNFWESRJ6-WAzXUY60sLiYKa1ktSw7x-Zf_uu7W4y65taXAec");'></div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex flex-1 flex-col items-center justify-center pt-20">
+<!-- Video Player -->
+<div class="relative w-full max-w-4xl px-4">
+<div class="relative flex items-center justify-center rounded-xl border-2 border-primary bg-black shadow-lg shadow-primary/20 aspect-video" data-alt="Video feed of the AI Agent">
+<img alt="AI Agent Video Feed" class="h-full w-full rounded-lg object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHEpt253kazpjAa5KokNtjidjQ47L80ovgaiC0ftUh_nrc-0lSODKdWL4P03hsbJNM4ASvp9CMoId8rh2l-qs4q3nGdzW3woqoSuqwqIBQ6ffy5UMpBR8jmmN7QCPoZ6U_ZLkxa8y1zUrGkmulF9wS0w5HWK8goAWPa7dh8T7dE20kmc82-veliMLsgEHgrLVaQvR8LMY8Drf4JJstXvTFPY7cIkp3ZC_Ev6rJbS7JImQrZuDkub8P1c1GxY4OHXMssAyeyaE9l7Q"/>
+<button class="absolute flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-black/50 text-white backdrop-blur-sm transition-transform hover:scale-110">
+<span class="material-symbols-outlined text-5xl">play_circle</span>
+</button>
+</div>
+</div>
+<!-- Transcription Panel -->
+<div class="absolute bottom-0 left-0 right-0 z-10 flex flex-col items-center">
+<div class="w-full max-w-5xl rounded-t-xl bg-[rgba(44,44,44,0.8)] p-6 backdrop-blur-md">
+<div class="max-h-56 space-y-4 overflow-y-auto pr-4">
+<!-- Agent Message -->
+<div class="flex gap-4">
+<div class="size-10 flex-shrink-0 rounded-full bg-primary/20 p-2 text-primary">
+<svg class="h-full w-full" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 4H30.6666V17.3334H17.3334V30.6666H4V44H44V4Z" fill="currentColor"></path>
+</svg>
+</div>
+<div class="flex flex-1 flex-col items-start gap-1">
+<div class="flex flex-wrap items-center gap-3">
+<p class="text-primary text-base font-bold">Agent:</p>
+<p class="text-gray-400 text-sm">10:30 AM</p>
+</div>
+<p class="text-white text-base">Hello, I'm your AI Resume Agent. Tell me about a time you faced a challenge at work.</p>
+</div>
+</div>
+<!-- User Message -->
+<div class="flex gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 flex-shrink-0" data-alt="User's profile picture, an abstract colorful pattern" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuATpykdXudULjb1tTqcrirO1u_R9-eGSeJ8wZ38SxA7BjutLDB9moLMigDXBL31XZz59ZgrQFcvlMJBO3k4mxIrPvPJOEvhLSgPOkhs1-vy6X2IKQ3SXuQ5O7B7BAh8NZza_mIXwDi2DIT6Z6JX6dgdR7NG9gnHGgpal4QrqU_RUSxsUAhweSXOhcFx7iWYogxvaMvZ-JNKKzLGUwFwNJjAfhb28NXccc8jqhi5HhJjwRTv7j5AfworRSNT9FTljmgMAjh5zcgd9gI");'></div>
+<div class="flex flex-1 flex-col items-start gap-1">
+<div class="flex flex-wrap items-center gap-3">
+<p class="text-white text-base font-bold">You:</p>
+<p class="text-gray-400 text-sm">10:31 AM</p>
+</div>
+<p class="text-white text-base">Certainly. In my last role, we had to launch a new feature with a very tight deadline. The main challenge was coordinating between the design, engineering, and marketing teams to ensure we were all aligned and moving forward efficiently. We created a shared project timeline and held daily stand-ups, which dramatically improved communication. As a result, we successfully launched the feature on time, and it led to a 15% increase in user engagement within the first month.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Story Detected & Controls -->
+<div class="flex w-full max-w-5xl items-center justify-between bg-zinc-900/50 p-4">
+<!-- Story Detected Button -->
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 bg-primary px-5 text-black gap-2 text-base font-bold tracking-tight shadow-lg shadow-primary/30 transition-transform hover:scale-105">
+<span class="material-symbols-outlined animate-pulse">spark</span>
+<span class="truncate">Story detected! Would you like to save it?</span>
+</button>
+<!-- Conversation Controls -->
+<div class="flex items-center gap-2">
+<button class="flex h-12 w-12 items-center justify-center rounded-lg bg-white/10 text-white transition-colors hover:bg-white/20">
+<span class="material-symbols-outlined text-3xl">pause</span>
+</button>
+<button class="flex h-12 w-12 items-center justify-center rounded-lg bg-white/10 text-white transition-colors hover:bg-white/20">
+<span class="material-symbols-outlined text-3xl">play_arrow</span>
+</button>
+<button class="flex h-12 w-12 items-center justify-center rounded-lg bg-red-500/80 text-white transition-colors hover:bg-red-500">
+<span class="material-symbols-outlined text-3xl">stop</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Story Confirmation Modal -->
+<div class="absolute inset-0 z-30 flex items-center justify-center bg-black/70 p-4 backdrop-blur-sm">
+<div class="w-full max-w-2xl rounded-xl bg-background-dark border border-zinc-700 p-6 shadow-2xl">
+<div class="flex flex-col gap-6">
+<div class="text-center">
+<h3 class="text-2xl font-bold text-white">Review Your STAR Story</h3>
+<p class="text-gray-400 mt-1">Here's a summary of the story we detected. Review and save it to your profile.</p>
+</div>
+<div class="space-y-4">
+<div>
+<label class="text-sm font-bold text-primary">Situation</label>
+<p class="mt-1 text-white/90 rounded-lg bg-zinc-800 p-3">In my last role, we had to launch a new feature with a very tight deadline.</p>
+</div>
+<div>
+<label class="text-sm font-bold text-primary">Task</label>
+<p class="mt-1 text-white/90 rounded-lg bg-zinc-800 p-3">To coordinate between design, engineering, and marketing for an efficient and aligned launch.</p>
+</div>
+<div>
+<label class="text-sm font-bold text-primary">Action</label>
+<p class="mt-1 text-white/90 rounded-lg bg-zinc-800 p-3">I established a shared project timeline and initiated daily stand-up meetings to enhance communication and track progress.</p>
+</div>
+<div>
+<label class="text-sm font-bold text-primary">Result</label>
+<p class="mt-1 text-white/90 rounded-lg bg-zinc-800 p-3">The feature was launched successfully on schedule, resulting in a 15% increase in user engagement in the first month.</p>
+</div>
+</div>
+<div class="mt-2 flex justify-end gap-4">
+<button class="flex h-12 min-w-[120px] items-center justify-center rounded-lg bg-zinc-700 px-6 text-base font-bold text-white transition-colors hover:bg-zinc-600">Discard</button>
+<button class="flex h-12 min-w-[120px] items-center justify-center rounded-lg bg-primary px-6 text-base font-bold text-black transition-opacity hover:opacity-90">Save Story</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body></html>

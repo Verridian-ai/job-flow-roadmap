@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Login</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#f2d00d",
+              "background-light": "#f8f8f5",
+              "background-dark": "#121212",
+              "surface-dark": "#1f1f1f",
+              "border-dark": "#333333",
+              "text-light": "#E0E0E0",
+              "text-secondary": "#A0A0A0",
+              "error": "#FF4136",
+            },
+            fontFamily: {
+              "display": ["Lexend", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-text-light">
+<div class="relative flex h-auto min-h-screen w-full flex-col items-center justify-center p-4">
+<div class="layout-container flex h-full w-full max-w-md flex-col items-center justify-center">
+<div class="w-full rounded-xl bg-surface-dark p-8 shadow-lg border border-border-dark">
+<div class="flex flex-col items-center mb-6">
+<div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-background-dark" style="font-size: 32px;">auto_awesome</span>
+</div>
+<h1 class="text-text-light tracking-light text-2xl font-bold leading-tight text-center">Welcome Back</h1>
+<p class="text-text-secondary text-sm mt-1">Log in to continue your career journey.</p>
+</div>
+<div class="flex flex-col gap-4">
+<label class="flex flex-col w-full">
+<p class="text-text-light text-sm font-medium leading-normal pb-2">Email Address</p>
+<div class="relative flex w-full items-center">
+<span class="material-symbols-outlined absolute left-3 text-text-secondary">mail</span>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-light placeholder:text-text-secondary focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-border-dark bg-[#2A2A2A] h-12 py-2 pr-3 pl-10 text-base font-normal leading-normal" maxlength="254" placeholder="Enter your email" type="email" value=""/>
+</div>
+</label>
+<div class="flex flex-col w-full">
+<label class="flex flex-col">
+<p class="text-text-light text-sm font-medium leading-normal pb-2">Password</p>
+<div class="relative flex w-full flex-1 items-stretch">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-text-secondary">lock</span>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-light placeholder:text-text-secondary focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-border-dark bg-[#2A2A2A] h-12 py-2 pr-10 pl-10 text-base font-normal leading-normal" maxlength="64" minlength="8" placeholder="Enter your password" type="password" value=""/>
+<button class="absolute right-3 top-1/2 -translate-y-1/2 text-text-secondary hover:text-text-light">
+<span class="material-symbols-outlined">visibility</span>
+</button>
+</div>
+</label>
+<div class="flex justify-end w-full">
+<a class="text-primary/80 hover:text-primary text-sm font-normal leading-normal pt-2 underline" href="#">Forgot Password?</a>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-4 mt-6">
+<button class="flex h-12 w-full items-center justify-center rounded-lg bg-primary px-6 text-base font-bold text-background-dark transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:ring-offset-2 focus:ring-offset-surface-dark">Log In</button>
+</div>
+<div class="relative my-6 flex items-center justify-center">
+<div class="absolute w-full border-t border-border-dark"></div>
+<span class="relative bg-surface-dark px-2 text-sm text-text-secondary">OR</span>
+</div>
+<div class="flex flex-col gap-3">
+<button class="flex h-12 w-full items-center justify-center gap-3 rounded-lg border border-border-dark bg-[#333333] px-4 text-sm font-medium text-text-light transition-colors hover:bg-border-dark focus:outline-none focus:ring-2 focus:ring-primary/50 focus:ring-offset-2 focus:ring-offset-surface-dark">
+<img alt="Google logo" class="h-5 w-5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAf2RRcsseZP0jWAUlCKIZOdnBqcT-L7DXnxseivamd6dumKDJHAah4750PXz5f8lYdQQ58YgXJjQManWFY9uZba6jdDDGDe1MnpAQ6RJqRquWoZXa9OxtZGyuWh2spe0k6fgvNTC9qgv6fMpmJ0fIv5LAyqs1S8ScYYpkNtspAmIil6-bLINyndSrBHhY0gK_lAwSulqIqaotB1O8Thv_E5jyUCBVQia4l2saARiWMi52u-sbXn6bdekA6Hxey8W8uthiguLXQhyg"/>
+<span>Continue with Google</span>
+</button>
+<button class="flex h-12 w-full items-center justify-center gap-3 rounded-lg border border-border-dark bg-[#333333] px-4 text-sm font-medium text-text-light transition-colors hover:bg-border-dark focus:outline-none focus:ring-2 focus:ring-primary/50 focus:ring-offset-2 focus:ring-offset-surface-dark">
+<img alt="Microsoft logo" class="h-5 w-5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXarwns7G4r7oJmkqoXJLAijxl6P9XhgXb5kWSHqndnrKWheuZm4qdoQyo2wHBhe2Uu98HkrG8mEZPCVPKJEIHOetKe5bZT54jzklKqRsGR452pDASUonN4N5o2bervO8XuW6PKX-phe1OA4o4kx-syXpBbXzz2BuidOL55pGv0RwXm4xwudVnst7L1FjdZrELu8aPrArJfPUW4Kz2BN-_XtZGj4S75TytElZewAn25jlBPlOWycIiTDbb_rdwtuZse0QEiHpGcN8"/>
+<span>Continue with Microsoft</span>
+</button>
+<button class="flex h-12 w-full items-center justify-center gap-3 rounded-lg border border-border-dark bg-[#333333] px-4 text-sm font-medium text-text-light transition-colors hover:bg-border-dark focus:outline-none focus:ring-2 focus:ring-primary/50 focus:ring-offset-2 focus:ring-offset-surface-dark">
+<img alt="Apple logo" class="h-5 w-5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpPRFPb52r57HWIWXVJIkJDwL7bDxRSLlsPvHpboKHeWh94NkhoEFa_Tlclvwm9CI7djwyd96AIu8BxjH_V8Tr-nFquvptSzmRiAtwk9baTnei8gUMj5txu0AD-_u0JtBv1p7rVv86vxZ9uejXZnXjmjblkf3R3zQkc6hcP3kIhWVMenngn_LDMzUCgHSreRfGA2ghhUw92xH57th06wvUYtvcLkGXXhPESquaagNPTwqxO0KGIaTV8KA0IJebryw2h7nJClC86Dw"/>
+<span>Continue with Apple</span>
+</button>
+</div>
+<p class="text-center text-sm text-text-secondary pt-6">Don't have an account? <a class="font-semibold text-primary/80 hover:text-primary underline" href="#">Sign Up</a></p>
+</div>
+</div>
+</div>
+</body></html>

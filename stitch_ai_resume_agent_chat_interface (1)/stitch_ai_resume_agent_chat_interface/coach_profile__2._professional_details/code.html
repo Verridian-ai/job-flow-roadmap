@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Coach Profile Creation - Step 2</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#f9d406",
+              "background-light": "#f8f8f5",
+              "background-dark": "#1A1A1A",
+            },
+            fontFamily: {
+              "display": ["Manrope", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+      }
+    </style>
+</head>
+<body class="font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<div class="px-4 sm:px-8 md:px-16 lg:px-40 flex flex-1 justify-center py-5">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-white/10 px-4 sm:px-10 py-3">
+<div class="flex items-center gap-4 text-white">
+<div class="size-6 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 4H30.6666V17.3334H17.3334V30.6666H4V44H44V4Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">AI Resume Agent</h2>
+</div>
+<div class="flex flex-1 justify-end items-center gap-8">
+<div class="hidden md:flex items-center gap-9">
+<a class="text-white/80 hover:text-white text-sm font-medium leading-normal transition-colors" href="#">Dashboard</a>
+<a class="text-white/80 hover:text-white text-sm font-medium leading-normal transition-colors" href="#">My Clients</a>
+<a class="text-white/80 hover:text-white text-sm font-medium leading-normal transition-colors" href="#">Resources</a>
+<a class="text-white text-sm font-medium leading-normal" href="#">Settings</a>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 w-10 bg-white/10 text-white/80 hover:bg-white/20 transition-colors">
+<span class="material-symbols-outlined text-xl">notifications</span>
+</button>
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 w-10 bg-white/10 text-white/80 hover:bg-white/20 transition-colors">
+<span class="material-symbols-outlined text-xl">help</span>
+</button>
+</div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User avatar image" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCQ6dmmioO8BSJ6a6DeB8h4__X5FNwnMKZUbphspgAH1kp8eZtSCzA1uiFXW4SAnNmpcG4NgLr8wUf_4zyrApy7kq1ACkcaU0-AyRDyxDKw9mZVLVUwUQW-ea0ODl3uBkjgWe2ArEk5gJA4qcIdhaBYSyIx2LdgoNiY6bxLEsGalTtviwovvDTQzhHZ5kxe5j2peDfz1aRbDxVNmSIk9O1fAVNmKcZNvEeZU_bGFYPchiLTnE4XWwkZFkXsmJ2nyJjdjBOnQ8v3fHc");'></div>
+</div>
+</header>
+<main class="flex-grow p-4 sm:p-6 md:p-10 space-y-8">
+<div class="flex flex-col gap-3">
+<div class="flex flex-col sm:flex-row gap-2 justify-between items-start">
+<p class="text-[#E0E0E0] text-sm font-medium leading-normal">Step 2 of 6</p>
+</div>
+<div class="flex w-full gap-1.5">
+<div class="h-2 flex-1 rounded-full bg-[#2C2C2C]"></div>
+<div class="h-2 flex-1 rounded-full bg-primary"></div>
+<div class="h-2 flex-1 rounded-full bg-[#2C2C2C]"></div>
+<div class="h-2 flex-1 rounded-full bg-[#2C2C2C]"></div>
+<div class="h-2 flex-1 rounded-full bg-[#2C2C2C]"></div>
+<div class="h-2 flex-1 rounded-full bg-[#2C2C2C]"></div>
+</div>
+</div>
+<div class="flex flex-wrap justify-between gap-3">
+<div class="flex min-w-72 flex-col gap-3">
+<p class="text-[#E0E0E0] text-3xl md:text-4xl font-black leading-tight tracking-[-0.033em]">Professional Details</p>
+<p class="text-[#888888] text-base font-normal leading-normal">Showcase your expertise. This information helps us match you with the right clients.</p>
+</div>
+</div>
+<div class="space-y-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col">
+<div class="flex justify-between pb-2">
+<p class="text-[#E0E0E0] text-base font-medium leading-normal">Job Title</p>
+<p class="text-[#888888] text-sm">0/100</p>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#E0E0E0] focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-white/20 bg-[#2C2C2C] focus:border-primary h-12 placeholder:text-[#888888] p-3 text-base font-normal leading-normal" maxlength="100" placeholder="e.g., 'Career Coach', 'Tech Recruiter'" value=""/>
+</div>
+<div class="flex flex-col">
+<p class="text-[#E0E0E0] text-base font-medium leading-normal pb-2">Years of Coaching Experience</p>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#E0E0E0] focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-white/20 bg-[#2C2C2C] focus:border-primary h-12 placeholder:text-[#888888] p-3 text-base font-normal leading-normal" placeholder="e.g., 5" type="number" value=""/>
+</div>
+</div>
+<div class="flex flex-col">
+<div class="flex justify-between pb-2">
+<p class="text-[#E0E0E0] text-base font-medium leading-normal">Coaching Specialties</p>
+<p class="text-[#888888] text-sm">3/10</p>
+</div>
+<div class="flex flex-wrap items-center gap-2 rounded-lg border border-white/20 bg-[#2C2C2C] p-2 focus-within:border-primary focus-within:ring-2 focus-within:ring-primary/50">
+<span class="flex items-center gap-1.5 bg-primary/20 text-primary text-sm font-medium px-2.5 py-1 rounded-full">Tech Career Transition <button class="text-primary/70 hover:text-primary"><span class="material-symbols-outlined text-base">close</span></button></span>
+<span class="flex items-center gap-1.5 bg-primary/20 text-primary text-sm font-medium px-2.5 py-1 rounded-full">Salary Negotiation <button class="text-primary/70 hover:text-primary"><span class="material-symbols-outlined text-base">close</span></button></span>
+<span class="flex items-center gap-1.5 bg-primary/20 text-primary text-sm font-medium px-2.5 py-1 rounded-full">Executive Coaching <button class="text-primary/70 hover:text-primary"><span class="material-symbols-outlined text-base">close</span></button></span>
+<input class="flex-1 bg-transparent text-[#E0E0E0] placeholder:text-[#888888] focus:outline-none p-1 min-w-[150px]" placeholder="Add a specialty..."/>
+</div>
+</div>
+<div class="flex flex-col">
+<div class="flex justify-between pb-2">
+<p class="text-[#E0E0E0] text-base font-medium leading-normal">Target Client Demographics</p>
+<p class="text-[#888888] text-sm">2/5</p>
+</div>
+<div class="flex flex-wrap items-center gap-2 rounded-lg border border-white/20 bg-[#2C2C2C] p-2 focus-within:border-primary focus-within:ring-2 focus-within:ring-primary/50">
+<span class="flex items-center gap-1.5 bg-primary/20 text-primary text-sm font-medium px-2.5 py-1 rounded-full">Early Career Professionals <button class="text-primary/70 hover:text-primary"><span class="material-symbols-outlined text-base">close</span></button></span>
+<span class="flex items-center gap-1.5 bg-primary/20 text-primary text-sm font-medium px-2.5 py-1 rounded-full">Software Engineers <button class="text-primary/70 hover:text-primary"><span class="material-symbols-outlined text-base">close</span></button></span>
+<input class="flex-1 bg-transparent text-[#E0E0E0] placeholder:text-[#888888] focus:outline-none p-1 min-w-[150px]" placeholder="Add a demographic..."/>
+</div>
+</div>
+<div class="flex flex-col">
+<div class="flex justify-between pb-2">
+<p class="text-[#E0E0E0] text-base font-medium leading-normal">Professional Bio</p>
+<p class="text-[#888888] text-sm">150/500</p>
+</div>
+<textarea class="form-textarea flex w-full min-w-0 flex-1 resize-y overflow-hidden rounded-lg text-[#E0E0E0] focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-white/20 bg-[#2C2C2C] focus:border-primary placeholder:text-[#888888] p-3 text-base font-normal leading-normal" placeholder="Tell us about your professional background and coaching philosophy..." rows="5"></textarea>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row justify-between items-center gap-4 pt-6 border-t border-white/10">
+<button class="flex w-full sm:w-auto cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 bg-transparent text-[#E0E0E0] border border-white/20 hover:bg-white/10 gap-2 text-base font-bold leading-normal tracking-[0.015em] min-w-0 px-6 transition-colors">
+                                Back
+                            </button>
+<button class="flex w-full sm:w-auto cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 bg-primary text-black gap-2 text-base font-bold leading-normal tracking-[0.015em] min-w-0 px-6 hover:bg-yellow-400 transition-colors">
+                                Next
+                            </button>
+</div>
+</main>
+</div>
+</div>
+</div>
+</div>
+</body></html>

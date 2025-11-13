@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Learning Provider Integrations</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f2d00d",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#121212",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark">
+<div class="relative flex min-h-screen w-full flex-col">
+<div class="flex flex-1">
+<!-- SideNavBar -->
+<aside class="flex w-64 flex-col gap-4 border-r border-white/10 bg-[#181711] p-4">
+<div class="flex flex-col justify-between h-full">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="Profile picture of Alex Chen" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAtcJHYrJq61FkqkG1gBEv6RjoMdY7ewk-Jf_fo4ebZML33kBQz0rp9WOdNmfyB-mA3Lq9fcOf9ENFPI4E3Of0avcWWFkLg3wf8c35OGswu8x3DIhjsSanou7xZAuGC9_9LLHRiSX3vO5l8X0TNToWzXl6w8jantxGh-dDgqVYuMtYe0eByVJxRSJy-yklCAkECCIR_0mUQTBu56SndNxhNwumMSgeaM_L75GEk-LpTzG1TjvUrCbbSV8ocaw3W6kI6WzuYKZvYPhw");'></div>
+<div class="flex flex-col">
+<h1 class="text-white text-base font-medium leading-normal">Alex Chen</h1>
+<p class="text-white/60 text-sm font-normal leading-normal">Software Engineer</p>
+</div>
+</div>
+<nav class="flex flex-col gap-2 mt-4">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-white/80 hover:bg-white/10 transition-colors" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<p class="text-sm font-medium leading-normal">Dashboard</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-white/80 hover:bg-white/10 transition-colors" href="#">
+<span class="material-symbols-outlined">description</span>
+<p class="text-sm font-medium leading-normal">Resume Builder</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-white/80 hover:bg-white/10 transition-colors" href="#">
+<span class="material-symbols-outlined">pie_chart</span>
+<p class="text-sm font-medium leading-normal">Skill Gap Analysis</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-white/80 hover:bg-white/10 transition-colors" href="#">
+<span class="material-symbols-outlined">route</span>
+<p class="text-sm font-medium leading-normal">Learning Paths</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/20 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">settings</span>
+<p class="text-sm font-medium leading-normal">Settings</p>
+</a>
+</nav>
+</div>
+<div class="flex flex-col gap-1">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-white/80 hover:bg-white/10 transition-colors" href="#">
+<span class="material-symbols-outlined">help_center</span>
+<p class="text-sm font-medium leading-normal">Help Center</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-white/80 hover:bg-white/10 transition-colors" href="#">
+<span class="material-symbols-outlined">logout</span>
+<p class="text-sm font-medium leading-normal">Logout</p>
+</a>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 p-8">
+<div class="mx-auto max-w-4xl">
+<!-- PageHeading -->
+<div class="flex flex-wrap justify-between gap-3 mb-8">
+<div class="flex min-w-72 flex-col gap-3">
+<p class="text-white text-4xl font-black leading-tight tracking-[-0.033em]">Learning Provider Integrations</p>
+<p class="text-white/60 text-base font-normal leading-normal">Connect your accounts to automatically track your learning progress and close skill gaps.</p>
+</div>
+</div>
+<!-- ActionPanel -->
+<div class="mb-10 @container">
+<div class="flex flex-1 flex-col items-start justify-between gap-4 rounded-xl border border-white/10 bg-white/5 p-5 @[480px]:flex-row @[480px]:items-center">
+<div class="flex flex-col gap-1">
+<p class="text-white text-base font-bold leading-tight">Enable/Disable All Syncing</p>
+<p class="text-white/60 text-base font-normal leading-normal">Use this master switch for quick privacy control over all integrations.</p>
+</div>
+<label class="relative flex h-[31px] w-[51px] cursor-pointer items-center rounded-full border-none bg-white/20 p-0.5 has-[:checked]:justify-end has-[:checked]:bg-primary">
+<div class="h-full w-[27px] rounded-full bg-white transition-transform" style="box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 8px, rgba(0, 0, 0, 0.06) 0px 3px 1px;"></div>
+<input checked="" class="invisible absolute" type="checkbox"/>
+</label>
+</div>
+</div>
+<!-- SectionHeader -->
+<h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] mb-4">Available Integrations</h2>
+<!-- Integration Items Grid -->
+<div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+<!-- ListItem: Coursera (Connected) -->
+<div class="flex items-center gap-4 rounded-xl border border-white/10 bg-white/5 p-4 justify-between">
+<div class="flex items-center gap-4">
+<div class="flex size-14 items-center justify-center rounded-lg bg-white p-2">
+<img class="h-auto w-full object-contain" data-alt="Coursera Logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvRrBBnGbzaTzARChFhS3VqJUwpxmU3tW0K0aFZIun8DTwVcmQAxpS9iMU_pimDzR9-ysn5Q3kRhV2z108jtd_DAa02W3GWg-NGO_wYr9du8peSBn69nMlx_HV9LAnraGhk37AONPCneWOJ0faFf7G3yQ49vIfMcj-GfZLEYzPeEHwAKcuRf2Hx5dXL2Up4499jmlYT80_B9UROXIsR3d5u6QXDd-Gd5KsnPFC1mPevsyGlEm8ROIhJPzEe7211S-fdc3LURZ2CNQ"/>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-white text-base font-medium leading-normal line-clamp-1">Coursera</p>
+<p class="text-green-400 text-sm font-normal leading-normal line-clamp-2">Connected</p>
+</div>
+</div>
+<div class="shrink-0">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 bg-white/10 text-white hover:bg-white/20 text-sm font-medium leading-normal w-fit transition-colors">
+<span class="truncate">Manage</span>
+</button>
+</div>
+</div>
+<!-- ListItem: edX (Not Connected) -->
+<div class="flex items-center gap-4 rounded-xl border border-white/10 bg-white/5 p-4 justify-between">
+<div class="flex items-center gap-4">
+<div class="flex size-14 items-center justify-center rounded-lg bg-white p-2">
+<img class="h-auto w-full object-contain" data-alt="edX Logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcqolgf6BE8OUW5l8OfWfyCM_fE0eawpinqkp54d_12UwWas_arhk3Wmw51vFqFH_sfeIcyaQNr9jNtwAe8m9to2omeZn6473InDYOt8pgaSbWg7n1UTxbo9AN7UxHnDIlQloaVDu69JAX3tB1nFJmHKSI3ePwb7rKDLRoIUE-0WucqjbXuP_NB0OrLfCTY062QnxpDnk4qlXRCD9jW29UIwQbqdd9h8Ur1CcHDmz5aHjMwnnZdF7PQ3n8out0Q0PUgjJFvJf1wnc"/>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-white text-base font-medium leading-normal line-clamp-1">edX</p>
+<p class="text-white/60 text-sm font-normal leading-normal line-clamp-2">Not Connected</p>
+</div>
+</div>
+<div class="shrink-0">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 bg-primary text-black hover:bg-primary/90 text-sm font-medium leading-normal w-fit transition-colors">
+<span class="truncate">Connect</span>
+</button>
+</div>
+</div>
+<!-- ListItem: LinkedIn Learning (Error) -->
+<div class="flex items-center gap-4 rounded-xl border border-white/10 bg-white/5 p-4 justify-between">
+<div class="flex items-center gap-4">
+<div class="flex size-14 items-center justify-center rounded-lg bg-[#0A66C2] p-2">
+<img class="h-auto w-full object-contain" data-alt="LinkedIn Learning Logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCK9pgdSy11COTxLzxMHxhvlSHxpImxiFpyG73wMteMX5cET9JuyGliIo40e_qrqUcE4uIgj15xTYaPuV8MBL2DiTXDnpznhsxvLYjjuf5rO8wCybqgR8Fo7TFH4eAXnd64sILYSDqW88iNh4SrattBqgE_a32SIg5NhNgH2GhUKLb4opj7HE1lgf9lvrcW1PRGrQKTEd_dbrhyBNjTKM5Pb82IO0dX1nhAn88xwzf3NxzHr5OdSgJZZgusY1mxiicwKyfDD8i3Ph0"/>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-white text-base font-medium leading-normal line-clamp-1">LinkedIn Learning</p>
+<p class="text-red-400 text-sm font-normal leading-normal line-clamp-2">Sync Error</p>
+</div>
+</div>
+<div class="shrink-0">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 bg-red-500/20 text-red-400 hover:bg-red-500/30 text-sm font-medium leading-normal w-fit transition-colors">
+<span class="truncate">Reconnect</span>
+</button>
+</div>
+</div>
+<!-- ListItem: Udemy (Not Connected) -->
+<div class="flex items-center gap-4 rounded-xl border border-white/10 bg-white/5 p-4 justify-between">
+<div class="flex items-center gap-4">
+<div class="flex size-14 items-center justify-center rounded-lg bg-[#A435F0] p-2">
+<img class="h-auto w-full object-contain" data-alt="Udemy Logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8neO93Ez4QrpoZJOWFi3BFybRA_Soh68qNjSXuMXiOdxHLXxmznT4tem_MAA9GPW01vmAFD73E9lbLi84ioQNFz4UHm_1S3ehZGVzBgHEczsu4Ix-FXPwthdz_MByL9BfA3-520yu43jrLPCbPSDoXmK_kD-mse5DJ9LunjjvcIzbC7Byajp4Z-oM5ABpDJu_-fYYMW2uQLzBxkSm9My2nSlVvZbvdTIZZKJSmOeQp8sZ14mR_BX_B1PshRHVMTAaLGcMN7lkmm8"/>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-white text-base font-medium leading-normal line-clamp-1">Udemy</p>
+<p class="text-white/60 text-sm font-normal leading-normal line-clamp-2">Not Connected</p>
+</div>
+</div>
+<div class="shrink-0">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 bg-primary text-black hover:bg-primary/90 text-sm font-medium leading-normal w-fit transition-colors">
+<span class="truncate">Connect</span>
+</button>
+</div>
+</div>
+<!-- ListItem: Pluralsight (Not Connected) -->
+<div class="flex items-center gap-4 rounded-xl border border-white/10 bg-white/5 p-4 justify-between">
+<div class="flex items-center gap-4">
+<div class="flex size-14 items-center justify-center rounded-lg bg-black p-2">
+<img class="h-auto w-full object-contain" data-alt="Pluralsight Logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsryBS1MWEylD56KHaIffE9kxDhGzllYj6Yak4NICPLQqhlKO50ZrgoiXtm60HWPlgBewDBgL5S6B6ZD0lEiL8VfPetXeAxVVp3-QO0VmLaMo5TZk6dVm_2QploGnktaKhm_vEJ3hyi-bRBOBWbQwwuDgulv52s2ZiL3XRxUeBl53aVeJUjW3fRKWh6ypsMdD_-dQGKFt6HGNMcxRDvv2ip6HNJztkoQRA_-mPR2uDowVk8Kh-T8IzsuLdXM61YirkoxL72kFXcG4"/>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-white text-base font-medium leading-normal line-clamp-1">Pluralsight</p>
+<p class="text-white/60 text-sm font-normal leading-normal line-clamp-2">Not Connected</p>
+</div>
+</div>
+<div class="shrink-0">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 bg-primary text-black hover:bg-primary/90 text-sm font-medium leading-normal w-fit transition-colors">
+<span class="truncate">Connect</span>
+</button>
+</div>
+</div>
+<!-- ListItem: AWS (Connected) -->
+<div class="flex items-center gap-4 rounded-xl border border-white/10 bg-white/5 p-4 justify-between">
+<div class="flex items-center gap-4">
+<div class="flex size-14 items-center justify-center rounded-lg bg-white p-2">
+<img class="h-auto w-full object-contain" data-alt="AWS Skill Builder Logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBC_uPWrID-OrtNx4wcP-11p7BJLkskZ5rk7z4CP_yicoKdDOs4LYoTJym5I_pBtz3agxPsZJo7fE7lbl0GCOI-Zuoru4g2b3F4PKbrqcRs4XIip5tqxeMUhmFgefPHDrh6tPQJPqrcAeb_bBWJixbWOJ7v7v8zaiAyaHFM82MV3nMFsK5pvWiew0vQIJXP9ejpiMdheqeKTvr6vQMquZPSf7yHC1V4c7ENxOOQNc94l6gxpu4Ks7P7ygF-G_3Pt8HSOdMjA9rv7tY"/>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-white text-base font-medium leading-normal line-clamp-1">AWS Skill Builder</p>
+<p class="text-green-400 text-sm font-normal leading-normal line-clamp-2">Connected</p>
+</div>
+</div>
+<div class="shrink-0">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 bg-white/10 text-white hover:bg-white/20 text-sm font-medium leading-normal w-fit transition-colors">
+<span class="truncate">Manage</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Privacy & Data Section -->
+<div class="mt-12 text-center text-sm text-white/60">
+<div class="flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sky-400" style="font-size: 20px;">info</span>
+<p>We sync course completions and certificates to update your skill profile.</p>
+</div>
+<a class="text-sky-400 hover:text-sky-300 underline mt-1 inline-block" href="#">Learn more about data privacy.</a>
+</div>
+</div>
+</main>
+</div>
+</div>
+</body></html>

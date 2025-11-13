@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI Job Matches</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#f2d00d",
+              "background-light": "#f8f8f5",
+              "background-dark": "#121212",
+              "component-dark": "#1A1A1A",
+              "text-main-dark": "#E0E0E0",
+              "text-subtle-dark": "#888888",
+              "border-dark": "#2E2E2E"
+            },
+            fontFamily: {
+              "display": ["Manrope", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-text-main-dark">
+<div class="relative flex min-h-screen w-full">
+<!-- SideNavBar -->
+<aside class="flex-shrink-0 w-64 bg-background-light dark:bg-component-dark border-r border-border-dark">
+<div class="flex h-full min-h-[700px] flex-col justify-between p-4">
+<div class="flex flex-col gap-4">
+<div class="flex gap-3 items-center p-2">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBTskSWNnc-fEgdifw2BwwjRUXGu2R5eSX-JZLx0708meIXtvcx5nVyJGUGkv6vNX2csVitKMiWJDtXG71Mt_xXxll7mFvg5YD_fLYy2dtVjZoqqeuUdQT3-OcKUlbu7kbd8nyCVHY2FJ6_e4RGRrEqhurb_B1WQXYIpAIvHebddvzB7a8nnxjZcFdAhHe0zPKt4S0L5eXmR4a3dEaRFq131C6zpsVpr86rrZMn_Udm5TsUmce1XfLTxU6p2xmmOGO0SWtshuBkXn0");'></div>
+<div class="flex flex-col">
+<h1 class="text-black dark:text-white text-base font-medium leading-normal">John Doe</h1>
+<p class="text-gray-600 dark:text-text-subtle-dark text-sm font-normal leading-normal">Job Seeker</p>
+</div>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors" href="#">
+<span class="material-symbols-outlined text-gray-700 dark:text-gray-300">dashboard</span>
+<p class="text-gray-900 dark:text-white text-sm font-medium leading-normal">Dashboard</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/20" href="#">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">work</span>
+<p class="text-primary text-sm font-medium leading-normal">Job Matches</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors" href="#">
+<span class="material-symbols-outlined text-gray-700 dark:text-gray-300">description</span>
+<p class="text-gray-900 dark:text-white text-sm font-medium leading-normal">My Resumes</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors" href="#">
+<span class="material-symbols-outlined text-gray-700 dark:text-gray-300">person</span>
+<p class="text-gray-900 dark:text-white text-sm font-medium leading-normal">Profile</p>
+</a>
+</nav>
+</div>
+<div class="flex flex-col gap-1">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors" href="#">
+<span class="material-symbols-outlined text-gray-700 dark:text-gray-300">settings</span>
+<p class="text-gray-900 dark:text-white text-sm font-medium leading-normal">Settings</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors" href="#">
+<span class="material-symbols-outlined text-gray-700 dark:text-gray-300">help</span>
+<p class="text-gray-900 dark:text-white text-sm font-medium leading-normal">Help</p>
+</a>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 p-8 grid grid-cols-12 gap-8">
+<!-- Left Filter Column -->
+<div class="col-span-12 lg:col-span-3">
+<div class="sticky top-8">
+<div class="flex flex-col gap-6">
+<!-- Search Bar -->
+<div>
+<label class="flex flex-col min-w-40 h-12 w-full">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+<div class="text-text-subtle-dark flex border border-r-0 border-border-dark bg-component-dark items-center justify-center pl-4 rounded-l-lg">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-main-dark focus:outline-0 focus:ring-1 focus:ring-primary border border-l-0 border-border-dark bg-component-dark h-full placeholder:text-text-subtle-dark px-4 rounded-l-none pl-2 text-base font-normal leading-normal" placeholder="Search by job title, company..." value=""/>
+</div>
+</label>
+</div>
+<!-- Accordion Filters -->
+<div class="flex flex-col">
+<details class="flex flex-col border-t border-t-border-dark py-2 group" open="">
+<summary class="flex cursor-pointer items-center justify-between gap-6 py-2 list-none">
+<p class="text-text-main-dark text-sm font-medium leading-normal">Work Arrangement</p>
+<span class="material-symbols-outlined text-text-main-dark group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="flex flex-col gap-2 pt-2">
+<label class="flex items-center gap-2 cursor-pointer">
+<input checked="" class="form-checkbox h-4 w-4 rounded bg-component-dark border-border-dark text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-text-main-dark text-sm">Remote</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer">
+<input class="form-checkbox h-4 w-4 rounded bg-component-dark border-border-dark text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-text-main-dark text-sm">Hybrid</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer">
+<input class="form-checkbox h-4 w-4 rounded bg-component-dark border-border-dark text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-text-main-dark text-sm">On-site</span>
+</label>
+</div>
+</details>
+<details class="flex flex-col border-t border-t-border-dark py-2 group">
+<summary class="flex cursor-pointer items-center justify-between gap-6 py-2 list-none">
+<p class="text-text-main-dark text-sm font-medium leading-normal">Seniority Level</p>
+<span class="material-symbols-outlined text-text-main-dark group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="text-text-subtle-dark text-sm font-normal leading-normal pb-2">Checkboxes for Seniority levels</p>
+</details>
+<details class="flex flex-col border-t border-t-border-dark py-2 group">
+<summary class="flex cursor-pointer items-center justify-between gap-6 py-2 list-none">
+<p class="text-text-main-dark text-sm font-medium leading-normal">Industry</p>
+<span class="material-symbols-outlined text-text-main-dark group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="text-text-subtle-dark text-sm font-normal leading-normal pb-2">Checkboxes for Industries</p>
+</details>
+<details class="flex flex-col border-t border-b border-border-dark py-2 group">
+<summary class="flex cursor-pointer items-center justify-between gap-6 py-2 list-none">
+<p class="text-text-main-dark text-sm font-medium leading-normal">Salary Range</p>
+<span class="material-symbols-outlined text-text-main-dark group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="relative flex w-full flex-col items-start justify-between gap-3 pt-4">
+<div class="flex h-[38px] w-full pt-1.5">
+<div class="flex h-1 w-full rounded-sm bg-border-dark">
+<div class="relative w-full h-full">
+<div class="absolute h-full bg-primary" style="left: 20%; right: 40%;"></div>
+<div class="absolute -top-1.5" style="left: 20%;">
+<div class="relative">
+<div class="absolute -left-2 flex flex-col items-center gap-1">
+<div class="size-4 rounded-full bg-primary border-2 border-component-dark cursor-pointer"></div>
+<p class="text-text-main-dark text-sm font-normal leading-normal">$60k</p>
+</div>
+</div>
+</div>
+<div class="absolute -top-1.5" style="left: 60%;">
+<div class="relative">
+<div class="absolute -left-2 flex flex-col items-center gap-1">
+<div class="size-4 rounded-full bg-primary border-2 border-component-dark cursor-pointer"></div>
+<p class="text-text-main-dark text-sm font-normal leading-normal">$120k</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</details>
+</div>
+<!-- Filter Actions -->
+<div class="flex flex-col gap-3 pt-4">
+<button class="w-full text-center py-2.5 px-5 rounded-lg bg-primary text-black font-bold text-sm hover:bg-yellow-400 transition-colors">Apply Filters</button>
+<button class="w-full text-center py-2.5 px-5 rounded-lg bg-transparent text-text-subtle-dark font-medium text-sm hover:bg-component-dark transition-colors">Reset</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Job Listing Column -->
+<div class="col-span-12 lg:col-span-9">
+<div class="flex flex-col gap-6">
+<!-- Page Heading & Sort -->
+<div class="flex flex-wrap justify-between items-center gap-4">
+<div class="flex flex-col gap-1">
+<p class="text-white text-3xl font-black leading-tight tracking-[-0.03em]">Your AI Job Matches</p>
+<p class="text-text-subtle-dark text-base font-normal leading-normal">Showing 78 Matched Jobs</p>
+</div>
+<div class="flex items-center gap-2">
+<label class="text-sm text-text-subtle-dark" for="sort">Sort by:</label>
+<select class="form-select bg-component-dark border-border-dark rounded-lg text-sm text-text-main-dark focus:ring-primary focus:border-primary" id="sort">
+<option>Match Score</option>
+<option>Date Posted</option>
+<option>Salary</option>
+</select>
+</div>
+</div>
+<!-- Job Card Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+<!-- Job Card 1 -->
+<div class="flex flex-col justify-between p-6 bg-component-dark rounded-xl border border-border-dark hover:border-primary transition-colors group">
+<div class="flex flex-col gap-4">
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-3">
+<div class="size-12 rounded-lg bg-white flex items-center justify-center">
+<img alt="Google logo" class="h-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfrO9VmdZladhfpjxRGbpyIEq3YeswGT1z2M4w1EuzS_r9yot1TUH2FSVggQWfS_PsWc6V8lnCqET6owQ_74KJ-KFGvycx12_OZHhRX8V3G3x9uDHZbRz_xEYqy3EqXZplSEgm9pHXpblVI212yQmtynLKHQZfZ-BGTpI_KNRx7cbgUZoMu2NfsQQTIxpvwyiuGvO920QXr69s9YQjOZAApG2jXNzT57rAWEOMnI7thBPsFvE-gfBDykVldBa0-cxKiGSFIUsOWRg"/>
+</div>
+<div>
+<p class="text-text-main-dark font-semibold">Google</p>
+<p class="text-text-subtle-dark text-sm">Mountain View, CA</p>
+</div>
+</div>
+<div class="px-2.5 py-1 bg-primary/20 rounded-full">
+<p class="text-primary font-bold text-xs">92% Match</p>
+</div>
+</div>
+<div>
+<h3 class="text-text-main-dark text-lg font-bold">Senior Product Designer</h3>
+<p class="text-text-subtle-dark text-sm mt-1">$150k - $220k • Full-time</p>
+</div>
+<p class="text-text-subtle-dark text-sm line-clamp-2">Lead the design of innovative user experiences for our core products, from concept to launch.</p>
+</div>
+<div class="flex items-center justify-between mt-6 pt-4 border-t border-border-dark">
+<p class="text-xs text-text-subtle-dark">Posted 3 days ago</p>
+<div class="flex items-center gap-2">
+<button class="p-2 rounded-full hover:bg-gray-700 transition-colors">
+<span class="material-symbols-outlined text-text-subtle-dark text-xl">bookmark_border</span>
+</button>
+<button class="px-4 py-2 rounded-lg bg-primary/20 text-primary text-sm font-bold hover:bg-primary/30 transition-colors">View Details</button>
+</div>
+</div>
+</div>
+<!-- Job Card 2 -->
+<div class="flex flex-col justify-between p-6 bg-component-dark rounded-xl border border-border-dark hover:border-primary transition-colors group">
+<div class="flex flex-col gap-4">
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-3">
+<div class="size-12 rounded-lg bg-white flex items-center justify-center p-2">
+<img alt="Amazon logo" class="h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-tfycYcEwRhNZ_45dYLONSOyN-dkyMSQQQ3w3hjlPGdhaTalEvoeybP4k5Jmd0JJOI2HYByo-U-PF3qpIbzK_viHb0-iK7daWYQNbZvgWc8Ey82oyJKi2NukdvqEz1oAmNZlrlj0AFbZr3pZ4I3hCeU15bxqSG9qCgIflmJr1H_ZPKocciGTJLPQRoGJ7uVLOOi2D5OboPFqOZyz3aEtZaswkeoTfRTHmih5nGfbic-dAzansSKyGNqAv6AFFtoUBB5kjUCr2pnI"/>
+</div>
+<div>
+<p class="text-text-main-dark font-semibold">Amazon</p>
+<p class="text-text-subtle-dark text-sm">Seattle, WA (Remote)</p>
+</div>
+</div>
+<div class="px-2.5 py-1 bg-primary/20 rounded-full">
+<p class="text-primary font-bold text-xs">88% Match</p>
+</div>
+</div>
+<div>
+<h3 class="text-text-main-dark text-lg font-bold">Frontend Engineer</h3>
+<p class="text-text-subtle-dark text-sm mt-1">$130k - $190k • Full-time</p>
+</div>
+<p class="text-text-subtle-dark text-sm line-clamp-2">Build and maintain scalable, high-performance web applications using modern frameworks.</p>
+</div>
+<div class="flex items-center justify-between mt-6 pt-4 border-t border-border-dark">
+<p class="text-xs text-text-subtle-dark">Posted 1 day ago</p>
+<div class="flex items-center gap-2">
+<button class="p-2 rounded-full hover:bg-gray-700 transition-colors">
+<span class="material-symbols-outlined text-text-subtle-dark text-xl">bookmark_border</span>
+</button>
+<button class="px-4 py-2 rounded-lg bg-primary/20 text-primary text-sm font-bold hover:bg-primary/30 transition-colors">View Details</button>
+</div>
+</div>
+</div>
+<!-- Job Card 3 -->
+<div class="flex flex-col justify-between p-6 bg-component-dark rounded-xl border border-border-dark hover:border-primary transition-colors group">
+<div class="flex flex-col gap-4">
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-3">
+<div class="size-12 rounded-lg bg-black flex items-center justify-center p-2">
+<img alt="Netflix logo" class="h-5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8wTC6iVlUZLc-n_KR0wFvjeyYbKt7Pm6Xsjy2P0SAnTCdH8Tet1Yh4Q3jzwOUepYwCWQPona4WYHY_H2GBV39xYsBPeimVbQs7jg0bfB0nhg5xBm2lvf0pk02bwih6tYyVmldeeFHlGzmcbW3FFxAt_LKYUn8hnqhJnYP3oQPK1qrTjqdm7k-UkowiS8LKgIpRuRh0MC6kQ7MyhYLvjmS2yMsZJC7axBa72XWr71UGVh00cepdysyzUfgu-vAdOSi4z8TaqXNffs"/>
+</div>
+<div>
+<p class="text-text-main-dark font-semibold">Netflix</p>
+<p class="text-text-subtle-dark text-sm">Los Gatos, CA</p>
+</div>
+</div>
+<div class="px-2.5 py-1 bg-primary/20 rounded-full">
+<p class="text-primary font-bold text-xs">85% Match</p>
+</div>
+</div>
+<div>
+<h3 class="text-text-main-dark text-lg font-bold">Data Scientist, Growth</h3>
+<p class="text-text-subtle-dark text-sm mt-1">$170k - $250k • Full-time</p>
+</div>
+<p class="text-text-subtle-dark text-sm line-clamp-2">Analyze large datasets to extract actionable insights and drive user acquisition and retention strategies.</p>
+</div>
+<div class="flex items-center justify-between mt-6 pt-4 border-t border-border-dark">
+<p class="text-xs text-text-subtle-dark">Posted 5 days ago</p>
+<div class="flex items-center gap-2">
+<button class="p-2 rounded-full hover:bg-gray-700 transition-colors">
+<span class="material-symbols-outlined text-text-subtle-dark text-xl">bookmark_border</span>
+</button>
+<button class="px-4 py-2 rounded-lg bg-primary/20 text-primary text-sm font-bold hover:bg-primary/30 transition-colors">View Details</button>
+</div>
+</div>
+</div>
+<!-- Job Card 4 (Remote) -->
+<div class="flex flex-col justify-between p-6 bg-component-dark rounded-xl border border-border-dark hover:border-primary transition-colors group">
+<div class="flex flex-col gap-4">
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-3">
+<div class="size-12 rounded-lg bg-gray-700 flex items-center justify-center">
+<img alt="Shopify logo" class="h-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDffQW4TeUx7tCzINc_T6caEjnCap2kZXfAo2K6SEwrJDfIzjr7jFgUOiLTvWVSWcl8OODwhieG-SWOGL_dwU_OGlPyx3KnuHywPS7iDKPpTgVm2mQ2wTJR7-4gjk6sZneYb2AZ-youVSA2miMdnFCSVNP0Ad2dXwiAADJ3zyQAwY7YXRrppkSuJ8Ers4DM3WKOHwrLNvr_j40g7fOAlwwwKHMoOiV88mh0q3FI-jQUad8Q7KkfuxEq18kbswTnqjkgbpZEMs8Orrw"/>
+</div>
+<div>
+<p class="text-text-main-dark font-semibold">Shopify</p>
+<p class="text-text-subtle-dark text-sm">Remote</p>
+</div>
+</div>
+<div class="px-2.5 py-1 bg-primary/20 rounded-full">
+<p class="text-primary font-bold text-xs">82% Match</p>
+</div>
+</div>
+<div>
+<h3 class="text-text-main-dark text-lg font-bold">Content Strategist</h3>
+<p class="text-text-subtle-dark text-sm mt-1">$90k - $120k • Contract</p>
+</div>
+<p class="text-text-subtle-dark text-sm line-clamp-2">Develop and execute content strategies that align with business goals and resonate with our audience.</p>
+</div>
+<div class="flex items-center justify-between mt-6 pt-4 border-t border-border-dark">
+<p class="text-xs text-text-subtle-dark">Posted 1 week ago</p>
+<div class="flex items-center gap-2">
+<button class="p-2 rounded-full hover:bg-gray-700 transition-colors">
+<span class="material-symbols-outlined text-text-subtle-dark text-xl">bookmark</span>
+</button>
+<button class="px-4 py-2 rounded-lg bg-primary/20 text-primary text-sm font-bold hover:bg-primary/30 transition-colors">View Details</button>
+</div>
+</div>
+</div>
+<!-- Job Card 5 (No Match Score) -->
+<div class="flex flex-col justify-between p-6 bg-component-dark rounded-xl border border-border-dark hover:border-primary transition-colors group">
+<div class="flex flex-col gap-4">
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-3">
+<div class="size-12 rounded-lg bg-white flex items-center justify-center p-2">
+<img alt="Microsoft Teams logo" class="h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEAQbE6Hjm8Im1kUItay3vGX5ZtmE82DB6HrFxQKIow4SMcmSh1JTZoMF4mnVg4-D2ievdUeRaNJoVyz8D3O8PDCju-N0Gv32tANVx3whXbuV8xk1wGKEGZ5nvfh--68CLlZtUQapBMpPOylFUJL-1DJsOUX_ENKeBXCR-kkIMmikB9AoySopgS05uGU_ZNQUkdNsB3oJPOonDnI76xvTC2kwBJ43msJK9cMKgsrzTttc4PZtMG0AC_wlf3U3S95C-zF14kUAjpEY"/>
+</div>
+<div>
+<p class="text-text-main-dark font-semibold">Microsoft</p>
+<p class="text-text-subtle-dark text-sm">Redmond, WA (Hybrid)</p>
+</div>
+</div>
+<!-- No Match Score -->
+</div>
+<div>
+<h3 class="text-text-main-dark text-lg font-bold">Cloud Solutions Architect</h3>
+<p class="text-text-subtle-dark text-sm mt-1">Salary not specified</p>
+</div>
+<p class="text-text-subtle-dark text-sm line-clamp-2">Design and implement robust cloud solutions on the Azure platform for enterprise clients.</p>
+</div>
+<div class="flex items-center justify-between mt-6 pt-4 border-t border-border-dark">
+<p class="text-xs text-text-subtle-dark">Posted 2 days ago</p>
+<div class="flex items-center gap-2">
+<button class="p-2 rounded-full hover:bg-gray-700 transition-colors">
+<span class="material-symbols-outlined text-text-subtle-dark text-xl">bookmark_border</span>
+</button>
+<button class="px-4 py-2 rounded-lg bg-primary/20 text-primary text-sm font-bold hover:bg-primary/30 transition-colors">View Details</button>
+</div>
+</div>
+</div>
+<!-- Job Card 6 -->
+<div class="flex flex-col justify-between p-6 bg-component-dark rounded-xl border border-border-dark hover:border-primary transition-colors group">
+<div class="flex flex-col gap-4">
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-3">
+<div class="size-12 rounded-lg bg-[#000] flex items-center justify-center p-2">
+<img alt="Apple logo" class="h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWAoc_W-fySRVAH1hu9ebJqn_Rh37EGNiXmqdHmWDvlOFn-RORhWQhqPj8usPlwGpkz-uhzHVhc9OAh1Qr1jT5l91Q1z0lRN90_GBoNdGJ_qCmEBXkv8ddU4VncaKOdR3DOVeEQnk9GwRnvChmJ4solw1mDFU9NlqdJRlBbnpxZW_Sc2QMedCejG28GqMTHInr4P77nyTQ0IbL3L1ruiztZDeH5yEvYSYhS5-sQEQehC29XBYn8_SB0bSscunXKoGOKyV9uXTYOmo"/>
+</div>
+<div>
+<p class="text-text-main-dark font-semibold">Apple</p>
+<p class="text-text-subtle-dark text-sm">Cupertino, CA</p>
+</div>
+</div>
+<div class="px-2.5 py-1 bg-primary/20 rounded-full">
+<p class="text-primary font-bold text-xs">79% Match</p>
+</div>
+</div>
+<div>
+<h3 class="text-text-main-dark text-lg font-bold">iOS Engineer</h3>
+<p class="text-text-subtle-dark text-sm mt-1">$160k - $230k • Full-time</p>
+</div>
+<p class="text-text-subtle-dark text-sm line-clamp-2">Contribute to the development of groundbreaking features for iOS and other Apple platforms.</p>
+</div>
+<div class="flex items-center justify-between mt-6 pt-4 border-t border-border-dark">
+<p class="text-xs text-text-subtle-dark">Posted 8 days ago</p>
+<div class="flex items-center gap-2">
+<button class="p-2 rounded-full hover:bg-gray-700 transition-colors">
+<span class="material-symbols-outlined text-text-subtle-dark text-xl">bookmark_border</span>
+</button>
+<button class="px-4 py-2 rounded-lg bg-primary/20 text-primary text-sm font-bold hover:bg-primary/30 transition-colors">View Details</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="flex justify-center items-center gap-2 pt-8">
+<button class="size-9 flex items-center justify-center rounded-lg hover:bg-component-dark transition-colors">
+<span class="material-symbols-outlined text-text-subtle-dark">chevron_left</span>
+</button>
+<button class="size-9 flex items-center justify-center rounded-lg bg-primary text-black font-bold text-sm">1</button>
+<button class="size-9 flex items-center justify-center rounded-lg hover:bg-component-dark text-text-main-dark font-medium text-sm transition-colors">2</button>
+<button class="size-9 flex items-center justify-center rounded-lg hover:bg-component-dark text-text-main-dark font-medium text-sm transition-colors">3</button>
+<span class="text-text-subtle-dark">...</span>
+<button class="size-9 flex items-center justify-center rounded-lg hover:bg-component-dark text-text-main-dark font-medium text-sm transition-colors">10</button>
+<button class="size-9 flex items-center justify-center rounded-lg hover:bg-component-dark transition-colors">
+<span class="material-symbols-outlined text-text-subtle-dark">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

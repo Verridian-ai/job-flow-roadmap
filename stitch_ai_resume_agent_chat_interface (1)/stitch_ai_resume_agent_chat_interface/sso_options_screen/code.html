@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Single Sign-On</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f2d00d",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#221f10",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            font-size: 24px;
+        }
+        /* Custom styles for brand logos to handle their specific colors */
+        .logo-google { background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIj48cGF0aCBkPSJNMjAuMjc5MiAxMi4zMzE4QzIwLjI3OTIgMTEuNTc1NyAyMC4yMDgyIDExLjA3MzYgMjAuMDk0MiAxMC41ODVIMTJWMTQuMDYwNUgxNi43MDQ3QzE2LjQ5NjcgMTUuMDM5NyAxNS44NDY3IDE2LjI2NzMgMTQuNTIzMiAxNy4xNzg2TDE0LjQ5NzcgMTcuMjdMMTcuMzc4NyAxOS40OTQ1TDE3LjU5MzIgMTkuNTEzNkMxOS4zNjM3IDE3Ljg4ODIgMjAuMjc5MiAxNS4zNjI3IDIwLjI3OTIgMTIuMzMxOFoiIGZpbGw9IiM0Mjg1RjQiLz48cGF0aCBkPSJNMTIgMjAuMzg1QzE0LjI5MTQgMjAuMzg1IDE2LjE5NzcgMTkuNTc2OCAxNy41OTQyIDE4LjQxMDVMMTQuNTIzNyAxNi4wNzgyQzEzLjgyNDEgMTYuNjk1IDEyLjk4MzIgMTcuMDM3MyAxMiAxNy4wMzczQzkuODc5NTUgMTcuMDM3MyA4LjA4MTgyIDE1LjU4ODIgNy41NTMzNiAxMy42NTMyTDcuNDUzODkgMTMuNjM4Mkw0LjU1Nzg5IDE1Ljk0MTZMMC41MjQ1NSAxNS45NzQxQzYuMTMxMzYgMTguODE0MSA4Ljg5MzYzIDIwLjM4NSA_IDIwLjM4NVoiIGZpbGw9IiMzNEE4NTMiLz48cGF0aCBkPSJNNy41NTMzNiAxMi45NTMyQzcuMzM4MTggMTIuMzAxMSA3LjIxODE4IDExLjU5NzMgNy4yMTgxOCAxMS4wMDA5QzcuMjE4MTggMTAuNDAyMyA3LjMzODE4IDkuNjk4NDUgNy41NTMzNiA5LjA0NDU1TDcuNTI3NzMgOC45MjcxNEw0LjUyNTkzIDYuNjAwNDVMNC40NjggNi42MzI5MUMzLjg2MjczIDcuODAzNDEgMy41IDEwLjM3NzMgMy41IDExLjAwMDlDMy41IDEyLjYzNDUgMy44NjI3MyAxMy43ODI0IDQuNDY4IDE0Ljk1NDVMMTAuNTUzMzYgMTIuOTUzMloiIGZpbGw9IiNGQkJDMDUiLz48cGF0aCBkPSJNMTIgMy45NjQ1NUMxMy4wNjE0IDMuOTY0NSA_LjAzNjggNC40MDU5MSAxNC44MDY4IDUuMTMyNzNMMTcuNjgxOCAyLjM1ODQxQzE2LjE4MTQgMC45NDQzMTggMTQuMjkxNCAwIDEyIDBDOC44OTU5MSAwIDYuMTMxODIgMS41NzE1OSA0LjU3MzYzIDQuMDIwOTFMMS41NTM4NiA2LjM0OTMzQzguMDc4NjQgNC40MTMxOCA5Ljg3NzI3IDMuOTY0NTUgMTIgMy45NjQ1VoiIGZpbGw9IiNFQTQzMzUiLz48L3N2Zz4='); }
+        .logo-microsoft { background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIj48cGF0aCBkPSJNMTIuODU3MSAzSDE5LjcwOUMyMC40MTE4IDMgMjEgMy41ODgxNyAyMSA0LjI5MDlWMTAuMTQyOUgxMi44NTcxVjNaTTMgM0g5Ljg1NzE0VjEwLjE0MjlIM1Y0LjI5MDlDMyAzLjU4ODE3IDMuNTg4MTcgMyA0LjI5MDkgM0gyMS43MDlDMjIuNDExOCAzIDIzIDMuNTg4MTcgMjMgNC4yOTA5VjExLjE0MjlIMjNWMjAuNzcxNkMyMyAyMS40NzQ0IDIyLjQxMTggMjIgMjEuNzA5IDIySDMuMjkwOUMyLjU4ODE3IDIyIDIgMjEuNDc0NCAyIDIwLjc3MTZWM0g5Ljg1NzE0VjEyLjg1NzFIMy4yOTA5QzIuNTg4MTcgMTIuODU3MSAyIDEyLjI2ODkgMiAxMS41NjYxVjQuMjkwOUMyIDMuNTg4MTcgMi41ODgxNyAzIDMuMjkwOSAzSDNaTTQgMTMuODU3MUg5Ljg1NzE0VjIxSDRWMjAuNzcxNkMyLjU4ODE3IDIyLjEzMjYgMy41MjU1NiAyMC4wMTMyIDQgMTguNTc5NFYxMy44NTcxWk0xMS4xNDI5IDExLjE0MjlWMTMuODU3MUg0LjI5MDlDMi41ODgxNyAxMy44NTcxIDIgMTIuMjY4OSAyIDExLjU2NjFWMy4yOTA5QzIgMi41ODgxNyAyLjU4ODE3IDIgMy4yOTA5IDJIOS44NTcxNFYxMS4xNDI5SDExLjE0MjlaTTIxIDExLjE0MjlWMjAuNzcxNkMyMSAyMS40NzQ0IDIwLjQxMTggMjIgMTkuNzA5IDIySDExLjE0MjlWMTMuODU3MUgxOS43MDlDMjIuNDExOCAxMy44NTcxIDIxIDE1LjQ0NTcgMjEgMTEuMTQyOVoiIGZpbGw9IiNGMzAiLz48cGF0aCBkPSJNMTEuMTQyOSA3LjcxNDI5VjNIOUM2Ljc1NzM2IDMgMyA2Ljc1NzM2IDMgOVYxMS4xNDI5SDExLjE0MjlWNy43MTQyOVoiIGZpbGw9IiMwMEE0RTAiLz48cGF0aCBkPSJNMTEuMTQyOSA5VjExLjE0MjlIM1YxNUMzIDE3LjI0MjYgNi43NTczNiAyMSA5IDIxSDEwLjE0MjlWMTIuODU3MUg0LjI5MDlDNC4yOTA5IDkuMDAwMDIgNy4yNjE0MSA5IDkuOTk5OTkgOUgxMS4xNDI5WiIgZmlsbD0iIzc5QjMwMyIvPjxwYXRoIGQ9Ik0xMi44NTcxIDEyLjg1NzFWMTguNTcxNEMxMi44NTcxIDIwLjQ1MyAxNC4wOTM4IDIyIDE2LjY0MjkgMjJMMTkuNzA5IDIyVjExLjE0MjlIMTguNDI4NkMxMy44NTcxIDExLjE0MjkgMTIuODU3MSAxMy44NTcxIDEyLjg1NzEgMTIuODU3MVoiIGZpbGw9IiNGRkI5MDAiLz48L3N2Zz4='); }
+        .logo-apple { background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJ3aGl0ZSI+PHBhdGggZD0iTTE5LjI3MjcgMTIuNjg5OUMxOS4yNzI3IDEwLjM3MjQgMTguMDMxOCAxLjM3NzI3IDE1LjQzNjQgOC4zNzc5MUMxNC4zMTgzIDcuNzIzNDIgMTIuOTU0NSA3Ljc2OTggMTIuMDY4MiA4LjM5NTE0QzEwLjk0NDkgOC45Njc0OSAxMC4xMzE4IDEwLjEwNjMgMTAuMTE4MiAxMS40MjA3QzEwLjEwOTkgMTIuODk0OCAxMS4wMTA5IDE0LjEzMjkgMTIuMTg2NCAxNC4yNTM3QzEyLjA2MzYgMTQuMjU4OSAxNC4xMDU1IDE1LjY5MTEgMTQuNzM2NCAxNi4wMTE0QzE0LjcxODIgMTYuMDM2NCAxNC4yNDU1IDE3LjcwOTIgMTQuMjQ1NSAxNy43MDkyQzE0LjI0NTUgMTcuNzA5MiAxNi4zNzgxIDE2LjI0NzcgMTYuNDI3MyAxNi4yMDU0QzE2LjQ3MjcgMTYuMTY3OCAxOC4yNzcyIDE0Ljk4NjMgMTguMjgxOCAxNC45NTg3QzE2Ljc1OTUgMTQuMDQ4NyAxNi42NTQ1IDEyLjMxNTkgMTguMjA5MSAxMS4yNjQ4QzE4LjMyMjcgMTEuMTMxMSAxOS4zMzYzIDEyLjU0NzcgMTkuMzM2MyAxMi41NDc3QzE5LjMzMjIgMTIuNTQ0NyAxOS4yNzI3IDEyLjY4OTkgMTkuMjcyNyAxMi42ODk5WiIgaWQ9IlBhdGgtMTIiLz48cGF0aCBkPSJNMTIuNjY2MiAzLjgwMTA4QzEyLjEzNjggMy43OTUxOCAxMC44MTExIDQuMjMwNzUgMTAuMzMyMiA0LjU2MzE5QzkuMDk5MzUgNS40NTQwMyA4LjQ5MzM4IDYuODgwMTIgOC41NzM0MyA4LjU1ODgyQzguNjAyMzkgOC44NDUyNSA4Ljc2OTIzIDkuMTQ0OTggOS4wNTA2MSA5LjMwNjAyQzkuMzk2ODUgOS40OTk4NyA5LjgwMTg4IDkuNDMyODcgMTAuMTMyNSA5LjIwNTAyQzExLjU2NTUgNy43OTgxMiAxMi4yNzYyIDYuNTgxMDQgMTIuMjQ4MyA1LjA1MDA1QzEyLjI0ODQgNC42MTMyOCAxMi40OTgyIDQuMDgyMDIgMTIuNjA1NiAzLjg5ODQyQzEyLjYxMjYgMy44ODczNSAxMi42NjYyIDMuODAxMDggMTIuNjY2MiAzLjgwMTA4WiIgaWQ9IlBhdGgtMTMiLz48L3N2Zz4='); }
+        .logo-icon {
+            width: 24px;
+            height: 24px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<div class="px-4 md:px-10 flex flex-1 justify-center items-center py-10">
+<div class="layout-content-container flex flex-col w-full max-w-md flex-1">
+<!-- Error Message Alert -->
+<div class="flex flex-col items-center mb-6">
+<div class="flex items-center gap-3 p-4 rounded-lg bg-red-500/10 text-red-500 dark:bg-red-500/20 dark:text-red-400 w-full">
+<span class="material-symbols-outlined text-xl">error</span>
+<p class="text-sm font-medium">Authentication with Google failed. Please try again.</p>
+</div>
+</div>
+<!-- Page Heading -->
+<div class="flex flex-col items-center gap-3 p-4 text-center">
+<h1 class="text-gray-900 dark:text-white text-4xl font-black leading-tight tracking-[-0.033em] font-display">Welcome Back</h1>
+<p class="text-gray-600 dark:text-gray-400 text-base font-normal leading-normal">Sign in quickly with your preferred service.</p>
+</div>
+<!-- SSO Button Group -->
+<div class="flex justify-center mt-4">
+<div class="flex w-full flex-col items-stretch gap-3 px-4 py-3">
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center gap-3 overflow-hidden rounded-lg h-12 px-5 bg-gray-100 dark:bg-white/5 text-gray-900 dark:text-white text-base font-bold leading-normal tracking-[0.015em] w-full border border-transparent hover:border-primary focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/50 transition-colors">
+<span class="logo-icon logo-google"></span>
+<span class="truncate">Continue with Google</span>
+</button>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center gap-3 overflow-hidden rounded-lg h-12 px-5 bg-gray-100 dark:bg-white/5 text-gray-900 dark:text-white text-base font-bold leading-normal tracking-[0.015em] w-full border border-transparent hover:border-primary focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/50 transition-colors">
+<span class="logo-icon logo-microsoft"></span>
+<span class="truncate">Continue with Microsoft</span>
+</button>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center gap-3 overflow-hidden rounded-lg h-12 px-5 bg-gray-900 dark:bg-white text-white dark:text-black text-base font-bold leading-normal tracking-[0.015em] w-full border border-transparent hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-opacity">
+<span class="logo-icon logo-apple"></span>
+<span class="truncate">Continue with Apple</span>
+</button>
+</div>
+</div>
+<!-- Divider -->
+<div class="flex items-center gap-4 px-4 py-3">
+<hr class="w-full border-gray-200 dark:border-white/10"/>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal text-center">or</p>
+<hr class="w-full border-gray-200 dark:border-white/10"/>
+</div>
+<!-- Alternative Action Link -->
+<div class="flex justify-center pb-3 pt-1 px-4">
+<a class="text-gray-600 dark:text-gray-400 text-sm font-normal leading-normal text-center underline hover:text-primary dark:hover:text-primary transition-colors" href="#">Log in with your email</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body></html>

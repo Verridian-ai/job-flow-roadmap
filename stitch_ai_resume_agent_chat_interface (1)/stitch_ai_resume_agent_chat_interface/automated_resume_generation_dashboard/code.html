@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI Resume Writer</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#ffd900",
+              "background-light": "#f8f8f5",
+              "background-dark": "#23200f",
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+      }
+    </style>
+</head>
+<body class="font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-[#2C2C2C] dark group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#3E3E3E] px-10 py-3">
+<div class="flex items-center gap-4 text-[#F5F5F5]">
+<div class="size-6 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6_319)">
+<path d="M8.57829 8.57829C5.52816 11.6284 3.451 15.5145 2.60947 19.7452C1.76794 23.9758 2.19984 28.361 3.85056 32.3462C5.50128 36.3314 8.29667 39.7376 11.8832 42.134C15.4698 44.5305 19.6865 45.8096 24 45.8096C28.3135 45.8096 32.5302 44.5305 36.1168 42.134C39.7033 39.7375 42.4987 36.3314 44.1494 32.3462C45.8002 28.361 46.2321 23.9758 45.3905 19.7452C44.549 15.5145 42.4718 11.6284 39.4217 8.57829L24 24L8.57829 8.57829Z" fill="currentColor"></path>
+</g>
+<defs>
+<clippath id="clip0_6_319">
+<rect fill="white" height="48" width="48"></rect>
+</clippath>
+</defs>
+</svg>
+</div>
+<h2 class="text-[#F5F5F5] text-lg font-bold leading-tight tracking-[-0.015em]">AI Resume Writer</h2>
+</div>
+<div class="flex flex-1 justify-end gap-8">
+<div class="flex items-center gap-9">
+<a class="text-[#F5F5F5] text-sm font-medium leading-normal" href="#">Dashboard</a>
+<a class="text-primary text-sm font-bold leading-normal" href="#">My Resumes</a>
+<a class="text-[#F5F5F5] text-sm font-medium leading-normal" href="#">Career Tools</a>
+<a class="text-[#F5F5F5] text-sm font-medium leading-normal" href="#">Settings</a>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-[#181710] text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Upgrade</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User avatar image" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDdVyjy4glllJqvh1BPm3w3m9QPeTaHFcWKzNh2ZMloED8BwciaoHdeW3rxe7MqyVIsBU2RAavYsroH9AYj0AvgEXgxBASB1DcbHL8SVXxYdR3IspoS-2KE9DL8Kt56RARuYcjEUW8ELRmZJJtUn0OhDE1Bh2CLq6Qt3jp83XRqIFHhEvOj74U-C5dQMTiqir4hKs4yaLuVBJ0xbtRK0yMg9_sYBGvDr4-0xXcNtpJHkQIr2xhCwHtHojsmEJBKw1yuaeLNfs4Cccc");'></div>
+</div>
+</header>
+<main class="flex-1 p-10">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 h-full">
+<!-- Left Panel: Input & Analysis -->
+<div class="flex flex-col gap-6 p-6 bg-[#3E3E3E] rounded-xl">
+<p class="text-[#F5F5F5] text-2xl font-bold leading-tight tracking-[-0.033em]">Job Description Analysis</p>
+<div class="flex flex-col flex-1">
+<label class="flex flex-col min-w-40 flex-1 h-full">
+<p class="text-[#F5F5F5] text-base font-medium leading-normal pb-2">Job Description</p>
+<textarea class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#F5F5F5] focus:outline-0 focus:ring-2 focus:ring-primary border-none bg-[#2C2C2C] min-h-60 placeholder:text-gray-500 p-4 text-base font-normal leading-normal" placeholder="Paste the job description here..."></textarea>
+</label>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 w-full bg-primary text-[#181710] text-base font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Analyze Job Description</span>
+</button>
+<h3 class="text-[#F5F5F5] text-lg font-bold leading-tight tracking-[-0.015em] pt-4">Analysis Results</h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<div class="bg-[#2C2C2C] p-4 rounded-lg">
+<h4 class="text-[#F5F5F5] text-sm font-bold mb-2">Key Skills</h4>
+<div class="flex flex-wrap gap-2">
+<span class="bg-[#3E3E3E] text-[#F5F5F5] text-xs font-medium px-2 py-1 rounded-full">React</span>
+<span class="bg-[#3E3E3E] text-[#F5F5F5] text-xs font-medium px-2 py-1 rounded-full">Node.js</span>
+<span class="bg-[#3E3E3E] text-[#F5F5F5] text-xs font-medium px-2 py-1 rounded-full">Tailwind CSS</span>
+<span class="bg-[#3E3E3E] text-[#F5F5F5] text-xs font-medium px-2 py-1 rounded-full">UI/UX</span>
+</div>
+</div>
+<div class="bg-[#2C2C2C] p-4 rounded-lg">
+<h4 class="text-[#F5F5F5] text-sm font-bold mb-2">Keywords</h4>
+<div class="flex flex-wrap gap-2">
+<span class="bg-[#3E3E3E] text-[#F5F5F5] text-xs font-medium px-2 py-1 rounded-full">Agile</span>
+<span class="bg-[#3E3E3E] text-[#F5F5F5] text-xs font-medium px-2 py-1 rounded-full">Leadership</span>
+<span class="bg-[#3E3E3E] text-[#F5F5F5] text-xs font-medium px-2 py-1 rounded-full">API</span>
+</div>
+</div>
+<div class="bg-[#2C2C2C] p-4 rounded-lg">
+<h4 class="text-[#F5F5F5] text-sm font-bold mb-2">Experience Level</h4>
+<p class="text-[#F5F5F5] font-semibold">Senior (5+ years)</p>
+</div>
+</div>
+</div>
+<!-- Right Panel: Resume Preview & Generation -->
+<div class="flex flex-col gap-6 p-6 bg-[#3E3E3E] rounded-xl">
+<p class="text-[#F5F5F5] text-2xl font-bold leading-tight tracking-[-0.033em]">AI-Generated Resume</p>
+<div class="flex items-center gap-6 bg-[#2C2C2C] p-4 rounded-lg">
+<div class="relative size-32">
+<svg class="size-full" height="36" viewbox="0 0 36 36" width="36" xmlns="http://www.w3.org/2000/svg">
+<circle class="stroke-current text-[#4a4a4a]" cx="18" cy="18" fill="none" r="16" stroke-width="3"></circle>
+<circle class="stroke-current text-primary" cx="18" cy="18" fill="none" r="16" stroke-dasharray="100" stroke-dashoffset="15" stroke-width="3" transform="rotate(-90 18 18)"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="text-3xl font-black text-primary">85%</span>
+<span class="text-xs text-[#F5F5F5]">ATS Match</span>
+</div>
+</div>
+<div class="flex-1">
+<h4 class="text-[#F5F5F5] font-bold">Resume Preview</h4>
+<p class="text-sm text-gray-400">This is a live preview of your generated resume. Keywords matching the job description are highlighted.</p>
+<div class="flex items-center gap-2 mt-2">
+<span class="size-3 rounded-full bg-primary/30 border border-primary"></span>
+<span class="text-xs text-gray-400">Keyword Heatmap</span>
+</div>
+</div>
+</div>
+<div class="flex-1 bg-[#2C2C2C] rounded-lg p-4 overflow-y-auto min-h-72">
+<div class="text-[#F5F5F5] text-sm leading-relaxed">
+<h3 class="text-lg font-bold">Jane Doe</h3>
+<p class="text-xs">San Francisco, CA | (123) 456-7890 | jane.doe@email.com</p>
+<hr class="border-gray-600 my-2"/>
+<p>Dynamic Senior Software Engineer with over 8 years of experience in building scalable web applications. Proficient in <span class="bg-primary/20 rounded px-1">React</span>, <span class="bg-primary/20 rounded px-1">Node.js</span>, and modern frontend frameworks. Proven track record of <span class="bg-primary/20 rounded px-1">leadership</span> in agile environments and delivering high-quality code.</p>
+<h4 class="font-bold mt-3">Professional Experience</h4>
+<p class="font-semibold">Senior Engineer, Tech Corp (2018 - Present)</p>
+<ul class="list-disc pl-5 text-xs mt-1">
+<li>Led a team of 5 developers in an <span class="bg-primary/20 rounded px-1">Agile</span> workflow to rebuild the customer-facing dashboard using <span class="bg-primary/20 rounded px-1">React</span> and <span class="bg-primary/20 rounded px-1">Tailwind CSS</span>, improving user engagement by 30%.</li>
+<li>Developed a RESTful <span class="bg-primary/20 rounded px-1">API</span> service with <span class="bg-primary/20 rounded px-1">Node.js</span> that processed over 1 million requests per day.</li>
+</ul>
+</div>
+</div>
+<div>
+<details class="group">
+<summary class="flex items-center justify-between cursor-pointer bg-[#2C2C2C] p-3 rounded-lg text-[#F5F5F5] font-bold">
+                                    STAR Scoring Matrix
+                                    <span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="bg-[#2C2C2C] rounded-b-lg overflow-hidden">
+<table class="w-full text-left text-sm text-[#F5F5F5]">
+<thead class="bg-[#3E3E3E]">
+<tr>
+<th class="p-2">Story</th>
+<th class="p-2">Skill</th>
+<th class="p-2">JD Requirement</th>
+<th class="p-2 text-center">Match</th>
+</tr>
+</thead>
+<tbody>
+<tr class="border-t border-[#3E3E3E]">
+<td class="p-2">"Led a team of 5..."</td>
+<td class="p-2">Leadership</td>
+<td class="p-2">Team Lead</td>
+<td class="p-2 flex justify-center items-center"><span class="material-symbols-outlined text-green-500" title="High Confidence">check_circle</span></td>
+</tr>
+<tr class="border-t border-[#3E3E3E]">
+<td class="p-2">"Rebuilt dashboard..."</td>
+<td class="p-2">React</td>
+<td class="p-2">React Experience</td>
+<td class="p-2 flex justify-center items-center"><span class="material-symbols-outlined text-green-500" title="High Confidence">check_circle</span></td>
+</tr>
+<tr class="border-t border-[#3E3E3E]">
+<td class="p-2">"Developed RESTful API..."</td>
+<td class="p-2">API Design</td>
+<td class="p-2">Backend Experience</td>
+<td class="p-2 flex justify-center items-center"><span class="material-symbols-outlined text-yellow-500" title="Medium Confidence">warning</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>
+</div>
+<div class="flex items-center gap-4 mt-auto pt-4">
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 flex-1 bg-primary text-[#181710] text-base font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Generate Resume</span>
+</button>
+<div class="relative">
+<button class="group flex items-center gap-2 min-w-[84px] cursor-pointer justify-center overflow-hidden rounded-lg h-12 px-5 bg-gray-600 text-[#F5F5F5] text-base font-bold leading-normal tracking-[0.015em]">
+<span>Export As</span>
+<span class="material-symbols-outlined transition-transform group-focus-within:rotate-180">expand_more</span>
+</button>
+<div class="absolute bottom-full mb-2 w-full bg-gray-600 rounded-lg shadow-lg hidden group-focus-within:block">
+<a class="block px-4 py-2 text-sm text-[#F5F5F5] hover:bg-gray-500" href="#">PDF</a>
+<a class="block px-4 py-2 text-sm text-[#F5F5F5] hover:bg-gray-500" href="#">DOCX</a>
+<a class="block px-4 py-2 text-sm text-[#F5F5F5] hover:bg-gray-500" href="#">TXT</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,426 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
+    />
+
+    <title>Stitch Design</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  </head>
+  <body>
+    <div class="relative flex h-auto min-h-screen w-full flex-col bg-[#181711] dark group/design-root overflow-x-hidden" style='font-family: Inter, "Noto Sans", sans-serif;'>
+      <div class="layout-container flex h-full grow flex-col">
+        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#393728] px-10 py-3">
+          <div class="flex items-center gap-4 text-white">
+            <div class="size-4">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_6_319)">
+                  <path
+                    d="M8.57829 8.57829C5.52816 11.6284 3.451 15.5145 2.60947 19.7452C1.76794 23.9758 2.19984 28.361 3.85056 32.3462C5.50128 36.3314 8.29667 39.7376 11.8832 42.134C15.4698 44.5305 19.6865 45.8096 24 45.8096C28.3135 45.8096 32.5302 44.5305 36.1168 42.134C39.7033 39.7375 42.4987 36.3314 44.1494 32.3462C45.8002 28.361 46.2321 23.9758 45.3905 19.7452C44.549 15.5145 42.4718 11.6284 39.4217 8.57829L24 24L8.57829 8.57829Z"
+                    fill="currentColor"
+                  ></path>
+                </g>
+                <defs>
+                  <clipPath id="clip0_6_319"><rect width="48" height="48" fill="white"></rect></clipPath>
+                </defs>
+              </svg>
+            </div>
+            <h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">CareerCraft</h2>
+          </div>
+          <div class="flex flex-1 justify-end gap-8">
+            <div class="flex items-center gap-9">
+              <a class="text-white text-sm font-medium leading-normal" href="#">Dashboard</a>
+              <a class="text-white text-sm font-medium leading-normal" href="#">Resume Builder</a>
+              <a class="text-white text-sm font-medium leading-normal" href="#">Cover Letter</a>
+              <a class="text-white text-sm font-medium leading-normal" href="#">Portfolio</a>
+              <a class="text-white text-sm font-medium leading-normal" href="#">Interview Prep</a>
+              <a class="text-white text-sm font-medium leading-normal" href="#">Job Search</a>
+            </div>
+            <button
+              class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-[#393728] text-white gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5"
+            >
+              <div class="text-white" data-icon="Bell" data-size="20px" data-weight="regular">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                  <path
+                    d="M221.8,175.94C216.25,166.38,208,139.33,208,104a80,80,0,1,0-160,0c0,35.34-8.26,62.38-13.81,71.94A16,16,0,0,0,48,200H88.81a40,40,0,0,0,78.38,0H208a16,16,0,0,0,13.8-24.06ZM128,216a24,24,0,0,1-22.62-16h45.24A24,24,0,0,1,128,216ZM48,184c7.7-13.24,16-43.92,16-80a64,64,0,1,1,128,0c0,36.05,8.28,66.73,16,80Z"
+                  ></path>
+                </svg>
+              </div>
+            </button>
+            <div
+              class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
+              style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA1I21gwiBWXI_iEa-sQHkNg7GmDLhtHo4uriRnPJ0T6xmreo1EWuACckNFS02wy0x0Hh-aXhfbieHhMyQQQ3l2UZwa_JbRRG2eN-Y_J070eER-3KqNPppdSlza5F3XoiGG_hwC9DsETFasZ2IZZfrNfQO7cwjR-hidwJLQ3iwEp1b0UR7oY8OGskuJrWwRV2d-grtUaPQfsxjb6hvmq5beaMdCNUVuYDfTrXGu6pcq0oi_7MJLrJMRiR0ILmSa6MRtHSxy2rwmLrw");'
+            ></div>
+          </div>
+        </header>
+        <div class="px-40 flex flex-1 justify-center py-5">
+          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+            <div class="flex flex-wrap justify-between gap-3 p-4">
+              <div class="flex min-w-72 flex-col gap-3">
+                <p class="text-white tracking-light text-[32px] font-bold leading-tight">Public Roadmap</p>
+                <p class="text-[#bab59c] text-sm font-normal leading-normal">Track the progress of submitted feature requests and upvote the ones you'd like to see implemented.</p>
+              </div>
+            </div>
+            <div class="px-4 py-3">
+              <label class="flex flex-col min-w-40 h-12 w-full">
+                <div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+                  <div
+                    class="text-[#bab59c] flex border-none bg-[#393728] items-center justify-center pl-4 rounded-l-lg border-r-0"
+                    data-icon="MagnifyingGlass"
+                    data-size="24px"
+                    data-weight="regular"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                      <path
+                        d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <input
+                    placeholder="Search feature requests"
+                    class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-0 border-none bg-[#393728] focus:border-none h-full placeholder:text-[#bab59c] px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal"
+                    value=""
+                  />
+                </div>
+              </label>
+            </div>
+            <div class="flex gap-3 p-3 flex-wrap pr-4">
+              <div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#393728] pl-4 pr-4">
+                <p class="text-white text-sm font-medium leading-normal">My Subscribed Requests</p>
+              </div>
+            </div>
+            <div class="pb-3">
+              <div class="flex border-b border-[#54503b] px-4 gap-8">
+                <a class="flex flex-col items-center justify-center border-b-[3px] border-b-white text-white pb-[13px] pt-4" href="#">
+                  <p class="text-white text-sm font-bold leading-normal tracking-[0.015em]">Under Consideration</p>
+                </a>
+                <a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#bab59c] pb-[13px] pt-4" href="#">
+                  <p class="text-[#bab59c] text-sm font-bold leading-normal tracking-[0.015em]">Planned</p>
+                </a>
+                <a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#bab59c] pb-[13px] pt-4" href="#">
+                  <p class="text-[#bab59c] text-sm font-bold leading-normal tracking-[0.015em]">In Progress</p>
+                </a>
+                <a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#bab59c] pb-[13px] pt-4" href="#">
+                  <p class="text-[#bab59c] text-sm font-bold leading-normal tracking-[0.015em]">Completed</p>
+                </a>
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="flex items-stretch justify-between gap-4 rounded-lg">
+                <div class="flex flex-[2_2_0px] flex-col gap-4">
+                  <div class="flex flex-col gap-1">
+                    <p class="text-white text-base font-bold leading-tight">AI-Powered Resume Tailoring</p>
+                    <p class="text-[#bab59c] text-sm font-normal leading-normal">Automatically tailor your resume to match specific job descriptions using AI algorithms.</p>
+                  </div>
+                  <button
+                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 flex-row-reverse bg-[#393728] text-white text-sm font-medium leading-normal w-fit"
+                  >
+                    <span class="truncate">Upvote (12)</span>
+                  </button>
+                </div>
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex-1"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCGr1CX153irL0olZIibB38NWl_ipB0L381-HN59O13xI4KZrNDi-Xn_kGGRnNgt0V7ktcwodsl6EL1AGgdVO4d9BZmbCzFDWulIbzDBlWlQEiQU7GC3wN3fH_eIV1cfXIprC0FlcgO2-VFqUuNsChHf0qFodf8hA2uzFje0dyBn_7Tsexu3EtJWq9uAAHi6Cw85f8Dxk0l8cq9myASebXrNRfSJuGJfj_xFhkz6f0GstphJSRm4tE2RQzq6hrNTAT9NqU-sLiwXME");'
+                ></div>
+              </div>
+            </div>
+            <div class="flex items-center gap-4 bg-[#181711] px-4 min-h-14 justify-between">
+              <p class="text-white text-base font-normal leading-normal flex-1 truncate">Subscribe to Updates</p>
+              <div class="shrink-0">
+                <label
+                  class="relative flex h-[31px] w-[51px] cursor-pointer items-center rounded-full border-none bg-[#393728] p-0.5 has-[:checked]:justify-end has-[:checked]:bg-[#f2d00d]"
+                >
+                  <div class="h-full w-[27px] rounded-full bg-white" style="box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 8px, rgba(0, 0, 0, 0.06) 0px 3px 1px;"></div>
+                  <input type="checkbox" class="invisible absolute" />
+                </label>
+              </div>
+            </div>
+            <h3 class="text-white text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Comments</h3>
+            <div class="flex w-full flex-row items-start justify-start gap-3 p-4">
+              <div
+                class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-10 shrink-0"
+                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDXd_HY1119NCPkOLC26U-Q_f1w-v2e4uw8nWsz9t-pEarW6YcBftzZlB654ZdIouQoftNdkK_Skh3ym4bawpGAT2xUxcZpII_c3_09dm_qfSjMF6RgNaY2trCwmU0IrXxdq8NWszYH9vJhI1KAXn031I_PjuBHQOkpAeBrJlpzycyAcKFOjUU5aCMMYQLYU0m1FNGqC0ouxnOv86USUZPpisIqWFMhmm0mu9BPFlJuh36lRGp7v52XumuXk5Mc2Rwxh8GlNAXa8g8");'
+              ></div>
+              <div class="flex h-full flex-1 flex-col items-start justify-start">
+                <div class="flex w-full flex-row items-start justify-start gap-x-3">
+                  <p class="text-white text-sm font-bold leading-normal tracking-[0.015em]">Sophia Bennett</p>
+                  <p class="text-[#bab59c] text-sm font-normal leading-normal">2d ago</p>
+                </div>
+                <p class="text-white text-sm font-normal leading-normal">
+                  This feature would be a game-changer! I'm constantly tweaking my resume for different roles, and this would save so much time.
+                </p>
+              </div>
+            </div>
+            <div class="flex flex-wrap gap-4 px-4 py-2 py-2">
+              <div class="flex items-center justify-center gap-2 px-3 py-2">
+                <div class="text-[#bab59c]" data-icon="ThumbsUp" data-size="24px" data-weight="regular">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                    <path
+                      d="M234,80.12A24,24,0,0,0,216,72H160V56a40,40,0,0,0-40-40,8,8,0,0,0-7.16,4.42L75.06,96H32a16,16,0,0,0-16,16v88a16,16,0,0,0,16,16H204a24,24,0,0,0,23.82-21l12-96A24,24,0,0,0,234,80.12ZM32,112H72v88H32ZM223.94,97l-12,96a8,8,0,0,1-7.94,7H88V105.89l36.71-73.43A24,24,0,0,1,144,56V80a8,8,0,0,0,8,8h64a8,8,0,0,1,7.94,9Z"
+                    ></path>
+                  </svg>
+                </div>
+                <p class="text-[#bab59c] text-[13px] font-bold leading-normal tracking-[0.015em]">5</p>
+              </div>
+            </div>
+            <div class="flex w-full flex-row items-start justify-start gap-3 p-4">
+              <div
+                class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-10 shrink-0"
+                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBvgMDMj8oFpJqaEQw4rCa3KS-KC6xmvmn--AOxBNWss4ln5IOtDsPhIYcUqP-fwjVp5ahltPjW6mEnuZe7oRfjAWIZe14Wgt9mFRLaZHlRVLO4TC7u7MS0tE4nn0Fcd_98JIaj0DYN2stN18s507gZkenQ8Z2wKJkBD947pjW--Iq_ZVTBhq1V96cg2qG1f4I4j8M2vL5cqF5KliRbFIkQI_xYaBruEB67MHIpX_RM8V3m0Hzxn971MT1ZDf0AEoJqMOV7Aeu7OO8");'
+              ></div>
+              <div class="flex h-full flex-1 flex-col items-start justify-start">
+                <div class="flex w-full flex-row items-start justify-start gap-x-3">
+                  <p class="text-white text-sm font-bold leading-normal tracking-[0.015em]">Ethan Carter</p>
+                  <p class="text-[#bab59c] text-sm font-normal leading-normal">1d ago</p>
+                </div>
+                <p class="text-white text-sm font-normal leading-normal">
+                  Agreed! It's a must-have for anyone serious about their job search. The ability to customize resumes quickly is crucial.
+                </p>
+              </div>
+            </div>
+            <div class="flex flex-wrap gap-4 px-4 py-2 py-2">
+              <div class="flex items-center justify-center gap-2 px-3 py-2">
+                <div class="text-[#bab59c]" data-icon="ThumbsUp" data-size="24px" data-weight="regular">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                    <path
+                      d="M234,80.12A24,24,0,0,0,216,72H160V56a40,40,0,0,0-40-40,8,8,0,0,0-7.16,4.42L75.06,96H32a16,16,0,0,0-16,16v88a16,16,0,0,0,16,16H204a24,24,0,0,0,23.82-21l12-96A24,24,0,0,0,234,80.12ZM32,112H72v88H32ZM223.94,97l-12,96a8,8,0,0,1-7.94,7H88V105.89l36.71-73.43A24,24,0,0,1,144,56V80a8,8,0,0,0,8,8h64a8,8,0,0,1,7.94,9Z"
+                    ></path>
+                  </svg>
+                </div>
+                <p class="text-[#bab59c] text-[13px] font-bold leading-normal tracking-[0.015em]">3</p>
+              </div>
+            </div>
+            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+              <label class="flex flex-col min-w-40 flex-1">
+                <textarea
+                  placeholder="Add a comment..."
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-0 border border-[#54503b] bg-[#27251b] focus:border-[#54503b] min-h-36 placeholder:text-[#bab59c] p-[15px] text-base font-normal leading-normal"
+                ></textarea>
+              </label>
+            </div>
+            <div class="flex px-4 py-3 justify-end">
+              <button
+                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#f2d00d] text-[#181711] text-sm font-bold leading-normal tracking-[0.015em]"
+              >
+                <span class="truncate">Add Comment</span>
+              </button>
+            </div>
+            <div class="p-4">
+              <div class="flex items-stretch justify-between gap-4 rounded-lg">
+                <div class="flex flex-[2_2_0px] flex-col gap-4">
+                  <div class="flex flex-col gap-1">
+                    <p class="text-white text-base font-bold leading-tight">Enhanced Interview Simulation</p>
+                    <p class="text-[#bab59c] text-sm font-normal leading-normal">
+                      Practice for interviews with realistic simulations, including AI-generated questions and feedback.
+                    </p>
+                  </div>
+                  <button
+                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 flex-row-reverse bg-[#393728] text-white text-sm font-medium leading-normal w-fit"
+                  >
+                    <span class="truncate">Upvote (8)</span>
+                  </button>
+                </div>
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex-1"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBnhc0wvMWC7Z5Gd-y1O_SX9WdPrz0_cXzAMKLLLEUdT6t0baODpidu7kQ4bn9CVygDj1P2icJNA0UnH1UawUBSM8vBoxP5cz1L3kopVtxln_JWlgycoG2dnxIl0FE-IiN7Sre7Q37fW9-gbKcxU9oKIwVQzItZx1tzmMyq-MaL02xo549aPZq7jNEUTSfhdP3iv83lJ6pq7mY6xD2XD2nQ-QHBDXrhBEaBG6jiMAjDlWHLD8H-FJXOHzHJZwapriOXFTYthpH0yxE");'
+                ></div>
+              </div>
+            </div>
+            <div class="flex items-center gap-4 bg-[#181711] px-4 min-h-14 justify-between">
+              <p class="text-white text-base font-normal leading-normal flex-1 truncate">Subscribe to Updates</p>
+              <div class="shrink-0">
+                <label
+                  class="relative flex h-[31px] w-[51px] cursor-pointer items-center rounded-full border-none bg-[#393728] p-0.5 has-[:checked]:justify-end has-[:checked]:bg-[#f2d00d]"
+                >
+                  <div class="h-full w-[27px] rounded-full bg-white" style="box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 8px, rgba(0, 0, 0, 0.06) 0px 3px 1px;"></div>
+                  <input type="checkbox" class="invisible absolute" />
+                </label>
+              </div>
+            </div>
+            <h3 class="text-white text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Comments</h3>
+            <div class="flex w-full flex-row items-start justify-start gap-3 p-4">
+              <div
+                class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-10 shrink-0"
+                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCdDlqqE0Lf2Odyq4-yfMzK0Q05bMthB1Q0K7-_IIx5FWu9NjkJK328fS6_t61UD1NDOhOog7vQ9SCcxvmXc1dxoD7lZAlEPuYX_8WfZR8XPPuKMVhn7E3c58VoM9APMz0g8v2QgwqRF0PZ2u3sSO6zSW3ZFeXUQXEV9c7GiWnEr6KhDUrrodBfvxoDH_ZqTTohNXM79wVpZOEL8KnzIKkjogn42z5jGqY1gJOvG54xdaybitnpG63WWcpjFCGgSAvW4m18oN5SVyw");'
+              ></div>
+              <div class="flex h-full flex-1 flex-col items-start justify-start">
+                <div class="flex w-full flex-row items-start justify-start gap-x-3">
+                  <p class="text-white text-sm font-bold leading-normal tracking-[0.015em]">Olivia Harper</p>
+                  <p class="text-[#bab59c] text-sm font-normal leading-normal">3d ago</p>
+                </div>
+                <p class="text-white text-sm font-normal leading-normal">
+                  I've been using the current interview prep, and it's good, but this would take it to the next level. More realistic scenarios are always welcome.
+                </p>
+              </div>
+            </div>
+            <div class="flex flex-wrap gap-4 px-4 py-2 py-2">
+              <div class="flex items-center justify-center gap-2 px-3 py-2">
+                <div class="text-[#bab59c]" data-icon="ThumbsUp" data-size="24px" data-weight="regular">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                    <path
+                      d="M234,80.12A24,24,0,0,0,216,72H160V56a40,40,0,0,0-40-40,8,8,0,0,0-7.16,4.42L75.06,96H32a16,16,0,0,0-16,16v88a16,16,0,0,0,16,16H204a24,24,0,0,0,23.82-21l12-96A24,24,0,0,0,234,80.12ZM32,112H72v88H32ZM223.94,97l-12,96a8,8,0,0,1-7.94,7H88V105.89l36.71-73.43A24,24,0,0,1,144,56V80a8,8,0,0,0,8,8h64a8,8,0,0,1,7.94,9Z"
+                    ></path>
+                  </svg>
+                </div>
+                <p class="text-[#bab59c] text-[13px] font-bold leading-normal tracking-[0.015em]">2</p>
+              </div>
+            </div>
+            <div class="flex w-full flex-row items-start justify-start gap-3 p-4">
+              <div
+                class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-10 shrink-0"
+                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBhYhi4GnIaZeZOQCS3U3ZYfo7PsdQNZX8tzJznFhiiw7b_OgJQnMmwJvOUQzBGbk31oslMmzVgnidy94rydBQEktKdrhNe_KozxWkcqPSOoEqhSH8KY3HwTIHT-tVtJDWDCKAv20Ovlm0F7GU1Od5Ia47SbjM4zY0QQwJiXSwIrOpVFW5lsu2xutxpMI9k_xIP3IPTNlfYbwB0ql_837H2N5YwpG5CRVMToa_kqSvHFrr5PcDzLpE26-yJoUHigUdYpk6gMXi1dj8");'
+              ></div>
+              <div class="flex h-full flex-1 flex-col items-start justify-start">
+                <div class="flex w-full flex-row items-start justify-start gap-x-3">
+                  <p class="text-white text-sm font-bold leading-normal tracking-[0.015em]">Liam Walker</p>
+                  <p class="text-[#bab59c] text-sm font-normal leading-normal">2d ago</p>
+                </div>
+                <p class="text-white text-sm font-normal leading-normal">
+                  The AI feedback sounds particularly useful. Knowing what you're doing well and where you need to improve is key.
+                </p>
+              </div>
+            </div>
+            <div class="flex flex-wrap gap-4 px-4 py-2 py-2">
+              <div class="flex items-center justify-center gap-2 px-3 py-2">
+                <div class="text-[#bab59c]" data-icon="ThumbsUp" data-size="24px" data-weight="regular">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                    <path
+                      d="M234,80.12A24,24,0,0,0,216,72H160V56a40,40,0,0,0-40-40,8,8,0,0,0-7.16,4.42L75.06,96H32a16,16,0,0,0-16,16v88a16,16,0,0,0,16,16H204a24,24,0,0,0,23.82-21l12-96A24,24,0,0,0,234,80.12ZM32,112H72v88H32ZM223.94,97l-12,96a8,8,0,0,1-7.94,7H88V105.89l36.71-73.43A24,24,0,0,1,144,56V80a8,8,0,0,0,8,8h64a8,8,0,0,1,7.94,9Z"
+                    ></path>
+                  </svg>
+                </div>
+                <p class="text-[#bab59c] text-[13px] font-bold leading-normal tracking-[0.015em]">4</p>
+              </div>
+            </div>
+            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+              <label class="flex flex-col min-w-40 flex-1">
+                <textarea
+                  placeholder="Add a comment..."
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-0 border border-[#54503b] bg-[#27251b] focus:border-[#54503b] min-h-36 placeholder:text-[#bab59c] p-[15px] text-base font-normal leading-normal"
+                ></textarea>
+              </label>
+            </div>
+            <div class="flex px-4 py-3 justify-end">
+              <button
+                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#f2d00d] text-[#181711] text-sm font-bold leading-normal tracking-[0.015em]"
+              >
+                <span class="truncate">Add Comment</span>
+              </button>
+            </div>
+            <div class="p-4">
+              <div class="flex items-stretch justify-between gap-4 rounded-lg">
+                <div class="flex flex-[2_2_0px] flex-col gap-4">
+                  <div class="flex flex-col gap-1">
+                    <p class="text-white text-base font-bold leading-tight">Personalized Career Path Recommendations</p>
+                    <p class="text-[#bab59c] text-sm font-normal leading-normal">Receive tailored career path suggestions based on your skills, experience, and interests.</p>
+                  </div>
+                  <button
+                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 flex-row-reverse bg-[#393728] text-white text-sm font-medium leading-normal w-fit"
+                  >
+                    <span class="truncate">Upvote (5)</span>
+                  </button>
+                </div>
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex-1"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBNrGinluyzY55vMBh0kb55LdEaV-t6RdGTyzc1y97HGX_8NLAILZ0xdarknYl6aCPdxfcZ4SaNitRUlR46aZ0tv-onJQq78ARbvRE7mXOFvcTc4riNwOHG-A2nwfFU4KQ3TIjWPCMskbTDqYZyFyoQELJAXYTH9pB_U_md7RlLjVAgoEZn2t4hjtILcqoZbtZQv7RUFPXIWAjgSxwp0DWhYYWz6RhqhaNHYxit05-gMheJ7Mf40NyTSK_Jx7qY0nWZrKQd3rEkCio");'
+                ></div>
+              </div>
+            </div>
+            <div class="flex items-center gap-4 bg-[#181711] px-4 min-h-14 justify-between">
+              <p class="text-white text-base font-normal leading-normal flex-1 truncate">Subscribe to Updates</p>
+              <div class="shrink-0">
+                <label
+                  class="relative flex h-[31px] w-[51px] cursor-pointer items-center rounded-full border-none bg-[#393728] p-0.5 has-[:checked]:justify-end has-[:checked]:bg-[#f2d00d]"
+                >
+                  <div class="h-full w-[27px] rounded-full bg-white" style="box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 8px, rgba(0, 0, 0, 0.06) 0px 3px 1px;"></div>
+                  <input type="checkbox" class="invisible absolute" />
+                </label>
+              </div>
+            </div>
+            <h3 class="text-white text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Comments</h3>
+            <div class="flex w-full flex-row items-start justify-start gap-3 p-4">
+              <div
+                class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-10 shrink-0"
+                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDLGXuisaf2-QYQfWot6rPc8uvOc1x27sfDstiH-CDj5NqbYSMEfp77WX4gNPCa0uEa0orOGDGOgDPRL3h9QmYeW3jWF9WQnErm2CN7WEm21cMvWitnAEaQVTVAvkFeG8zzD4U3_cKfKEjT4222XWyJ92LdqX9y2UUk_lEYslinPqySbZ6bzyeJvGpBkdGEnZFc_1tswyiX2MGUFy19Jkdg0CpLo3lxzBRgTSywhcgoF8MMSzwZDDL21Wf9L43KmaaeKYepWW7-oP8");'
+              ></div>
+              <div class="flex h-full flex-1 flex-col items-start justify-start">
+                <div class="flex w-full flex-row items-start justify-start gap-x-3">
+                  <p class="text-white text-sm font-bold leading-normal tracking-[0.015em]">Ava Morgan</p>
+                  <p class="text-[#bab59c] text-sm font-normal leading-normal">4d ago</p>
+                </div>
+                <p class="text-white text-sm font-normal leading-normal">This is exactly what I need! I'm at a crossroads in my career and could really use some guidance.</p>
+              </div>
+            </div>
+            <div class="flex flex-wrap gap-4 px-4 py-2 py-2">
+              <div class="flex items-center justify-center gap-2 px-3 py-2">
+                <div class="text-[#bab59c]" data-icon="ThumbsUp" data-size="24px" data-weight="regular">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                    <path
+                      d="M234,80.12A24,24,0,0,0,216,72H160V56a40,40,0,0,0-40-40,8,8,0,0,0-7.16,4.42L75.06,96H32a16,16,0,0,0-16,16v88a16,16,0,0,0,16,16H204a24,24,0,0,0,23.82-21l12-96A24,24,0,0,0,234,80.12ZM32,112H72v88H32ZM223.94,97l-12,96a8,8,0,0,1-7.94,7H88V105.89l36.71-73.43A24,24,0,0,1,144,56V80a8,8,0,0,0,8,8h64a8,8,0,0,1,7.94,9Z"
+                    ></path>
+                  </svg>
+                </div>
+                <p class="text-[#bab59c] text-[13px] font-bold leading-normal tracking-[0.015em]">1</p>
+              </div>
+            </div>
+            <div class="flex w-full flex-row items-start justify-start gap-3 p-4">
+              <div
+                class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-10 shrink-0"
+                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAavWMjfIRsQmPioM-ANqA8Mbs8jzxcy9UR37vshLIviSnK7DZLZ3hZr2MiDIWH42dEkgcu1xgFlX9nIZFR5sgq7L5QFCND8cjNBKtb8QRKbnkBaMIzrcY_A6kf9sdv0UJvDwhIXYE1nj5gfgaLqRsgxri1RiXXJi4yDjSr5NNPzgIMifsxe27i-fj6em4Ftc0EOp3SKhrq_-4_zV24Z_8DoaJTwrfGMRKwGnA-o9vWrUcB3OdfGKRUg0Rzc8xS4MUYtPDWQwkJPrA");'
+              ></div>
+              <div class="flex h-full flex-1 flex-col items-start justify-start">
+                <div class="flex w-full flex-row items-start justify-start gap-x-3">
+                  <p class="text-white text-sm font-bold leading-normal tracking-[0.015em]">Noah Bennett</p>
+                  <p class="text-[#bab59c] text-sm font-normal leading-normal">3d ago</p>
+                </div>
+                <p class="text-white text-sm font-normal leading-normal">
+                  Personalized recommendations would be incredibly helpful. It's hard to know what opportunities are out there that align with your skills.
+                </p>
+              </div>
+            </div>
+            <div class="flex flex-wrap gap-4 px-4 py-2 py-2">
+              <div class="flex items-center justify-center gap-2 px-3 py-2">
+                <div class="text-[#bab59c]" data-icon="ThumbsUp" data-size="24px" data-weight="regular">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                    <path
+                      d="M234,80.12A24,24,0,0,0,216,72H160V56a40,40,0,0,0-40-40,8,8,0,0,0-7.16,4.42L75.06,96H32a16,16,0,0,0-16,16v88a16,16,0,0,0,16,16H204a24,24,0,0,0,23.82-21l12-96A24,24,0,0,0,234,80.12ZM32,112H72v88H32ZM223.94,97l-12,96a8,8,0,0,1-7.94,7H88V105.89l36.71-73.43A24,24,0,0,1,144,56V80a8,8,0,0,0,8,8h64a8,8,0,0,1,7.94,9Z"
+                    ></path>
+                  </svg>
+                </div>
+                <p class="text-[#bab59c] text-[13px] font-bold leading-normal tracking-[0.015em]">3</p>
+              </div>
+            </div>
+            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+              <label class="flex flex-col min-w-40 flex-1">
+                <textarea
+                  placeholder="Add a comment..."
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-0 border border-[#54503b] bg-[#27251b] focus:border-[#54503b] min-h-36 placeholder:text-[#bab59c] p-[15px] text-base font-normal leading-normal"
+                ></textarea>
+              </label>
+            </div>
+            <div class="flex px-4 py-3 justify-end">
+              <button
+                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#f2d00d] text-[#181711] text-sm font-bold leading-normal tracking-[0.015em]"
+              >
+                <span class="truncate">Add Comment</span>
+              </button>
+            </div>
+            <div class="flex px-4 py-3 justify-end">
+              <button
+                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#f2d00d] text-[#181711] text-sm font-bold leading-normal tracking-[0.015em]"
+              >
+                <span class="truncate">Submit New Feature Request</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

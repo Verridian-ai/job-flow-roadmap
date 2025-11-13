@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Coach News Feed</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#f2d00d",
+              "background-light": "#f8f8f5",
+              "background-dark": "#181711",
+            },
+            fontFamily: {
+              "display": ["Lexend", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-white">
+<div class="flex min-h-screen">
+<!-- SideNavBar -->
+<aside class="w-64 shrink-0 bg-[#221f10] p-4 flex flex-col justify-between border-r border-[#393728]">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-3 p-2">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="Profile picture of Alex Chen" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBXNVKF-TfozdbeyrvCtPbn-KJa-gP5AR-Q4m9bHwsPijIeMbbpcE0n1nI5t32ZR7Fp1ZDnhhy8fKgGRr-wP2hcLrS4jp_B5xOEYpM-IMfumVG9cjCdgOn7ZZdbgBUWaIbJL15vcuMD7KdkdkK5yKyAykjdelrrkQlRJIrXwew9Kll3tS2zCwYhNa7ZXYCFz2cKJ_yvmv0Q4BRoy2ySmuRFb-SIEChRJqclUh_j_cO2fQrOUU6gjIqltiBknZWKl0Pii0PvGOsbpzA");'></div>
+<div class="flex flex-col">
+<h1 class="text-white text-base font-medium leading-normal">Alex Chen</h1>
+<p class="text-[#bab59c] text-sm font-normal leading-normal">Career Coach</p>
+</div>
+</div>
+<nav class="flex flex-col gap-2 mt-4">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-white/70 hover:bg-[#393728] hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">home</span>
+<p class="text-sm font-medium leading-normal">Home</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/20 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">feed</span>
+<p class="text-sm font-medium leading-normal">News Feed</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-white/70 hover:bg-[#393728] hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">group</span>
+<p class="text-sm font-medium leading-normal">Clients</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-white/70 hover:bg-[#393728] hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">folder</span>
+<p class="text-sm font-medium leading-normal">Resources</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-white/70 hover:bg-[#393728] hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">settings</span>
+<p class="text-sm font-medium leading-normal">Settings</p>
+</a>
+</nav>
+</div>
+<button class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-background-dark text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">AI Resume Agent</span>
+</button>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 p-8 grid grid-cols-12 gap-8">
+<div class="col-span-12 lg:col-span-8 xl:col-span-8 flex flex-col gap-6">
+<!-- Composer -->
+<div class="flex items-start px-4 py-3 gap-3 @container bg-[#221f10] rounded-xl border border-[#393728]">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 shrink-0 mt-2" data-alt="Profile picture of Alex Chen" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAmsE6y26g5k2VeDFEqefmxCO4i-xCKIYvEWjUxCnQqxhau79whLDaTF4lwao5IoWdrd89LslwQCz3bXns6vIIf-VWNnMieC6Of_uemt3R9V5JJ6ws54I8t2aCpeyyIy-LkYBEsmD2Ss2Yq84301_X4DYBFlaeExehK_XMn1cD5GPpc8q6I_Gc_6mgql3hBYLuuZ-oDX0hvhAHOCD0EKq9StICeP9_wsuMvy2dsT2QCm90nuudp9WNR37I63bMEAzDW3z7HtDK0Z0g");'></div>
+<div class="flex flex-col flex-1">
+<textarea class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden text-white focus:outline-0 focus:ring-0 border-0 bg-transparent h-auto placeholder:text-[#787354] text-base font-normal leading-normal p-2" placeholder="Share a coaching win or discuss a hiring trend..." rows="3"></textarea>
+<div class="flex items-center gap-4 justify-between pt-2">
+<div class="flex items-center gap-1">
+<button class="flex items-center justify-center p-2 rounded-full hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-[#bab59c] text-xl">image</span>
+</button>
+<button class="flex items-center justify-center p-2 rounded-full hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-[#bab59c] text-xl">link</span>
+</button>
+<button class="flex items-center justify-center p-2 rounded-full hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-[#bab59c] text-xl">attach_file</span>
+</button>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-9 px-5 bg-primary text-background-dark text-sm font-medium leading-normal">
+<span class="truncate">Post</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Chips/Filters -->
+<div class="flex gap-3 px-1 overflow-x-auto">
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#393728] pl-4 pr-3 text-sm font-medium leading-normal text-white hover:bg-primary/30 transition-colors">
+                        Sort by: Latest
+                        <span class="material-symbols-outlined text-base">expand_more</span>
+</button>
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#393728] pl-4 pr-3 text-sm font-medium leading-normal text-white hover:bg-primary/30 transition-colors">
+                        Topic: All
+                        <span class="material-symbols-outlined text-base">expand_more</span>
+</button>
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#393728] pl-4 pr-3 text-sm font-medium leading-normal text-white hover:bg-primary/30 transition-colors">
+                        Industry: All
+                        <span class="material-symbols-outlined text-base">expand_more</span>
+</button>
+</div>
+<!-- Feed Cards -->
+<div class="flex flex-col gap-6">
+<!-- Card 1 -->
+<div class="bg-[#221f10] rounded-xl border border-[#393728] overflow-hidden">
+<div class="p-5 flex flex-col gap-4">
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12" data-alt="Profile picture of Eleanor Vance" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA1z8kxNHxz6AraD4T49TPtjSL1tBYoGj7HvCdEay_-JTTRAgrLfN21MOJsaaHxcTxnUBh_OMEfAlM0Q04FwYeJ9pwP-MCdePO1KcXdviQH5y3TfK7n8IYfB49_NXrCN1mCrToNr7imNIBuavt8ubdRozg97yZc_wplxfWopqtl_DswvVSXfXlOAtczy9JhFcUc7olxRAOJqOHUIMInP5I9-ks7L_ODoTyo8_FW8kpG1AycP17wQXEgMTaGw01RKrJY-B6qmmULaA4");'></div>
+<div class="flex flex-col">
+<p class="text-white font-semibold">Eleanor Vance</p>
+<p class="text-[#bab59c] text-sm">Tech Career Coach • 2 hours ago</p>
+</div>
+</div>
+<p class="text-white/90 text-base font-normal leading-relaxed">
+                                Exciting news! My client just landed a Senior PM role at a top tech firm after we completely revamped their resume using the STAR method for their biggest projects. It really goes to show how framing achievements makes a huge difference. #ClientPlacement #STARmethod
+                            </p>
+</div>
+<div class="border-t border-[#393728] px-3">
+<div class="flex flex-wrap gap-2 py-1">
+<button class="flex items-center justify-center gap-2 px-3 py-2 rounded-lg hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-[#bab59c] text-xl">thumb_up</span>
+<p class="text-[#bab59c] text-sm font-medium">12</p>
+</button>
+<button class="flex items-center justify-center gap-2 px-3 py-2 rounded-lg hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-[#bab59c] text-xl">chat_bubble</span>
+<p class="text-[#bab59c] text-sm font-medium">4 Comments</p>
+</button>
+<button class="flex items-center justify-center gap-2 px-3 py-2 rounded-lg hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-[#bab59c] text-xl">share</span>
+<p class="text-[#bab59c] text-sm font-medium">Share</p>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-[#221f10] rounded-xl border border-[#393728] overflow-hidden">
+<div class="p-5 flex flex-col gap-4">
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12" data-alt="Profile picture of Marcus Holloway" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA-7rdHhnMuaZnhnjNzFjl_7kO0UpRFoDpCgTcFk7jDbCeGk6j6RfZCjeCRhIcOQ3IuTK2Rj0KC_MsDgwPilRa8oMU9N-fwPOVJnSpayS-l5_rZ4IvdeVL9-PxmAJvxjUaDdfLaJC0XWQJkYyuclrPegkXyG83o4o4WrNYhn1z9uwxpItkQo-iZ2Yg6X49c5jnMHlijBbtduzM57qw-QSdchXjOIIc08hsezypHxUNiO5M_YYe9-4ujrwqSJSEMScxyY1jv3K0f4wI");'></div>
+<div class="flex flex-col">
+<p class="text-white font-semibold">Marcus Holloway</p>
+<p class="text-[#bab59c] text-sm">Finance Career Coach • 5 hours ago</p>
+</div>
+</div>
+<p class="text-white/90 text-base font-normal leading-relaxed">
+                                Seeing a big trend in hiring managers for investment banking roles asking more behavioral questions focused on ethical dilemmas. How are you all prepping your clients for these? Any specific frameworks you're finding effective besides the usual PAR/STAR? #HiringTrends #Finance
+                            </p>
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg mt-2" data-alt="Stock chart with an upward trend" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDMRzj3r5tOjqnjyRp2_AMFRGvHfWp7pDje6k79VIyFmC4-88Lh7E5jMg_GGCbAqW_55toA9GONC4DGQFqGaItYkCqtdh9Jjm3cW3gA0CRGdq0Mx3X-Q74HVl5AWDRz-SwB-qMbCpt8xh4hgonuqz44nsZfh6KBTSe0ILnCA_5_s1gSx1uXe0xx_A5LcId6elpoxpWStuKVnF51jiptPipWN1V-SccFbjNCCxqVO4kfNS8CHTPQHle2FatEpqmmXXq4UATg8OkV8TM");'></div>
+</div>
+<div class="border-t border-[#393728] px-3">
+<div class="flex flex-wrap gap-2 py-1">
+<button class="flex items-center justify-center gap-2 px-3 py-2 rounded-lg hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-[#bab59c] text-xl">thumb_up</span>
+<p class="text-[#bab59c] text-sm font-medium">28</p>
+</button>
+<button class="flex items-center justify-center gap-2 px-3 py-2 rounded-lg hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-[#bab59c] text-xl">chat_bubble</span>
+<p class="text-[#bab59c] text-sm font-medium">11 Comments</p>
+</button>
+<button class="flex items-center justify-center gap-2 px-3 py-2 rounded-lg hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-[#bab59c] text-xl">share</span>
+<p class="text-[#bab59c] text-sm font-medium">Share</p>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Sidebar -->
+<aside class="col-span-12 lg:col-span-4 xl:col-span-4 hidden lg:flex flex-col gap-6">
+<!-- Search -->
+<div class="relative">
+<input class="w-full h-10 px-4 pl-10 bg-[#221f10] border border-[#393728] rounded-lg focus:ring-primary focus:border-primary placeholder:text-[#787354]" placeholder="Search coaches..." type="text"/>
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-[#787354]">search</span>
+</div>
+<!-- Featured Coaches -->
+<div class="bg-[#221f10] rounded-xl border border-[#393728] p-5 flex flex-col gap-4">
+<h3 class="text-lg font-semibold text-white">Active Coaches</h3>
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="Profile picture of Sarah Jenkins" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCp9xmlUCa_u6pDCur_cUD9i6SYZhBySt0J0YMQ2YnqP1lFkcN0pMVNI_E-0-mRTBIr2IDLYJA8R3xurGJLqjqpUdHwftx3XE-autZYmMp1XAgxZXBQfvJzD4NecUsbbS_HTlITxLI9h8fdmZ1gvqEVCxQD6YiIG0Il5TD6XAJuulUq-slVdFPOkxPBYBq5vACvwGR44_U7odGmXwdhpz1-CCFJWw4LUMLm46euRyE1ffr2yVwUROlKadnuyeKWCFRx0nRohyaQ8F8");'></div>
+<div>
+<p class="font-medium text-white">Sarah Jenkins</p>
+<p class="text-sm text-[#bab59c]">Creative Industries</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="Profile picture of David Lee" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuALSSDZuiVYQ-Wd690tdMKnnVNpljlIQsGC9Fge_HW_ZlGDJxv6HRHhxMwZVDi7cLZm6eX3bTzoeTDS2QumF0oxAnNHoJr6M1tFwBT82XBFe-hoIPC4C9ous8t1tC7lNPfkZvic8GTw1k7Tpkq2_SZwPmm2NQQu_SK5alo410kPgdKQ8xJEms3FPljbaeMCwW4mUlk7ePbKANBde2G5lmJ78JsIFBN0tAs55vok2fkGVtJs_Ry742z4cLsx6e-8NN5E_ZwFNGhf0Mw");'></div>
+<div>
+<p class="font-medium text-white">David Lee</p>
+<p class="text-sm text-[#bab59c]">Startup &amp; VC</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="Profile picture of Maria Garcia" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuARxNWIfDNhoIYjIF3tummYPWgTA4vnKI6HQ_ZXy-LSewiVr-05e2fDUqNACKYaLQ0f296dAdDTOi_-RLbIje5zjGTuMql_tDgEtkOTaJZaXNWslGBNYoygZHKcjAxR3pAh6WbEQwWCA0Effsqx7UzbBSfErTM3ZVJuIozPHiEq-BufeT_BzZshGhTBohvFu9CBPA-cdE_O1jW2myWNrCBYG884C9EnSJQ2fMN10XvRl3cTk9fErL0Ll3of_PZNdns-dAz-GganK9s");'></div>
+<div>
+<p class="font-medium text-white">Maria Garcia</p>
+<p class="text-sm text-[#bab59c]">Healthcare Tech</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Trending Topics -->
+<div class="bg-[#221f10] rounded-xl border border-[#393728] p-5 flex flex-col gap-3">
+<h3 class="text-lg font-semibold text-white">Trending Topics</h3>
+<div class="flex flex-col gap-2">
+<a class="text-primary hover:underline" href="#">#InterviewPrep</a>
+<p class="text-sm text-[#bab59c]">124 posts this week</p>
+</div>
+<div class="flex flex-col gap-2">
+<a class="text-primary hover:underline" href="#">#SalaryNegotiation</a>
+<p class="text-sm text-[#bab59c]">98 posts this week</p>
+</div>
+<div class="flex flex-col gap-2">
+<a class="text-primary hover:underline" href="#">#BigTech</a>
+<p class="text-sm text-[#bab59c]">76 posts this week</p>
+</div>
+</div>
+</aside>
+</main>
+</div>
+</body></html>

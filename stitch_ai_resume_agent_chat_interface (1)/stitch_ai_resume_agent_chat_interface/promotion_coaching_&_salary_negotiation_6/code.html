@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CareerDev AI - Coach Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#ffd900",
+            "background-light": "#f8f8f5",
+            "background-dark": "#23200f",
+          },
+          fontFamily: {
+            "display": ["Lexend", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      background-color: #2C2C2C;}
+    .material-symbols-outlined {
+      font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+    }
+  </style>
+</head>
+<body class="font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col text-[#F5F5F5]">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[#3A3A3A] px-10 py-3">
+<div class="flex items-center gap-4 text-white">
+<div class="size-6 text-primary">
+<span class="material-symbols-outlined !text-3xl">hub</span>
+</div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">CareerDev AI</h2>
+</div>
+<div class="flex flex-1 justify-end gap-8">
+<div class="flex items-center gap-9">
+<a class="text-primary text-sm font-bold leading-normal" href="#">Dashboard</a>
+<a class="text-[#A9A9A9] hover:text-white text-sm font-medium leading-normal" href="#">My Clients</a>
+<a class="text-[#A9A9A9] hover:text-white text-sm font-medium leading-normal" href="#">Messaging</a>
+<a class="text-[#A9A9A9] hover:text-white text-sm font-medium leading-normal" href="#">Resources</a>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 w-10 bg-[#3A3A3A] text-white gap-2 text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="material-symbols-outlined text-xl">notifications</span>
+</button>
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 w-10 bg-[#3A3A3A] text-white gap-2 text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="material-symbols-outlined text-xl">settings</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB7HT9R9Aws67AgGh3SejndLgi4ru7doF7BmLftBtZ9EZQPvnHo5pG_RtRCHosVv62kIRqba6PBOKpoxtI1O-MSha2ZqAnSNf-La-uaW1TIVAUb0vYuftmH3V5Cn6O8I1EMtljiSOpM_EBeCV97yvUdD1XiQv5rdN3cmScw_4-ndmAbyn2HjX2yrrX-nahbSYtpBpNdLkUZKxruDuRqyutsZjiG9-quSZf-_JgERYK238VuLkZRh5-l0ocYfwTgGDKOdnpzKtIeYJc");'></div>
+</div>
+</div>
+</header>
+<main class="flex-1 px-10 py-8">
+<div class="flex flex-wrap justify-between gap-4 pb-8">
+<h1 class="text-white text-4xl font-black leading-tight tracking-[-0.033em] min-w-72">Coach Dashboard</h1>
+<div class="flex items-center gap-2 rounded-lg bg-[#3A3A3A] p-1">
+<button class="px-3 py-1.5 rounded-md bg-[#4a4a4a] text-sm font-semibold text-white">My Performance</button>
+<button class="px-3 py-1.5 rounded-md text-sm text-[#A9A9A9] hover:text-white">Client Progress</button>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<div class="flex flex-col gap-6">
+<div class="bg-[#3A3A3A] rounded-xl p-6">
+<h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] pb-5">Performance Metrics</h2>
+<div class="grid grid-cols-2 gap-4">
+<div class="border border-[#4a4a4a] rounded-lg p-4">
+<p class="text-sm text-[#A9A9A9] mb-1">Active Clients</p>
+<p class="text-3xl font-bold text-white">24</p>
+</div>
+<div class="border border-[#4a4a4a] rounded-lg p-4">
+<p class="text-sm text-[#A9A9A9] mb-1">Avg. Session Rating</p>
+<p class="text-3xl font-bold text-white">4.8 <span class="text-primary">★</span></p>
+</div>
+<div class="border border-[#4a4a4a] rounded-lg p-4">
+<p class="text-sm text-[#A9A9A9] mb-1">Client Success Rate</p>
+<p class="text-3xl font-bold text-white">92%</p>
+</div>
+<div class="border border-[#4a4a4a] rounded-lg p-4">
+<p class="text-sm text-[#A9A9A9] mb-1">Response Time</p>
+<p class="text-3xl font-bold text-white">&lt; 3 hours</p>
+</div>
+</div>
+</div>
+<div class="bg-[#3A3A3A] rounded-xl p-6">
+<h3 class="text-white text-lg font-bold leading-tight tracking-[-0.015em] mb-4">Client Feedback Score Distribution</h3>
+<div class="flex flex-col gap-3">
+<div class="flex items-center gap-3">
+<span class="text-sm w-12 text-right">5 ★</span>
+<div class="w-full bg-[#2C2C2C] rounded-full h-3">
+<div class="bg-primary h-3 rounded-full" style="width: 85%"></div>
+</div>
+<span class="text-sm text-[#A9A9A9]">85%</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-sm w-12 text-right">4 ★</span>
+<div class="w-full bg-[#2C2C2C] rounded-full h-3">
+<div class="bg-primary h-3 rounded-full" style="width: 10%"></div>
+</div>
+<span class="text-sm text-[#A9A9A9]">10%</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-sm w-12 text-right">3 ★</span>
+<div class="w-full bg-[#2C2C2C] rounded-full h-3">
+<div class="bg-primary h-3 rounded-full" style="width: 5%"></div>
+</div>
+<span class="text-sm text-[#A9A9A9]">5%</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-6 bg-[#3A3A3A] rounded-xl p-6">
+<div class="flex justify-between items-center">
+<h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em]">Performance Benchmarking</h2>
+<button class="text-sm text-[#A9A9A9] hover:text-white flex items-center gap-1">
+<span class="material-symbols-outlined text-base">info</span>
+                How is this calculated?
+              </button>
+</div>
+<div class="flex flex-col gap-6">
+<div class="border-b border-[#4a4a4a] pb-6">
+<h3 class="text-white text-lg font-bold leading-tight tracking-[-0.015em] mb-4">Client Success Rate Comparison</h3>
+<div class="h-40 flex items-end gap-4">
+<div class="flex flex-col items-center gap-2 w-1/2 h-full justify-end">
+<div class="w-16 bg-primary rounded-t-md" style="height: 92%;"></div>
+<p class="text-sm font-semibold text-primary">You: 92%</p>
+</div>
+<div class="flex flex-col items-center gap-2 w-1/2 h-full justify-end">
+<div class="w-16 bg-[#5A5A5A] rounded-t-md" style="height: 85%;"></div>
+<p class="text-sm text-[#A9A9A9]">Platform Avg: 85%</p>
+</div>
+</div>
+</div>
+<div>
+<h3 class="text-white text-lg font-bold leading-tight tracking-[-0.015em] mb-4">Average Feedback Score Percentile</h3>
+<div class="relative h-2 w-full bg-gradient-to-r from-[#5A5A5A] to-[#888888] rounded-full">
+<div class="absolute top-1/2 -translate-y-1/2 flex flex-col items-center" style="left: 88%;">
+<div class="w-4 h-4 rounded-full bg-primary border-2 border-[#2C2C2C] ring-2 ring-primary"></div>
+<div class="mt-2 text-center bg-[#23200f] px-2 py-1 rounded-md">
+<p class="text-sm font-bold text-primary">You: 4.8</p>
+<p class="text-xs text-white">Top 12%</p>
+</div>
+</div>
+</div>
+<div class="flex justify-between text-xs text-[#A9A9A9] mt-2">
+<span>Bottom 50%</span>
+<span>Top 10%</span>
+</div>
+</div>
+</div>
+<div class="mt-auto pt-6">
+<button class="flex items-center justify-center gap-2 w-full h-12 rounded-lg bg-primary text-black font-bold text-sm hover:bg-yellow-400 transition-colors">
+<span class="material-symbols-outlined text-xl">insights</span>
+                View Detailed Analytics Report
+              </button>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>

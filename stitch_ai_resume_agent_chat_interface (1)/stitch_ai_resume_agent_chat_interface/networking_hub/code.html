@@ -1,0 +1,257 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
+    />
+
+    <title>Stitch Design</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  </head>
+  <body>
+    <div
+      class="relative flex h-auto min-h-screen w-full flex-col bg-[#181711] dark group/design-root overflow-x-hidden"
+      style="--select-button-svg: url('data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2724px%27 height=%2724px%27 fill=%27rgb(186,181,156)%27 viewBox=%270 0 256 256%27%3e%3cpath d=%27M181.66,170.34a8,8,0,0,1,0,11.32l-48,48a8,8,0,0,1-11.32,0l-48-48a8,8,0,0,1,11.32-11.32L128,212.69l42.34-42.35A8,8,0,0,1,181.66,170.34Zm-96-84.68L128,43.31l42.34,42.35a8,8,0,0,0,11.32-11.32l-48-48a8,8,0,0,0-11.32,0l-48,48A8,8,0,0,0,85.66,85.66Z%27%3e%3c/path%3e%3c/svg%3e'); font-family: Inter, &quot;Noto Sans&quot;, sans-serif;"
+    >
+      <div class="layout-container flex h-full grow flex-col">
+        <div class="gap-1 px-6 flex flex-1 justify-center py-5">
+          <div class="layout-content-container flex flex-col w-80">
+            <div class="px-4 py-3">
+              <label class="flex flex-col min-w-40 h-12 w-full">
+                <div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+                  <div
+                    class="text-[#bab59c] flex border-none bg-[#393728] items-center justify-center pl-4 rounded-l-lg border-r-0"
+                    data-icon="MagnifyingGlass"
+                    data-size="24px"
+                    data-weight="regular"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                      <path
+                        d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <input
+                    placeholder="Search professionals"
+                    class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-0 border-none bg-[#393728] focus:border-none h-full placeholder:text-[#bab59c] px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal"
+                    value=""
+                  />
+                </div>
+              </label>
+            </div>
+            <h3 class="text-white text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Filters</h3>
+            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+              <label class="flex flex-col min-w-40 flex-1">
+                <select
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-0 border border-[#54503b] bg-[#27251b] focus:border-[#54503b] h-14 bg-[image:--select-button-svg] placeholder:text-[#bab59c] p-[15px] text-base font-normal leading-normal"
+                >
+                  <option value="one">Industry</option>
+                  <option value="two">two</option>
+                  <option value="three">three</option>
+                </select>
+              </label>
+            </div>
+            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+              <label class="flex flex-col min-w-40 flex-1">
+                <select
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-0 border border-[#54503b] bg-[#27251b] focus:border-[#54503b] h-14 bg-[image:--select-button-svg] placeholder:text-[#bab59c] p-[15px] text-base font-normal leading-normal"
+                >
+                  <option value="one">Company</option>
+                  <option value="two">two</option>
+                  <option value="three">three</option>
+                </select>
+              </label>
+            </div>
+            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+              <label class="flex flex-col min-w-40 flex-1">
+                <select
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-0 border border-[#54503b] bg-[#27251b] focus:border-[#54503b] h-14 bg-[image:--select-button-svg] placeholder:text-[#bab59c] p-[15px] text-base font-normal leading-normal"
+                >
+                  <option value="one">Role</option>
+                  <option value="two">two</option>
+                  <option value="three">three</option>
+                </select>
+              </label>
+            </div>
+            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+              <label class="flex flex-col min-w-40 flex-1">
+                <select
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-0 border border-[#54503b] bg-[#27251b] focus:border-[#54503b] h-14 bg-[image:--select-button-svg] placeholder:text-[#bab59c] p-[15px] text-base font-normal leading-normal"
+                >
+                  <option value="one">Connection Type</option>
+                  <option value="two">two</option>
+                  <option value="three">three</option>
+                </select>
+              </label>
+            </div>
+            <h3 class="text-white text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">My Network</h3>
+            <div class="flex items-center gap-4 bg-[#181711] px-4 min-h-[72px] py-2">
+              <div
+                class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-14 w-fit"
+                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCn9tjGRyeWpBnjShU7AwVyct5SJvxdJ3N7_D5wBU3LV7rWrAyvI_EztXtuVfJEQwMlO6p9xa0GkJyyNrdPZIluuSSoTOGxFlS0y9z8x3ppvd2FNcnurdVKREEVnrAvlNAwB0I8aNv_pxY8CZnEwbJROqAcBjjO9CoroC0CiUct_t6ZFRZj2DlgMGTYj7pTG0Xg8WJ41EkQ9ZJGBYEIw5WL35WH5Vv5oRwugOPtUI9thNrwKNJuOO3vRJd5JspepQc4Y3YkoD9rItY");'
+              ></div>
+              <div class="flex flex-col justify-center">
+                <p class="text-white text-base font-medium leading-normal line-clamp-1">Ethan Carter</p>
+                <p class="text-[#bab59c] text-sm font-normal leading-normal line-clamp-2">Software Engineer at Tech Innovations</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-4 bg-[#181711] px-4 min-h-[72px] py-2">
+              <div
+                class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-14 w-fit"
+                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDwCu9N-WqLt7jltDrrhrapsflqyA4Xl7zxiVdvjNdf5ZOfB8OA6GC9m2gAaxi3vAR4gA4V-tsfAVIzr3T1IaR5CHclhl3baP8gUo4s9QRdfQoLeAkqynVuYBG9CF3O5YsDkKnWAUGbgfzZ07LP6LYRsdPDd-bSx8AJDTxERQ5RKNq3kGK6vFFiKJ-Z-wD1L2woKnVxQXCbeqBMF4wZ-OUFqyWnN5MddhUt2zGdGtY1ZKLefgO2k9W3z7MHEC_Jjn6mJCW1HtimSdg");'
+              ></div>
+              <div class="flex flex-col justify-center">
+                <p class="text-white text-base font-medium leading-normal line-clamp-1">Sophia Bennett</p>
+                <p class="text-[#bab59c] text-sm font-normal leading-normal line-clamp-2">Product Manager at Innovate Solutions</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-4 bg-[#181711] px-4 min-h-[72px] py-2">
+              <div
+                class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-14 w-fit"
+                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBSr2ouY88MgiZaaCRjYVaN1Gsiu6q9NrJ_irQgzrwNIUjQiZ_s151pI2R_6JxFuUcdSN_8ONUJXaxjV5KHzn-ddmQe3UrsDIWLe8m8w4JnBPZNuG92HQVRZzUNAVVU_AEpEZB7AvNEi84q90TZliqrCZW4uiTM6OHNj7UOsJmQImG4SMkp7OTPAG8B7itar0hCiX6ZE309gwb9BvHBfQ7U8BnM2Ky1x56OmBbELUb2EkuOyylRZuC9--2lns05IDRyxtKa4MV8rHU");'
+              ></div>
+              <div class="flex flex-col justify-center">
+                <p class="text-white text-base font-medium leading-normal line-clamp-1">Liam Harper</p>
+                <p class="text-[#bab59c] text-sm font-normal leading-normal line-clamp-2">Data Scientist at Data Dynamics</p>
+              </div>
+            </div>
+          </div>
+          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+            <div class="flex flex-wrap justify-between gap-3 p-4">
+              <div class="flex min-w-72 flex-col gap-3">
+                <p class="text-white tracking-light text-[32px] font-bold leading-tight">Networking Hub</p>
+                <p class="text-[#bab59c] text-sm font-normal leading-normal">Connect with professionals who can help you advance your career.</p>
+              </div>
+            </div>
+            <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Suggested Connections</h2>
+            <div class="p-4">
+              <div class="flex items-stretch justify-between gap-4 rounded-lg">
+                <div class="flex flex-[2_2_0px] flex-col gap-4">
+                  <div class="flex flex-col gap-1">
+                    <p class="text-white text-base font-bold leading-tight">Ava Thompson</p>
+                    <p class="text-[#bab59c] text-sm font-normal leading-normal">Senior Software Engineer at Tech Innovations</p>
+                  </div>
+                  <button
+                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 flex-row-reverse bg-[#393728] text-white pr-2 gap-1 text-sm font-medium leading-normal w-fit"
+                  >
+                    <div class="text-white" data-icon="Plus" data-size="18px" data-weight="regular">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" fill="currentColor" viewBox="0 0 256 256">
+                        <path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"></path>
+                      </svg>
+                    </div>
+                    <span class="truncate">Connect</span>
+                  </button>
+                </div>
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex-1"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC2I3atFEF3h5eb7phjYbDUC1lNmJI38KiMMOwb_3Oirz8XZJwi8czQ_boIpxnkR3_KNxOKelnus4d8e3q1c7N_AAgWTbYx7K9zbNfLae9wRhDy_WS8cqSPvEgXsisrAAWZVOLQuKGkXFchah3dT2_dsmrsomnqWDIXneNgFyv7YFXcavKcGcK9QrnZpth1I4_JD5tXKc4jTDGwLS_PkEIDkVzK2S0I8C1yK5gzOK8ezgEsgHAEAnGrD26VJfWJ0USgr6gQhVqpcw8");'
+                ></div>
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="flex items-stretch justify-between gap-4 rounded-lg">
+                <div class="flex flex-[2_2_0px] flex-col gap-4">
+                  <div class="flex flex-col gap-1">
+                    <p class="text-white text-base font-bold leading-tight">Noah Parker</p>
+                    <p class="text-[#bab59c] text-sm font-normal leading-normal">Product Manager at Innovate Solutions</p>
+                  </div>
+                  <button
+                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 flex-row-reverse bg-[#393728] text-white pr-2 gap-1 text-sm font-medium leading-normal w-fit"
+                  >
+                    <div class="text-white" data-icon="Plus" data-size="18px" data-weight="regular">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" fill="currentColor" viewBox="0 0 256 256">
+                        <path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"></path>
+                      </svg>
+                    </div>
+                    <span class="truncate">Connect</span>
+                  </button>
+                </div>
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex-1"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC_EK7X8P6O0bYj5cETx2pK8Hd0qTBhG5x2DjJSOSiW72igSWsY9WfwseeGjNreIGWi0IrdsSH_H9Je-TqkSYO-G74jJ3epeaB3ZHNUxShm3zlhi1P53l0vXgHvMYOrSZoI5S5W1rDfj18u98JVIKihKfuAPnYrNUWrUGhJjPbdMr4HuQD-BdURQl5OgLqSTGvbxQ6XuwXjhJUJDyLAI59eu9OdntV4QbWlalSdZ9LS0YoKZnU0jG7zp7oWl2Ni65o0wGRH7KWJjsc");'
+                ></div>
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="flex items-stretch justify-between gap-4 rounded-lg">
+                <div class="flex flex-[2_2_0px] flex-col gap-4">
+                  <div class="flex flex-col gap-1">
+                    <p class="text-white text-base font-bold leading-tight">Olivia Hayes</p>
+                    <p class="text-[#bab59c] text-sm font-normal leading-normal">Data Scientist at Data Dynamics</p>
+                  </div>
+                  <button
+                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 flex-row-reverse bg-[#393728] text-white pr-2 gap-1 text-sm font-medium leading-normal w-fit"
+                  >
+                    <div class="text-white" data-icon="Plus" data-size="18px" data-weight="regular">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" fill="currentColor" viewBox="0 0 256 256">
+                        <path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"></path>
+                      </svg>
+                    </div>
+                    <span class="truncate">Connect</span>
+                  </button>
+                </div>
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex-1"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCpeG7R47uVwliruxhsIGGBUVQZiV3YTYfs7Envusu_kECuYwqcVdUL_n7CqIgYhQmG55tphw7wVsdJPnqswm5lOjZA6v-2zfim9SN3iOV21_tr9ssA8ujvozSBAF-v3bMB23yRIDq_r6o7KJ0ozPB_xAULpjqL7uThDO-9qQ4bTx-cvwsh7TH3t-DG4MLwnaaqG3O6-96etJFeTD4YY8jyLDSIZUbfc6lL-K75LYZmwBQkqfs3-VCFVh78qDXRPoAfh4pBkVlvWlY");'
+                ></div>
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="flex items-stretch justify-between gap-4 rounded-lg">
+                <div class="flex flex-[2_2_0px] flex-col gap-4">
+                  <div class="flex flex-col gap-1">
+                    <p class="text-white text-base font-bold leading-tight">Jackson Reed</p>
+                    <p class="text-[#bab59c] text-sm font-normal leading-normal">UX Designer at Creative Minds</p>
+                  </div>
+                  <button
+                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 flex-row-reverse bg-[#393728] text-white pr-2 gap-1 text-sm font-medium leading-normal w-fit"
+                  >
+                    <div class="text-white" data-icon="Plus" data-size="18px" data-weight="regular">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" fill="currentColor" viewBox="0 0 256 256">
+                        <path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"></path>
+                      </svg>
+                    </div>
+                    <span class="truncate">Connect</span>
+                  </button>
+                </div>
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex-1"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDXvOfJoUviadSb3-fp19fOwj6t288WTzrxP4hD3i3_LFyPgNCSo0gwIuL7A9e9Jnh3V0NGdPoX-dEzVGTuHrP6lSxS7IScIbBPpaOXVuXTnX3pg8qSDFdAPtcF6MFrgPEygSaXmNqoRmkscMLi8ylwcw_Hwi8VziJfNVK_se-wFyUSi-h-iUz2lBCHcENNiBrdyeK9tMWzkFFEV_2rdSmLfZNEBrguNYrPqQtAaENHs_xRkpX8uzdgXGF-5A9V7daGLmUeoy4Lj00");'
+                ></div>
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="flex items-stretch justify-between gap-4 rounded-lg">
+                <div class="flex flex-[2_2_0px] flex-col gap-4">
+                  <div class="flex flex-col gap-1">
+                    <p class="text-white text-base font-bold leading-tight">Isabella Foster</p>
+                    <p class="text-[#bab59c] text-sm font-normal leading-normal">Marketing Director at Global Reach</p>
+                  </div>
+                  <button
+                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 flex-row-reverse bg-[#393728] text-white pr-2 gap-1 text-sm font-medium leading-normal w-fit"
+                  >
+                    <div class="text-white" data-icon="Plus" data-size="18px" data-weight="regular">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" fill="currentColor" viewBox="0 0 256 256">
+                        <path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"></path>
+                      </svg>
+                    </div>
+                    <span class="truncate">Connect</span>
+                  </button>
+                </div>
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex-1"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBOQ1QpzxxVdfR6JSTCWBDFVSCzvz3asNj9SAN-tJakdSxlrYBM-TZsFGkVXgfJBihK2bZ8NMwLPlUTny2b6_ksCCUnZJfQrplN5DM-Tn4m8GFSfpcACOJKAbhQ55q3CXbhjb5SX8Bz0DCEvUoGnMY04yPhIM3Qngfqkj9YIloEFzXG1t4nlCKVQD2zkILIYsLy8XbnVxkSHzn-7_zgs0SVNykAvbpDqXYoohrqD8J8fQPzOwdw6fk-ViEBmfZGHT37yqdXgjbGbcc");'
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

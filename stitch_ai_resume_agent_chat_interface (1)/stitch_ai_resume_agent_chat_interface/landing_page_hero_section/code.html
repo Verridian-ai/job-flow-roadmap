@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Careersu - AI-Powered Career Coaching</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f2d00d",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#121212",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+        }
+    </style>
+</head>
+<body class="bg-background-dark font-display text-white">
+<div class="relative min-h-screen w-full">
+<!-- Background Video -->
+<div class="absolute inset-0 z-0 h-full w-full overflow-hidden">
+<video autoplay="" class="pointer-events-none h-full w-full object-cover" loop="" muted="" playsinline="">
+<source src="https://videos.pexels.com/video-files/8063321/8063321-hd_1920_1080_25fps.mp4" type="video/mp4"/>
+                Your browser does not support the video tag.
+            </video>
+<div class="absolute inset-0 bg-black/70"></div>
+</div>
+<!-- Page Content -->
+<div class="relative z-10 mx-auto flex h-screen min-h-[700px] max-w-7xl flex-col px-4 sm:px-6 lg:px-8">
+<!-- TopNavBar -->
+<header class="flex items-center justify-between py-6">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-3xl">auto_graph</span>
+<h2 class="text-xl font-bold tracking-tight">Careersu</h2>
+</div>
+<nav class="hidden items-center gap-8 md:flex">
+<a class="text-sm font-medium text-white/90 transition-colors hover:text-white" href="#">Features</a>
+<a class="text-sm font-medium text-white/90 transition-colors hover:text-white" href="#">Pricing</a>
+<a class="text-sm font-medium text-white/90 transition-colors hover:text-white" href="#">Testimonials</a>
+<a class="text-sm font-medium text-white/90 transition-colors hover:text-white" href="#">About Us</a>
+</nav>
+<div class="flex items-center gap-3">
+<button class="h-10 max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg px-4 text-sm font-bold text-white transition-colors hover:bg-white/10">
+<span class="truncate">Log In</span>
+</button>
+<button class="flex h-10 min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-primary px-4 text-sm font-bold text-background-dark transition-transform hover:scale-105">
+<span class="truncate">Sign Up</span>
+</button>
+</div>
+</header>
+<!-- HeroSection -->
+<main class="flex flex-1 flex-col items-center justify-center text-center">
+<div class="flex max-w-4xl flex-col items-center gap-6">
+<h1 class="text-4xl font-black tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
+                        Unlock Your Dream Career with AI-Powered Coaching.
+                    </h1>
+<p class="max-w-2xl text-base text-white/70 sm:text-lg md:text-xl">
+                        Careersu combines cutting-edge AI with expert human coaches to land you a £100k+ role in weeks, not months.
+                    </p>
+<div class="mt-4 flex flex-col items-center gap-4 sm:flex-row">
+<button class="flex h-12 min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-primary px-6 text-base font-bold text-background-dark shadow-lg shadow-primary/20 transition-transform hover:scale-105">
+<span class="truncate">Start Your Journey Today</span>
+</button>
+<a class="group inline-flex items-center gap-2 text-sm font-medium text-white/80 transition-colors hover:text-white" href="#">
+<span>Explore Coaching Plans</span>
+<span class="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
+</a>
+</div>
+</div>
+</main>
+</div>
+</div>
+</body></html>

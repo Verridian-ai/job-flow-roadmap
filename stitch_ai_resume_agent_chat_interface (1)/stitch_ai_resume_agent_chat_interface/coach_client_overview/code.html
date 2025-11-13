@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CareerDev AI - Client Overview</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#f2d00d",
+              "background-light": "#f8f8f5",
+              "background-dark": "#121212",
+              "card-dark": "#1E1E1E",
+              "border-dark": "#393728",
+              "text-primary-dark": "#E0E0E0",
+              "text-secondary-dark": "#A0A0A0",
+            },
+            fontFamily: {
+              "display": ["Lexend", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- TopNavBar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid dark:border-border-dark px-6 md:px-10 lg:px-20 py-3 bg-background-light dark:bg-background-dark/80 backdrop-blur-sm sticky top-0 z-50">
+<div class="flex items-center gap-4 text-text-primary-dark">
+<div class="size-6 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 18.4228L42 11.475V34.3663C42 34.7796 41.7457 35.1504 41.3601 35.2992L24 42V18.4228Z" fill="currentColor" fill-rule="evenodd"></path>
+<path clip-rule="evenodd" d="M24 8.18819L33.4123 11.574L24 15.2071L14.5877 11.574L24 8.18819ZM9 15.8487L21 20.4805V37.6263L9 32.9945V15.8487ZM27 37.6263V20.4805L39 15.8487V32.9945L27 37.6263ZM25.354 2.29885C24.4788 1.98402 23.5212 1.98402 22.646 2.29885L4.98454 8.65208C3.7939 9.08038 3 10.2097 3 11.475V34.3663C3 36.0196 4.01719 37.5026 5.55962 38.098L22.9197 44.7987C23.6149 45.0671 24.3851 45.0671 25.0803 44.7987L42.4404 38.098C43.9828 37.5026 45 36.0196 45 34.3663V11.475C45 10.2097 44.2061 9.08038 43.0155 8.65208L25.354 2.29885Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-text-primary-dark text-lg font-bold leading-tight tracking-[-0.015em]">CareerDev AI</h2>
+</div>
+<div class="flex flex-1 justify-end gap-4 md:gap-8">
+<div class="hidden md:flex items-center gap-9">
+<a class="text-text-primary-dark text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Dashboard</a>
+<a class="text-text-secondary-dark text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Clients</a>
+<a class="text-text-secondary-dark text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Resources</a>
+</div>
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 w-10 bg-card-dark text-text-primary-dark hover:bg-border-dark transition-colors">
+<span class="material-symbols-outlined text-text-secondary-dark group-hover:text-primary-dark">notifications</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="Coach's profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAWea-Ywzwpe_gdNF38Se_eYYsnb3qv2vzpi7rr1C8vQlUDE6iP1lgAOOlXkKUmRyqTkLhMU4ZXql-e6IKp4o3fnhNmOZo6dZHijHL8hqSdCPjVbxe-8WmGgO2KLUo8PAN5OLBvsRP76-d5anvpY9jyssGjgNjyE3rQLtg_WtFMV3SevD9uD4_iHO-0czHYM6yFKcmCkm70uzw-ponT7fj5MtN8Had20z2FD3QixNVR2pa1_CFzhH2y5LrXfhjiFxAvDXzu9zjtzo4");'></div>
+</div>
+</header>
+<main class="px-6 md:px-10 lg:px-20 flex flex-1 justify-center py-5">
+<div class="layout-content-container flex flex-col w-full max-w-6xl flex-1 gap-6">
+<!-- Breadcrumbs -->
+<div class="flex flex-wrap gap-2 pt-4">
+<a class="text-text-secondary-dark text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Coach Dashboard</a>
+<span class="text-text-secondary-dark text-sm font-medium leading-normal">/</span>
+<span class="text-text-primary-dark text-sm font-medium leading-normal">Client Overview</span>
+</div>
+<!-- ProfileHeader -->
+<div class="flex p-4 @container bg-card-dark rounded-xl border border-border-dark">
+<div class="flex w-full flex-col gap-4 @[520px]:flex-row @[520px]:justify-between @[520px]:items-center">
+<div class="flex gap-4 items-center">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-24 w-24" data-alt="Client profile picture of Jordan Smith" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCCUU-NQxYThDSrUY5sCDVKljKUD4QTgm1w7WS-Ji2UOezPdBnn0qvHpo2ebdRiIC9-nZNsTZn-cxrZaiuPFNw3FHYEp4gPt4PpJFBN2kQO1lyL4nY6f14y3cuwuNxql6l8OySJspkhscO2zNiPTA65WU8RDFNg5UYec6CECj5FewAoQRA0CeIjXW9AHfVdas_UgDgNglqGHoWf-ZpRkdXSm76bvs4QtlCZzE2mWTABqk38idQVieWKO-orS1KZtT-Tce7ODM8aExU");'></div>
+<div class="flex flex-col justify-center gap-1">
+<p class="text-text-primary-dark text-[28px] font-bold leading-tight tracking-[-0.015em]">Jordan Smith</p>
+<p class="text-text-secondary-dark text-base font-normal leading-normal px-3 py-1 bg-primary/20 text-primary rounded-full w-fit text-sm">Actively Job Seeking</p>
+</div>
+</div>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-6 bg-primary text-background-dark text-sm font-bold leading-normal tracking-[0.015em] w-full max-w-[480px] @[480px]:w-auto hover:bg-primary/90 transition-colors">
+<span class="truncate">Message Client</span>
+</button>
+</div>
+</div>
+<!-- Stats Grid -->
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+<div class="flex flex-col gap-2 rounded-lg p-4 bg-card-dark border border-border-dark">
+<p class="text-text-secondary-dark text-sm font-medium leading-normal">Profile Completion</p>
+<p class="text-text-primary-dark tracking-light text-3xl font-bold leading-tight">85%</p>
+<div class="w-full bg-border-dark rounded-full h-1.5 mt-1"><div class="bg-primary h-1.5 rounded-full" style="width: 85%"></div></div>
+</div>
+<div class="flex flex-col gap-2 rounded-lg p-4 bg-card-dark border border-border-dark">
+<p class="text-text-secondary-dark text-sm font-medium leading-normal">STAR Stories</p>
+<p class="text-text-primary-dark tracking-light text-3xl font-bold leading-tight">12</p>
+</div>
+<div class="flex flex-col gap-2 rounded-lg p-4 bg-card-dark border border-border-dark">
+<p class="text-text-secondary-dark text-sm font-medium leading-normal">Resumes</p>
+<p class="text-text-primary-dark tracking-light text-3xl font-bold leading-tight">5</p>
+</div>
+<div class="flex flex-col gap-2 rounded-lg p-4 bg-card-dark border border-border-dark">
+<p class="text-text-secondary-dark text-sm font-medium leading-normal">Applications</p>
+<p class="text-text-primary-dark tracking-light text-3xl font-bold leading-tight">8</p>
+</div>
+<div class="flex flex-col gap-2 rounded-lg p-4 bg-card-dark border border-border-dark">
+<p class="text-text-secondary-dark text-sm font-medium leading-normal">Skill Gaps</p>
+<p class="text-text-primary-dark tracking-light text-3xl font-bold leading-tight">3</p>
+</div>
+</div>
+<!-- Main Content Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+<!-- Left Column: Activity Feed & Quick Links -->
+<div class="lg:col-span-2 flex flex-col gap-6">
+<!-- Activity Feed -->
+<div class="bg-card-dark rounded-xl p-6 border border-border-dark">
+<h2 class="text-text-primary-dark text-xl font-bold leading-tight tracking-[-0.015em] mb-4">Recent Activity</h2>
+<div class="flex flex-col gap-4">
+<div class="flex items-start gap-4">
+<div class="flex-shrink-0 size-10 rounded-lg bg-primary/20 flex items-center justify-center"><span class="material-symbols-outlined text-primary">description</span></div>
+<div>
+<p class="text-text-primary-dark font-medium">Generated new resume for "Senior Product Manager"</p>
+<p class="text-text-secondary-dark text-sm">Today, 11:30 AM</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="flex-shrink-0 size-10 rounded-lg bg-primary/20 flex items-center justify-center"><span class="material-symbols-outlined text-primary">send</span></div>
+<div>
+<p class="text-text-primary-dark font-medium">Applied to "Product Lead" at Google</p>
+<p class="text-text-secondary-dark text-sm">Yesterday, 4:15 PM</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="flex-shrink-0 size-10 rounded-lg bg-primary/20 flex items-center justify-center"><span class="material-symbols-outlined text-primary">chat_bubble</span></div>
+<div>
+<p class="text-text-primary-dark font-medium">Received coach feedback on STAR Story</p>
+<p class="text-text-secondary-dark text-sm">2 days ago</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="flex-shrink-0 size-10 rounded-lg bg-primary/20 flex items-center justify-center"><span class="material-symbols-outlined text-primary">videocam</span></div>
+<div>
+<p class="text-text-primary-dark font-medium">Completed AI Interview Prep session</p>
+<p class="text-text-secondary-dark text-sm">3 days ago</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick Links -->
+<div class="bg-card-dark rounded-xl p-6 border border-border-dark">
+<h2 class="text-text-primary-dark text-xl font-bold leading-tight tracking-[-0.015em] mb-4">Quick Links</h2>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<button class="flex flex-col items-center justify-center gap-2 p-4 rounded-lg bg-border-dark hover:bg-primary/20 transition-colors group">
+<span class="material-symbols-outlined text-text-secondary-dark group-hover:text-primary">person</span>
+<span class="text-text-primary-dark text-sm font-medium">Full Profile</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-2 p-4 rounded-lg bg-border-dark hover:bg-primary/20 transition-colors group">
+<span class="material-symbols-outlined text-text-secondary-dark group-hover:text-primary">star</span>
+<span class="text-text-primary-dark text-sm font-medium">STAR Stories</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-2 p-4 rounded-lg bg-border-dark hover:bg-primary/20 transition-colors group">
+<span class="material-symbols-outlined text-text-secondary-dark group-hover:text-primary">work</span>
+<span class="text-text-primary-dark text-sm font-medium">Job Tracker</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-2 p-4 rounded-lg bg-border-dark hover:bg-primary/20 transition-colors group">
+<span class="material-symbols-outlined text-text-secondary-dark group-hover:text-primary">analytics</span>
+<span class="text-text-primary-dark text-sm font-medium">Analytics</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Right Column: Goals, Notes, Visualizations -->
+<div class="lg:col-span-1 flex flex-col gap-6">
+<!-- Goals & Notes -->
+<div class="bg-card-dark rounded-xl p-6 border border-border-dark">
+<!-- Tabs -->
+<div class="flex border-b border-border-dark mb-4">
+<button class="px-4 py-2 text-sm font-medium text-primary border-b-2 border-primary">Coaching Goals</button>
+<button class="px-4 py-2 text-sm font-medium text-text-secondary-dark hover:text-text-primary-dark">Coach Notes</button>
+</div>
+<!-- Content -->
+<div class="flex flex-col gap-3">
+<div class="flex items-center gap-3">
+<input checked="" class="h-4 w-4 rounded border-border-dark text-primary focus:ring-primary bg-background-dark" id="goal1" type="checkbox"/>
+<label class="text-text-primary-dark text-sm line-through text-text-secondary-dark" for="goal1">Finalize top 3 target companies</label>
+</div>
+<div class="flex items-center gap-3">
+<input checked="" class="h-4 w-4 rounded border-border-dark text-primary focus:ring-primary bg-background-dark" id="goal2" type="checkbox"/>
+<label class="text-text-primary-dark text-sm line-through text-text-secondary-dark" for="goal2">Create 5 STAR stories for leadership</label>
+</div>
+<div class="flex items-center gap-3">
+<input class="h-4 w-4 rounded border-border-dark text-primary focus:ring-primary bg-background-dark" id="goal3" type="checkbox"/>
+<label class="text-text-primary-dark text-sm" for="goal3">Tailor resume for the "Product Lead" role</label>
+</div>
+<div class="flex items-center gap-3">
+<input class="h-4 w-4 rounded border-border-dark text-primary focus:ring-primary bg-background-dark" id="goal4" type="checkbox"/>
+<label class="text-text-primary-dark text-sm" for="goal4">Complete 2 more mock interviews</label>
+</div>
+</div>
+</div>
+<!-- Skill Gaps -->
+<div class="bg-card-dark rounded-xl p-6 border border-border-dark">
+<h2 class="text-text-primary-dark text-xl font-bold leading-tight tracking-[-0.015em] mb-4">Skill Gap Analysis</h2>
+<div class="flex flex-col gap-4">
+<div>
+<div class="flex justify-between mb-1">
+<p class="text-text-primary-dark text-sm font-medium">Data Analysis</p>
+<p class="text-text-secondary-dark text-sm">80%</p>
+</div>
+<div class="w-full bg-border-dark rounded-full h-1.5"><div class="bg-primary h-1.5 rounded-full" style="width: 80%"></div></div>
+</div>
+<div>
+<div class="flex justify-between mb-1">
+<p class="text-text-primary-dark text-sm font-medium">Agile Methodologies</p>
+<p class="text-text-secondary-dark text-sm">95%</p>
+</div>
+<div class="w-full bg-border-dark rounded-full h-1.5"><div class="bg-primary h-1.5 rounded-full" style="width: 95%"></div></div>
+</div>
+<div>
+<div class="flex justify-between mb-1">
+<p class="text-text-primary-dark text-sm font-medium">Public Speaking</p>
+<p class="text-text-secondary-dark text-sm">60%</p>
+</div>
+<div class="w-full bg-border-dark rounded-full h-1.5"><div class="bg-primary h-1.5 rounded-full" style="width: 60%"></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+</body></html>

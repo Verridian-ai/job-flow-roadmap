@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Profile Creation - Step 3: Skills</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f9d406",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#121212",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+        }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<div class="px-4 md:px-10 lg:px-20 xl:px-40 flex flex-1 justify-center py-10 md:py-16">
+<div class="layout-content-container flex flex-col w-full max-w-[960px] flex-1">
+<!-- Progress Bar -->
+<div class="w-full px-4 mb-8">
+<div class="flex justify-between mb-1 text-sm font-medium text-gray-400 dark:text-gray-500">
+<p class="text-white dark:text-white">Step 3/6</p>
+<p>Skills</p>
+</div>
+<div class="flex w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+<div class="w-1/6 bg-primary"></div>
+<div class="w-1/6 bg-primary"></div>
+<div class="w-1/6 bg-primary"></div>
+<div class="w-1/6 bg-gray-200 dark:bg-gray-700"></div>
+<div class="w-1/6 bg-gray-200 dark:bg-gray-700"></div>
+<div class="w-1/6 bg-gray-200 dark:bg-gray-700"></div>
+</div>
+</div>
+<!-- Page Heading -->
+<div class="flex flex-col items-center text-center gap-3 p-4 mb-8">
+<h1 class="text-black dark:text-white text-4xl md:text-5xl font-extrabold tracking-tighter">What are your key skills?</h1>
+<p class="text-gray-600 dark:text-gray-400 text-base md:text-lg">Add skills that best represent your expertise to help us tailor your experience.</p>
+</div>
+<div class="flex flex-col gap-8 p-4">
+<!-- Technical Skills Section -->
+<div class="flex flex-col gap-3">
+<label class="flex flex-col w-full">
+<p class="text-black dark:text-white text-base font-medium leading-normal pb-2">Technical Skills (7/20)</p>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-black dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border-gray-300 dark:border-gray-700 bg-white dark:bg-[#1E1E1E] h-14 placeholder:text-gray-500 dark:placeholder:text-gray-500 p-4 text-base font-normal leading-normal" placeholder="e.g., Python, Figma, SQL" value=""/>
+</label>
+<p class="text-gray-500 dark:text-gray-400 text-sm">Add at least 3 skills.</p>
+<div class="flex gap-2 p-1 flex-wrap">
+<div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-primary/20 pl-3 pr-2 text-primary-800 dark:text-primary">
+<p class="text-sm font-medium leading-normal">React</p>
+<button class="flex items-center justify-center w-5 h-5 rounded-full hover:bg-black/10 dark:hover:bg-white/10">
+<span class="material-symbols-outlined !text-base">close</span>
+</button>
+</div>
+<div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-primary/20 pl-3 pr-2 text-primary-800 dark:text-primary">
+<p class="text-sm font-medium leading-normal">Node.js</p>
+<button class="flex items-center justify-center w-5 h-5 rounded-full hover:bg-black/10 dark:hover:bg-white/10">
+<span class="material-symbols-outlined !text-base">close</span>
+</button>
+</div>
+<div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-primary/20 pl-3 pr-2 text-primary-800 dark:text-primary">
+<p class="text-sm font-medium leading-normal">UI Design</p>
+<button class="flex items-center justify-center w-5 h-5 rounded-full hover:bg-black/10 dark:hover:bg-white/10">
+<span class="material-symbols-outlined !text-base">close</span>
+</button>
+</div>
+<div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-primary/20 pl-3 pr-2 text-primary-800 dark:text-primary">
+<p class="text-sm font-medium leading-normal">JavaScript</p>
+<button class="flex items-center justify-center w-5 h-5 rounded-full hover:bg-black/10 dark:hover:bg-white/10">
+<span class="material-symbols-outlined !text-base">close</span>
+</button>
+</div>
+<div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-primary/20 pl-3 pr-2 text-primary-800 dark:text-primary">
+<p class="text-sm font-medium leading-normal">HTML5</p>
+<button class="flex items-center justify-center w-5 h-5 rounded-full hover:bg-black/10 dark:hover:bg-white/10">
+<span class="material-symbols-outlined !text-base">close</span>
+</button>
+</div>
+<div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-primary/20 pl-3 pr-2 text-primary-800 dark:text-primary">
+<p class="text-sm font-medium leading-normal">CSS3</p>
+<button class="flex items-center justify-center w-5 h-5 rounded-full hover:bg-black/10 dark:hover:bg-white/10">
+<span class="material-symbols-outlined !text-base">close</span>
+</button>
+</div>
+<div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-primary/20 pl-3 pr-2 text-primary-800 dark:text-primary">
+<p class="text-sm font-medium leading-normal">Tailwind CSS</p>
+<button class="flex items-center justify-center w-5 h-5 rounded-full hover:bg-black/10 dark:hover:bg-white/10">
+<span class="material-symbols-outlined !text-base">close</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Soft Skills Section -->
+<div class="flex flex-col gap-3">
+<label class="flex flex-col w-full">
+<p class="text-black dark:text-white text-base font-medium leading-normal pb-2">Soft Skills (3/10)</p>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-black dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border-gray-300 dark:border-gray-700 bg-white dark:bg-[#1E1E1E] h-14 placeholder:text-gray-500 dark:placeholder:text-gray-500 p-4 text-base font-normal leading-normal" placeholder="e.g., Communication, Teamwork" value=""/>
+</label>
+<p class="text-gray-500 dark:text-gray-400 text-sm">Add at least 2 skills.</p>
+<div class="flex gap-2 p-1 flex-wrap">
+<div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-primary/20 pl-3 pr-2 text-primary-800 dark:text-primary">
+<p class="text-sm font-medium leading-normal">Communication</p>
+<button class="flex items-center justify-center w-5 h-5 rounded-full hover:bg-black/10 dark:hover:bg-white/10">
+<span class="material-symbols-outlined !text-base">close</span>
+</button>
+</div>
+<div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-primary/20 pl-3 pr-2 text-primary-800 dark:text-primary">
+<p class="text-sm font-medium leading-normal">Problem Solving</p>
+<button class="flex items-center justify-center w-5 h-5 rounded-full hover:bg-black/10 dark:hover:bg-white/10">
+<span class="material-symbols-outlined !text-base">close</span>
+</button>
+</div>
+<div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-primary/20 pl-3 pr-2 text-primary-800 dark:text-primary">
+<p class="text-sm font-medium leading-normal">Teamwork</p>
+<button class="flex items-center justify-center w-5 h-5 rounded-full hover:bg-black/10 dark:hover:bg-white/10">
+<span class="material-symbols-outlined !text-base">close</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Industry Expertise Section -->
+<div class="flex flex-col gap-3">
+<label class="flex flex-col w-full">
+<p class="text-black dark:text-white text-base font-medium leading-normal pb-2">Industry Expertise (1/5)</p>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-black dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border-gray-300 dark:border-gray-700 bg-white dark:bg-[#1E1E1E] h-14 placeholder:text-gray-500 dark:placeholder:text-gray-500 p-4 text-base font-normal leading-normal" placeholder="e.g., FinTech, SaaS, Healthcare" value=""/>
+</label>
+<p class="text-gray-500 dark:text-gray-400 text-sm">Maximum 5 industries.</p>
+<div class="flex gap-2 p-1 flex-wrap">
+<div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-primary/20 pl-3 pr-2 text-primary-800 dark:text-primary">
+<p class="text-sm font-medium leading-normal">SaaS</p>
+<button class="flex items-center justify-center w-5 h-5 rounded-full hover:bg-black/10 dark:hover:bg-white/10">
+<span class="material-symbols-outlined !text-base">close</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Navigation Buttons -->
+<div class="flex justify-between items-center p-4 mt-10">
+<button class="flex h-12 shrink-0 items-center justify-center gap-x-2 rounded-lg border border-gray-300 dark:border-gray-700 bg-transparent px-6 text-base font-bold text-black dark:text-white transition-colors hover:bg-gray-100 dark:hover:bg-gray-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50">
+                            Back
+                        </button>
+<button class="flex h-12 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-primary px-6 text-base font-bold text-black transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50">
+                            Next: Set Your Goals
+                        </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body></html>

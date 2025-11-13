@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Add a New STAR Story</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#f2d00d",
+            "background-light": "#f8f8f5",
+            "background-dark": "#121212",
+          },
+          fontFamily: {
+            "display": ["Lexend", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      font-family: 'Lexend', sans-serif;
+    }
+    .material-symbols-outlined {
+      font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 24
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex min-h-screen w-full flex-col items-center justify-center p-4 bg-background-light dark:bg-background-dark">
+<div class="w-full max-w-3xl rounded-xl bg-[#221f10] shadow-2xl dark:bg-[#1C1C1C] dark:border dark:border-neutral-800">
+<!-- Toolbar -->
+<div class="flex justify-between items-center p-4 border-b border-white/10">
+<div></div> <!-- Spacer -->
+<button class="p-2 text-neutral-400 hover:text-white transition-colors">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="p-8 md:p-12">
+<!-- Page Heading -->
+<div class="mb-8">
+<h1 class="text-white tracking-tight text-3xl font-bold leading-tight">Add a New STAR Story</h1>
+<p class="text-neutral-400 mt-2">Capture your career highlights quickly and efficiently.</p>
+</div>
+<form class="flex flex-col gap-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Situation TextField -->
+<label class="flex flex-col">
+<p class="text-white text-base font-medium leading-normal pb-2">Situation</p>
+<textarea class="form-textarea flex w-full min-w-0 flex-1 resize-y overflow-hidden rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-primary border border-neutral-700 bg-[#27251b] dark:bg-neutral-900 focus:border-primary min-h-36 placeholder:text-neutral-500 p-4 text-base font-normal leading-normal transition-colors" placeholder="Describe the context and background."></textarea>
+</label>
+<!-- Task TextField -->
+<label class="flex flex-col">
+<p class="text-white text-base font-medium leading-normal pb-2">Task</p>
+<textarea class="form-textarea flex w-full min-w-0 flex-1 resize-y overflow-hidden rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-primary border border-neutral-700 bg-[#27251b] dark:bg-neutral-900 focus:border-primary min-h-36 placeholder:text-neutral-500 p-4 text-base font-normal leading-normal transition-colors" placeholder="What was your specific role or goal?"></textarea>
+</label>
+<!-- Action TextField -->
+<label class="flex flex-col">
+<p class="text-white text-base font-medium leading-normal pb-2">Action</p>
+<textarea class="form-textarea flex w-full min-w-0 flex-1 resize-y overflow-hidden rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-primary border border-neutral-700 bg-[#27251b] dark:bg-neutral-900 focus:border-primary min-h-36 placeholder:text-neutral-500 p-4 text-base font-normal leading-normal transition-colors" placeholder="What specific steps did you take?"></textarea>
+</label>
+<!-- Result TextField -->
+<label class="flex flex-col">
+<p class="text-white text-base font-medium leading-normal pb-2">Result</p>
+<textarea class="form-textarea flex w-full min-w-0 flex-1 resize-y overflow-hidden rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-primary border border-neutral-700 bg-[#27251b] dark:bg-neutral-900 focus:border-primary min-h-36 placeholder:text-neutral-500 p-4 text-base font-normal leading-normal transition-colors" placeholder="What were the outcomes of your actions?"></textarea>
+</label>
+</div>
+<!-- Quantifiable Results Toggle -->
+<div class="flex items-center justify-between mt-2">
+<label class="text-white text-base font-medium" for="quantifiable">Quantifiable Results Included?</label>
+<button aria-checked="false" class="relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent bg-neutral-700 transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-neutral-900 data-[state=checked]:bg-primary" id="quantifiable" role="switch" type="button">
+<span class="pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out translate-x-0 data-[state=checked]:translate-x-5"></span>
+</button>
+</div>
+<!-- Skills Involved Tag Input -->
+<div class="flex flex-col gap-2">
+<p class="text-white text-base font-medium leading-normal">Skills Involved (Optional)</p>
+<div class="flex flex-wrap items-center gap-2 rounded-lg border border-neutral-700 bg-[#27251b] dark:bg-neutral-900 p-2 focus-within:ring-2 focus-within:ring-primary focus-within:border-primary transition-colors">
+<div class="flex items-center gap-2 rounded-full bg-primary/20 px-3 py-1 text-sm text-primary">
+<span>Project Management</span>
+<button class="text-primary hover:text-white" type="button">
+<span class="material-symbols-outlined !text-base">close</span>
+</button>
+</div>
+<div class="flex items-center gap-2 rounded-full bg-primary/20 px-3 py-1 text-sm text-primary">
+<span>Data Analysis</span>
+<button class="text-primary hover:text-white" type="button">
+<span class="material-symbols-outlined !text-base">close</span>
+</button>
+</div>
+<input class="min-w-[100px] flex-1 bg-transparent text-white placeholder-neutral-500 focus:outline-none p-1" placeholder="Add a skill..." type="text"/>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-col sm:flex-row-reverse items-center gap-4 mt-8">
+<button class="w-full sm:w-auto inline-flex items-center justify-center rounded-lg bg-primary px-6 py-3 text-base font-bold text-black hover:bg-yellow-300 transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-neutral-900" type="submit">Save Story</button>
+<button class="w-full sm:w-auto text-center rounded-lg px-6 py-3 text-base font-medium text-neutral-400 hover:text-white hover:bg-white/5 transition-colors" type="button">Cancel</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</body></html>

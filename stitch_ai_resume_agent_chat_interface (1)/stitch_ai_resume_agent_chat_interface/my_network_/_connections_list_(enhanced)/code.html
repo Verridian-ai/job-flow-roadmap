@@ -1,0 +1,425 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
+    />
+
+    <title>Stitch Design</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  </head>
+  <body>
+    <div
+      class="relative flex h-auto min-h-screen w-full flex-col bg-[#181711] dark group/design-root overflow-x-hidden"
+      style="--select-button-svg: url('data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2724px%27 height=%2724px%27 fill=%27rgb(186,181,156)%27 viewBox=%270 0 256 256%27%3e%3cpath d=%27M181.66,170.34a8,8,0,0,1,0,11.32l-48,48a8,8,0,0,1-11.32,0l-48-48a8,8,0,0,1,11.32-11.32L128,212.69l42.34-42.35A8,8,0,0,1,181.66,170.34Zm-96-84.68L128,43.31l42.34,42.35a8,8,0,0,0,11.32-11.32l-48-48a8,8,0,0,0-11.32,0l-48,48A8,8,0,0,0,85.66,85.66Z%27%3e%3c/path%3e%3c/svg%3e'); font-family: Inter, &quot;Noto Sans&quot;, sans-serif;"
+    >
+      <div class="layout-container flex h-full grow flex-col">
+        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#393728] px-10 py-3">
+          <div class="flex items-center gap-8">
+            <div class="flex items-center gap-4 text-white">
+              <div class="size-4">
+                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_6_319)">
+                    <path
+                      d="M8.57829 8.57829C5.52816 11.6284 3.451 15.5145 2.60947 19.7452C1.76794 23.9758 2.19984 28.361 3.85056 32.3462C5.50128 36.3314 8.29667 39.7376 11.8832 42.134C15.4698 44.5305 19.6865 45.8096 24 45.8096C28.3135 45.8096 32.5302 44.5305 36.1168 42.134C39.7033 39.7375 42.4987 36.3314 44.1494 32.3462C45.8002 28.361 46.2321 23.9758 45.3905 19.7452C44.549 15.5145 42.4718 11.6284 39.4217 8.57829L24 24L8.57829 8.57829Z"
+                      fill="currentColor"
+                    ></path>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_6_319"><rect width="48" height="48" fill="white"></rect></clipPath>
+                  </defs>
+                </svg>
+              </div>
+              <h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">Careersu</h2>
+            </div>
+            <div class="flex items-center gap-9">
+              <a class="text-white text-sm font-medium leading-normal" href="#">Home</a>
+              <a class="text-white text-sm font-medium leading-normal" href="#">Professional Social Feed</a>
+              <a class="text-white text-sm font-medium leading-normal" href="#">My Network</a>
+              <a class="text-white text-sm font-medium leading-normal" href="#">My Profile</a>
+              <a class="text-white text-sm font-medium leading-normal" href="#">Settings</a>
+            </div>
+          </div>
+          <div class="flex flex-1 justify-end gap-8">
+            <label class="flex flex-col min-w-40 !h-10 max-w-64">
+              <div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+                <div
+                  class="text-[#bab59c] flex border-none bg-[#393728] items-center justify-center pl-4 rounded-l-lg border-r-0"
+                  data-icon="MagnifyingGlass"
+                  data-size="24px"
+                  data-weight="regular"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                    <path
+                      d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"
+                    ></path>
+                  </svg>
+                </div>
+                <input
+                  placeholder="Search"
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-0 border-none bg-[#393728] focus:border-none h-full placeholder:text-[#bab59c] px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal"
+                  value=""
+                />
+              </div>
+            </label>
+            <div
+              class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
+              style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAWH_dWj_5MZC3_9EsOqBQaS_CnlwC3Z_fvzgDiq4bqbeZunIsTR13jdfNX90FnLROn7qqrns9c43fYwb4M00gVdocrpuOSxxhurlVpM1ENONiAyE14lDyhr6B7_H4B3IoS0AcdXcADpmijyRwpVdniPbBhSEA1oxb7fqbN2TxBpDlv3Gb94unSevgSQd8IoTWTiqOaiWUhk9FOlgqukLfWAi5JFuhL78yVp2J0Vg1_-FQe0SU0EB064QaLqZuXgUZTmcvadQiBaTY");'
+            ></div>
+          </div>
+        </header>
+        <div class="gap-1 px-6 flex flex-1 justify-center py-5">
+          <div class="layout-content-container flex flex-col w-80">
+            <div class="px-4 py-3">
+              <label class="flex flex-col min-w-40 h-12 w-full">
+                <div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+                  <div
+                    class="text-[#bab59c] flex border-none bg-[#393728] items-center justify-center pl-4 rounded-l-lg border-r-0"
+                    data-icon="MagnifyingGlass"
+                    data-size="24px"
+                    data-weight="regular"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                      <path
+                        d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <input
+                    placeholder="Search My Network"
+                    class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-0 border-none bg-[#393728] focus:border-none h-full placeholder:text-[#bab59c] px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal"
+                    value=""
+                  />
+                </div>
+              </label>
+            </div>
+            <h3 class="text-white text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Filters</h3>
+            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+              <label class="flex flex-col min-w-40 flex-1">
+                <select
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-0 border border-[#54503b] bg-[#27251b] focus:border-[#54503b] h-14 bg-[image:--select-button-svg] placeholder:text-[#bab59c] p-[15px] text-base font-normal leading-normal"
+                >
+                  <option value="one">Industry</option>
+                  <option value="two">two</option>
+                  <option value="three">three</option>
+                </select>
+              </label>
+            </div>
+            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+              <label class="flex flex-col min-w-40 flex-1">
+                <select
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-0 border border-[#54503b] bg-[#27251b] focus:border-[#54503b] h-14 bg-[image:--select-button-svg] placeholder:text-[#bab59c] p-[15px] text-base font-normal leading-normal"
+                >
+                  <option value="one">Company</option>
+                  <option value="two">two</option>
+                  <option value="three">three</option>
+                </select>
+              </label>
+            </div>
+            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+              <label class="flex flex-col min-w-40 flex-1">
+                <select
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-0 border border-[#54503b] bg-[#27251b] focus:border-[#54503b] h-14 bg-[image:--select-button-svg] placeholder:text-[#bab59c] p-[15px] text-base font-normal leading-normal"
+                >
+                  <option value="one">Role</option>
+                  <option value="two">two</option>
+                  <option value="three">three</option>
+                </select>
+              </label>
+            </div>
+            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+              <label class="flex flex-col min-w-40 flex-1">
+                <select
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-0 border border-[#54503b] bg-[#27251b] focus:border-[#54503b] h-14 bg-[image:--select-button-svg] placeholder:text-[#bab59c] p-[15px] text-base font-normal leading-normal"
+                >
+                  <option value="one">Location</option>
+                  <option value="two">two</option>
+                  <option value="three">three</option>
+                </select>
+              </label>
+            </div>
+            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+              <label class="flex flex-col min-w-40 flex-1">
+                <select
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-0 border border-[#54503b] bg-[#27251b] focus:border-[#54503b] h-14 bg-[image:--select-button-svg] placeholder:text-[#bab59c] p-[15px] text-base font-normal leading-normal"
+                >
+                  <option value="one">Education</option>
+                  <option value="two">two</option>
+                  <option value="three">three</option>
+                </select>
+              </label>
+            </div>
+            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+              <label class="flex flex-col min-w-40 flex-1">
+                <select
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-0 border border-[#54503b] bg-[#27251b] focus:border-[#54503b] h-14 bg-[image:--select-button-svg] placeholder:text-[#bab59c] p-[15px] text-base font-normal leading-normal"
+                >
+                  <option value="one">Last Active</option>
+                  <option value="two">two</option>
+                  <option value="three">three</option>
+                </select>
+              </label>
+            </div>
+            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+              <label class="flex flex-col min-w-40 flex-1">
+                <select
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-0 border border-[#54503b] bg-[#27251b] focus:border-[#54503b] h-14 bg-[image:--select-button-svg] placeholder:text-[#bab59c] p-[15px] text-base font-normal leading-normal"
+                >
+                  <option value="one">Relationship Strength</option>
+                  <option value="two">two</option>
+                  <option value="three">three</option>
+                </select>
+              </label>
+            </div>
+            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+              <label class="flex flex-col min-w-40 flex-1">
+                <select
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-0 border border-[#54503b] bg-[#27251b] focus:border-[#54503b] h-14 bg-[image:--select-button-svg] placeholder:text-[#bab59c] p-[15px] text-base font-normal leading-normal"
+                >
+                  <option value="one">Connection Type</option>
+                  <option value="two">two</option>
+                  <option value="three">three</option>
+                </select>
+              </label>
+            </div>
+            <h3 class="text-white text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Sorting</h3>
+            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+              <label class="flex flex-col min-w-40 flex-1">
+                <select
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-0 border border-[#54503b] bg-[#27251b] focus:border-[#54503b] h-14 bg-[image:--select-button-svg] placeholder:text-[#bab59c] p-[15px] text-base font-normal leading-normal"
+                >
+                  <option value="one">Sort By</option>
+                  <option value="two">two</option>
+                  <option value="three">three</option>
+                </select>
+              </label>
+            </div>
+            <h3 class="text-white text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Custom Groups/Lists</h3>
+            <div class="flex items-center gap-4 bg-[#181711] px-4 min-h-14 justify-between">
+              <p class="text-white text-base font-normal leading-normal flex-1 truncate">Mentors</p>
+              <div class="shrink-0">
+                <div class="text-white flex size-7 items-center justify-center" data-icon="CaretRight" data-size="24px" data-weight="regular">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                    <path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center gap-4 bg-[#181711] px-4 min-h-14 justify-between">
+              <p class="text-white text-base font-normal leading-normal flex-1 truncate">Potential Collaborators</p>
+              <div class="shrink-0">
+                <div class="text-white flex size-7 items-center justify-center" data-icon="CaretRight" data-size="24px" data-weight="regular">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                    <path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center gap-4 bg-[#181711] px-4 min-h-14 justify-between">
+              <p class="text-white text-base font-normal leading-normal flex-1 truncate">Recruiters</p>
+              <div class="shrink-0">
+                <div class="text-white flex size-7 items-center justify-center" data-icon="CaretRight" data-size="24px" data-weight="regular">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                    <path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+            <div class="flex flex-wrap justify-between gap-3 p-4">
+              <div class="flex min-w-72 flex-col gap-3">
+                <p class="text-white tracking-light text-[32px] font-bold leading-tight">My Network</p>
+                <p class="text-[#bab59c] text-sm font-normal leading-normal">Manage and interact with your professional connections.</p>
+              </div>
+            </div>
+            <div class="flex flex-wrap gap-4 p-4">
+              <div class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-lg p-6 border border-[#54503b]">
+                <p class="text-white text-base font-medium leading-normal">Total Connections</p>
+                <p class="text-white tracking-light text-2xl font-bold leading-tight">350</p>
+              </div>
+              <div class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-lg p-6 border border-[#54503b]">
+                <p class="text-white text-base font-medium leading-normal">New Connections This Month</p>
+                <p class="text-white tracking-light text-2xl font-bold leading-tight">15</p>
+              </div>
+              <div class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-lg p-6 border border-[#54503b]">
+                <p class="text-white text-base font-medium leading-normal">Connections Needing Follow-up</p>
+                <p class="text-white tracking-light text-2xl font-bold leading-tight">5</p>
+              </div>
+            </div>
+            <div class="flex justify-stretch">
+              <div class="flex flex-1 gap-3 flex-wrap px-4 py-3 justify-start">
+                <button
+                  class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#f2d00d] text-[#181711] text-sm font-bold leading-normal tracking-[0.015em]"
+                >
+                  <span class="truncate">Add New Connection</span>
+                </button>
+                <button
+                  class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#393728] text-white text-sm font-bold leading-normal tracking-[0.015em]"
+                >
+                  <span class="truncate">Manage Connection Requests</span>
+                </button>
+              </div>
+            </div>
+            <h3 class="text-white text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Connections</h3>
+            <div class="flex gap-4 bg-[#181711] px-4 py-3 justify-between">
+              <div class="flex items-start gap-4">
+                <div
+                  class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-[70px] w-fit"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBIdFEw55TJNAuX01uSz9V6HPTHhOFo4TlhRRMeBDSwRRknHAqhRnE-czewvrZ7aakFW83L22gAxEYBmnbxceCGXgRkeuD2jBnMoJl2Bvjo7XiNEGiM2RKEQYtWzs0LsO1jVefQRS3XUfiWdbnOs0yWVx0vBBj-fMjYrM-8AYxVljt477jXrGAPS1boM-KD0mYQWiowzH7S6jU1wM1KeFPD8x5I_SA9Le1MX1av1a9Jo7KpEm9f4yMLGYY8iPvnSuhit_qWoxVCGgQ");'
+                ></div>
+                <div class="flex flex-1 flex-col justify-center">
+                  <p class="text-white text-base font-medium leading-normal">Ethan Harper</p>
+                  <p class="text-[#bab59c] text-sm font-normal leading-normal">Messaged 2 days ago | Shared skill: Project Management | Strong</p>
+                  <p class="text-[#bab59c] text-sm font-normal leading-normal">Software Engineer at Tech Innovations Inc. | San Francisco</p>
+                </div>
+              </div>
+              <div class="shrink-0">
+                <button
+                  class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 bg-[#393728] text-white text-sm font-medium leading-normal w-fit"
+                >
+                  <span class="truncate">Send Message</span>
+                </button>
+              </div>
+            </div>
+            <div class="flex gap-4 bg-[#181711] px-4 py-3 justify-between">
+              <div class="flex items-start gap-4">
+                <div
+                  class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-[70px] w-fit"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCf6nhdVk_F6acGtIJUfHENiJVKDGrGZWDLQOhBJ6OnkV75B6O4uSRVOauAjFT05LJEQpGcNreODT1QvtqyRCiVGXk7VPUnh78vQcUlBZ7yLHVBKoXMjM4XSCXSFFg4zLyUAv0TZ0-66Pp2Ok6MMjbslFQh1eo60skoQUL8FazKfZ-9z4mUwlxnGsbjTwukM0beL4tabjck_Um0WToQsNZCT3dKG0Z9lY0E0JZB4rdB4uRXA6td26SyG84PFK8JTiSFqXa49NA-uNg");'
+                ></div>
+                <div class="flex flex-1 flex-col justify-center">
+                  <p class="text-white text-base font-medium leading-normal">Olivia Bennett</p>
+                  <p class="text-[#bab59c] text-sm font-normal leading-normal">Liked your post last week | You both follow AI Ethics | Developing</p>
+                  <p class="text-[#bab59c] text-sm font-normal leading-normal">Product Manager at Global Solutions Ltd. | New York</p>
+                </div>
+              </div>
+              <div class="shrink-0">
+                <button
+                  class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 bg-[#393728] text-white text-sm font-medium leading-normal w-fit"
+                >
+                  <span class="truncate">Send Message</span>
+                </button>
+              </div>
+            </div>
+            <div class="flex gap-4 bg-[#181711] px-4 py-3 justify-between">
+              <div class="flex items-start gap-4">
+                <div
+                  class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-[70px] w-fit"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAf1EoVzW1Y2uhTpKphnCedP8KLY6gxd6FqXGO3WK2u2EhKDESRvihpsfNZkcuX1CqjyoQmMlU67cMyTeDrqGqhJrtR26-O2cXqgyqBEo2C2LskaUzmMG8hn1afNLMaJ5r0m0YCANbDt8IY7yrhc25rDOWaEB1P_dK0ElHXIepjlEENIcH7la55KKADsx02FDSF8GxxW0XHncn1sjVrIZ2XelUk3M2O9X9_-IzPCxZIU3lwco2bUaanEAEqDqxYLMWDYp9SB_l2WTA");'
+                ></div>
+                <div class="flex flex-1 flex-col justify-center">
+                  <p class="text-white text-base font-medium leading-normal">Liam Carter</p>
+                  <p class="text-[#bab59c] text-sm font-normal leading-normal">Messaged 1 week ago | Shared skill: Data Analysis | Strong</p>
+                  <p class="text-[#bab59c] text-sm font-normal leading-normal">Data Scientist at Data Insights Corp. | London</p>
+                </div>
+              </div>
+              <div class="shrink-0">
+                <button
+                  class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 bg-[#393728] text-white text-sm font-medium leading-normal w-fit"
+                >
+                  <span class="truncate">Send Message</span>
+                </button>
+              </div>
+            </div>
+            <div class="flex gap-4 bg-[#181711] px-4 py-3 justify-between">
+              <div class="flex items-start gap-4">
+                <div
+                  class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-[70px] w-fit"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBpm5E7wALtpJGPBBPecblipU-o5IPBriWA7nZqfpRRYrVt8h0zCS7jKgy_JocTXPeVDrUVs-BXHg3XRXckkK5yXUhWn51CNlM-RU3vwC5Y6nj64JmnUSDmpB-_TvMPzL8Gi3_p-u6rk2B783djiZCGipoTUja0I5jI5NDqPzBG-iCXk-8660LFRyO_uCbwXP0pB1hcyphu14Q1FBIpmFpW_H2q6yzE0ub8QeX1KfGTrtkujdcGimLe5xDFm0GHPskcJm6SLutTrtM");'
+                ></div>
+                <div class="flex flex-1 flex-col justify-center">
+                  <p class="text-white text-base font-medium leading-normal">Sophia Evans</p>
+                  <p class="text-[#bab59c] text-sm font-normal leading-normal">Liked your post 2 weeks ago | You both follow Design Thinking | Developing</p>
+                  <p class="text-[#bab59c] text-sm font-normal leading-normal">UX Designer at Creative Designs Studio | Los Angeles</p>
+                </div>
+              </div>
+              <div class="shrink-0">
+                <button
+                  class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 bg-[#393728] text-white text-sm font-medium leading-normal w-fit"
+                >
+                  <span class="truncate">Send Message</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="layout-content-container flex flex-col">
+            <h3 class="text-white text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">AI Insights &amp; Proactive Engagement</h3>
+            <h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em] px-4 text-left pb-2 pt-4">Connections to Re-engage</h2>
+            <div class="flex items-center gap-4 bg-[#181711] px-4 min-h-[72px] py-2 justify-between">
+              <div class="flex items-center gap-4">
+                <div
+                  class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-14 w-fit"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDw9JzJcfOlhkAC-WWMatw5Qv5kEeQqjTo99XX809ue_DX-17M-_7x6-8xntmrD6CyHRVhJOZouYyWXBEHuAE5CClNaVHl1vAL-455QpeHYzxYe-mla2rJAhvTj1EcVD7n3vZe69EuEnTUOUnTY8iBOUFLAOnFKbhsfx8GhtM3ukw0UPpwnuaqktRlPviz2HxGcNQS1dY7yE0SVP7_aLQHA_VZXgCpHdeM4LGyjbBuEBuJ8lZQNu1Z2zBOfmkZCbj9NkUwcg8jvqh0");'
+                ></div>
+                <div class="flex flex-col justify-center">
+                  <p class="text-white text-base font-medium leading-normal line-clamp-1">Noah Foster</p>
+                  <p class="text-[#bab59c] text-sm font-normal leading-normal line-clamp-2">Last interacted 3 months ago</p>
+                </div>
+              </div>
+              <div class="shrink-0">
+                <button
+                  class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 bg-[#393728] text-white text-sm font-medium leading-normal w-fit"
+                >
+                  <span class="truncate">Draft Message</span>
+                </button>
+              </div>
+            </div>
+            <div class="flex items-center gap-4 bg-[#181711] px-4 min-h-[72px] py-2 justify-between">
+              <div class="flex items-center gap-4">
+                <div
+                  class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-14 w-fit"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAi9RH-zhbY8MfyKy_SsCnJF6hBrQQAJKZqweaXIam0DDkamH5gt6d-CEtnWx3OeJTD16lhDxPH50mZj6noJ7f-M_bXZmK6A-wSRR8vfDoEMZc615zj3LqYxxLf0KpBpKV2XzW8NyWpaolr3TB0X8BbUpwd3U1F1i4fQshdg3fZLAmPTTV7i9L4muw-w7LPz698Oji3QomA58ImvTuDqhQ9IM07C3HZWvtwkUdc7SwpAWkkzrer2jokFGhkvHfMGirN9Rmpydlc7vQ");'
+                ></div>
+                <div class="flex flex-col justify-center">
+                  <p class="text-white text-base font-medium leading-normal line-clamp-1">Ava Green</p>
+                  <p class="text-[#bab59c] text-sm font-normal leading-normal line-clamp-2">Recently started a new role at Innovate Solutions</p>
+                </div>
+              </div>
+              <div class="shrink-0">
+                <button
+                  class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 bg-[#393728] text-white text-sm font-medium leading-normal w-fit"
+                >
+                  <span class="truncate">Draft Message</span>
+                </button>
+              </div>
+            </div>
+            <h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em] px-4 text-left pb-2 pt-4">Potential Introductions</h2>
+            <div class="flex items-center gap-4 bg-[#181711] px-4 min-h-[72px] py-2 justify-between">
+              <div class="flex items-center gap-4">
+                <div
+                  class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-14 w-fit"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCZ3PkvzS23-mG_Z_bM_KJpANAVJJGyxXymOdMNSyweq14ygyQx4t_f6JkRJt7EkKiDHa-7aow2nLqJmOIhmgnYdcd6x56bCgYezliHPiQrPYdnsBBMdta98QNX3D2Xx1puWjQrM6t7jCvGCpCE3Zfwsn1acLbfp94Qt78ZQHgeaGckEW5bmxS2vfQZm5MHiv15FtvnxuHdwYBdddc7-WtjyOGUhIeMzKh9oDSmck6xnkNbOro1BXOxQDH6u19L7j7vpYTTorplSD0");'
+                ></div>
+                <div class="flex flex-col justify-center">
+                  <p class="text-white text-base font-medium leading-normal line-clamp-1">Introduce Chloe Hayes to Daniel Clark</p>
+                  <p class="text-[#bab59c] text-sm font-normal leading-normal line-clamp-2">Based on their profiles and goals</p>
+                </div>
+              </div>
+              <div class="shrink-0">
+                <button
+                  class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 bg-[#393728] text-white text-sm font-medium leading-normal w-fit"
+                >
+                  <span class="truncate">Introduce</span>
+                </button>
+              </div>
+            </div>
+            <h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em] px-4 text-left pb-2 pt-4">Networking Goals Progress</h2>
+            <div class="flex flex-col gap-3 p-4">
+              <div class="flex gap-6 justify-between">
+                <p class="text-white text-base font-medium leading-normal">Connect with 5 new people this month</p>
+                <p class="text-white text-sm font-normal leading-normal">3/5</p>
+              </div>
+              <div class="rounded bg-[#54503b]"><div class="h-2 rounded bg-white" style="width: 60%;"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+Get-Content : Cannot find path 'C:\Users\Danie\Desktop\Job Flow Roadmap 1\jobflow\project-structure.txt' because it 
+does not exist.
+At line:1 char:86
++ ... low; tree /F /A ; if ($?) { Get-Content project-structure.txt } else  ...
++                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\Danie\...t-structure.txt:String) [Get-Content], ItemNotFoundEx 
+   ception
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.GetContentCommand
+ 

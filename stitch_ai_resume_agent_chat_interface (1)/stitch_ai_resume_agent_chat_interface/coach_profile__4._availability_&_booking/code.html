@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Coach Profile Creation - Availability &amp; Booking</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#f9d406",
+            "background-light": "#f8f8f5",
+            "background-dark": "#23200f",
+          },
+          fontFamily: {
+            "display": ["Manrope", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+    }
+  </style>
+</head>
+<body class="font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<div class="px-4 sm:px-8 md:px-16 lg:px-24 xl:px-40 flex flex-1 justify-center py-5">
+<div class="layout-content-container flex flex-col max-w-6xl w-full flex-1">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-white/10 px-4 py-3">
+<div class="flex items-center gap-4 text-white">
+<div class="size-6 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 4H30.6666V17.3334H17.3334V30.6666H4V44H44V4Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">AI Resume Agent</h2>
+</div>
+<div class="flex flex-1 justify-end gap-4 sm:gap-8">
+<div class="flex gap-2">
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-white/10 text-white hover:bg-white/20 transition-colors gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5">
+<span class="material-symbols-outlined text-white" style="font-size: 20px;">notifications</span>
+</button>
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-white/10 text-white hover:bg-white/20 transition-colors gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5">
+<span class="material-symbols-outlined text-white" style="font-size: 20px;">settings</span>
+</button>
+</div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User avatar placeholder" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCCf5NvBcStyM7FHzjas54uKxcyO9iqHTPrrTQlhU_VHHzKnJ6v8x2X-zJqdNs5v26l-FLhW-W-LVtyhKFqhoQXorWuy-u5sVwuSIxf02kKxknIAgoOzLCHNyUtf046n6OD_NAUtRbDm12nFTsuUBy9tGQX4-u4KRsMDfNeAdutAI2RPf_n9GUU67uWULyXVefd8L8wN-UysCdbmwPb7D9Q4sKDzhMCaSvphuR_7vWWVtqbixUKC2KL5wURinDMeq9TkPtIp_IE1nM");'></div>
+</div>
+</header>
+<main class="flex flex-col gap-8 p-4 md:p-6 lg:p-8">
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between text-sm font-medium text-white/50">
+<p>Step 4/6</p>
+</div>
+<div class="grid grid-cols-6 gap-2">
+<div class="h-1.5 rounded-full bg-primary/30"><div class="h-1.5 rounded-full bg-primary" style="width: 100%;"></div></div>
+<div class="h-1.5 rounded-full bg-primary/30"><div class="h-1.5 rounded-full bg-primary" style="width: 100%;"></div></div>
+<div class="h-1.5 rounded-full bg-primary/30"><div class="h-1.5 rounded-full bg-primary" style="width: 100%;"></div></div>
+<div class="h-1.5 rounded-full bg-primary/30"><div class="h-1.5 rounded-full bg-primary" style="width: 100%;"></div></div>
+<div class="h-1.5 rounded-full bg-white/10"></div>
+<div class="h-1.5 rounded-full bg-white/10"></div>
+</div>
+</div>
+<div class="flex flex-wrap justify-between gap-4">
+<div class="flex min-w-72 flex-col gap-2">
+<p class="text-white text-3xl md:text-4xl font-black leading-tight tracking-[-0.033em]">Set Your Availability &amp; Booking</p>
+<p class="text-white/60 text-base font-normal leading-normal max-w-2xl">
+                  Define when you're available for client sessions and connect your external calendars to prevent double-booking.
+                </p>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<div class="lg:col-span-2 flex flex-col gap-6">
+<div class="flex flex-col gap-4 p-6 rounded-xl bg-white/5">
+<h2 class="text-white text-xl font-bold leading-tight tracking-[-0.015em]">Weekly Availability</h2>
+<p class="text-white/60 text-sm font-normal leading-normal">
+                      Click and drag on the calendar to block out personal time. All other times within your office hours will be shown as available to clients.
+                    </p>
+<div class="mt-2 w-full text-white/80">
+<div class="grid grid-cols-8 text-center text-xs font-semibold">
+<div class="py-2"></div>
+<div class="py-2">Mon</div>
+<div class="py-2">Tue</div>
+<div class="py-2">Wed</div>
+<div class="py-2">Thu</div>
+<div class="py-2">Fri</div>
+<div class="py-2">Sat</div>
+<div class="py-2">Sun</div>
+</div>
+<div class="grid grid-cols-8 text-xs">
+<div class="flex flex-col text-right pr-2 text-white/50">
+<div class="h-8 flex items-center justify-end">9:00 AM</div>
+<div class="h-8 flex items-center justify-end">10:00 AM</div>
+<div class="h-8 flex items-center justify-end">11:00 AM</div>
+<div class="h-8 flex items-center justify-end">12:00 PM</div>
+<div class="h-8 flex items-center justify-end">1:00 PM</div>
+<div class="h-8 flex items-center justify-end">2:00 PM</div>
+<div class="h-8 flex items-center justify-end">3:00 PM</div>
+<div class="h-8 flex items-center justify-end">4:00 PM</div>
+<div class="h-8 flex items-center justify-end">5:00 PM</div>
+</div>
+<!-- Calendar Days -->
+<div class="col-span-7 grid grid-cols-7 border-l border-white/10">
+<script>
+                            for(let day = 0; day < 7; day++) {
+                              document.write('<div class="flex flex-col border-r border-white/10">');
+                              for(let hour = 0; hour < 9; hour++) {
+                                let specialClass = '';
+                                if(day === 2 && (hour === 2 || hour === 3)) { specialClass = 'bg-primary/30'; }
+                                if(day === 4 && hour === 5) { specialClass = 'bg-primary/30'; }
+                                document.write('<div class="h-8 border-t border-white/10 cursor-pointer hover:bg-primary/20 ' + specialClass + '"></div>');
+                              }
+                              document.write('</div>');
+                            }
+                          </script>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-1 flex flex-col gap-8">
+<div class="flex flex-col gap-6 p-6 rounded-xl bg-white/5">
+<h2 class="text-white text-xl font-bold leading-tight tracking-[-0.015em]">Booking Rules</h2>
+<div class="flex flex-col gap-4">
+<label class="text-white/80 text-sm font-medium" for="office-hours">Office Hours</label>
+<div class="flex justify-between gap-2 text-white/80 text-xs">
+<button class="flex-1 h-8 rounded bg-white/10 hover:bg-white/20">M</button>
+<button class="flex-1 h-8 rounded bg-primary text-background-dark font-bold">T</button>
+<button class="flex-1 h-8 rounded bg-primary text-background-dark font-bold">W</button>
+<button class="flex-1 h-8 rounded bg-primary text-background-dark font-bold">T</button>
+<button class="flex-1 h-8 rounded bg-primary text-background-dark font-bold">F</button>
+<button class="flex-1 h-8 rounded bg-white/10 hover:bg-white/20">S</button>
+<button class="flex-1 h-8 rounded bg-white/10 hover:bg-white/20">S</button>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<input class="w-full bg-white/5 border border-white/10 rounded-lg text-sm text-white/80 p-2.5 focus:ring-primary focus:border-primary" type="time" value="09:00"/>
+<input class="w-full bg-white/5 border border-white/10 rounded-lg text-sm text-white/80 p-2.5 focus:ring-primary focus:border-primary" type="time" value="17:00"/>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-white/80 text-sm font-medium" for="buffer-time">Buffer time</label>
+<select class="w-full bg-white/5 border border-white/10 rounded-lg text-sm text-white/80 p-2.5 focus:ring-primary focus:border-primary" id="buffer-time">
+<option>15 minutes</option>
+<option selected="">30 minutes</option>
+<option>45 minutes</option>
+<option>1 hour</option>
+</select>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-white/80 text-sm font-medium">Messaging available</span>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-white/20 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+<div class="flex flex-col gap-6 p-6 rounded-xl bg-white/5">
+<div class="flex flex-col gap-2">
+<h2 class="text-white text-xl font-bold leading-tight tracking-[-0.015em]">Calendar Sync</h2>
+<p class="text-white/60 text-sm font-normal leading-normal">
+                      Connect your calendar to automatically sync your availability.
+                    </p>
+</div>
+<div class="flex flex-col gap-3">
+<button class="flex w-full items-center justify-center gap-3 rounded-lg bg-white/10 px-4 py-2.5 text-sm font-bold text-white hover:bg-white/20 transition-colors">
+<img alt="Google Calendar logo" class="h-5 w-5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKMGoQv-DsoHLwsqET1wR2i2KeHcxkleSeQQgCbVAO7lTXaG6ZnyRSMjfxi1RtEaLIPdg5cgA69MBjtO0F6cEcQpCkLDIET9t6QHDKHn43z9JGJI24er5gdlGyf1zM90OxHLSD51RirdHVI76NNDIFdpMM0wSVs2FvMzh_rzHbALQVpZHbHKvDiX1U0687Y0bRaBkpFBxsPYidhxMFbqteAKXAmVo0gra2_vsqDd1m-TZBt_sFONbmGh3Z38fIcaofwtaPBYUb98k"/>
+                      Connect with Google Calendar
+                    </button>
+<button class="flex w-full items-center justify-center gap-3 rounded-lg bg-white/10 px-4 py-2.5 text-sm font-bold text-white hover:bg-white/20 transition-colors">
+<img alt="Outlook Calendar logo" class="h-5 w-5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbyH4SuDHxJlt6QWnFQvPnW8waHFMeFrRBPa5rZ5Z7uOWVJ4AcW7k4pZvRltxEJHSoPARD2Vt5KJ6jrGgPRIpFSIF7ukydGQkzMY54lbKLSKpOiFWts12QzP-ojQYOFQfcDOMwTZJiLu5BNBbFo6NlRioPq8rfrwDZohEmCjducyTdFBtGZmz_eCWScbXsjHLgBVlqP2PBJODxzEXqWz_Jl-bQl0lRNInN-zm49PVpWjCXQLG7Oosdb6UIkKme3nsryQB1Pj11VWM"/>
+                      Connect with Outlook Calendar
+                    </button>
+</div>
+</div>
+</div>
+</div>
+<div class="flex justify-end gap-4 pt-8">
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 bg-transparent text-white/60 border border-white/20 hover:bg-white/5 hover:text-white transition-colors gap-2 text-base font-bold leading-normal tracking-[0.015em] min-w-0 px-6">Back</button>
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 bg-primary text-background-dark hover:bg-yellow-300 transition-colors gap-2 text-base font-bold leading-normal tracking-[0.015em] min-w-0 px-6">Next: Set Packages</button>
+</div>
+</main>
+</div>
+</div>
+</div>
+</div>
+</body></html>

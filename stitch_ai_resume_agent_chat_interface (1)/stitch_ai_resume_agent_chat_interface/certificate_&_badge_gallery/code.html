@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CareerDev - Certificate &amp; Badge Gallery</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f2d00d",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#221f10",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 20
+        }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<div class="flex h-full grow flex-col">
+<div class="px-4 sm:px-8 md:px-16 lg:px-24 xl:px-40 flex flex-1 justify-center py-5">
+<div class="flex flex-col max-w-[960px] flex-1">
+<!-- TopNavBar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-white/10 dark:border-white/10 px-4 sm:px-6 lg:px-10 py-3">
+<div class="flex items-center gap-4 text-white">
+<div class="size-6 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">CareerDev</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-end gap-8">
+<div class="flex items-center gap-9">
+<a class="text-white/80 hover:text-white text-sm font-medium leading-normal transition-colors" href="#">Dashboard</a>
+<a class="text-white/80 hover:text-white text-sm font-medium leading-normal transition-colors" href="#">My Plan</a>
+<a class="text-white/80 hover:text-white text-sm font-medium leading-normal transition-colors" href="#">Resume AI</a>
+<a class="text-primary text-sm font-bold leading-normal" href="#">Gallery</a>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-white/10 hover:bg-white/20 text-white text-sm font-bold leading-normal tracking-[0.015em] transition-colors">
+<span class="truncate">Settings</span>
+</button>
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-white/10 hover:bg-white/20 text-white gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5 transition-colors">
+<span class="material-symbols-outlined text-white text-[20px]">notifications</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDk5NoF0lZaM3WfCMTf-QxDms07ChPfSGQIR-qIg_FoElLZnvoJcEChxJ8Q9UDZdsrlhZayvJk8TDqRDzEwrtDH6WGpMZvalYC5GcAIZlFTlScKTbX3eWX3I1uvvlGiI-8U9wYrhEeicaa-I64G8jmr6ucMcYn3d7lrmn5iBctO78KE_BBeflxmjMAwuD_xdejz3Ls5XO6vkIC2zfxWRL07e_ZEohHnEvLzyR20EfT50eQgHjZX3BeWk7WlaR_A-zEeiQffX1GXt5E");'></div>
+</div>
+</div>
+<button class="md:hidden flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-white/10 hover:bg-white/20 text-white gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5 transition-colors">
+<span class="material-symbols-outlined text-white text-[24px]">menu</span>
+</button>
+</header>
+<main class="mt-8">
+<!-- PageHeading -->
+<div class="flex flex-wrap justify-between gap-4 p-4 items-center">
+<div class="flex min-w-72 flex-col gap-2">
+<p class="text-white text-4xl font-black leading-tight tracking-[-0.033em]">My Certificates &amp; Badges</p>
+<p class="text-white/60 dark:text-white/60 text-base font-normal leading-normal">Showcase of all your issued badges and certificates from completed learning events.</p>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-5 bg-primary text-background-dark text-sm font-bold leading-normal tracking-[0.015em] hover:brightness-90 transition-all gap-2">
+<span class="material-symbols-outlined text-background-dark text-[20px]">ios_share</span>
+<span class="truncate">Share All Achievements</span>
+</button>
+</div>
+<!-- Chips -->
+<div class="flex gap-3 p-3 mt-4 overflow-x-auto">
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-white/10 dark:bg-white/10 pl-3 pr-2 hover:bg-white/20 transition-colors">
+<span class="material-symbols-outlined text-white text-[20px]">filter_list</span>
+<p class="text-white text-sm font-medium leading-normal">Provider</p>
+<span class="material-symbols-outlined text-white text-[20px]">arrow_drop_down</span>
+</button>
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-white/10 dark:bg-white/10 pl-3 pr-2 hover:bg-white/20 transition-colors">
+<span class="material-symbols-outlined text-white text-[20px]">filter_list</span>
+<p class="text-white text-sm font-medium leading-normal">Skill</p>
+<span class="material-symbols-outlined text-white text-[20px]">arrow_drop_down</span>
+</button>
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-white/10 dark:bg-white/10 pl-3 pr-2 hover:bg-white/20 transition-colors">
+<span class="material-symbols-outlined text-white text-[20px]">swap_vert</span>
+<p class="text-white text-sm font-medium leading-normal">Sort by: Newest</p>
+<span class="material-symbols-outlined text-white text-[20px]">arrow_drop_down</span>
+</button>
+</div>
+<!-- ImageGrid -->
+<div class="grid grid-cols-[repeat(auto-fill,minmax(160px,1fr))] gap-4 p-4">
+<div class="flex flex-col gap-3 pb-3 group cursor-pointer">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg group-hover:scale-105 group-hover:shadow-lg group-hover:shadow-primary/20 transition-transform duration-300 border border-white/10" data-alt="Certificate for Advanced Python" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuApUrwlRLq6HEfS2rm6g1hKtTj3DRTxNtLpjMxj5A-ZDjbyDcG6Y0Ol7_634YD4kcC__PtGA8ORe4vXl1nxBhqTlIexJ7Kwz2Ncuijq4dmcMUBXy5gMzvVpmy6HyDLaZ4f8mwv2PYopGnGFNGf9EF62J0dg2LaXjxZik4eFdd0uhnAc1vHQB8_f1qlGUuBfZXogmDRBT4xBRjWCRFszy3gvdbxkAa0ni6JUIY4HowJwxr_jEvvm6jVgWkI455XH_15leAGt2uQ7ogo");'></div>
+<div>
+<p class="text-white text-base font-medium leading-normal">Advanced Python</p>
+<p class="text-white/60 dark:text-white/60 text-sm font-normal leading-normal">Coursera</p>
+<p class="text-white/60 dark:text-white/60 text-sm font-normal leading-normal">Completed: 2024-03-15</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 pb-3 group cursor-pointer">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg group-hover:scale-105 group-hover:shadow-lg group-hover:shadow-primary/20 transition-transform duration-300 border border-white/10" data-alt="Certificate for Project Management Professional (PMP)" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCgf0OjXfw3rSybl4_DLmNgXuzvN4WEAeBe4GQ9o5YmOrq9PWkIM6gijMqs2F8Zdi4VTMMlLqrXgg-s0Y1In2BVhIBFk4J3M26XPskdUHQ6vNkYkIIFgSawuAJNrCL6HypEHMQdrse3KydIwOKiykgGvb9xS7ds-U7XkQ9GR-IKus1fRLsHd4cs2enfxYXso7zxMMLYIUV3RRrRRxT-RxqgXYPfbavg5_kt5gTDUKWqjgIMaiLZNUuH11exRI7-wNWKjeXSaXelIBk");'></div>
+<div>
+<p class="text-white text-base font-medium leading-normal">Project Management Professional (PMP)</p>
+<p class="text-white/60 dark:text-white/60 text-sm font-normal leading-normal">PMI</p>
+<p class="text-white/60 dark:text-white/60 text-sm font-normal leading-normal">Completed: 2024-02-20</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 pb-3 group cursor-pointer">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg group-hover:scale-105 group-hover:shadow-lg group-hover:shadow-primary/20 transition-transform duration-300 border border-white/10" data-alt="Certificate for Data Science Fundamentals" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCG6eR9mRpF8hkrw6WNwOhWlh0fPHHY6eSdujhaGadkQJKtNtM-pBo6jeJNvAImyg67WyVlxxvAcu1f1ORzxkqXBI4VH9NEQ7SwoJnocmdBzpA9h4v24-8US8ba-gcYdPDSN7xRpLCHalf-4rY-xzb5deFIqqNrCYH1XgolIG1vLeFUnoxb_eCzGyyvro7wqfpSXN-pS6vFQjvFd-j6I1hC9O9-sc8zcQVs9qeQvVr5_1AkyOPr2EPfnobOx_BbIVLSytzFY4is3P4");'></div>
+<div>
+<p class="text-white text-base font-medium leading-normal">Data Science Fundamentals</p>
+<p class="text-white/60 dark:text-white/60 text-sm font-normal leading-normal">LinkedIn Learning</p>
+<p class="text-white/60 dark:text-white/60 text-sm font-normal leading-normal">Completed: 2024-01-10</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 pb-3 group cursor-pointer">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg group-hover:scale-105 group-hover:shadow-lg group-hover:shadow-primary/20 transition-transform duration-300 border border-white/10" data-alt="Certificate for UX Design Principles" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD1pBEn8sCwF3-MQScHhIrR1yANzp8dHcts5d-8Q9UdzHEQTEdYuIpxMqRB1C_I1RcxKqrKtBSo_7nWZ_LYGLJMdhJuDubn7sf7dBRUUUh2CjGBoir7BZ03jS7KdlGQ4rhrc4al5Z364aZdzcA8Sh_D7SPkUktXGXYTpLS2OtOZ346IUzZFnMuiBsdd_L9pTGEsrH2EvgjfSngW6oQWcXlV_FvPSux86NSxBZkwW_wJ38wcOal0_Ap75V-3J8tWj30lqAUs0d89HnM");'></div>
+<div>
+<p class="text-white text-base font-medium leading-normal">UX Design Principles</p>
+<p class="text-white/60 dark:text-white/60 text-sm font-normal leading-normal">Coursera</p>
+<p class="text-white/60 dark:text-white/60 text-sm font-normal leading-normal">Completed: 2023-12-05</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 pb-3 group cursor-pointer">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg group-hover:scale-105 group-hover:shadow-lg group-hover:shadow-primary/20 transition-transform duration-300 border border-white/10" data-alt="Certificate for Agile Methodologies" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCUsE6MG6PY_ZQ_C_jz9gTRL66fgkhJnuXHmRKH0CqgvjAJ_bwT5vSsA58GQWCLEqqnWmbJI9qklq4uZjECxg5kgsH2VYqwF5dB1T3J_y4D4lM0b6dZvx5ZFW4LsCUYUx21nlYn8H9vZg4isyDeiKegxv48iqMfy5ttqpBFaPTdnLmnl6LhUU85vSUmNjTBfcgICOpGLn3Byauj5OZuOlkDHQ81OIwPm883OvlMkBi-RS5I-Ppcb59QPAuIrfV7yrPA1P5OGppRNfM");'></div>
+<div>
+<p class="text-white text-base font-medium leading-normal">Agile Methodologies</p>
+<p class="text-white/60 dark:text-white/60 text-sm font-normal leading-normal">Udemy</p>
+<p class="text-white/60 dark:text-white/60 text-sm font-normal leading-normal">Completed: 2023-11-18</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 pb-3 group cursor-pointer">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg group-hover:scale-105 group-hover:shadow-lg group-hover:shadow-primary/20 transition-transform duration-300 border border-white/10" data-alt="Certificate for Cloud Computing Basics" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC8jiSX6r0eSPGf3g6JQ6eNh9ikCbLxnzUdjVrJRdLkW4YekdBYzG3WFkq1kl2DiAIPbKbe9EmTb_d_PEw9r3pBqc2X_Lf3Me3MCIJlY95SUXMARyjzTjJXKt5obVymp6YUemjV_s_2IZ_RtY74HboRCYqZbE_0yLDy8u8YiHqJc9-d14wrDjXWcG18AmppUHhqn0IAt3hp50rE1lZYaSRmnhszRoeLZCHbsm4oLPkMflBUSFdwIK-rv8vGPSG3QYIKAlZUGUMP8jA");'></div>
+<div>
+<p class="text-white text-base font-medium leading-normal">Cloud Computing Basics</p>
+<p class="text-white/60 dark:text-white/60 text-sm font-normal leading-normal">LinkedIn Learning</p>
+<p class="text-white/60 dark:text-white/60 text-sm font-normal leading-normal">Completed: 2023-10-22</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 pb-3 group cursor-pointer">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg group-hover:scale-105 group-hover:shadow-lg group-hover:shadow-primary/20 transition-transform duration-300 border border-white/10" data-alt="Certificate for Digital Marketing" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCeOG4fgEnIvxNfL-PWCHFt9mR5cguuWJZHB_u2n1kxpjkLIFd3pv4beWuEHsjdKAk7v1hz3VxR0g2ACFI-nGJHZEQkbcVZjx11Cha-28yPiRnaNX3wKg6jPhlkDZvBak7QyuxuYtvwAK_VSIgC248csADyc6blu6ytD_f5P6kiMHJLmIv_I1cdgzm8VaR573CZADsaxcB3Lk46EGVmvb1c6cacINkv11S7X_ixOaqu37xRBE_uPLfxAPCU6qy5Gli7vQq0haOBoSo");'></div>
+<div>
+<p class="text-white text-base font-medium leading-normal">Digital Marketing</p>
+<p class="text-white/60 dark:text-white/60 text-sm font-normal leading-normal">Coursera</p>
+<p class="text-white/60 dark:text-white/60 text-sm font-normal leading-normal">Completed: 2023-09-30</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 pb-3 group cursor-pointer">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg group-hover:scale-105 group-hover:shadow-lg group-hover:shadow-primary/20 transition-transform duration-300 border border-white/10" data-alt="Certificate for Machine Learning Introduction" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDVhnLyc-atS-XOM36E18yKNhGg6s2LVjsQEFnKhZ9IetIjGC9J4I4K_FHpnkXdELikEix8DNZEnpqFTD2OmDZ_1j-wStw78YR3OsRjL74lMT4pAYcZyffar3WxTeqTro_IOJYkKXppyeBjNaczc8zU8TsvXmValV96UYXE-asIsgaiBVXo1NMQd3Y2j-0P1GkoMRmIjFafY97O6ixaqqbIpZZIn4vjFqWNolfD8_h8rdqYxqRZnX5F5hJIdX5LWfUpN4l-gM98rwk");'></div>
+<div>
+<p class="text-white text-base font-medium leading-normal">Machine Learning Introduction</p>
+<p class="text-white/60 dark:text-white/60 text-sm font-normal leading-normal">Udemy</p>
+<p class="text-white/60 dark:text-white/60 text-sm font-normal leading-normal">Completed: 2023-08-14</p>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="flex items-center justify-center p-4 mt-8">
+<a class="flex size-10 items-center justify-center text-white/60 hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">chevron_left</span>
+</a>
+<a class="text-sm font-bold leading-normal tracking-[0.015em] flex size-10 items-center justify-center text-background-dark rounded-full bg-primary" href="#">1</a>
+<a class="text-sm font-normal leading-normal flex size-10 items-center justify-center text-white/80 rounded-full hover:bg-white/10 transition-colors" href="#">2</a>
+<a class="text-sm font-normal leading-normal flex size-10 items-center justify-center text-white/80 rounded-full hover:bg-white/10 transition-colors" href="#">3</a>
+<span class="text-sm font-normal leading-normal flex size-10 items-center justify-center text-white/60 rounded-full">...</span>
+<a class="text-sm font-normal leading-normal flex size-10 items-center justify-center text-white/80 rounded-full hover:bg-white/10 transition-colors" href="#">8</a>
+<a class="text-sm font-normal leading-normal flex size-10 items-center justify-center text-white/80 rounded-full hover:bg-white/10 transition-colors" href="#">9</a>
+<a class="text-sm font-normal leading-normal flex size-10 items-center justify-center text-white/80 rounded-full hover:bg-white/10 transition-colors" href="#">10</a>
+<a class="flex size-10 items-center justify-center text-white/60 hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">chevron_right</span>
+</a>
+</div>
+</main>
+</div>
+</div>
+</div>
+</div>
+</body></html>

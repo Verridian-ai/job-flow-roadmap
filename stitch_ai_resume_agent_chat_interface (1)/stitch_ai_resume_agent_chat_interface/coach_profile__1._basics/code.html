@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Coach Profile Creation - Step 1: Basics</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#f9d406",
+              "background-light": "#f8f8f5",
+              "background-dark": "#121212",
+              "text-light": "#1f2937",
+              "text-dark": "#f3f4f6",
+              "subtle-light": "#e5e7eb",
+              "subtle-dark": "#374151",
+              "element-light": "#ffffff",
+              "element-dark": "#1e1e1e",
+              "border-light": "#d1d5db",
+              "border-dark": "#4b5563"
+            },
+            fontFamily: {
+              "display": ["Manrope", "sans-serif"]
+            },
+            borderRadius: {
+              "DEFAULT": "0.25rem",
+              "lg": "0.5rem",
+              "xl": "0.75rem",
+              "full": "9999px"
+            },
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+      }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark antialiased">
+<div class="relative flex min-h-screen w-full flex-col items-center justify-center p-4 sm:p-6 lg:p-8">
+<main class="w-full max-w-2xl">
+<!-- Segmented Progress Bar -->
+<div class="mb-8">
+<p class="mb-2 text-sm font-medium text-text-light dark:text-text-dark/80">Step 1 of 6</p>
+<div aria-valuemax="6" aria-valuemin="1" aria-valuenow="1" aria-valuetext="Step 1 of 6: Basics" class="flex w-full gap-2" role="progressbar">
+<div class="h-1.5 flex-1 rounded-full bg-primary"></div>
+<div class="h-1.5 flex-1 rounded-full bg-subtle-light dark:bg-subtle-dark"></div>
+<div class="h-1.5 flex-1 rounded-full bg-subtle-light dark:bg-subtle-dark"></div>
+<div class="h-1.5 flex-1 rounded-full bg-subtle-light dark:bg-subtle-dark"></div>
+<div class="h-1.5 flex-1 rounded-full bg-subtle-light dark:bg-subtle-dark"></div>
+<div class="h-1.5 flex-1 rounded-full bg-subtle-light dark:bg-subtle-dark"></div>
+</div>
+</div>
+<!-- Page Heading -->
+<div class="mb-10">
+<h1 class="text-3xl font-extrabold tracking-tight text-text-light dark:text-text-dark sm:text-4xl">Coach Profile: Basics</h1>
+<p class="mt-2 text-base text-text-light/70 dark:text-text-dark/70">Let's start with the essentials. This information will be used to create your public profile.</p>
+</div>
+<!-- Form -->
+<form class="flex flex-col gap-6">
+<div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+<!-- First Name -->
+<div>
+<label class="block text-sm font-medium leading-6" for="first-name">First Name</label>
+<div class="mt-2">
+<input class="block w-full rounded-lg border-0 bg-element-light dark:bg-element-dark py-3 px-4 shadow-sm ring-1 ring-inset ring-border-light dark:ring-border-dark placeholder:text-text-light/50 dark:placeholder:text-text-dark/50 focus:ring-2 focus:ring-inset focus:ring-primary" id="first-name" maxlength="50" name="first-name" placeholder="e.g. Jane" type="text"/>
+</div>
+</div>
+<!-- Last Name -->
+<div>
+<label class="block text-sm font-medium leading-6" for="last-name">Last Name</label>
+<div class="mt-2">
+<input class="block w-full rounded-lg border-0 bg-element-light dark:bg-element-dark py-3 px-4 shadow-sm ring-1 ring-inset ring-border-light dark:ring-border-dark placeholder:text-text-light/50 dark:placeholder:text-text-dark/50 focus:ring-2 focus:ring-inset focus:ring-primary" id="last-name" maxlength="50" name="last-name" placeholder="e.g. Doe" type="text"/>
+</div>
+</div>
+</div>
+<!-- Phone Number -->
+<div>
+<label class="block text-sm font-medium leading-6" for="phone-number">Phone Number</label>
+<div class="mt-2">
+<input class="block w-full rounded-lg border-0 bg-element-light dark:bg-element-dark py-3 px-4 shadow-sm ring-1 ring-inset ring-border-light dark:ring-border-dark placeholder:text-text-light/50 dark:placeholder:text-text-dark/50 focus:ring-2 focus:ring-inset focus:ring-primary" id="phone-number" maxlength="20" name="phone-number" placeholder="+12025550104" type="tel"/>
+<p class="mt-2 text-xs text-text-light/60 dark:text-text-dark/60">E.164 format recommended.</p>
+</div>
+</div>
+<!-- Email Address -->
+<div>
+<label class="block text-sm font-medium leading-6" for="email">Email Address</label>
+<div class="mt-2">
+<input class="block w-full cursor-not-allowed rounded-lg border-0 bg-subtle-light dark:bg-subtle-dark/50 py-3 px-4 text-text-light/70 dark:text-text-dark/70 shadow-sm ring-1 ring-inset ring-border-light dark:ring-border-dark placeholder:text-text-light/50 dark:placeholder:text-text-dark/50 focus:ring-2 focus:ring-inset focus:ring-primary" disabled="" id="email" name="email" type="email" value="coach.name@example.com"/>
+</div>
+</div>
+<div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+<!-- Country of Residence -->
+<div>
+<label class="block text-sm font-medium leading-6" for="country">Country of Residence</label>
+<div class="relative mt-2">
+<select class="block w-full appearance-none rounded-lg border-0 bg-element-light dark:bg-element-dark py-3 pl-4 pr-10 shadow-sm ring-1 ring-inset ring-border-light dark:ring-border-dark focus:ring-2 focus:ring-inset focus:ring-primary" id="country" name="country">
+<option>United States</option>
+<option selected="">United Kingdom</option>
+<option>Canada</option>
+<option>Australia</option>
+</select>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
+<span aria-hidden="true" class="material-symbols-outlined text-text-light/50 dark:text-text-dark/50">unfold_more</span>
+</div>
+</div>
+</div>
+<!-- City -->
+<div>
+<label class="block text-sm font-medium leading-6" for="city">City</label>
+<div class="mt-2">
+<input class="block w-full rounded-lg border-0 bg-element-light dark:bg-element-dark py-3 px-4 shadow-sm ring-1 ring-inset ring-border-light dark:ring-border-dark placeholder:text-text-light/50 dark:placeholder:text-text-dark/50 focus:ring-2 focus:ring-inset focus:ring-primary" id="city" maxlength="50" name="city" placeholder="e.g. London" type="text"/>
+</div>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="mt-8 flex flex-col-reverse items-center gap-4 border-t border-border-light dark:border-border-dark pt-6 sm:flex-row sm:justify-end">
+<button class="text-sm font-semibold leading-6 transition-colors hover:text-text-light dark:hover:text-text-dark" type="button">Save and exit</button>
+<button class="flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-5 py-3 text-sm font-semibold text-black shadow-sm transition-all hover:bg-yellow-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary sm:w-auto" type="submit">
+                        Next
+                        <span aria-hidden="true" class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</form>
+</main>
+</div>
+</body></html>

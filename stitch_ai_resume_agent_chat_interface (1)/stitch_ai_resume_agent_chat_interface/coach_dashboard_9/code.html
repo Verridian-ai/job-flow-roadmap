@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Coach Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;888;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#f2d00d",
+              "background-light": "#f8f8f5",
+              "background-dark": "#121212",
+              "card-dark": "#1E1E1E",
+              "border-dark": "#393728",
+              "text-main-dark": "#E0E0E0",
+              "text-secondary-dark": "#888888",
+            },
+            fontFamily: {
+              "display": ["Lexend", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "0.75rem", "xl": "1rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            font-size: 24px;
+        }
+        .sortable-ghost {
+            opacity: 0.4;
+            background-color: #393728;
+            border: 2px dashed #f2d00d;
+        }
+        .drag-handle {
+            cursor: move;
+        }
+        #customisation-panel {
+            transition: transform 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-main-dark">
+<div class="flex min-h-screen">
+<aside class="w-64 flex-shrink-0 bg-background-light dark:bg-background-dark border-r border-transparent dark:border-border-dark">
+<div class="flex h-full min-h-[700px] flex-col justify-between p-4">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-3 p-2">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="Profile picture of Alex Morgan" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDhK2rmr_0KRUJjjofRy0Nd3MQ364vDso7Oy_i2aQtL0mxB-58t6GFAGY9-xlgm2nzSC-wf5MvWa4whOvOf7CgIDbPRYOucSUnBmksxod9OSwTqSPDmKeHonUZ3CpUu59ExCboyLBVY-9-ZVJLVyvoEJLLM7sIKTSXF5vPswNRwdkeqoJUiHgpsGQOHXwDVyOL1janetej52JJQT5EdohllXUBWR8hDfA0ap_7M-0VuP3c2Z28XtXw7R-truZB0ceaWkIm-JvUVRR0");'></div>
+<div class="flex flex-col">
+<h1 class="text-black dark:text-white text-base font-medium leading-normal">Alex Morgan</h1>
+<p class="text-gray-600 dark:text-text-secondary-dark text-sm font-normal leading-normal">Career Coach</p>
+</div>
+</div>
+<nav class="flex flex-col gap-2 mt-4">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/20 text-primary" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<p class="text-sm font-medium leading-normal">Dashboard</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-black dark:text-text-main-dark hover:bg-primary/10 rounded-lg" href="#">
+<span class="material-symbols-outlined">group</span>
+<p class="text-sm font-medium leading-normal">Clients</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-black dark:text-text-main-dark hover:bg-primary/10 rounded-lg" href="#">
+<span class="material-symbols-outlined">diversity_3</span>
+<p class="text-sm font-medium leading-normal">Mentorship</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-black dark:text-text-main-dark hover:bg-primary/10 rounded-lg" href="#">
+<span class="material-symbols-outlined">calendar_month</span>
+<p class="text-sm font-medium leading-normal">Calendar</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-black dark:text-text-main-dark hover:bg-primary/10 rounded-lg" href="#">
+<span class="material-symbols-outlined">feed</span>
+<p class="text-sm font-medium leading-normal">News Feed</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-black dark:text-text-main-dark hover:bg-primary/10 rounded-lg" href="#">
+<span class="material-symbols-outlined">settings</span>
+<p class="text-sm font-medium leading-normal">Settings</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-black dark:text-text-main-dark hover:bg-primary/10 rounded-lg" href="#">
+<span class="material-symbols-outlined">account_circle</span>
+<p class="text-sm font-medium leading-normal">My Profile</p>
+</a>
+</nav>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-background-dark text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Add New Client</span>
+</button>
+</div>
+</aside>
+<main class="flex-1 p-8 overflow-y-auto">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-wrap justify-between items-center gap-4 mb-8">
+<div class="flex flex-col gap-1">
+<h1 class="text-black dark:text-white text-4xl font-black leading-tight tracking-[-0.033em]">Good Morning, Alex!</h1>
+<p class="text-gray-600 dark:text-text-secondary-dark text-base font-normal leading-normal">Here's a summary of your coaching activities.</p>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-background-dark text-sm font-bold leading-normal tracking-[0.015em] gap-2" id="customise-btn">
+<span class="material-symbols-outlined !text-xl">edit</span>
+<span class="truncate">Customise Dashboard</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 mb-8" id="dashboard-widgets">
+<div class="flex flex-col gap-2 rounded-lg p-6 bg-white dark:bg-card-dark border border-gray-200 dark:border-border-dark relative widget-card">
+<span class="material-symbols-outlined drag-handle text-text-secondary-dark absolute top-2 right-2 hidden">drag_indicator</span>
+<p class="text-gray-800 dark:text-text-main-dark text-base font-medium leading-normal">Total Clients</p>
+<p class="text-black dark:text-white tracking-light text-3xl font-bold leading-tight">48</p>
+<p class="text-green-500 text-sm font-medium leading-normal">+5% this month</p>
+</div>
+<div class="flex flex-col gap-2 rounded-lg p-6 bg-white dark:bg-card-dark border border-gray-200 dark:border-border-dark relative widget-card">
+<span class="material-symbols-outlined drag-handle text-text-secondary-dark absolute top-2 right-2 hidden">drag_indicator</span>
+<p class="text-gray-800 dark:text-text-main-dark text-base font-medium leading-normal">Active Sessions</p>
+<p class="text-black dark:text-white tracking-light text-3xl font-bold leading-tight">12</p>
+<p class="text-green-500 text-sm font-medium leading-normal">+2 this week</p>
+</div>
+<div class="flex flex-col gap-2 rounded-lg p-6 bg-white dark:bg-card-dark border border-gray-200 dark:border-border-dark relative widget-card">
+<span class="material-symbols-outlined drag-handle text-text-secondary-dark absolute top-2 right-2 hidden">drag_indicator</span>
+<p class="text-gray-800 dark:text-text-main-dark text-base font-medium leading-normal">Avg. Client Progress</p>
+<p class="text-black dark:text-white tracking-light text-3xl font-bold leading-tight">76%</p>
+<p class="text-green-500 text-sm font-medium leading-normal">+3% this month</p>
+</div>
+<div class="flex flex-col gap-2 rounded-lg p-6 bg-white dark:bg-card-dark border border-gray-200 dark:border-border-dark relative widget-card">
+<span class="material-symbols-outlined drag-handle text-text-secondary-dark absolute top-2 right-2 hidden">drag_indicator</span>
+<p class="text-gray-800 dark:text-text-main-dark text-base font-medium leading-normal">Client Success Rate</p>
+<p class="text-black dark:text-white tracking-light text-3xl font-bold leading-tight">89%</p>
+<p class="text-red-500 text-sm font-medium leading-normal">-1.5% this month</p>
+</div>
+</div>
+<div class="mb-8">
+<div class="flex flex-wrap items-center justify-between gap-4 mb-4">
+<h2 class="text-black dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em]">Coach Performance Analytics</h2>
+<div class="flex items-center gap-4">
+<div class="relative">
+<select class="form-select appearance-none bg-white dark:bg-card-dark border border-gray-200 dark:border-border-dark rounded-lg py-2 pl-3 pr-8 text-sm text-black dark:text-text-main-dark focus:border-primary focus:ring-primary">
+<option>Last 30 Days</option>
+<option>Last 3 Months</option>
+<option>Last 6 Months</option>
+<option>All Time</option>
+</select>
+<span class="material-symbols-outlined pointer-events-none absolute right-2 top-1/2 -translate-y-1/2 text-text-secondary-dark">expand_more</span>
+</div>
+<div class="relative">
+<select class="form-select appearance-none bg-white dark:bg-card-dark border border-gray-200 dark:border-border-dark rounded-lg py-2 pl-3 pr-8 text-sm text-black dark:text-text-main-dark focus:border-primary focus:ring-primary">
+<option>All Clients</option>
+<option>Active Clients</option>
+<option>Completed Clients</option>
+</select>
+<span class="material-symbols-outlined pointer-events-none absolute right-2 top-1/2 -translate-y-1/2 text-text-secondary-dark">expand_more</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6" id="analytics-widgets">
+<div class="lg:col-span-2 p-6 bg-white dark:bg-card-dark border border-gray-200 dark:border-border-dark rounded-lg relative widget-card">
+<span class="material-symbols-outlined drag-handle text-text-secondary-dark absolute top-2 right-2 hidden">drag_indicator</span>
+<h3 class="text-lg font-semibold text-black dark:text-white mb-4">Client Success &amp; Feedback Score Trend</h3>
+<div class="h-80">
+<canvas id="performanceChart"></canvas>
+</div>
+</div>
+<div class="p-6 bg-white dark:bg-card-dark border border-gray-200 dark:border-border-dark rounded-lg relative widget-card">
+<span class="material-symbols-outlined drag-handle text-text-secondary-dark absolute top-2 right-2 hidden">drag_indicator</span>
+<h3 class="text-lg font-semibold text-black dark:text-white mb-4">Key Metrics Overview</h3>
+<div class="grid grid-cols-2 gap-6">
+<div class="flex flex-col gap-1">
+<p class="text-gray-600 dark:text-text-secondary-dark text-sm">Avg. Client Success Rate</p>
+<p class="text-2xl font-bold text-black dark:text-white">92.1%</p>
+</div>
+<div class="flex flex-col gap-1">
+<p class="text-gray-600 dark:text-text-secondary-dark text-sm">Client Retention Rate</p>
+<p class="text-2xl font-bold text-black dark:text-white">95%</p>
+</div>
+<div class="flex flex-col gap-1">
+<p class="text-gray-600 dark:text-text-secondary-dark text-sm">Avg. Feedback Score</p>
+<div class="flex items-center gap-1">
+<p class="text-2xl font-bold text-black dark:text-white">4.8</p>
+<span class="material-symbols-outlined text-primary text-xl">star</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<p class="text-gray-600 dark:text-text-secondary-dark text-sm">Avg. Time Spent / Client</p>
+<p class="text-2xl font-bold text-black dark:text-white">6.2 hrs</p>
+</div>
+<div class="flex flex-col gap-1">
+<p class="text-gray-600 dark:text-text-secondary-dark text-sm">Resumes Reviewed</p>
+<p class="text-2xl font-bold text-black dark:text-white">124</p>
+</div>
+</div>
+</div>
+<div class="p-6 bg-white dark:bg-card-dark border border-gray-200 dark:border-border-dark rounded-lg relative widget-card">
+<span class="material-symbols-outlined drag-handle text-text-secondary-dark absolute top-2 right-2 hidden">drag_indicator</span>
+<h3 class="text-lg font-semibold text-black dark:text-white mb-4">Client Segment Performance</h3>
+<div class="space-y-4">
+<div>
+<div class="flex justify-between text-sm mb-1">
+<span class="font-medium text-black dark:text-text-main-dark">Software Engineering</span>
+<span class="text-gray-600 dark:text-text-secondary-dark">95% Success</span>
+</div>
+<div class="w-full bg-gray-200 dark:bg-border-dark rounded-full h-2.5">
+<div class="bg-primary h-2.5 rounded-full" style="width: 95%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-sm mb-1">
+<span class="font-medium text-black dark:text-text-main-dark">Product Management</span>
+<span class="text-gray-600 dark:text-text-secondary-dark">88% Success</span>
+</div>
+<div class="w-full bg-gray-200 dark:bg-border-dark rounded-full h-2.5">
+<div class="bg-primary h-2.5 rounded-full" style="width: 88%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-sm mb-1">
+<span class="font-medium text-black dark:text-text-main-dark">UX/UI Design</span>
+<span class="text-gray-600 dark:text-text-secondary-dark">91% Success</span>
+</div>
+<div class="w-full bg-gray-200 dark:bg-border-dark rounded-full h-2.5">
+<div class="bg-primary h-2.5 rounded-full" style="width: 91%"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mb-8 p-6 bg-white dark:bg-card-dark border border-gray-200 dark:border-border-dark rounded-lg">
+<div class="flex flex-wrap items-center justify-between gap-4 mb-6">
+<h2 class="text-black dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em]">Mentorship Matching System</h2>
+<div class="flex items-center gap-2">
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-border-dark text-text-main-dark text-sm font-medium leading-normal tracking-[0.015em] gap-2">
+<span class="material-symbols-outlined !text-xl">manage_search</span>
+<span class="truncate">My Mentorships</span>
+</button>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-background-dark text-sm font-bold leading-normal tracking-[0.015em] gap-2">
+<span class="material-symbols-outlined !text-xl">search</span>
+<span class="truncate">Find a Mentor</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+<div>
+<h3 class="font-semibold text-white mb-4">Top Mentor Matches</h3>
+<div class="space-y-4">
+<div class="p-4 rounded-lg bg-background-dark/30 border border-border-dark">
+<div class="flex flex-wrap gap-4 items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB0Ye01CXSbQlZqfdYGgotmM_ZC6_QLXz-nNoydFPh77DCRbO41FZTU68NqE9Lhd96tkBKhmQeEJtv87Ba612oyDo4UAh7MxkjOdOl6tY6au3Q4--QSOBMOfnygnqoQ86G8s3JPbvI82hODSI1BAhFcmZ2yFBw7PGbcGKOgkGpt7SytrzcB8iTHrRdw9IH-za8LCTgeXi_-OkDFO5GAznxz4rbkrPXiRc8w6jDY5UomGyIdJTSsrQxA4N6-m5_5dNDWgRLycSEcoLQ");'></div>
+<div>
+<p class="font-semibold text-white">Dr. Evelyn Reed</p>
+<p class="text-sm text-text-secondary-dark">Leadership &amp; Executive Coaching</p>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<p class="text-sm font-bold text-primary">95% Match</p>
+<button class="text-sm text-primary hover:underline">View Profile</button>
+</div>
+</div>
+<div class="mt-4 pt-4 border-t border-border-dark flex items-center justify-between">
+<div class="flex items-center gap-3 text-sm text-text-secondary-dark">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined !text-base">military_tech</span>15+ Yrs Exp.</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined !text-base">star</span>4.9/5 Rating</span>
+</div>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-9 px-3 bg-primary/20 text-primary text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/30">
+<span>Request</span>
+</button>
+</div>
+</div>
+<div class="p-4 rounded-lg bg-background-dark/30 border border-border-dark">
+<div class="flex flex-wrap gap-4 items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB0Ye01CXSbQlZqfdYGgotmM_ZC6_QLXz-nNoydFPh77DCRbO41FZTU68NqE9Lhd96tkBKhmQeEJtv87Ba612oyDo4UAh7MxkjOdOl6tY6au3Q4--QSOBMOfnygnqoQ86G8s3JPbvI82hODSI1BAhFcmZ2yFBw7PGbcGKOgkGpt7SytrzcB8iTHrRdw9IH-za8LCTgeXi_-OkDFO5GAznxz4rbkrPXiRc8w6jDY5UomGyIdJTSsrQxA4N6-m5_5dNDWgRLycSEcoLQ");'></div>
+<div>
+<p class="font-semibold text-white">Marcus Thorne</p>
+<p class="text-sm text-text-secondary-dark">STAR Method Specialist</p>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<p class="text-sm font-bold text-primary">92% Match</p>
+<button class="text-sm text-primary hover:underline">View Profile</button>
+</div>
+</div>
+<div class="mt-4 pt-4 border-t border-border-dark flex items-center justify-between">
+<div class="flex items-center gap-3 text-sm text-text-secondary-dark">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined !text-base">military_tech</span>10 Yrs Exp.</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined !text-base">star</span>4.8/5 Rating</span>
+</div>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-9 px-3 bg-primary/20 text-primary text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/30">
+<span>Request</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div>
+<h3 class="font-semibold text-white mb-4">Potential Mentees</h3>
+<div class="space-y-4">
+<div class="p-4 rounded-lg bg-background-dark/30 border border-border-dark">
+<div class="flex flex-wrap gap-4 items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB0Ye01CXSbQlZqfdYGgotmM_ZC6_QLXz-nNoydFPh77DCRbO41FZTU68NqE9Lhd96tkBKhmQeEJtv87Ba612oyDo4UAh7MxkjOdOl6tY6au3Q4--QSOBMOfnygnqoQ86G8s3JPbvI82hODSI1BAhFcmZ2yFBw7PGbcGKOgkGpt7SytrzcB8iTHrRdw9IH-za8LCTgeXi_-OkDFO5GAznxz4rbkrPXiRc8w6jDY5UomGyIdJTSsrQxA4N6-m5_5dNDWgRLycSEcoLQ");'></div>
+<div>
+<p class="font-semibold text-white">Jasmine Karr</p>
+<p class="text-sm text-text-secondary-dark">Aspiring Tech Career Coach</p>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<p class="text-sm font-bold text-primary">88% Match</p>
+<button class="text-sm text-primary hover:underline">View Profile</button>
+</div>
+</div>
+<div class="mt-4 pt-4 border-t border-border-dark flex items-center justify-between">
+<div class="flex items-center gap-3 text-sm text-text-secondary-dark">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined !text-base">military_tech</span>2 Yrs Exp.</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined !text-base">psychology</span>Seeks STAR method guidance</span>
+</div>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-9 px-3 bg-border-dark text-text-main-dark text-sm font-bold leading-normal tracking-[0.015em] hover:bg-opacity-80">
+<span>Offer Mentorship</span>
+</button>
+</div>
+</div>
+<div class="p-4 rounded-lg bg-background-dark/30 border border-border-dark">
+<div class="flex flex-wrap gap-4 items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB0Ye01CXSbQlZqfdYGgotmM_ZC6_QLXz-nNoydFPh77DCRbO41FZTU68NqE9Lhd96tkBKhmQeEJtv87Ba612oyDo4UAh7MxkjOdOl6tY6au3Q4--QSOBMOfnygnqoQ86G8s3JPbvI82hODSI1BAhFcmZ2yFBw7PGbcGKOgkGpt7SytrzcB8iTHrRdw9IH-za8LCTgeXi_-OkDFO5GAznxz4rbkrPXiRc8w6jDY5UomGyIdJTSsrQxA4N6-m5_5dNDWgRLycSEcoLQ");'></div>
+<div>
+<p class="font-semibold text-white">Leo Chen</p>
+<p class="text-sm text-text-secondary-dark">Junior Resume Writer</p>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<p class="text-sm font-bold text-primary">85% Match</p>
+<button class="text-sm text-primary hover:underline">View Profile</button>
+</div>
+</div>
+<div class="mt-4 pt-4 border-t border-border-dark flex items-center justify-between">
+<div class="flex items-center gap-3 text-sm text-text-secondary-dark">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined !text-base">military_tech</span>1 Yr Exp.</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined !text-base">psychology</span>Wants client management tips</span>
+</div>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-9 px-3 bg-border-dark text-text-main-dark text-sm font-bold leading-normal tracking-[0.015em] hover:bg-opacity-80">
+<span>Offer Mentorship</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mb-8 p-6 bg-white dark:bg-card-dark border border-gray-200 dark:border-border-dark rounded-lg">
+<div class="flex flex-wrap items-center justify-between gap-4 mb-6">
+<h2 class="text-black dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em]">Professional Development Goals</h2>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-background-dark text-sm font-bold leading-normal tracking-[0.015em] gap-2">
+<span class="material-symbols-outlined !text-xl">add_circle</span>
+<span class="truncate">Set New Goal</span>
+</button>
+</div>
+<div class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-end gap-4 p-4 border border-gray-200 dark:border-border-dark rounded-lg bg-background-dark/30">
+<div class="flex flex-col gap-2 col-span-1 md:col-span-2">
+<label class="text-sm font-medium text-gray-600 dark:text-text-secondary-dark" for="new-goal">Goal Description</label>
+<input class="form-input w-full rounded-lg text-black dark:text-white bg-white dark:bg-card-dark border-gray-200 dark:border-border-dark h-10 placeholder:text-text-secondary-dark px-4 text-base font-normal leading-normal focus:border-primary focus:ring-primary" id="new-goal" placeholder="e.g., Achieve Y average client feedback score" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-sm font-medium text-gray-600 dark:text-text-secondary-dark" for="target-metric">Target Metric</label>
+<input class="form-input w-full rounded-lg text-black dark:text-white bg-white dark:bg-card-dark border-gray-200 dark:border-border-dark h-10 placeholder:text-text-secondary-dark px-4 text-base font-normal leading-normal focus:border-primary focus:ring-primary" id="target-metric" placeholder="e.g., 4.9 or 95%" type="text"/>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-gray-200 dark:bg-border-dark text-text-main-dark text-sm font-bold leading-normal tracking-[0.015em] gap-2 hover:bg-gray-300 dark:hover:bg-opacity-80">
+<span class="truncate">Add Goal</span>
+</button>
+</div>
+<div class="space-y-4">
+<div class="p-4 rounded-lg bg-background-dark/30 border border-transparent hover:border-border-dark transition-colors">
+<div class="flex flex-wrap items-center justify-between gap-4">
+<div class="flex-1 min-w-[200px]">
+<div class="flex items-center gap-3 mb-2">
+<p class="font-semibold text-black dark:text-white">Achieve 4.9 average client feedback score</p>
+<span class="text-xs font-medium px-2 py-1 rounded-full bg-primary/20 text-primary">In Progress</span>
+</div>
+<div class="w-full bg-gray-200 dark:bg-border-dark rounded-full h-2.5">
+<div class="bg-primary h-2.5 rounded-full" style="width: 80%"></div>
+</div>
+</div>
+<div class="flex items-center gap-4 text-sm">
+<div>
+<span class="text-gray-600 dark:text-text-secondary-dark">Current: </span>
+<span class="font-bold text-black dark:text-white">4.8</span>
+</div>
+<div>
+<span class="text-gray-600 dark:text-text-secondary-dark">Target: </span>
+<span class="font-bold text-black dark:text-white">4.9</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex items-center justify-center size-9 rounded-lg hover:bg-gray-100 dark:hover:bg-border-dark text-black dark:text-text-main-dark"><span class="material-symbols-outlined !text-xl">edit</span></button>
+<button class="flex items-center justify-center size-9 rounded-lg hover:bg-gray-100 dark:hover:bg-border-dark text-black dark:text-text-main-dark"><span class="material-symbols-outlined !text-xl">delete</span></button>
+</div>
+</div>
+</div>
+<div class="p-4 rounded-lg bg-background-dark/30 border border-transparent hover:border-border-dark transition-colors">
+<div class="flex flex-wrap items-center justify-between gap-4">
+<div class="flex-1 min-w-[200px]">
+<div class="flex items-center gap-3 mb-2">
+<p class="font-semibold text-black dark:text-white">Increase client retention to 98%</p>
+<span class="text-xs font-medium px-2 py-1 rounded-full bg-primary/20 text-primary">In Progress</span>
+</div>
+<div class="w-full bg-gray-200 dark:bg-border-dark rounded-full h-2.5">
+<div class="bg-primary h-2.5 rounded-full" style="width: 50%"></div>
+</div>
+</div>
+<div class="flex items-center gap-4 text-sm">
+<div>
+<span class="text-gray-600 dark:text-text-secondary-dark">Current: </span>
+<span class="font-bold text-black dark:text-white">95%</span>
+</div>
+<div>
+<span class="text-gray-600 dark:text-text-secondary-dark">Target: </span>
+<span class="font-bold text-black dark:text-white">98%</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex items-center justify-center size-9 rounded-lg hover:bg-gray-100 dark:hover:bg-border-dark text-black dark:text-text-main-dark"><span class="material-symbols-outlined !text-xl">edit</span></button>
+<button class="flex items-center justify-center size-9 rounded-lg hover:bg-gray-100 dark:hover:bg-border-dark text-black dark:text-text-main-dark"><span class="material-symbols-outlined !text-xl">delete</span></button>
+</div>
+</div>
+</div>
+<div class="p-4 rounded-lg bg-background-dark/30 border border-transparent hover:border-border-dark transition-colors">
+<div class="flex flex-wrap items-center justify-between gap-4">
+<div class="flex-1 min-w-[200px]">
+<div class="flex items-center gap-3 mb-2">
+<p class="font-semibold text-black dark:text-white">Certify in STAR Method Advanced Techniques</p>
+<span class="text-xs font-medium px-2 py-1 rounded-full bg-green-500/20 text-green-400">Completed</span>
+</div>
+<div class="w-full bg-gray-200 dark:bg-border-dark rounded-full h-2.5">
+<div class="bg-green-500 h-2.5 rounded-full" style="width: 100%"></div>
+</div>
+</div>
+<div class="flex items-center gap-4 text-sm">
+<div>
+<span class="text-gray-600 dark:text-text-secondary-dark">Status: </span>
+<span class="font-bold text-black dark:text-white">Done</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex items-center justify-center size-9 rounded-lg hover:bg-gray-100 dark:hover:bg-border-dark text-black dark:text-text-main-dark"><span class="material-symbols-outlined !text-xl">edit</span></button>
+<button class="flex items-center justify-center size-9 rounded-lg hover:bg-gray-100 dark:hover:bg-border-dark text-black dark:text-text-main-dark"><span class="material-symbols-outlined !text-xl">delete</span></button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mb-8 p-6 bg-white dark:bg-card-dark border border-gray-200 dark:border-border-dark rounded-lg">
+<div class="flex flex-wrap items-center justify-between gap-4 mb-6">
+<h2 class="text-black dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em]">Certifications &amp; Specializations</h2>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-background-dark text-sm font-bold leading-normal tracking-[0.015em] gap-2">
+<span class="material-symbols-outlined !text-xl">school</span>
+<span class="truncate">View Certifications</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col gap-4 p-4 border border-border-dark rounded-lg bg-background-dark/30">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary !text-3xl">workspace_premium</span>
+<div class="flex-1">
+<h3 class="font-semibold text-primary">STAR Method Advanced Techniques</h3>
+<p class="text-sm text-text-secondary-dark">Mastery of situational storytelling for impact.</p>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-sm mb-1">
+<span class="text-text-main-dark">Progress</span>
+<span class="font-medium text-primary">75%</span>
+</div>
+<div class="w-full bg-border-dark rounded-full h-2">
+<div class="bg-primary h-2 rounded-full" style="width: 75%"></div>
+</div>
+</div>
+<button class="w-full flex items-center justify-center gap-2 rounded-lg h-10 px-4 bg-border-dark text-text-main-dark text-sm font-medium hover:bg-opacity-80">
+<span>Continue Learning</span>
+<span class="material-symbols-outlined !text-xl">arrow_forward</span>
+</button>
+</div>
+<div class="flex flex-col gap-4 p-4 border border-border-dark rounded-lg bg-background-dark/30">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary !text-3xl">workspace_premium</span>
+<div class="flex-1">
+<h3 class="font-semibold text-primary">Leadership Coaching Certified</h3>
+<p class="text-sm text-text-secondary-dark">Guiding emerging leaders to their full potential.</p>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-sm mb-1">
+<span class="text-text-main-dark">Status</span>
+<span class="font-medium text-green-400">Completed</span>
+</div>
+<div class="w-full bg-border-dark rounded-full h-2">
+<div class="bg-green-500 h-2 rounded-full" style="width: 100%"></div>
+</div>
+</div>
+<button class="w-full flex items-center justify-center gap-2 rounded-lg h-10 px-4 bg-transparent border border-border-dark text-text-secondary-dark text-sm font-medium hover:bg-border-dark hover:text-text-main-dark">
+<span>View on Profile</span>
+<span class="material-symbols-outlined !text-xl">visibility</span>
+</button>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<div class="lg:col-span-2">
+<h2 class="text-black dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] mb-4">My Clients</h2>
+<div class="mb-4">
+<label class="flex flex-col min-w-40 h-12 w-full">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+<div class="text-text-secondary-dark flex bg-white dark:bg-card-dark items-center justify-center pl-4 rounded-l-lg border-y border-l border-gray-200 dark:border-border-dark">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-lg text-black dark:text-white focus:outline-0 focus:ring-0 bg-white dark:bg-card-dark focus:border-primary border-y border-r border-gray-200 dark:border-border-dark h-full placeholder:text-text-secondary-dark px-4 pl-2 text-base font-normal leading-normal" placeholder="Search for a client..." value=""/>
+</div>
+</label>
+</div>
+<div class="space-y-4">
+<div class="flex items-center justify-between p-4 rounded-lg bg-white dark:bg-card-dark border border-gray-200 dark:border-border-dark hover:border-primary/50 transition-colors">
+<div class="flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="Avatar of Ben Carter" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBWtBUQfQJhcPOv5XfMyKxUHZTlDIzjAPk9fbg8tibpd4UlJ1zJltSje_V7RHcS5l9sYZEVR54ls_Dem2EnWgM-FD6PW6CTWypeKhMvFZGnGlcDuSMyoSK6UtJPCPXYpdrcjxkyULdHWk5h0FNdJhMn3s3HZS8o3J9iCoCdEtKZv6V4V2V19vhOFmn0bIupgz-n_xxndDP_OyjrOKVOQ7LeEfR4qyLAbEEuv9PwRaw7AkOwuTEi18UE7nZvDutHah5tV8CnQzIhfxQ");'></div>
+<div>
+<p class="font-semibold text-black dark:text-white">Ben Carter</p>
+<span class="text-xs font-medium px-2 py-1 rounded-full bg-green-500/20 text-green-400">Active</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex items-center justify-center size-9 rounded-lg hover:bg-gray-100 dark:hover:bg-border-dark text-black dark:text-text-main-dark"><span class="material-symbols-outlined">mail</span></button>
+<button class="flex items-center justify-center size-9 rounded-lg hover:bg-gray-100 dark:hover:bg-border-dark text-black dark:text-text-main-dark"><span class="material-symbols-outlined">visibility</span></button>
+</div>
+</div>
+<div class="flex items-center justify-between p-4 rounded-lg bg-white dark:bg-card-dark border border-gray-200 dark:border-border-dark hover:border-primary/50 transition-colors">
+<div class="flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="Avatar of Olivia Martinez" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAcafL3C6pOD-T16-J0PUajFHKP3vuXCGqBs3gRXx0DEHRmAuwReh3qsHpdHMDsBTVjm2QivnclyPYgUeuUuKtCGbuSyzSjrw5_p6_vsa548llQ8xC_5Bpl9ZDr8v1IF4XtZfQvtQHJb1_TsLFjewHLaVhFNNaUhk25tXFHKr9EbmxWfftptHQS0esLPWZ4Kzgl8jDuarfmR8Ya-jVl841OJa8VHF-88z1qcZNTcsxO_GwKHLtrxx_EUtrKFNBKwzt3KfCHSLf7VV8");'></div>
+<div>
+<p class="font-semibold text-black dark:text-white">Olivia Martinez</p>
+<span class="text-xs font-medium px-2 py-1 rounded-full bg-blue-500/20 text-blue-400">Onboarding</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex items-center justify-center size-9 rounded-lg hover:bg-gray-100 dark:hover:bg-border-dark text-black dark:text-text-main-dark"><span class="material-symbols-outlined">mail</span></button>
+<button class="flex items-center justify-center size-9 rounded-lg hover:bg-gray-100 dark:hover:bg-border-dark text-black dark:text-text-main-dark"><span class="material-symbols-outlined">visibility</span></button>
+</div>
+</div>
+<div class="flex items-center justify-between p-4 rounded-lg bg-white dark:bg-card-dark border border-gray-200 dark:border-border-dark hover:border-primary/50 transition-colors">
+<div class="flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="Avatar of Liam Evans" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA-Lv_d9XSEkqo0SgbYi1uW2V3zwIuOJsk_qhl-V8SuZO6UDi9IFfS93NRdWk7-UzR3wHZNYwaNcku3zLnTDU33Nup8KMHM_x5DSHr12ECUjh6gTitKq9mLxkqqGVGTcNAAEd1JZNCKovfrTDv3bmXEruZs-Ks8ThCde8gMZWYoA3LHtivc3TI3Kv1w9s5YLCPocAI5pvsaG6cwrosM0EHPJtLe5nKA_EQsygUURoBJgdjKPB0eTog2_SDVbMSlwAD9Y8fuM42Tq3Q");'></div>
+<div>
+<p class="font-semibold text-black dark:text-white">Liam Evans</p>
+<span class="text-xs font-medium px-2 py-1 rounded-full bg-gray-500/20 text-gray-400">Completed</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex items-center justify-center size-9 rounded-lg hover:bg-gray-100 dark:hover:bg-border-dark text-black dark:text-text-main-dark"><span class="material-symbols-outlined">mail</span></button>
+<button class="flex items-center justify-center size-9 rounded-lg hover:bg-gray-100 dark:hover:bg-border-dark text-black dark:text-text-main-dark"><span class="material-symbols-outlined">visibility</span></button>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-1">
+<div class="bg-white dark:bg-card-dark p-6 rounded-lg border border-gray-200 dark:border-border-dark">
+<div class="border-b border-gray-200 dark:border-border-dark">
+<nav aria-label="Tabs" class="-mb-px flex gap-6">
+<button class="whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm border-primary text-primary">Upcoming Appointments</button>
+<button class="whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm border-transparent text-gray-500 dark:text-text-secondary-dark hover:text-gray-700 hover:border-gray-300 dark:hover:text-text-main-dark dark:hover:border-border-dark">Pending Feedback</button>
+</nav>
+</div>
+<div class="mt-6 space-y-4">
+<div class="flex items-start gap-4">
+<div class="flex flex-col items-center justify-center p-3 rounded-lg bg-primary/20 text-primary">
+<span class="font-bold text-lg">15</span>
+<span class="text-xs">JUN</span>
+</div>
+<div>
+<p class="font-semibold text-black dark:text-white">Resume Review</p>
+<p class="text-sm text-gray-600 dark:text-text-secondary-dark">with Ben Carter</p>
+<p class="text-sm text-gray-600 dark:text-text-secondary-dark">10:00 AM - 10:45 AM</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="flex flex-col items-center justify-center p-3 rounded-lg bg-gray-100 dark:bg-border-dark text-black dark:text-text-main-dark">
+<span class="font-bold text-lg">17</span>
+<span class="text-xs">JUN</span>
+</div>
+<div>
+<p class="font-semibold text-black dark:text-white">Onboarding Call</p>
+<p class="text-sm text-gray-600 dark:text-text-secondary-dark">with Olivia Martinez</p>
+<p class="text-sm text-gray-600 dark:text-text-secondary-dark">2:00 PM - 3:00 PM</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<aside class="fixed top-0 right-0 h-full w-80 bg-background-dark border-l border-border-dark shadow-lg p-6 flex flex-col gap-6 transform translate-x-full z-50" id="customisation-panel">
+<div class="flex items-center justify-between">
+<h3 class="text-xl font-bold text-white">Customise Dashboard</h3>
+<button class="text-text-secondary-dark hover:text-white" id="close-panel-btn">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div>
+<h4 class="font-semibold text-text-main-dark mb-3">Visible Widgets</h4>
+<div class="space-y-3">
+<label class="flex items-center justify-between p-3 bg-card-dark rounded-lg cursor-pointer">
+<span class="text-sm text-text-main-dark">Summary Cards</span>
+<input checked="" class="form-checkbox h-5 w-5 rounded bg-border-dark border-text-secondary-dark text-primary focus:ring-primary focus:ring-offset-background-dark" type="checkbox"/>
+</label>
+<label class="flex items-center justify-between p-3 bg-card-dark rounded-lg cursor-pointer">
+<span class="text-sm text-text-main-dark">Performance Chart</span>
+<input checked="" class="form-checkbox h-5 w-5 rounded bg-border-dark border-text-secondary-dark text-primary focus:ring-primary focus:ring-offset-background-dark" type="checkbox"/>
+</label>
+<label class="flex items-center justify-between p-3 bg-card-dark rounded-lg cursor-pointer">
+<span class="text-sm text-text-main-dark">Key Metrics</span>
+<input checked="" class="form-checkbox h-5 w-5 rounded bg-border-dark border-text-secondary-dark text-primary focus:ring-primary focus:ring-offset-background-dark" type="checkbox"/>
+</label>
+<label class="flex items-center justify-between p-3 bg-card-dark rounded-lg cursor-pointer">
+<span class="text-sm text-text-main-dark">Segment Performance</span>
+<input checked="" class="form-checkbox h-5 w-5 rounded bg-border-dark border-text-secondary-dark text-primary focus:ring-primary focus:ring-offset-background-dark" type="checkbox"/>
+</label>
+</div>
+</div>
+<div class="mt-auto flex flex-col gap-3">
+<button class="w-full flex items-center justify-center gap-2 rounded-lg h-10 px-4 bg-primary text-background-dark text-sm font-bold" id="save-layout-btn">
+<span class="material-symbols-outlined !text-xl">save</span>
+<span>Save Layout</span>
+</button>
+<button class="w-full rounded-lg h-10 px-4 bg-card-dark border border-border-dark text-text-main-dark text-sm font-medium hover:bg-border-dark">
+Reset to Default
+</button>
+</div>
+</aside>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const ctx = document.getElementById('performanceChart');
+        if (ctx) {
+            Chart.defaults.color = '#888888';
+            Chart.defaults.font.family = 'Lexend, sans-serif';
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+                    datasets: [{
+                        label: 'Success Rate (%)',
+                        data: [88, 90, 89, 92, 91, 92.1],
+                        borderColor: '#f2d00d',
+                        backgroundColor: 'rgba(242, 208, 13, 0.1)',
+                        pointBackgroundColor: '#f2d00d',
+                        pointBorderColor: '#1E1E1E',
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: '#f2d00d',
+                        tension: 0.4,
+                        fill: true,
+                        yAxisID: 'y'
+                    }, {
+                        label: 'Feedback Score',
+                        data: [4.5, 4.6, 4.6, 4.7, 4.8, 4.8],
+                        borderColor: '#E0E0E0',
+                        backgroundColor: 'rgba(224, 224, 224, 0.1)',
+                        pointBackgroundColor: '#E0E0E0',
+                        pointBorderColor: '#1E1E1E',
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: '#E0E0E0',
+                        tension: 0.4,
+                        fill: false,
+                        yAxisID: 'y1'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        x: {
+                            grid: {
+                                color: '#393728'
+                            }
+                        },
+                        y: {
+                            type: 'linear',
+                            display: true,
+                            position: 'left',
+                            grid: {
+                                color: '#393728'
+                            },
+                            ticks: {
+                                callback: function(value) {
+                                    return value + '%';
+                                }
+                            }
+                        },
+                        y1: {
+                            type: 'linear',
+                            display: true,
+                            position: 'right',
+                            min: 4,
+                            max: 5,
+                            grid: {
+                                drawOnChartArea: false, // only want the grid lines for one axis to show up
+                            },
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                        },
+                        tooltip: {
+                            backgroundColor: '#1E1E1E',
+                            titleColor: '#E0E0E0',
+                            bodyColor: '#E0E0E0',
+                            borderColor: '#393728',
+                            borderWidth: 1,
+                        }
+                    }
+                }
+            });
+        }
+        const customiseBtn = document.getElementById('customise-btn');
+        const customisationPanel = document.getElementById('customisation-panel');
+        const closePanelBtn = document.getElementById('close-panel-btn');
+        const saveLayoutBtn = document.getElementById('save-layout-btn');
+        const widgetCards = document.querySelectorAll('.widget-card');
+        const dragHandles = document.querySelectorAll('.drag-handle');
+        const sortableContainers = [
+            document.getElementById('dashboard-widgets'),
+            document.getElementById('analytics-widgets')
+        ];
+        let sortableInstances = [];
+        function initSortable() {
+            sortableContainers.forEach(container => {
+                if (container) {
+                   const instance = new Sortable(container, {
+                        animation: 150,
+                        ghostClass: 'sortable-ghost',
+                        handle: '.drag-handle',
+                        group: 'shared-widgets',
+                    });
+                    sortableInstances.push(instance);
+                }
+            });
+        }
+        function destroySortable() {
+            sortableInstances.forEach(instance => instance.destroy());
+            sortableInstances = [];
+        }
+        function enterEditMode() {
+            customisationPanel.classList.remove('translate-x-full');
+            widgetCards.forEach(card => card.classList.add('border-primary', 'border-dashed'));
+            dragHandles.forEach(handle => handle.classList.remove('hidden'));
+            initSortable();
+        }
+        function exitEditMode() {
+            customisationPanel.classList.add('translate-x-full');
+            widgetCards.forEach(card => card.classList.remove('border-primary', 'border-dashed'));
+            dragHandles.forEach(handle => handle.classList.add('hidden'));
+            destroySortable();
+        }
+        customiseBtn.addEventListener('click', enterEditMode);
+        closePanelBtn.addEventListener('click', exitEditMode);
+        saveLayoutBtn.addEventListener('click', () => {
+             // Add save logic here
+             alert('Layout saved!');
+             exitEditMode();
+        });
+    });
+</script>
+</body></html>

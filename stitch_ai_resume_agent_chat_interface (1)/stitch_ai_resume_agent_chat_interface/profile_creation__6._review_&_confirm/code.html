@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI Resume Agent - Review Profile</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#f9d406",
+              "background-light": "#f8f8f5",
+              "background-dark": "#121212",
+              "card-dark": "#1E1E1E",
+              "text-primary-light": "#1f2937",
+              "text-primary-dark": "#E0E0E0",
+              "text-secondary-light": "#6b7280",
+              "text-secondary-dark": "#A0A0A0",
+              "border-dark": "#3a3a3a",
+            },
+            fontFamily: {
+              "display": ["Manrope", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+      }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-primary-light dark:text-text-primary-dark">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<div class="px-4 sm:px-8 md:px-16 lg:px-24 xl:px-40 flex flex-1 justify-center py-5">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-border-dark px-4 py-4 mb-8">
+<div class="flex items-center gap-4">
+<div class="size-6 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 4H30.6666V17.3334H17.3334V30.6666H4V44H44V4Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em] text-white">AI Resume Agent</h2>
+</div>
+<div class="flex flex-1 justify-end gap-2">
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 w-10 bg-card-dark text-text-secondary-dark hover:bg-border-dark transition-colors">
+<span class="material-symbols-outlined text-xl">notifications</span>
+</button>
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 w-10 bg-card-dark text-text-secondary-dark hover:bg-border-dark transition-colors">
+<span class="material-symbols-outlined text-xl">help</span>
+</button>
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 w-10 bg-card-dark text-text-secondary-dark hover:bg-border-dark transition-colors">
+<span class="material-symbols-outlined text-xl">settings</span>
+</button>
+<div class="ml-4 bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User avatar image" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBMH2vl2F8PoyvNpIIoMxmkGv0EUhhyHbSYANhD6YJ66UiP2m_KOiW2BIvTSqOK2pi24gIx-manT3dTQyFmNwDjY0Tw--VwxvRs_SGJGEMkpbotyvFndziFYFbu4JBNIsUWR-_7wVb-79Y84dVheVr4NzMJhwAjZ55JgRWIkkbL4JGNTZmoVuREfHK5ofvmboXXAKoVqCqPnODipVKbVex8-oTmeT0Ul_C_jfTr6oikKpN1D_Iy3bgw2fr9IZD7sBpEUMgha_uMRWI");'></div>
+</div>
+</header>
+<main class="flex flex-col gap-8 px-4">
+<div class="flex flex-col gap-4">
+<div class="flex min-w-72 flex-col gap-2">
+<p class="text-4xl font-black leading-tight tracking-[-0.033em] text-white">Review Your Profile</p>
+<p class="text-base font-normal leading-normal text-text-secondary-dark">Please confirm all your information is correct before proceeding.</p>
+</div>
+<div class="flex flex-col gap-3 py-4">
+<div class="flex gap-1">
+<div class="h-2 flex-1 rounded-full bg-primary"></div>
+<div class="h-2 flex-1 rounded-full bg-primary"></div>
+<div class="h-2 flex-1 rounded-full bg-primary"></div>
+<div class="h-2 flex-1 rounded-full bg-primary"></div>
+<div class="h-2 flex-1 rounded-full bg-primary"></div>
+<div class="h-2 flex-1 rounded-full bg-primary"></div>
+</div>
+<div class="flex justify-between">
+<p class="text-sm font-normal leading-normal text-text-secondary-dark">Profile Creation</p>
+<p class="text-base font-medium leading-normal text-white">Step 6 of 6</p>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-6">
+<div class="rounded-lg bg-card-dark border border-border-dark">
+<div class="flex items-center justify-between border-b border-border-dark px-6 py-4">
+<h2 class="text-xl font-bold leading-tight tracking-[-0.015em] text-white">Personal Details</h2>
+<button class="flex items-center gap-2 rounded-md px-3 py-1.5 text-sm font-semibold text-primary hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-lg">edit</span>
+<span>Edit</span>
+</button>
+</div>
+<div class="p-6 grid grid-cols-1 md:grid-cols-[200px_1fr] gap-x-6 gap-y-5">
+<p class="text-sm font-normal leading-normal text-text-secondary-dark">Full Name</p>
+<p class="text-sm font-normal leading-normal text-white">John Doe</p>
+<p class="text-sm font-normal leading-normal text-text-secondary-dark">Email Address</p>
+<p class="text-sm font-normal leading-normal text-white">john.doe@email.com</p>
+<p class="text-sm font-normal leading-normal text-text-secondary-dark">Phone Number</p>
+<p class="text-sm font-normal leading-normal text-white">+1 (555) 123-4567</p>
+<p class="text-sm font-normal leading-normal text-text-secondary-dark">Location</p>
+<p class="text-sm font-normal leading-normal text-white">San Francisco, CA</p>
+</div>
+</div>
+<div class="rounded-lg bg-card-dark border border-border-dark">
+<div class="flex items-center justify-between border-b border-border-dark px-6 py-4">
+<h2 class="text-xl font-bold leading-tight tracking-[-0.015em] text-white">Professional Summary</h2>
+<button class="flex items-center gap-2 rounded-md px-3 py-1.5 text-sm font-semibold text-primary hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-lg">edit</span>
+<span>Edit</span>
+</button>
+</div>
+<div class="p-6 grid grid-cols-1 md:grid-cols-[200px_1fr] gap-x-6 gap-y-5">
+<p class="text-sm font-normal leading-normal text-text-secondary-dark">Headline</p>
+<p class="text-sm font-normal leading-normal text-white">Senior Product Manager with 8+ years of experience.</p>
+<p class="text-sm font-normal leading-normal text-text-secondary-dark">Summary</p>
+<p class="text-sm font-normal leading-normal text-white">Innovative and results-driven Senior Product Manager specializing in SaaS solutions. Proven ability to lead cross-functional teams to deliver high-impact products from concept to launch.</p>
+</div>
+</div>
+<div class="rounded-lg bg-card-dark border border-border-dark">
+<div class="flex items-center justify-between border-b border-border-dark px-6 py-4">
+<h2 class="text-xl font-bold leading-tight tracking-[-0.015em] text-white">Work Experience</h2>
+<button class="flex items-center gap-2 rounded-md px-3 py-1.5 text-sm font-semibold text-primary hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-lg">edit</span>
+<span>Edit</span>
+</button>
+</div>
+<div class="p-6 space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-x-6 gap-y-2">
+<p class="text-sm font-normal leading-normal text-text-secondary-dark">Senior Product Manager</p>
+<div class="flex flex-col">
+<p class="font-semibold text-white">Innovatech Solutions Inc.</p>
+<p class="text-sm text-text-secondary-dark">Jan 2020 - Present</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-x-6 gap-y-2">
+<p class="text-sm font-normal leading-normal text-text-secondary-dark">Product Manager</p>
+<div class="flex flex-col">
+<p class="font-semibold text-white">NextGen Apps</p>
+<p class="text-sm text-text-secondary-dark">Jun 2017 - Dec 2019</p>
+</div>
+</div>
+</div>
+</div>
+<div class="rounded-lg bg-card-dark border border-border-dark">
+<div class="flex items-center justify-between border-b border-border-dark px-6 py-4">
+<h2 class="text-xl font-bold leading-tight tracking-[-0.015em] text-white">Education</h2>
+<button class="flex items-center gap-2 rounded-md px-3 py-1.5 text-sm font-semibold text-primary hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-lg">edit</span>
+<span>Edit</span>
+</button>
+</div>
+<div class="p-6 grid grid-cols-1 md:grid-cols-[200px_1fr] gap-x-6 gap-y-5">
+<p class="text-sm font-normal leading-normal text-text-secondary-dark">Master of Business Administration</p>
+<div class="flex flex-col">
+<p class="font-semibold text-white">Stanford University</p>
+<p class="text-sm text-text-secondary-dark">Graduated May 2017</p>
+</div>
+</div>
+</div>
+<div class="rounded-lg bg-card-dark border border-border-dark">
+<div class="flex items-center justify-between border-b border-border-dark px-6 py-4">
+<h2 class="text-xl font-bold leading-tight tracking-[-0.015em] text-white">Skills</h2>
+<button class="flex items-center gap-2 rounded-md px-3 py-1.5 text-sm font-semibold text-primary hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-lg">edit</span>
+<span>Edit</span>
+</button>
+</div>
+<div class="p-6 flex flex-wrap gap-2">
+<span class="rounded-full bg-border-dark px-3 py-1 text-sm text-text-primary-dark">Product Roadmapping</span>
+<span class="rounded-full bg-border-dark px-3 py-1 text-sm text-text-primary-dark">Agile Methodologies</span>
+<span class="rounded-full bg-border-dark px-3 py-1 text-sm text-text-primary-dark">JIRA</span>
+<span class="rounded-full bg-border-dark px-3 py-1 text-sm text-text-primary-dark">Market Research</span>
+<span class="rounded-full bg-border-dark px-3 py-1 text-sm text-text-primary-dark">User Experience (UX)</span>
+<span class="rounded-full bg-border-dark px-3 py-1 text-sm text-text-primary-dark">A/B Testing</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row justify-between items-center gap-4 py-8">
+<button class="w-full sm:w-auto flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 bg-card-dark text-white border border-border-dark gap-2 text-base font-bold leading-normal tracking-[0.015em] min-w-0 px-6 hover:bg-border-dark transition-colors">Back</button>
+<button class="w-full sm:w-auto flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 bg-primary text-background-dark gap-2 text-base font-bold leading-normal tracking-[0.015em] min-w-0 px-8 hover:brightness-90 transition-all">Confirm Profile</button>
+</div>
+</main>
+</div>
+</div>
+</div>
+</div>
+</body></html>

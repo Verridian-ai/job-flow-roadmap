@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dashboard - Career Development</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#FFD700",
+              "background-light": "#f8f8f5",
+              "background-dark": "#23200f",
+              "charcoal": "#2C2C2C",
+              "light-gray": "#A9A9A9",
+            },
+            fontFamily: {
+              "display": ["Lexend", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+</head>
+<body class="font-display bg-charcoal text-white">
+<div class="relative flex h-screen w-full flex-col group/design-root overflow-hidden">
+<div class="flex flex-1">
+<div class="flex h-full min-h-[700px] flex-col justify-between bg-[#1f1f1f] p-4 w-64 border-r border-gray-700/50">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-3 p-2">
+<div class="size-6 text-primary">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6_319)">
+<path d="M8.57829 8.57829C5.52816 11.6284 3.451 15.5145 2.60947 19.7452C1.76794 23.9758 2.19984 28.361 3.85056 32.3462C5.50128 36.3314 8.29667 39.7376 11.8832 42.134C15.4698 44.5305 19.6865 45.8096 24 45.8096C28.3135 45.8096 32.5302 44.5305 36.1168 42.134C39.7033 39.7375 42.4987 36.3314 44.1494 32.3462C45.8002 28.361 46.2321 23.9758 45.3905 19.7452C44.549 15.5145 42.4718 11.6284 39.4217 8.57829L24 24L8.57829 8.57829Z" fill="currentColor"></path>
+</g>
+<defs>
+<clipPath id="clip0_6_319">
+<rect fill="white" height="48" width="48"></rect>
+</clipPath>
+</defs>
+</svg>
+</div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">CareerDev AI</h2>
+</div>
+<div class="flex flex-col gap-2 mt-4">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/20 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">grid_view</span>
+<p class="text-sm font-medium leading-normal">Dashboard</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-light-gray hover:text-white hover:bg-white/5 rounded-lg" href="#">
+<span class="material-symbols-outlined">edit_note</span>
+<p class="text-sm font-medium leading-normal">Resume Writer</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-light-gray hover:text-white hover:bg-white/5 rounded-lg" href="#">
+<span class="material-symbols-outlined">videocam</span>
+<p class="text-sm font-medium leading-normal">Mock Interview</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-light-gray hover:text-white hover:bg-white/5 rounded-lg" href="#">
+<span class="material-symbols-outlined">assessment</span>
+<p class="text-sm font-medium leading-normal">Skills Assessment</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-light-gray hover:text-white hover:bg-white/5 rounded-lg" href="#">
+<span class="material-symbols-outlined">forum</span>
+<p class="text-sm font-medium leading-normal">Community</p>
+</a>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-charcoal text-sm font-bold leading-normal tracking-[0.015em] hover:bg-yellow-400 transition-colors">
+<span class="truncate">Upgrade Plan</span>
+</button>
+<div class="flex items-center gap-3 p-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCTudU2OG7s7s7NnXCM22gT3BYFqjaNPxRsUKwmAz0NQfjE_jId9yEcrCYnFD_0aKMSyt-Cv-l9hkCjXu3TiYVZWFMq83w3tJMa4SA32f_6ifr5cEiknXt47B_l-zDqrRoXfwuq-ZMap4eRBdakqe5eW_CvdpV5Mg59f8qnrfKxJP8RgxAPW3ipGAFRyJxExHIBtl3eRe8npl7CzvPUO1QgHgVvjB_YTT3cWbdpFbw2hoUu1ArgdoSpF4rJXNMcBxc2c74PdbZcr5g");'></div>
+<div class="flex flex-col">
+<h1 class="text-white text-sm font-medium leading-normal">Jordan Smith</h1>
+<p class="text-light-gray text-xs font-normal leading-normal">Premium Plan</p>
+</div>
+</div>
+</div>
+</div>
+<main class="flex-1 grid grid-cols-12 gap-6 p-6 bg-charcoal overflow-y-auto">
+<div class="col-span-12 lg:col-span-8 flex flex-col gap-6">
+<div class="flex flex-col gap-2">
+<h1 class="text-white text-3xl font-bold leading-tight tracking-[-0.03em]">Career Progression</h1>
+<p class="text-light-gray text-base font-normal leading-normal">Your visualized path to success, based on aggregated user data.</p>
+</div>
+<div class="bg-[#1f1f1f] p-6 rounded-xl border border-gray-700/50 flex-1 flex flex-col">
+<h3 class="text-white text-lg font-bold mb-4">Your Projected Career Path</h3>
+<div class="flex-1 flex items-center justify-center space-x-2">
+<div class="text-center flex flex-col items-center">
+<div class="w-24 h-24 bg-gray-700/50 rounded-lg flex flex-col items-center justify-center p-2 text-center">
+<span class="material-symbols-outlined text-primary text-3xl">work</span>
+<p class="text-white text-xs font-bold mt-1">Junior Analyst</p>
+<p class="text-light-gray text-xs">Current Role</p>
+</div>
+</div>
+<div class="flex-1 border-t-2 border-dashed border-primary/50"></div>
+<div class="text-center flex flex-col items-center">
+<div class="relative w-32 h-32 bg-primary/20 border-2 border-primary rounded-lg flex flex-col items-center justify-center p-2 text-center shadow-lg shadow-primary/20">
+<span class="absolute -top-3 -right-3 bg-primary text-charcoal rounded-full p-1"><span class="material-symbols-outlined text-base">star</span></span>
+<span class="material-symbols-outlined text-primary text-4xl">trending_up</span>
+<p class="text-white text-sm font-bold mt-1">Data Analyst</p>
+<p class="text-light-gray text-xs">Avg. 1.5 yrs</p>
+<p class="text-primary text-xs font-bold mt-1">+25% Salary</p>
+</div>
+<p class="text-light-gray text-xs mt-2">Recommended Next Step</p>
+</div>
+<div class="flex-1 border-t-2 border-dashed border-gray-700"></div>
+<div class="text-center flex flex-col items-center opacity-70">
+<div class="w-24 h-24 bg-gray-700/50 rounded-lg flex flex-col items-center justify-center p-2 text-center">
+<span class="material-symbols-outlined text-light-gray text-3xl">corporate_fare</span>
+<p class="text-white text-xs font-bold mt-1">Senior Analyst</p>
+<p class="text-light-gray text-xs">Avg. 3 yrs</p>
+</div>
+</div>
+<div class="flex-1 border-t-2 border-dashed border-gray-700"></div>
+<div class="text-center flex flex-col items-center opacity-70">
+<div class="w-24 h-24 bg-gray-700/50 rounded-lg flex flex-col items-center justify-center p-2 text-center">
+<span class="material-symbols-outlined text-light-gray text-3xl">groups</span>
+<p class="text-white text-xs font-bold mt-1">Analytics Lead</p>
+<p class="text-light-gray text-xs">Avg. 5+ yrs</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-[#1f1f1f] p-6 rounded-xl border border-gray-700/50">
+<h3 class="text-white text-lg font-bold mb-4">Skill Progression Recommendations</h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+<div class="bg-gray-700/50 p-4 rounded-lg">
+<p class="text-white font-semibold">Python for Data Science</p>
+<p class="text-light-gray text-sm mt-1">Crucial for automation and advanced analysis.</p>
+<div class="w-full bg-gray-600 rounded-full h-2 mt-3">
+<div class="bg-primary h-2 rounded-full" style="width: 75%"></div>
+</div>
+</div>
+<div class="bg-gray-700/50 p-4 rounded-lg">
+<p class="text-white font-semibold">Advanced SQL</p>
+<p class="text-light-gray text-sm mt-1">Optimize complex queries for large datasets.</p>
+<div class="w-full bg-gray-600 rounded-full h-2 mt-3">
+<div class="bg-primary h-2 rounded-full" style="width: 40%"></div>
+</div>
+</div>
+<div class="bg-gray-700/50 p-4 rounded-lg">
+<p class="text-white font-semibold">Data Visualization</p>
+<p class="text-light-gray text-sm mt-1">Master tools like Tableau or Power BI.</p>
+<div class="w-full bg-gray-600 rounded-full h-2 mt-3">
+<div class="bg-primary h-2 rounded-full" style="width: 60%"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-span-12 lg:col-span-4 flex flex-col gap-6">
+<div class="bg-[#1f1f1f] p-6 rounded-xl border border-gray-700/50">
+<h3 class="text-white text-lg font-bold mb-4">Salary Benchmarks</h3>
+<p class="text-sm text-light-gray mb-1">Role: <span class="text-white font-semibold">Data Analyst</span></p>
+<p class="text-sm text-light-gray mb-4">Location: <span class="text-white font-semibold">United States (Remote)</span></p>
+<div class="flex items-end gap-2 h-32">
+<div class="flex-1 flex flex-col justify-end items-center gap-1">
+<p class="text-xs text-light-gray">$75k</p>
+<div class="w-full h-[30%] bg-gray-700 rounded-t-sm"></div>
+</div>
+<div class="flex-1 flex flex-col justify-end items-center gap-1">
+<p class="text-xs text-light-gray">$90k</p>
+<div class="w-full h-[60%] bg-gray-700 rounded-t-sm"></div>
+</div>
+<div class="flex-1 flex flex-col justify-end items-center gap-1">
+<p class="text-xs font-bold text-primary">$110k</p>
+<div class="w-full h-full bg-primary rounded-t-sm"></div>
+</div>
+<div class="flex-1 flex flex-col justify-end items-center gap-1">
+<p class="text-xs text-light-gray">$125k</p>
+<div class="w-full h-[70%] bg-gray-700 rounded-t-sm"></div>
+</div>
+<div class="flex-1 flex flex-col justify-end items-center gap-1">
+<p class="text-xs text-light-gray">$140k</p>
+<div class="w-full h-[45%] bg-gray-700 rounded-t-sm"></div>
+</div>
+</div>
+<div class="flex justify-between text-xs text-light-gray mt-2 border-t border-gray-700 pt-2">
+<span>25th Pctl</span>
+<span class="font-bold text-primary">Your Target</span>
+<span>90th Pctl</span>
+</div>
+</div>
+<div class="bg-[#1f1f1f] p-6 rounded-xl border border-gray-700/50">
+<h3 class="text-white text-lg font-bold mb-4">Industry Trends</h3>
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-3">
+<div class="p-2 bg-primary/20 rounded-md">
+<span class="material-symbols-outlined text-primary">psychology</span>
+</div>
+<div>
+<p class="font-semibold text-white">AI &amp; Machine Learning</p>
+<p class="text-sm text-light-gray">Demand up by 32% YoY</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="p-2 bg-primary/20 rounded-md">
+<span class="material-symbols-outlined text-primary">cloud</span>
+</div>
+<div>
+<p class="font-semibold text-white">Cloud Computing</p>
+<p class="text-sm text-light-gray">Essential for scalable data solutions</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="p-2 bg-primary/20 rounded-md">
+<span class="material-symbols-outlined text-primary">security</span>
+</div>
+<div>
+<p class="font-semibold text-white">Data Privacy &amp; Security</p>
+<p class="text-sm text-light-gray">Increasingly critical skill area</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-[#1f1f1f] p-4 rounded-xl border border-gray-700/50">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-light-gray">lock</span>
+<p class="text-sm text-light-gray">Your personal data is private. All insights are generated from anonymized, aggregated user data.</p>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>

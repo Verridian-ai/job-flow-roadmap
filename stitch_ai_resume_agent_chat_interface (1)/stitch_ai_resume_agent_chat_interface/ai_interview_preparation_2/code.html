@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI Interview Pro - Mock Interview</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#ffd900",
+              "background-light": "#f8f8f5",
+              "background-dark": "#23200f",
+              "charcoal": "#2C2C2C",
+              "light-gray": "#A9A9A9",
+            },
+            fontFamily: {
+              "display": ["Lexend", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+</head>
+<body class="font-display bg-charcoal text-white">
+<div class="relative flex h-screen w-full flex-col group/design-root overflow-hidden">
+<div class="flex flex-1">
+<!-- SideNavBar -->
+<div class="flex h-full min-h-[700px] flex-col justify-between bg-[#1f1f1f] p-4 w-64 border-r border-gray-700/50">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-3 p-2">
+<div class="size-6 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6_319)">
+<path d="M8.57829 8.57829C5.52816 11.6284 3.451 15.5145 2.60947 19.7452C1.76794 23.9758 2.19984 28.361 3.85056 32.3462C5.50128 36.3314 8.29667 39.7376 11.8832 42.134C15.4698 44.5305 19.6865 45.8096 24 45.8096C28.3135 45.8096 32.5302 44.5305 36.1168 42.134C39.7033 39.7375 42.4987 36.3314 44.1494 32.3462C45.8002 28.361 46.2321 23.9758 45.3905 19.7452C44.549 15.5145 42.4718 11.6284 39.4217 8.57829L24 24L8.57829 8.57829Z" fill="currentColor"></path>
+</g>
+<defs>
+<clippath id="clip0_6_319"><rect fill="white" height="48" width="48"></rect></clippath>
+</defs>
+</svg>
+</div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">AI Interview Pro</h2>
+</div>
+<div class="flex flex-col gap-2 mt-4">
+<a class="flex items-center gap-3 px-3 py-2 text-light-gray hover:text-white hover:bg-white/5 rounded-lg" href="#">
+<span class="material-symbols-outlined">grid_view</span>
+<p class="text-sm font-medium leading-normal">Dashboard</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-light-gray hover:text-white hover:bg-white/5 rounded-lg" href="#">
+<span class="material-symbols-outlined">edit_note</span>
+<p class="text-sm font-medium leading-normal">Resume Writer</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/20 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">videocam</span>
+<p class="text-sm font-medium leading-normal">Mock Interview</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-light-gray hover:text-white hover:bg-white/5 rounded-lg" href="#">
+<span class="material-symbols-outlined">monitoring</span>
+<p class="text-sm font-medium leading-normal">Analytics</p>
+</a>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-charcoal text-sm font-bold leading-normal tracking-[0.015em] hover:bg-yellow-400 transition-colors">
+<span class="truncate">Upgrade Plan</span>
+</button>
+<div class="flex items-center gap-3 p-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCTudU2OG7s7s7NnXCM22gT3BYFqjaNPxRsUKwmAz0NQfjE_jId9yEcrCYnFD_0aKMSyt-Cv-l9hkCjXu3TiYVZWFMq83w3tJMa4SA32f_6ifr5cEiknXt47B_l-zDqrRoXfwuq-ZMap4eRBdakqe5eW_CvdpV5Mg59f8qnrfKxJP8RgxAPW3ipGAFRyJxExHIBtl3eRe8npl7CzvPUO1QgHgVvjB_YTT3cWbdpFbw2hoUu1ArgdoSpF4rJXNMcBxc2c74PdbZcr5g");'></div>
+<div class="flex flex-col">
+<h1 class="text-white text-sm font-medium leading-normal">Jordan Smith</h1>
+<p class="text-light-gray text-xs font-normal leading-normal">Premium Plan</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Content -->
+<main class="flex-1 flex flex-col p-8 bg-charcoal">
+<!-- PageHeading -->
+<div class="flex flex-wrap justify-between items-center gap-3 pb-6">
+<div class="flex min-w-72 flex-col gap-2">
+<p class="text-white text-3xl font-bold leading-tight tracking-[-0.03em]">Mock Interview: Senior Product Manager</p>
+<p class="text-light-gray text-base font-normal leading-normal">Question 3/10 | Time Elapsed: 02:45</p>
+</div>
+</div>
+<!-- Interview Interface -->
+<div class="flex-1 grid grid-cols-3 gap-8">
+<!-- Left Panel: AI Avatar and Question -->
+<div class="col-span-2 flex flex-col gap-6">
+<div class="flex-1 bg-black rounded-xl overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="AI interviewer avatar in a professional setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAI-q7zXHkM2Esw_2lKxu2FBFQ8fxswD4Jf7vOAkdvqIXzOFG2PH64dRNP-OthwTzJdmGgnwjaEQwzQYRXWDZv_67wvrZQC07BbQPob7aqUbQw9Qdh951MVePu-sALhxcV5Xe5JyWbWrnsLoLDe81R71eDVNP65i8jmKQoNEm8hliFGTuBo-sRLAQW2Lc5i3vKcmOR9BCsNhggwoOOzvcs74jlm6zhbW6noOpCeZ9ktKil493QE7BX42EpCzhaBOXf2Pdh5zw0Ank"/>
+<div class="absolute bottom-4 left-4 right-4 bg-black/50 backdrop-blur-sm p-3 rounded-lg">
+<span class="text-xs font-semibold uppercase text-light-gray tracking-wider">AI INTERVIEWER</span>
+</div>
+</div>
+<div class="bg-[#1f1f1f] p-6 rounded-xl border border-gray-700/50">
+<p class="text-white text-lg font-normal leading-relaxed">Tell me about a time you had to handle a difficult stakeholder. How did you manage the situation and what was the outcome?</p>
+</div>
+</div>
+<!-- Right Panel: User Video and Feedback -->
+<div class="col-span-1 flex flex-col gap-6">
+<div class="aspect-[4/3] bg-black rounded-xl overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="User's video feed during an interview" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_XFY8U4fJSFJ2xQRF42St-gnEDgJzOHlzyUiRrRT2_5i4108cGE4yBPfQLVCgdH1QAuPW-E7p-Rpm-Ti3x8T-EOSnLqOISTk3oypXfJmK4b2uKao8BFpvwTebeDguazFPkb_9SIuFtZKfWsIpG9fg3dO29JfoK0VXr8C87rTd0P3I_qO6j7-E6_tGtCuGqy-VAjsg3fezvUbqA8hPo6IfIg8KbAtgcwPU-GbV_JEOWyjW6w4LEY6LzBA3kS416aQeCV7sgZ4UUBA"/>
+<div class="absolute bottom-4 left-4 right-4 bg-black/50 backdrop-blur-sm p-3 rounded-lg">
+<span class="text-xs font-semibold uppercase text-light-gray tracking-wider">YOU</span>
+</div>
+</div>
+<!-- Real-Time Feedback Module -->
+<div class="bg-[#1f1f1f] p-4 rounded-xl flex-1 flex flex-col border border-gray-700/50">
+<h3 class="text-lg font-bold mb-3 px-2">Real-Time Feedback</h3>
+<div class="flex border-b border-gray-700/50 mb-4">
+<button class="px-4 py-2 text-sm font-medium border-b-2 border-primary text-primary">Speech</button>
+<button class="px-4 py-2 text-sm font-medium border-b-2 border-transparent text-light-gray hover:text-white">Body Language</button>
+<button class="px-4 py-2 text-sm font-medium border-b-2 border-transparent text-light-gray hover:text-white">Tone</button>
+</div>
+<div class="space-y-4 px-2">
+<div class="flex justify-between items-center">
+<span class="text-sm text-light-gray">Pace (WPM)</span>
+<span class="text-base font-semibold text-white">145</span>
+</div>
+<div class="w-full bg-gray-700 rounded-full h-2">
+<div class="bg-primary h-2 rounded-full" style="width: 75%"></div>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-sm text-light-gray">Filler Words</span>
+<span class="text-base font-semibold text-white">2</span>
+</div>
+<div class="w-full bg-gray-700 rounded-full h-2">
+<div class="bg-red-500 h-2 rounded-full" style="width: 20%"></div>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-sm text-light-gray">Clarity Score</span>
+<span class="text-base font-semibold text-white">8.5/10</span>
+</div>
+<div class="w-full bg-gray-700 rounded-full h-2">
+<div class="bg-green-500 h-2 rounded-full" style="width: 85%"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Controls Bar -->
+<div class="flex items-center justify-center gap-4 mt-6 p-4 bg-[#1f1f1f] rounded-xl border border-gray-700/50">
+<button class="flex items-center justify-center size-12 cursor-pointer rounded-full bg-gray-600 hover:bg-gray-500 text-white transition-colors">
+<span class="material-symbols-outlined">mic</span>
+</button>
+<button class="flex items-center justify-center size-12 cursor-pointer rounded-full bg-gray-600 hover:bg-gray-500 text-white transition-colors">
+<span class="material-symbols-outlined">videocam</span>
+</button>
+<button class="flex items-center justify-center size-12 cursor-pointer rounded-full bg-gray-600 hover:bg-gray-500 text-white transition-colors">
+<span class="material-symbols-outlined">volume_up</span>
+</button>
+<button class="flex items-center justify-center gap-2 h-12 px-6 cursor-pointer rounded-full bg-primary hover:bg-yellow-400 text-charcoal font-bold transition-colors">
+<span>Next Question</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="flex items-center justify-center h-12 px-6 cursor-pointer rounded-full bg-red-600 hover:bg-red-500 text-white font-bold transition-colors">
+<span>End Interview</span>
+</button>
+</div>
+</main>
+</div>
+</div>
+</body></html>

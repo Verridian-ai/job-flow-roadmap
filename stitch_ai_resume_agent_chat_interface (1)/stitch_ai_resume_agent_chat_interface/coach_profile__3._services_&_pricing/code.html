@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Coach Profile Creation - Services &amp; Pricing</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f9d406",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#121212",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display antialiased">
+<div class="relative flex min-h-screen w-full flex-col">
+<!-- Top Navigation Bar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-white/10 px-10 py-3">
+<div class="flex items-center gap-4 text-white">
+<div class="size-6 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 4H30.6666V17.3334H17.3334V30.6666H4V44H44V4Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">AI Resume Agent</h2>
+</div>
+<div class="flex flex-1 justify-end items-center gap-8">
+<nav class="flex items-center gap-9">
+<a class="text-white/80 hover:text-white text-sm font-medium leading-normal transition-colors" href="#">Dashboard</a>
+<a class="text-white hover:text-white/80 text-sm font-bold leading-normal transition-colors" href="#">My Profile</a>
+<a class="text-white/80 hover:text-white text-sm font-medium leading-normal transition-colors" href="#">Resources</a>
+<a class="text-white/80 hover:text-white text-sm font-medium leading-normal transition-colors" href="#">Settings</a>
+</nav>
+<div class="flex items-center gap-2">
+<button class="flex h-10 w-10 cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-white/5 text-white/80 hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-xl">notifications</span>
+</button>
+<button class="flex h-10 w-10 cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-white/5 text-white/80 hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-xl">help</span>
+</button>
+</div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User profile picture with a gradient background" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuATIs2Xu4XxXJOIE0tyPkdoDNvUqb53IhjVNE5Za1iQP5cqwYQvt6yx58HN-_Ht2-qiLXOmPf4DPeCmAQ4HdIEpXRMdwVKstxGTWO9saIu6k3OCRffbwjZXC8-jK98WrqPSkGWywyBYKXBFcSiAOrIcxSb2S84gOuWU68fiO82KBLSaha8MCus9_YaZDmAkKZKpx6gci6sVe6br9Y2HVLURBY8G1enj-swXkeCh_DooziVIHhbSU0E1q5lyInUf9jqdrr-0-c6PkcE");'></div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex flex-1 justify-center py-10 px-4 sm:px-6 lg:px-8">
+<div class="flex w-full max-w-4xl flex-col gap-8">
+<!-- Progress Bar -->
+<div class="flex flex-col gap-4 px-4">
+<div class="flex justify-between">
+<p class="text-white text-base font-medium leading-normal">Step 3 of 6</p>
+</div>
+<div class="flex w-full gap-2">
+<div class="h-2 flex-1 rounded-full bg-primary"></div>
+<div class="h-2 flex-1 rounded-full bg-primary"></div>
+<div class="h-2 flex-1 rounded-full bg-primary"></div>
+<div class="h-2 flex-1 rounded-full bg-white/10"></div>
+<div class="h-2 flex-1 rounded-full bg-white/10"></div>
+<div class="h-2 flex-1 rounded-full bg-white/10"></div>
+</div>
+<div class="flex justify-between text-sm font-medium text-white/50">
+<span class="text-white">Services</span>
+<span>Availability</span>
+<span>Review</span>
+</div>
+</div>
+<!-- Page Heading -->
+<div class="flex flex-wrap justify-between gap-3 p-4">
+<div class="flex flex-col gap-2">
+<h1 class="text-white text-4xl font-black leading-tight tracking-[-0.033em]">Define Your Services &amp; Pricing</h1>
+<p class="text-white/60 text-base font-normal leading-normal">Detail the coaching packages you offer to clients. You can add multiple services.</p>
+</div>
+</div>
+<!-- Service Form Section -->
+<div class="flex flex-col gap-6">
+<!-- Service Card 1 -->
+<div class="flex flex-col gap-6 rounded-xl bg-white/5 p-6 border border-white/10">
+<div class="flex justify-between items-center">
+<h3 class="text-white text-xl font-bold">Service 1</h3>
+<button class="flex h-9 w-9 items-center justify-center rounded-lg text-white/60 hover:bg-white/10 hover:text-white transition-colors">
+<span class="material-symbols-outlined text-xl">delete</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Service Name -->
+<label class="flex flex-col col-span-2">
+<p class="text-white text-sm font-medium leading-normal pb-2">Service Name</p>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white placeholder:text-white/40 focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-white/20 bg-[#2C2C2C] focus:border-primary h-12 p-3 text-base font-normal leading-normal" placeholder="e.g., 3-Month Career Accelerator" value="Mock Interview Session"/>
+</label>
+<!-- Description -->
+<label class="flex flex-col col-span-2">
+<p class="text-white text-sm font-medium leading-normal pb-2">Description</p>
+<textarea class="form-textarea flex w-full min-w-0 flex-1 resize-y overflow-hidden rounded-lg text-white placeholder:text-white/40 focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-white/20 bg-[#2C2C2C] focus:border-primary min-h-32 p-3 text-base font-normal leading-normal" placeholder="Describe what's included in this package..."></textarea>
+</label>
+<!-- Price -->
+<label class="flex flex-col">
+<p class="text-white text-sm font-medium leading-normal pb-2">Price</p>
+<div class="relative">
+<div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+<span class="text-white/60 text-base">£</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white placeholder:text-white/40 focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-white/20 bg-[#2C2C2C] focus:border-primary h-12 p-3 pl-8 text-base font-normal leading-normal" placeholder="250" type="number" value=""/>
+</div>
+</label>
+<!-- Duration -->
+<label class="flex flex-col">
+<p class="text-white text-sm font-medium leading-normal pb-2">Duration</p>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white placeholder:text-white/40 focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-white/20 bg-[#2C2C2C] focus:border-primary h-12 p-3 text-base font-normal leading-normal" placeholder="e.g., 1 x 90-minute session" value=""/>
+</label>
+<!-- Payment Type -->
+<div class="col-span-2">
+<p class="text-white text-sm font-medium leading-normal pb-2">Payment Type</p>
+<div class="grid grid-cols-2 gap-4">
+<label class="flex items-center gap-3 rounded-lg border border-white/20 bg-[#2C2C2C] p-3 has-[:checked]:border-primary has-[:checked]:bg-primary/20 has-[:checked]:ring-2 has-[:checked]:ring-primary/50 cursor-pointer">
+<input checked="" class="form-radio bg-transparent border-white/40 text-primary focus:ring-primary/50" name="payment_type_1" type="radio"/>
+<span class="text-white text-sm font-medium">One-off Payment</span>
+</label>
+<label class="flex items-center gap-3 rounded-lg border border-white/20 bg-[#2C2C2C] p-3 has-[:checked]:border-primary has-[:checked]:bg-primary/20 has-[:checked]:ring-2 has-[:checked]:ring-primary/50 cursor-pointer">
+<input class="form-radio bg-transparent border-white/40 text-primary focus:ring-primary/50" name="payment_type_1" type="radio"/>
+<span class="text-white text-sm font-medium">Subscription</span>
+</label>
+</div>
+</div>
+</div>
+</div>
+<!-- Add Service Button -->
+<button class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 border-2 border-dashed border-white/20 bg-transparent text-white hover:border-white/40 hover:bg-white/5 gap-2 text-sm font-bold leading-normal tracking-[0.015em] transition-colors">
+<span class="material-symbols-outlined">add</span>
+                         Add Another Service
+                    </button>
+</div>
+<!-- Navigation Buttons -->
+<div class="flex items-center justify-between border-t border-white/10 p-4 mt-4">
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-11 bg-transparent text-white/80 hover:text-white gap-2 text-base font-bold leading-normal tracking-[0.015em] min-w-0 px-6 transition-colors">
+                        Back
+                    </button>
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-11 bg-primary text-black gap-2 text-base font-bold leading-normal tracking-[0.015em] min-w-0 px-8 hover:bg-yellow-400 transition-colors">
+                        Next
+                    </button>
+</div>
+</div>
+</main>
+</div>
+</body></html>

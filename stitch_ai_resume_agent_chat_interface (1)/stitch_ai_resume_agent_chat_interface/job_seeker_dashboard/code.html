@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Job Seeker Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f2d00d",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#121212",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="flex flex-1">
+<!-- SideNavBar -->
+<aside class="w-64 flex-shrink-0 bg-[#1E1E1E] p-4 flex flex-col justify-between">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-3 p-2">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User avatar image" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBdf4XYWInNkqLGLCEagcDH0hlVW97F2YrNQY4oA7FeoPee2lpkW3wRsllZaVlkZzu4TauM75pT1zWsrs0HyAw3IgX0CmH-BPXolboQwHzjPjkFu3bqKC7QhVqJjp91qaKl-FaGyOAp5tvgrfh5d2-F3MPexpyzdYmWfE2pt7NwaCv99Cc2jOVz4W4w8R0K-C-4QeSOZf_Q9NsdcWLTwoMVB-oersnztrFfIb7yxTQhhGfTWLe-j9hCA-NEU37ziseLuhvlm0vrEq4");'></div>
+<div class="flex flex-col">
+<h1 class="text-white text-base font-medium leading-normal">Alex Chen</h1>
+<p class="text-gray-400 text-sm font-normal leading-normal">Job Seeker</p>
+</div>
+</div>
+<nav class="flex flex-col gap-2 mt-4">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/20 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<p class="text-sm font-medium leading-normal">Dashboard</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-gray-300 hover:bg-white/10 rounded-lg" href="#">
+<span class="material-symbols-outlined">person</span>
+<p class="text-sm font-medium leading-normal">Profile</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-gray-300 hover:bg-white/10 rounded-lg" href="#">
+<span class="material-symbols-outlined">star</span>
+<p class="text-sm font-medium leading-normal">STAR Story Bank</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-gray-300 hover:bg-white/10 rounded-lg" href="#">
+<span class="material-symbols-outlined">work</span>
+<p class="text-sm font-medium leading-normal">Job Tracking</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-gray-300 hover:bg-white/10 rounded-lg" href="#">
+<span class="material-symbols-outlined">smart_toy</span>
+<p class="text-sm font-medium leading-normal">AI Agent</p>
+</a>
+</nav>
+</div>
+<button class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-background-dark text-sm font-bold leading-normal tracking-[0.015em] hover:brightness-90 transition-all">
+<span class="truncate">Upgrade Plan</span>
+</button>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 p-8 overflow-y-auto">
+<div class="max-w-6xl mx-auto">
+<!-- PageHeading -->
+<div class="flex flex-wrap justify-between items-center gap-3 mb-8">
+<p class="text-white text-4xl font-black leading-tight tracking-[-0.033em]">Welcome back, Alex!</p>
+</div>
+<!-- Stats -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+<div class="flex flex-col gap-2 rounded-xl p-6 bg-[#1E1E1E] border border-white/10">
+<p class="text-gray-300 text-base font-medium leading-normal">Resumes Generated</p>
+<p class="text-white tracking-light text-4xl font-bold leading-tight">1</p>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-6 bg-[#1E1E1E] border border-white/10">
+<p class="text-gray-300 text-base font-medium leading-normal">Stories in Bank</p>
+<p class="text-white tracking-light text-4xl font-bold leading-tight">5</p>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-6 bg-[#1E1E1E] border border-white/10">
+<p class="text-gray-300 text-base font-medium leading-normal">Applications Tracked</p>
+<p class="text-white tracking-light text-4xl font-bold leading-tight">2</p>
+</div>
+</div>
+<!-- Main Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+<!-- Left Column (Primary Card) -->
+<div class="lg:col-span-2">
+<!-- Card: Latest Resume Draft -->
+<div class="p-4 @container bg-[#1E1E1E] rounded-xl border border-white/10">
+<div class="flex flex-col items-stretch justify-start">
+<div class="w-full bg-center bg-no-repeat aspect-[2/1] bg-cover rounded-lg" data-alt="Abstract gradient representing a resume document" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD7GVJcL23gMs0nxPKNAP1DrRu_d-LVPUCTwzPStEKJG9QyXHRDqiUqjBFFaOmO5r_R9itlURXc9XxM-Kbu8Pzejrgq3XuOm1oEcOM7Gie2Fv0D64i1dRA_lxPDB8_f2GGA6idgGdbXrI8ZN5-WBfFcIxW7WLaNsIdc7a83l_1woOfsyEVVsxGGQP3M37Ad5vpCIScYLFckGF1CKD87aYk-HU-7tu3GnJ940U58ijAjXSE72P-1bsGMK5EKcG9_4lClEiAevw2TJJA");'></div>
+<div class="flex w-full grow flex-col items-stretch justify-center gap-2 pt-4">
+<p class="text-white text-xl font-bold leading-tight tracking-[-0.015em]">Latest Resume Draft</p>
+<div class="flex items-end gap-3 justify-between">
+<div class="flex flex-col gap-1">
+<p class="text-gray-400 text-base font-normal leading-normal">For Product Manager at Acme Corp</p>
+<p class="text-gray-400 text-sm font-normal leading-normal">Generated: 2 days ago</p>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-5 bg-primary text-background-dark text-sm font-bold leading-normal hover:brightness-90 transition-all">
+<span class="truncate">Refine with AI</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column (Secondary Widgets) -->
+<div class="flex flex-col gap-6">
+<!-- Profile Completion Card -->
+<div class="flex flex-col gap-3 rounded-xl p-6 bg-[#1E1E1E] border border-white/10">
+<p class="text-white text-lg font-bold">Complete Your Profile</p>
+<div class="w-full bg-gray-700 rounded-full h-2.5">
+<div class="bg-primary h-2.5 rounded-full" style="width: 75%"></div>
+</div>
+<div class="flex justify-between items-center">
+<p class="text-gray-400 text-sm">75% Complete</p>
+<button class="text-primary text-sm font-bold hover:underline">Add Details</button>
+</div>
+</div>
+<!-- STAR Story Prompt -->
+<div class="flex flex-col items-center text-center gap-3 rounded-xl p-6 bg-[#1E1E1E] border border-white/10">
+<span class="material-symbols-outlined text-primary" style="font-size: 36px;">auto_stories</span>
+<p class="text-white text-lg font-bold">Strengthen Your Resume</p>
+<p class="text-gray-400 text-sm">Add more of your experiences to help the AI craft the perfect application.</p>
+<button class="mt-2 w-full flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary/20 text-primary text-sm font-bold leading-normal hover:bg-primary/30 transition-all">
+<span class="truncate">Add a STAR Story</span>
+</button>
+</div>
+</div>
+</div>
+<!-- SectionHeader -->
+<h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] mt-8 mb-4">Recent Job Matches</h2>
+<!-- Recent Job Matches List -->
+<div class="flex flex-col gap-4">
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 p-4 bg-[#1E1E1E] rounded-xl border border-white/10">
+<div class="flex items-center gap-4">
+<div class="p-3 bg-white/5 rounded-lg"><span class="material-symbols-outlined text-white">business_center</span></div>
+<div>
+<p class="text-white font-medium">Senior Product Manager</p>
+<p class="text-gray-400 text-sm">Innovate Inc. • San Francisco, CA</p>
+</div>
+</div>
+<button class="text-primary text-sm font-bold hover:underline whitespace-nowrap">View Details</button>
+</div>
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 p-4 bg-[#1E1E1E] rounded-xl border border-white/10">
+<div class="flex items-center gap-4">
+<div class="p-3 bg-white/5 rounded-lg"><span class="material-symbols-outlined text-white">business_center</span></div>
+<div>
+<p class="text-white font-medium">UX/UI Designer</p>
+<p class="text-gray-400 text-sm">Creative Solutions • New York, NY (Remote)</p>
+</div>
+</div>
+<button class="text-primary text-sm font-bold hover:underline whitespace-nowrap">View Details</button>
+</div>
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 p-4 bg-[#1E1E1E] rounded-xl border border-white/10">
+<div class="flex items-center gap-4">
+<div class="p-3 bg-white/5 rounded-lg"><span class="material-symbols-outlined text-white">business_center</span></div>
+<div>
+<p class="text-white font-medium">Lead Software Engineer</p>
+<p class="text-gray-400 text-sm">TechCorp • Austin, TX</p>
+</div>
+</div>
+<button class="text-primary text-sm font-bold hover:underline whitespace-nowrap">View Details</button>
+</div>
+</div>
+<div class="text-center mt-6">
+<button class="text-primary font-bold hover:underline">View All Matches</button>
+</div>
+</div>
+</main>
+</div>
+</div>
+</body></html>

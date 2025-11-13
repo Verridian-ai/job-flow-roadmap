@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CareerDev AI - Find Your Coach</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#f2d00d",
+            "background-light": "#f8f8f5",
+            "background-dark": "#1A1A1A",
+            "card-dark": "#2D2D2D",
+            "card-light": "#FFFFFF",
+            "text-light-primary": "#1A1A1A",
+            "text-dark-primary": "#E0E0E0",
+            "text-light-secondary": "#6B7280",
+            "text-dark-secondary": "#A0A0A0",
+          },
+          fontFamily: {
+            "display": ["Lexend", "sans-serif"]
+          },
+          borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+        },
+      },
+    }
+  </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-light-primary dark:text-text-dark-primary">
+<div class="relative flex min-h-screen w-full flex-col">
+<!-- TopNavBar -->
+<header class="sticky top-0 z-50 border-b border-white/10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="container mx-auto flex items-center justify-between whitespace-nowrap px-4 py-3">
+<div class="flex items-center gap-4">
+<div class="size-6 text-primary">
+<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 18.4228L42 11.475V34.3663C42 34.7796 41.7457 35.1504 41.3601 35.2992L24 42V18.4228Z" fill-opacity="0.7"></path>
+<path clip-rule="evenodd" d="M24 8.18819L33.4123 11.574L24 15.2071L14.5877 11.574L24 8.18819ZM9 15.8487L21 20.4805V37.6263L9 32.9945V15.8487ZM27 37.6263V20.4805L39 15.8487V32.9945L27 37.6263ZM25.354 2.29885C24.4788 1.98402 23.5212 1.98402 22.646 2.29885L4.98454 8.65208C3.7939 9.08038 3 10.2097 3 11.475V34.3663C3 36.0196 4.01719 37.5026 5.55962 38.098L22.9197 44.7987C23.6149 45.0671 24.3851 45.0671 25.0803 44.7987L42.4404 38.098C43.9828 37.5026 45 36.0196 45 34.3663V11.475C45 10.2097 44.2061 9.08038 43.0155 8.65208L25.354 2.29885Z"></path>
+</svg>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">CareerDev AI</h2>
+</div>
+<nav class="hidden items-center gap-9 md:flex">
+<a class="text-sm font-medium leading-normal hover:text-primary" href="#">Home</a>
+<a class="text-sm font-medium leading-normal hover:text-primary" href="#">AI Resume Writer</a>
+<a class="text-primary text-sm font-medium leading-normal" href="#">Coaches</a>
+</nav>
+<div class="flex items-center gap-2">
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-transparent text-sm font-bold leading-normal tracking-[0.015em] border border-text-light-secondary/50 dark:border-text-dark-secondary/50 hover:bg-white/10 dark:hover:bg-white/5">
+<span class="truncate">Log In</span>
+</button>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-background-dark text-sm font-bold leading-normal tracking-[0.015em] hover:bg-yellow-300">
+<span class="truncate">Sign Up</span>
+</button>
+</div>
+</div>
+</header>
+<main class="container mx-auto flex-1 px-4 py-8 sm:py-12 md:py-16">
+<div class="flex flex-col gap-8">
+<!-- PageHeading -->
+<div class="flex flex-col items-center gap-3 text-center">
+<h1 class="text-4xl font-black leading-tight tracking-[-0.033em] md:text-5xl">Find Your Career Coach</h1>
+<p class="max-w-xl text-base font-normal leading-normal text-text-light-secondary dark:text-text-dark-secondary">Connect with top-rated experts to accelerate your career growth.</p>
+</div>
+<!-- Toolbar: Search and Filters -->
+<div class="flex flex-col gap-4">
+<!-- SearchBar -->
+<div class="px-0 py-0">
+<div class="relative">
+<div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4 text-text-light-secondary dark:text-text-dark-secondary">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input block w-full rounded-lg border-2 border-transparent bg-card-light dark:bg-card-dark py-3 pl-12 pr-4 text-base font-normal leading-normal placeholder:text-text-light-secondary dark:placeholder:text-text-dark-secondary focus:border-primary focus:outline-none focus:ring-0" placeholder="Search by coach name, keyword..." type="search"/>
+</div>
+</div>
+<!-- Filters (Chips) -->
+<div class="flex flex-wrap items-center gap-3">
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-card-light dark:bg-card-dark pl-4 pr-3 text-sm font-medium leading-normal hover:bg-gray-200 dark:hover:bg-gray-700">
+<span>Sort by: Rating</span>
+<span class="material-symbols-outlined text-xl">expand_more</span>
+</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-card-light dark:bg-card-dark pl-4 pr-3 text-sm font-medium leading-normal hover:bg-gray-200 dark:hover:bg-gray-700">
+<span>Specialty</span>
+<span class="material-symbols-outlined text-xl">expand_more</span>
+</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-card-light dark:bg-card-dark pl-4 pr-3 text-sm font-medium leading-normal hover:bg-gray-200 dark:hover:bg-gray-700">
+<span>Industry</span>
+<span class="material-symbols-outlined text-xl">expand_more</span>
+</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-card-light dark:bg-card-dark pl-4 pr-3 text-sm font-medium leading-normal hover:bg-gray-200 dark:hover:bg-gray-700">
+<span>Availability</span>
+<span class="material-symbols-outlined text-xl">expand_more</span>
+</button>
+</div>
+</div>
+<!-- Coach Grid -->
+<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+<!-- Coach Profile Card 1 -->
+<div class="group flex flex-col overflow-hidden rounded-xl border border-white/10 bg-card-light dark:bg-card-dark shadow-lg transition-all hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/10">
+<div class="flex-1 p-6">
+<div class="flex flex-col items-center text-center">
+<div class="relative mb-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-24" data-alt="Professional headshot of Olivia Chen" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA_lrR_Omc3F9vEpkDiOzIPEGG90U4SeFFgdouBPN2c-VTjt-6ddqBELSHJZr2JYdINNicspq7VMCwEknVY6Lpd_xtu2wy3EWIsb9TmRBRq3y5jwHATkncF-kQmn9iKVBCaZ0iOqs449r1JrZ_F7Ea5Ar9_mVT6FgMNDUkBz2AlJ4vNeb8vfC3bBjKL7BB-Acf8-U7eTBbrzK24Gnp6y4W_HeTfU7psVTYj2gqUPLE5J4bQTUG-rTX6UrFRpdTgD_4P7NEbTyR6cOU");'></div>
+<div class="absolute bottom-0 right-0 rounded-full border-2 border-background-dark bg-green-500 p-1.5"></div>
+</div>
+<h3 class="text-lg font-bold">Olivia Chen</h3>
+<p class="text-sm text-text-light-secondary dark:text-text-dark-secondary">Interview Prep &amp; Salary Negotiation</p>
+<div class="mt-3 flex items-center gap-1.5">
+<span class="font-bold text-primary">4.9</span>
+<div class="flex text-primary">
+<span class="material-symbols-outlined !text-xl">star</span>
+<span class="material-symbols-outlined !text-xl">star</span>
+<span class="material-symbols-outlined !text-xl">star</span>
+<span class="material-symbols-outlined !text-xl">star</span>
+<span class="material-symbols-outlined !text-xl">star_half</span>
+</div>
+<span class="text-xs text-text-light-secondary dark:text-text-dark-secondary">(128)</span>
+</div>
+</div>
+</div>
+<div class="border-t border-white/10 p-4">
+<button class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-11 px-4 bg-primary text-background-dark text-sm font-bold leading-normal tracking-[0.015em] transition-colors hover:bg-yellow-300">
+<span class="truncate">View Profile</span>
+</button>
+</div>
+</div>
+<!-- Coach Profile Card 2 -->
+<div class="group flex flex-col overflow-hidden rounded-xl border border-white/10 bg-card-light dark:bg-card-dark shadow-lg transition-all hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/10">
+<div class="flex-1 p-6">
+<div class="flex flex-col items-center text-center">
+<div class="relative mb-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-24" data-alt="Professional headshot of Ben Carter" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAPUsoFr2L18ML1mzuKztbQ6xqaUXg-5ei1cdMBqOJ74YOEvwTlJjL1StfdWIxdrqvLGqkCSXMtn-1aMncDYTO3ArEB8u78zoRcOFAfJ-TSH-H09El4EP3kQdqIaSCiSTioLDrglN6Zkf0FsTN9A0u5LqtrIptQY8Rg2Zk7-ln2aZ2jnH7Rbe4eMzmPrj1tEiP_877NWH63PgfA1gLd68HsQYU3iotipwpDjxtvizzKOjBd3hTAyTsO8U5gYqeL5LJje0EOIXZODAw");'></div>
+</div>
+<h3 class="text-lg font-bold">Ben Carter</h3>
+<p class="text-sm text-text-light-secondary dark:text-text-dark-secondary">Tech Leadership &amp; Mentorship</p>
+<div class="mt-3 flex items-center gap-1.5">
+<span class="font-bold text-primary">5.0</span>
+<div class="flex text-primary">
+<span class="material-symbols-outlined !text-xl">star</span>
+<span class="material-symbols-outlined !text-xl">star</span>
+<span class="material-symbols-outlined !text-xl">star</span>
+<span class="material-symbols-outlined !text-xl">star</span>
+<span class="material-symbols-outlined !text-xl">star</span>
+</div>
+<span class="text-xs text-text-light-secondary dark:text-text-dark-secondary">(94)</span>
+</div>
+</div>
+</div>
+<div class="border-t border-white/10 p-4">
+<button class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-11 px-4 bg-primary text-background-dark text-sm font-bold leading-normal tracking-[0.015em] transition-colors hover:bg-yellow-300">
+<span class="truncate">View Profile</span>
+</button>
+</div>
+</div>
+<!-- Coach Profile Card 3 -->
+<div class="group flex flex-col overflow-hidden rounded-xl border border-white/10 bg-card-light dark:bg-card-dark shadow-lg transition-all hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/10">
+<div class="flex-1 p-6">
+<div class="flex flex-col items-center text-center">
+<div class="relative mb-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-24" data-alt="Professional headshot of Sofia Rodriguez" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA_p0gopin_zAS4yD7vbzxggpoyIGKXlj8PLEUOoPXc4aljX-XdjpFwiYQwToroKQiV3pEyHGT-GCQFzbL6eYM_XKCcFFqUR-ZAeu5j2bduVaKGlu7IA0VIBfvWP40XIzjymJTigZOSHReTQcsjWvIPI2u1dCwYUcr_iUfbc4vvQ--D-46QzRAoYoFJkBe13uMWIEv6BTzxiiUe3iFznLjZfmnOsygSzFhTKzIWHmHAikXvXdERGOOXMmxZwcZLdS0BuJ1YXVwB_dY");'></div>
+</div>
+<h3 class="text-lg font-bold">Sofia Rodriguez</h3>
+<p class="text-sm text-text-light-secondary dark:text-text-dark-secondary">Career Transition Specialist</p>
+<div class="mt-3 flex items-center gap-1.5">
+<span class="font-bold text-primary">4.8</span>
+<div class="flex text-primary">
+<span class="material-symbols-outlined !text-xl">star</span>
+<span class="material-symbols-outlined !text-xl">star</span>
+<span class="material-symbols-outlined !text-xl">star</span>
+<span class="material-symbols-outlined !text-xl">star</span>
+<span class="material-symbols-outlined !text-xl">star</span>
+</div>
+<span class="text-xs text-text-light-secondary dark:text-text-dark-secondary">(215)</span>
+</div>
+</div>
+</div>
+<div class="border-t border-white/10 p-4">
+<button class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-11 px-4 bg-primary text-background-dark text-sm font-bold leading-normal tracking-[0.015em] transition-colors hover:bg-yellow-300">
+<span class="truncate">View Profile</span>
+</button>
+</div>
+</div>
+<!-- Coach Profile Card 4 -->
+<div class="group flex flex-col overflow-hidden rounded-xl border border-white/10 bg-card-light dark:bg-card-dark shadow-lg transition-all hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/10">
+<div class="flex-1 p-6">
+<div class="flex flex-col items-center text-center">
+<div class="relative mb-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-24" data-alt="Professional headshot of David Lee" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAXIfR7jXFloeiHuQkRNUthYA4ucJGCSC9aKxvXkbpkR_lgVeKZVju-6VZqoG6SJ-s5kyC-YcCVz5qGE2kNjo_i4082RuVHCXvIA35V62a5MFxzAnH-nBsLwx8tA2IekqWWyhRzHCn8g79s_NlIyOU-BHZwGR9tsHtyvZSSCCl4-gyAqXvnsdVZFl94ibNO2YQC6N9xTACdh2cQibScvu5ksXHaupsgSM-uBdDYB04U0yzRzgePLDJ5J1x7_PtmjAcTTftaAjAfGrY");'></div>
+<div class="absolute bottom-0 right-0 rounded-full border-2 border-background-dark bg-green-500 p-1.5"></div>
+</div>
+<h3 class="text-lg font-bold">David Lee</h3>
+<p class="text-sm text-text-light-secondary dark:text-text-dark-secondary">Healthcare Industry Expert</p>
+<div class="mt-3 flex items-center gap-1.5">
+<span class="font-bold text-primary">4.9</span>
+<div class="flex text-primary">
+<span class="material-symbols-outlined !text-xl">star</span>
+<span class="material-symbols-outlined !text-xl">star</span>
+<span class="material-symbols-outlined !text-xl">star</span>
+<span class="material-symbols-outlined !text-xl">star</span>
+<span class="material-symbols-outlined !text-xl">star_half</span>
+</div>
+<span class="text-xs text-text-light-secondary dark:text-text-dark-secondary">(88)</span>
+</div>
+</div>
+</div>
+<div class="border-t border-white/10 p-4">
+<button class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-11 px-4 bg-primary text-background-dark text-sm font-bold leading-normal tracking-[0.015em] transition-colors hover:bg-yellow-300">
+<span class="truncate">View Profile</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="flex items-center justify-center pt-8">
+<nav aria-label="Pagination" class="flex items-center gap-2">
+<button class="flex size-10 items-center justify-center rounded-lg hover:bg-card-light dark:hover:bg-card-dark disabled:opacity-50" disabled="">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="flex size-10 items-center justify-center rounded-lg bg-primary text-background-dark font-bold">1</button>
+<button class="flex size-10 items-center justify-center rounded-lg hover:bg-card-light dark:hover:bg-card-dark font-medium">2</button>
+<button class="flex size-10 items-center justify-center rounded-lg hover:bg-card-light dark:hover:bg-card-dark font-medium">3</button>
+<span class="px-2">...</span>
+<button class="flex size-10 items-center justify-center rounded-lg hover:bg-card-light dark:hover:bg-card-dark font-medium">8</button>
+<button class="flex size-10 items-center justify-center rounded-lg hover:bg-card-light dark:hover:bg-card-dark">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</nav>
+</div>
+</div>
+</main>
+</div>
+</body></html>

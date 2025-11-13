@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Learning Progress View</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f2d00d",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#181711",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24;
+            line-height: 1; /* Ensure icon is vertically centered */
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#E0E0E0]">
+<div class="relative flex min-h-screen w-full flex-col">
+<div class="flex flex-1">
+<!-- SideNavBar -->
+<aside class="flex w-64 flex-col bg-[#221f10] p-4 border-r border-[#393728]">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-3 px-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User avatar of Alex Chen" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCxDFBqwbHX-ot0IUCUguLdIO00y77RbRFXbd_WtKKNnUkq7x3Xc4xXZYw4zwYog4Ic_EnyDV-iUZQm64i3nIC94-8z8lWNjILqwtPw-lCpdLVSLvmsMt5DdrfHFmnCqNPdGU5rgJFY9bUs6692N7pf6wvOPM5l_LCndTV0Huf3MsijMrF_sc-9hcfruiLDMQ2i7BLWOuZi_wmykzmGJkYGF-3mTVNvPJWjPlxmhohbLDE1hy3fm_7D-UPUeAdTDaZ2keubRilyir4");'></div>
+<div class="flex flex-col">
+<h1 class="text-white text-base font-medium leading-normal">Alex Chen</h1>
+<p class="text-[#bab59c] text-sm font-normal leading-normal">Product Manager</p>
+</div>
+</div>
+<nav class="flex flex-col gap-2 mt-4">
+<a class="flex items-center gap-3 px-3 py-2 text-white hover:bg-[#393728] rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<p class="text-sm font-medium leading-normal">Dashboard</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-white hover:bg-[#393728] rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">auto_awesome</span>
+<p class="text-sm font-medium leading-normal">Resume AI</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-[#393728] text-white" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">school</span>
+<p class="text-sm font-medium leading-normal">Learning Paths</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-white hover:bg-[#393728] rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">flag</span>
+<p class="text-sm font-medium leading-normal">Career Goals</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-white hover:bg-[#393728] rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">settings</span>
+<p class="text-sm font-medium leading-normal">Settings</p>
+</a>
+</nav>
+</div>
+<div class="mt-auto flex flex-col gap-4">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-background-dark text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+<span class="truncate">Upgrade Plan</span>
+</button>
+<div class="flex flex-col gap-1">
+<a class="flex items-center gap-3 px-3 py-2 text-white hover:bg-[#393728] rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">help_center</span>
+<p class="text-sm font-medium leading-normal">Help Center</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-white hover:bg-[#393728] rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">logout</span>
+<p class="text-sm font-medium leading-normal">Log Out</p>
+</a>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 p-8">
+<div class="mx-auto max-w-4xl">
+<!-- Page Heading -->
+<div class="flex flex-wrap items-center justify-between gap-4 mb-8">
+<div class="flex flex-col gap-2">
+<p class="text-white text-4xl font-black leading-tight tracking-[-0.033em]">Learning Progress</p>
+<p class="text-[#bab59c] text-base font-normal leading-normal">Advanced Python for Data Science</p>
+</div>
+<div class="flex items-center gap-3">
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-transparent text-white text-sm font-bold leading-normal tracking-[0.015em] border border-[#54503b] hover:bg-[#393728] transition-colors">
+<span class="truncate">Go to Course Platform</span>
+</button>
+</div>
+</div>
+<!-- Progress Section -->
+<section class="bg-[#221f10] p-6 rounded-xl border border-[#393728] mb-8">
+<div class="flex flex-col gap-3">
+<div class="flex gap-6 justify-between items-center">
+<p class="text-white text-base font-medium leading-normal">Overall Progress</p>
+<p class="text-white text-lg font-bold leading-normal">75%</p>
+</div>
+<div class="rounded-full bg-[#54503b]">
+<div aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="h-2 rounded-full bg-primary" role="progressbar" style="width: 75%;"></div>
+</div>
+<p class="text-[#bab59c] text-sm font-normal leading-normal">Keep up the great work! You're almost there.</p>
+</div>
+</section>
+<!-- Stats -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+<div class="flex flex-col gap-2 rounded-xl p-6 bg-[#221f10] border border-[#393728]">
+<p class="text-[#bab59c] text-base font-medium leading-normal">Hours Viewed</p>
+<p class="text-white tracking-light text-2xl font-bold leading-tight">12 / 16 hrs</p>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-6 bg-[#221f10] border border-[#393728]">
+<p class="text-[#bab59c] text-base font-medium leading-normal">Current Score</p>
+<p class="text-white tracking-light text-2xl font-bold leading-tight">88%</p>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-6 bg-[#221f10] border border-[#393728]">
+<p class="text-[#bab59c] text-base font-medium leading-normal">Status</p>
+<p class="text-white tracking-light text-2xl font-bold leading-tight">In Progress</p>
+</div>
+</div>
+<!-- Activity & Completion Details -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<!-- Activity Log Section -->
+<div class="flex flex-col">
+<h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] mb-4">Recent Activity</h2>
+<div class="bg-[#221f10] rounded-xl border border-[#393728] p-6 space-y-4">
+<div class="relative flex items-start pb-4">
+<div class="absolute left-3 top-3 h-full border-l-2 border-dashed border-[#54503b]"></div>
+<div class="z-10 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-[#3B82F6]">
+<span class="material-symbols-outlined text-white text-sm">task_alt</span>
+</div>
+<div class="ml-4 flex-grow">
+<p class="text-white font-medium">Completed Module 3: Data Wrangling</p>
+<p class="text-sm text-[#bab59c]">2 days ago</p>
+</div>
+</div>
+<div class="relative flex items-start pb-4">
+<div class="absolute left-3 top-3 h-full border-l-2 border-dashed border-[#54503b]"></div>
+<div class="z-10 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-[#3B82F6]">
+<span class="material-symbols-outlined text-white text-sm">quiz</span>
+</div>
+<div class="ml-4 flex-grow">
+<p class="text-white font-medium">Took Quiz 2 - Scored 92%</p>
+<p class="text-sm text-[#bab59c]">3 days ago</p>
+</div>
+</div>
+<div class="relative flex items-start">
+<div class="z-10 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-[#3B82F6]">
+<span class="material-symbols-outlined text-white text-sm">play_circle</span>
+</div>
+<div class="ml-4 flex-grow">
+<p class="text-white font-medium">Started Module 3: Data Wrangling</p>
+<p class="text-sm text-[#bab59c]">5 days ago</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Completion Details Section (Example for a completed course) -->
+<div class="flex flex-col">
+<h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] mb-4">Completion Details</h2>
+<div class="bg-[#221f10] rounded-xl border border-[#393728] p-6 space-y-4 text-center">
+<p class="text-[#bab59c]">This course is not yet complete. Finish all modules to unlock your certificate and sharing options.</p>
+<!-- The content below would be shown upon completion -->
+<!--
+                                <div class="space-y-3">
+                                    <div>
+                                        <p class="text-[#bab59c] text-sm">Issued Badge URL</p>
+                                        <a href="#" class="text-blue-400 hover:text-blue-300 break-words">https://coursera.org/verify/LKD89SDFG</a>
+                                    </div>
+                                    <div>
+                                        <p class="text-[#bab59c] text-sm">Evidence URL</p>
+                                        <a href="#" class="text-blue-400 hover:text-blue-300 break-words">https://coursera.org/evidence/LKD89SDFG</a>
+                                    </div>
+                                </div>
+                                <button class="flex w-full mt-4 cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-background-dark text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+                                    <span class="material-symbols-outlined mr-2 text-base">share</span>
+                                    <span class="truncate">Share Certificate/Badge</span>
+                                </button>
+                                -->
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+</body></html>

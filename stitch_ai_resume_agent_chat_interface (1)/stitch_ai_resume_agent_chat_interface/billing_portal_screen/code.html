@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Billing &amp; Subscription</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#f9d406",
+              "background-light": "#f8f8f5",
+              "background-dark": "#121212",
+              "surface-dark": "#1E1E1E",
+              "border-dark": "#282828",
+              "text-primary-dark": "#E0E0E0",
+              "text-secondary-dark": "#A0A0A0",
+              "status-green": "#4CAF50",
+              "status-red": "#F44336",
+            },
+            fontFamily: {
+              "display": ["Manrope", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-primary-dark">
+<div class="relative flex min-h-screen w-full flex-col">
+<div class="flex h-full flex-1">
+<!-- SideNavBar -->
+<aside class="flex w-64 flex-col gap-8 border-r border-border-dark bg-background-dark p-4">
+<div class="flex items-center gap-3 px-2">
+<span class="material-symbols-outlined text-primary" style="font-size: 32px;">auto_awesome</span>
+<span class="text-xl font-bold text-white">CareerAI</span>
+</div>
+<div class="flex grow flex-col justify-between">
+<div class="flex flex-col gap-2">
+<a class="flex items-center gap-3 rounded-lg px-3 py-2 text-text-secondary-dark hover:bg-surface-dark hover:text-white" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<p class="text-sm font-medium">Dashboard</p>
+</a>
+<a class="flex items-center gap-3 rounded-lg px-3 py-2 text-text-secondary-dark hover:bg-surface-dark hover:text-white" href="#">
+<span class="material-symbols-outlined">spark</span>
+<p class="text-sm font-medium">AI Resume Writer</p>
+</a>
+<a class="flex items-center gap-3 rounded-lg bg-surface-dark px-3 py-2 text-white" href="#">
+<span class="material-symbols-outlined">settings</span>
+<p class="text-sm font-medium">Profile Settings</p>
+</a>
+<a class="flex items-center gap-3 rounded-lg px-3 py-2 text-text-secondary-dark hover:bg-surface-dark hover:text-white" href="#">
+<span class="material-symbols-outlined">help</span>
+<p class="text-sm font-medium">Help</p>
+</a>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex items-start gap-3 rounded-lg bg-surface-dark p-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User avatar of Alex Doe" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA_R0wWGuSbukfzEYdqBlbozlzVCw2dkHl0cxbxMfbrpAcycLdre0PBPg1AZDFM63c7Lv1nVZxEr9nZookOOLZZ2v2ETdSddfkMyWM-zh2pA1DyJHSqqsB7KBABw45C-DQUMudWYCzKydjxbeXj8RI2HKPUfzSHfn6N4Ugkg97TFre76Q5Dz7PaF7bE8sLADwgW01SseD-OsDU2HWmi3v3Z9aLY6l1fl-9TfiefpEHNY9mG15E_t-xZ8nxsAf0ZmPZjlyV9DsiAFvA");'></div>
+<div class="flex flex-col">
+<h1 class="text-sm font-semibold text-white">Alex Doe</h1>
+<p class="text-xs text-text-secondary-dark">alex.doe@email.com</p>
+</div>
+</div>
+<a class="flex items-center gap-3 rounded-lg px-3 py-2 text-text-secondary-dark hover:bg-surface-dark hover:text-white" href="#">
+<span class="material-symbols-outlined">logout</span>
+<p class="text-sm font-medium">Logout</p>
+</a>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 overflow-y-auto p-8 md:p-12">
+<div class="mx-auto max-w-4xl">
+<!-- PageHeading -->
+<div class="mb-8">
+<a class="mb-4 flex items-center gap-2 text-sm text-text-secondary-dark hover:text-primary" href="#">
+<span class="material-symbols-outlined text-base">arrow_back</span>
+                        Back to Settings
+                    </a>
+<div class="flex flex-wrap items-center justify-between gap-4">
+<h1 class="text-4xl font-black leading-tight tracking-[-0.033em] text-white">Billing &amp; Subscription</h1>
+<div class="flex items-center gap-2 text-sm text-text-secondary-dark">
+<span class="material-symbols-outlined text-base">lock</span>
+<span>Secure Payments by Stripe</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-10">
+<!-- Current Plan Section -->
+<section>
+<h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] pb-3 pt-5">Your Current Plan</h2>
+<div class="rounded-xl border border-border-dark bg-surface-dark p-6">
+<div class="flex flex-wrap items-start justify-between gap-6">
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-3">
+<p class="text-2xl font-bold text-white">Pro Plan</p>
+<span class="inline-flex items-center rounded-full bg-status-green/10 px-3 py-1 text-xs font-semibold text-status-green">Active</span>
+</div>
+<p class="text-text-secondary-dark text-base">$29.99/month</p>
+<p class="text-text-secondary-dark text-sm">Next billing date: July 30, 2024</p>
+</div>
+<button class="flex h-10 cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg bg-primary px-5 text-sm font-bold text-black hover:bg-primary/90">
+<span>Change Plan</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Payment Method & Billing Information -->
+<section class="grid grid-cols-1 gap-8 md:grid-cols-2">
+<div>
+<h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] pb-3 pt-5">Payment Method</h2>
+<div class="flex h-full flex-col justify-between gap-4 rounded-xl border border-border-dark bg-surface-dark p-6">
+<div class="flex items-start gap-4">
+<img class="h-6 w-auto" data-alt="A Visa credit card icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsP3VDxAVEQnjW62p40xNPECU3cYN52f7l4AwWymtHLetrEZuOuo_jtF8HcKzktvQCcqTzIVz4515iJGG-1GNmEbzw3W-33FA3-qEcxR_LDd4tqiwhEuUbXCNu8RCztQKqNfuorbtF7SHvPjJXDXsXyLsrWNbjxwj8pPKNM4a1R-nCkia5GjnGMCp6lp4shmL9enyjB2LeGjncOzwPVfy7dLmFQ79NVw4wZGoUCaARoc1UmN67QvphfqNjf22cmLBdzKUYjIU8epY"/>
+<div>
+<p class="font-semibold text-white">Visa ending in 4242</p>
+<p class="text-sm text-text-secondary-dark">Expires 12/26</p>
+</div>
+</div>
+<button class="flex h-10 w-full cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg bg-white/10 px-5 text-sm font-medium text-white hover:bg-white/20 md:w-fit">
+<span class="material-symbols-outlined text-base">edit</span>
+<span>Update Payment Method</span>
+</button>
+</div>
+</div>
+<div>
+<h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] pb-3 pt-5">Billing Address</h2>
+<div class="flex h-full flex-col justify-between gap-4 rounded-xl border border-border-dark bg-surface-dark p-6">
+<div>
+<p class="font-semibold text-white">Alex Doe</p>
+<p class="text-sm text-text-secondary-dark">123 Design St, San Francisco, CA 94102</p>
+</div>
+<button class="flex h-10 w-full cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg bg-white/10 px-5 text-sm font-medium text-white hover:bg-white/20 md:w-fit">
+<span class="material-symbols-outlined text-base">edit</span>
+<span>Edit Information</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Invoice History Section -->
+<section>
+<h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] pb-3 pt-5">Invoice History</h2>
+<div class="overflow-hidden rounded-xl border border-border-dark bg-surface-dark">
+<div class="overflow-x-auto">
+<table class="min-w-full divide-y divide-border-dark text-sm">
+<thead class="bg-white/5">
+<tr>
+<th class="px-6 py-3 text-left font-medium text-text-secondary-dark" scope="col">Date</th>
+<th class="px-6 py-3 text-left font-medium text-text-secondary-dark" scope="col">Amount</th>
+<th class="px-6 py-3 text-left font-medium text-text-secondary-dark" scope="col">Status</th>
+<th class="relative px-6 py-3" scope="col"><span class="sr-only">Download</span></th>
+</tr>
+</thead>
+<tbody class="divide-y divide-border-dark">
+<tr>
+<td class="whitespace-nowrap px-6 py-4 text-white">June 30, 2024</td>
+<td class="whitespace-nowrap px-6 py-4 text-white">$29.99</td>
+<td class="whitespace-nowrap px-6 py-4">
+<span class="inline-flex items-center rounded-full bg-status-green/10 px-2.5 py-0.5 text-xs font-medium text-status-green">Paid</span>
+</td>
+<td class="whitespace-nowrap px-6 py-4 text-right">
+<a class="flex items-center justify-end gap-1.5 font-medium text-primary hover:text-primary/80" href="#">
+<span class="material-symbols-outlined text-base">download</span>
+<span>PDF</span>
+</a>
+</td>
+</tr>
+<tr>
+<td class="whitespace-nowrap px-6 py-4 text-white">May 30, 2024</td>
+<td class="whitespace-nowrap px-6 py-4 text-white">$29.99</td>
+<td class="whitespace-nowrap px-6 py-4">
+<span class="inline-flex items-center rounded-full bg-status-green/10 px-2.5 py-0.5 text-xs font-medium text-status-green">Paid</span>
+</td>
+<td class="whitespace-nowrap px-6 py-4 text-right">
+<a class="flex items-center justify-end gap-1.5 font-medium text-primary hover:text-primary/80" href="#">
+<span class="material-symbols-outlined text-base">download</span>
+<span>PDF</span>
+</a>
+</td>
+</tr>
+<tr>
+<td class="whitespace-nowrap px-6 py-4 text-white">April 30, 2024</td>
+<td class="whitespace-nowrap px-6 py-4 text-white">$29.99</td>
+<td class="whitespace-nowrap px-6 py-4">
+<span class="inline-flex items-center rounded-full bg-status-green/10 px-2.5 py-0.5 text-xs font-medium text-status-green">Paid</span>
+</td>
+<td class="whitespace-nowrap px-6 py-4 text-right">
+<a class="flex items-center justify-end gap-1.5 font-medium text-primary hover:text-primary/80" href="#">
+<span class="material-symbols-outlined text-base">download</span>
+<span>PDF</span>
+</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- Subscription Actions -->
+<section>
+<h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] pb-3 pt-5">Subscription Management</h2>
+<div class="rounded-xl border border-status-red/30 bg-surface-dark p-6">
+<div class="flex flex-wrap items-center justify-between gap-4">
+<div>
+<h3 class="font-bold text-white">Cancel Subscription</h3>
+<p class="mt-1 text-sm text-text-secondary-dark">Cancelling will downgrade you to the free plan at the end of your current billing cycle.</p>
+</div>
+<button class="flex h-10 cursor-pointer items-center justify-center overflow-hidden rounded-lg border border-status-red/50 bg-transparent px-5 text-sm font-medium text-status-red hover:bg-status-red/10">
+<span>Cancel Subscription</span>
+</button>
+</div>
+</div>
+</section>
+</div>
+</div>
+</main>
+</div>
+</div>
+</body></html>

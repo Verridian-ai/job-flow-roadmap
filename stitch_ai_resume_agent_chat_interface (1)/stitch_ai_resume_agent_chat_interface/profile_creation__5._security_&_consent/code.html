@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Profile Creation - Security &amp; Consent</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f9d406",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#121212", // Modified as per user request
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#E0E0E0]">
+<div class="relative flex h-auto min-h-screen w-full flex-col items-center justify-center p-4 sm:p-6 lg:p-8">
+<div class="flex w-full max-w-[960px] flex-col gap-8">
+<!-- Progress Bar -->
+<div class="flex flex-col gap-3 p-4">
+<p class="text-white text-base font-medium leading-normal">Step 5 of 6</p>
+<div class="flex w-full gap-2">
+<div class="h-2 flex-1 rounded-full bg-primary/20"><div class="h-full w-full rounded-full bg-primary"></div></div>
+<div class="h-2 flex-1 rounded-full bg-primary/20"><div class="h-full w-full rounded-full bg-primary"></div></div>
+<div class="h-2 flex-1 rounded-full bg-primary/20"><div class="h-full w-full rounded-full bg-primary"></div></div>
+<div class="h-2 flex-1 rounded-full bg-primary/20"><div class="h-full w-full rounded-full bg-primary"></div></div>
+<div class="h-2 flex-1 rounded-full bg-primary"></div>
+<div class="h-2 flex-1 rounded-full bg-primary/20"></div>
+</div>
+</div>
+<!-- Page Heading -->
+<div class="flex flex-wrap justify-between gap-3 p-4">
+<div class="flex min-w-72 flex-col gap-3">
+<p class="text-white text-4xl font-black leading-tight tracking-[-0.033em]">Security &amp; Consent</p>
+<p class="text-[#A0A0A0] text-base font-normal leading-normal">Set your security preferences and control how your data is used.</p>
+</div>
+</div>
+<div class="flex flex-col gap-8 rounded-lg bg-[#1E1E1E] p-4 sm:p-6 lg:p-8">
+<!-- Section 1: Account Security -->
+<div class="flex flex-col gap-4">
+<h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em]">Enhance Your Account Security</h2>
+<p class="text-[#A0A0A0] text-base font-normal leading-normal">
+                        Add an extra layer of security to your account. With 2FA, you'll need to provide a code from your authentication app to log in.
+                    </p>
+<div class="flex items-center gap-4 py-2">
+<div class="flex flex-1 items-center gap-4">
+<div class="text-white flex items-center justify-center rounded-lg bg-[#333] shrink-0 size-10">
+<span class="material-symbols-outlined">shield_lock</span>
+</div>
+<p class="text-white text-base font-normal leading-normal">Enable Two-Factor Authentication (2FA)</p>
+</div>
+<div class="shrink-0">
+<label class="relative flex h-[31px] w-[51px] cursor-pointer items-center rounded-full border-none bg-[#333] p-0.5 has-[:checked]:justify-end has-[:checked]:bg-primary">
+<div class="h-full w-[27px] rounded-full bg-white transition-transform" style="box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 8px, rgba(0, 0, 0, 0.06) 0px 3px 1px;"></div>
+<input class="invisible absolute" type="checkbox"/>
+</label>
+</div>
+</div>
+</div>
+<!-- Section 2: Data & Privacy Consent -->
+<div class="flex flex-col gap-4 border-t border-white/10 pt-8">
+<h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em]">How We Use Your Data</h2>
+<p class="text-[#A0A0A0] text-base font-normal leading-normal">We value your privacy. Choose how your information is used to improve our services and support your career journey.</p>
+<div class="flex flex-col gap-4 pt-2">
+<label class="flex cursor-pointer items-center gap-4 p-2 rounded-lg hover:bg-white/5 transition-colors">
+<input checked="" class="h-5 w-5 rounded border-2 border-[#A0A0A0] bg-transparent text-primary focus:ring-primary focus:ring-offset-transparent" type="checkbox"/>
+<span class="text-white text-base font-normal leading-normal">Allow use of anonymized data for market insights</span>
+</label>
+<label class="flex cursor-pointer items-center gap-4 p-2 rounded-lg hover:bg-white/5 transition-colors">
+<input checked="" class="h-5 w-5 rounded border-2 border-[#A0A0A0] bg-transparent text-primary focus:ring-primary focus:ring-offset-transparent" type="checkbox"/>
+<span class="text-white text-base font-normal leading-normal">Allow career coaches to access my profile for personalized support</span>
+</label>
+</div>
+</div>
+<!-- Section 3: Email Notifications -->
+<div class="flex flex-col gap-4 border-t border-white/10 pt-8">
+<h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em]">Stay in the Loop</h2>
+<p class="text-[#A0A0A0] text-base font-normal leading-normal">Select the email updates you'd like to receive from us.</p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+<label class="flex cursor-pointer items-center gap-4 p-2 rounded-lg hover:bg-white/5 transition-colors">
+<input checked="" class="h-5 w-5 rounded border-2 border-[#A0A0A0] bg-transparent text-primary focus:ring-primary focus:ring-offset-transparent" type="checkbox"/>
+<span class="text-white text-base font-normal leading-normal">Job Alerts</span>
+</label>
+<label class="flex cursor-pointer items-center gap-4 p-2 rounded-lg hover:bg-white/5 transition-colors">
+<input checked="" class="h-5 w-5 rounded border-2 border-[#A0A0A0] bg-transparent text-primary focus:ring-primary focus:ring-offset-transparent" type="checkbox"/>
+<span class="text-white text-base font-normal leading-normal">Coaching Updates</span>
+</label>
+<label class="flex cursor-pointer items-center gap-4 p-2 rounded-lg hover:bg-white/5 transition-colors">
+<input class="h-5 w-5 rounded border-2 border-[#A0A0A0] bg-transparent text-primary focus:ring-primary focus:ring-offset-transparent" type="checkbox"/>
+<span class="text-white text-base font-normal leading-normal">Product News</span>
+</label>
+<label class="flex cursor-pointer items-center gap-4 p-2 rounded-lg hover:bg-white/5 transition-colors">
+<input checked="" class="h-5 w-5 rounded border-2 border-[#A0A0A0] bg-transparent text-primary focus:ring-primary focus:ring-offset-transparent" type="checkbox"/>
+<span class="text-white text-base font-normal leading-normal">Weekly Career Tips</span>
+</label>
+</div>
+</div>
+</div>
+<!-- Footer Navigation -->
+<div class="flex items-center justify-between gap-4 p-4">
+<button class="flex h-12 items-center justify-center rounded-lg border-2 border-[#A0A0A0] px-6 text-base font-bold text-white transition-colors hover:bg-white/10">Back</button>
+<button class="flex h-12 items-center justify-center rounded-lg bg-primary px-8 text-base font-bold text-black transition-opacity hover:opacity-90">Next</button>
+</div>
+</div>
+</div>
+</body></html>

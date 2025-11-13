@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FAQ Section</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#f2d00d",
+              "background-light": "#f8f8f5",
+              "background-dark": "#121212",
+            },
+            fontFamily: {
+              "display": ["Lexend", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            transition: transform 0.3s ease-in-out;
+        }
+        details[open] summary .material-symbols-outlined {
+            transform: rotate(45deg);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#F5F5F5]">
+<div class="relative flex h-auto min-h-screen w-full flex-col">
+<div class="layout-container flex h-full grow flex-col">
+<div class="px-4 sm:px-6 lg:px-8 flex flex-1 justify-center py-16 sm:py-20 md:py-24">
+<div class="layout-content-container flex flex-col max-w-3xl flex-1">
+<!-- SectionHeader Component -->
+<div class="text-center mb-10">
+<h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 dark:text-white">Frequently Asked Questions</h2>
+</div>
+<!-- Accordions Component -->
+<div class="flex flex-col space-y-4">
+<details class="group rounded-lg bg-white/5 p-6" open="">
+<summary class="flex list-none cursor-pointer items-center justify-between gap-4">
+<h3 class="text-base font-medium text-slate-900 dark:text-white group-open:text-primary">How does the AI Resume Agent work?</h3>
+<span class="material-symbols-outlined text-slate-500 dark:text-slate-400 group-open:text-primary">add</span>
+</summary>
+<p class="mt-4 text-slate-600 dark:text-slate-400">Our AI uses natural language processing to extract your career experiences and rephrase them using the STAR method (Situation, Task, Action, Result) to create impactful, professional resume bullet points.</p>
+</details>
+<details class="group rounded-lg bg-white/5 p-6">
+<summary class="flex list-none cursor-pointer items-center justify-between gap-4">
+<h3 class="text-base font-medium text-slate-900 dark:text-white group-open:text-primary">What is the STAR method and why is it important?</h3>
+<span class="material-symbols-outlined text-slate-500 dark:text-slate-400 group-open:text-primary">add</span>
+</summary>
+<p class="mt-4 text-slate-600 dark:text-slate-400">The STAR method is a structured way of responding to behavioral-based interview questions by discussing the specific Situation, Task, Action, and Result. It's important for resumes because it provides clear, quantifiable evidence of your accomplishments, making your experience more compelling to recruiters.</p>
+</details>
+<details class="group rounded-lg bg-white/5 p-6">
+<summary class="flex list-none cursor-pointer items-center justify-between gap-4">
+<h3 class="text-base font-medium text-slate-900 dark:text-white group-open:text-primary">Is my personal information secure?</h3>
+<span class="material-symbols-outlined text-slate-500 dark:text-slate-400 group-open:text-primary">add</span>
+</summary>
+<p class="mt-4 text-slate-600 dark:text-slate-400">Absolutely. We prioritize your privacy and data security. All data is encrypted in transit and at rest. We do not share your personal information with third parties without your explicit consent. Please review our Privacy Policy for full details.</p>
+</details>
+<details class="group rounded-lg bg-white/5 p-6">
+<summary class="flex list-none cursor-pointer items-center justify-between gap-4">
+<h3 class="text-base font-medium text-slate-900 dark:text-white group-open:text-primary">Who can benefit from using this tool?</h3>
+<span class="material-symbols-outlined text-slate-500 dark:text-slate-400 group-open:text-primary">add</span>
+</summary>
+<p class="mt-4 text-slate-600 dark:text-slate-400">This tool is designed for anyone looking to enhance their resume, from recent graduates to seasoned professionals. It's particularly useful for those who struggle to articulate their achievements or want to ensure their resume is optimized for modern hiring practices and applicant tracking systems (ATS).</p>
+</details>
+<details class="group rounded-lg bg-white/5 p-6">
+<summary class="flex list-none cursor-pointer items-center justify-between gap-4">
+<h3 class="text-base font-medium text-slate-900 dark:text-white group-open:text-primary">Is this service free? What are the pricing plans?</h3>
+<span class="material-symbols-outlined text-slate-500 dark:text-slate-400 group-open:text-primary">add</span>
+</summary>
+<p class="mt-4 text-slate-600 dark:text-slate-400">We offer a free tier that allows you to generate a limited number of resume bullet points to try out our service. For unlimited access and advanced features, we have several affordable subscription plans. You can find detailed information on our Pricing page.</p>
+</details>
+<details class="group rounded-lg bg-white/5 p-6">
+<summary class="flex list-none cursor-pointer items-center justify-between gap-4">
+<h3 class="text-base font-medium text-slate-900 dark:text-white group-open:text-primary">Can I edit the resume after the AI generates it?</h3>
+<span class="material-symbols-outlined text-slate-500 dark:text-slate-400 group-open:text-primary">add</span>
+</summary>
+<p class="mt-4 text-slate-600 dark:text-slate-400">Yes, of course! The AI-generated content is a powerful starting point. You have full control to edit, rephrase, or add your own personal touch to the resume content directly within our editor before finalizing and exporting your document.</p>
+</details>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body></html>

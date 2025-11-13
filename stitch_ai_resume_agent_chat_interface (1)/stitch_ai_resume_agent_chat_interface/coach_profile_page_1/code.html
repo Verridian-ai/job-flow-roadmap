@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Coach Profile</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#f2d00d",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#121212",
+                        "surface-dark": "#1E1E1E",
+                    },
+                    fontFamily: {
+                        display: ["Lexend", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg: "0.5rem",
+                        xl: "0.75rem",
+                        full: "9999px",
+                    },
+                },
+            },
+        };
+    </script>
+<style>
+        body {
+            background-color: #121212;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+        }
+        .logo-filter {
+            filter: brightness(0) invert(0.8) grayscale(1);
+            opacity: 0.6;
+        }
+    </style>
+</head>
+<body class="font-display bg-background-dark text-white">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<header class="sticky top-0 z-10 border-b border-solid border-white/10 bg-background-dark/80 px-4 py-3 backdrop-blur-sm sm:px-6 md:px-8">
+<div class="mx-auto flex max-w-7xl items-center justify-between whitespace-nowrap">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-3 text-white">
+<div class="size-6 text-primary">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 18.4228L42 11.475V34.3663C42 34.7796 41.7457 35.1504 41.3601 35.2992L24 42V18.4228Z" fill="currentColor" fill-rule="evenodd"></path>
+<path clip-rule="evenodd" d="M24 8.18819L33.4123 11.574L24 15.2071L14.5877 11.574L24 8.18819ZM9 15.8487L21 20.4805V37.6263L9 32.9945V15.8487ZM27 37.6263V20.4805L39 15.8487V32.9945L27 37.6263ZM25.354 2.29885C24.4788 1.98402 23.5212 1.98402 22.646 2.29885L4.98454 8.65208C3.7939 9.08038 3 10.2097 3 11.475V34.3663C3 36.0196 4.01719 37.5026 5.55962 38.098L22.9197 44.7987C23.6149 45.0671 24.3851 45.0671 25.0803 44.7987L42.4404 38.098C43.9828 37.5026 45 36.0196 45 34.3663V11.475C45 10.2097 44.2061 9.08038 43.0155 8.65208L25.354 2.29885Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">CareerDev AI</h2>
+</div>
+<label class="hidden lg:flex flex-col min-w-40 !h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+<div class="text-white/60 flex border-none bg-white/5 items-center justify-center pl-4 rounded-l-lg border-r-0">
+<span class="material-symbols-outlined text-xl"> search </span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white/90 focus:outline-0 focus:ring-0 border-none bg-white/5 focus:border-none h-full placeholder:text-white/60 px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal" placeholder="Search Coaches" value=""/>
+</div>
+</label>
+</div>
+<div class="flex flex-1 items-center justify-end gap-3 md:gap-6">
+<div class="hidden items-center gap-6 lg:flex">
+<a class="text-white/90 hover:text-primary text-sm font-medium leading-normal" href="#">Dashboard</a>
+<a class="text-white/90 hover:text-primary text-sm font-medium leading-normal" href="#">AI Resume Writer</a>
+<a class="text-primary text-sm font-bold leading-normal" href="#">Coach Directory</a>
+<a class="text-white/90 hover:text-primary text-sm font-medium leading-normal" href="#">Resources</a>
+</div>
+<div class="flex items-center gap-2">
+<button class="hidden sm:flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-background-dark text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Upgrade</span>
+</button>
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-white/10 text-white/90 gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5">
+<span class="material-symbols-outlined text-xl"> notifications </span>
+</button>
+</div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User profile picture of an abstract pattern" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBxeQrFchMFXnYlgqVt7W1uta1BdJ_sjWHA23P2S5bdFdskLHe7oIKSPtWfhtj_GO-Gxsser6ouXZCUfpzHSp1OFW_c_bP_suI-PMfNS4ijnXyJRerPw72IgRhv4XUBjFCl3cW_VxDhDhrGvAjVBUj6Z6ZHY7zZrAZIIXnLH_d0g2BMVnKHhSrObdXifg6FWmzOojW-bsFoL94BM0-HkvPtS5MJfFE31IYfEecnG9UnuQ6YXhaNFQy-fXYSLC6kbx5wXuw56-rys1o')"></div>
+</div>
+</div>
+</header>
+<main class="flex-1">
+<div class="w-full">
+<div class="relative bg-[#1A1A1A] pt-12 pb-24">
+<div class="absolute inset-0 z-0 h-full w-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAGyPGIChNogCJjD6f3uRkhbQM1MBvN5ujcuDXmWWBF--YEGoC9MyvJDyJJvhbHzie2ozkyqwZllphgPFthBG8u0lMyUWHV4eHkOIqG-S98aQlH1qabhRDyOpIeQWGzbokOTmtdNeil7MWJp82bXdF_tOyBYA1lvdpYLOriNPuPVCYfHpo6oZDv0Q_qjk2RLgdXzm_9xYCaybtg-c59wUr3yfkSPaMpmxVTRYWCZC3K67YSciVD8Kg8C3FZ7adfSoIW6LBLUZeYfwk'); opacity: 0.2;"></div>
+<div class="relative z-10 mx-auto max-w-7xl rounded-xl bg-white/95 p-8 shadow-2xl @container backdrop-blur-sm">
+<div class="grid grid-cols-1 gap-8 @3xl:grid-cols-2">
+<div class="flex flex-col justify-between pr-8">
+<div>
+<p class="text-xl font-bold text-black">300+ coached | 25% avg. salary bump</p>
+</div>
+<div>
+<p class="text-xl font-bold text-black">Every offer, one life changed ❤️</p>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<h1 class="text-3xl font-extrabold leading-tight text-black">Land a $140k-$300k+ tech role <span class="bg-primary px-2 py-1 rounded-md">in just 45-90 days</span></h1>
+<p class="text-lg font-medium text-black/80">Coaching built on 10+ years of tech recruiting</p>
+<p class="text-lg font-medium text-black/80">From first message to final offer → I coach you through it all</p>
+<div class="mt-4 flex items-center gap-6">
+<div class="flex h-8 items-center justify-center text-sm font-bold uppercase tracking-wider text-black/50 logo-filter grayscale">THE AUSTRALIAN BUSINESS JOURNAL</div>
+<div class="h-8 w-px bg-black/20"></div>
+<div class="flex h-8 items-center justify-center text-sm font-bold uppercase tracking-wider text-black/50 logo-filter grayscale">Careersu Coaching</div>
+<div class="h-8 w-px bg-black/20"></div>
+<div class="flex h-8 items-center justify-center text-sm font-bold uppercase tracking-wider text-black/50 logo-filter grayscale">LinkedIn Top Voice</div>
+<div class="h-8 w-px bg-black/20"></div>
+<div class="flex h-8 items-center justify-center text-sm font-bold uppercase tracking-wider text-black/50 logo-filter grayscale">LinkedIn News Australia</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mx-auto max-w-7xl p-4 sm:p-6 md:p-8">
+<div class="flex flex-wrap gap-2 text-sm">
+<a class="text-white/60 hover:text-primary font-medium leading-normal" href="#">Home</a>
+<span class="text-white/40 font-medium leading-normal">/</span>
+<a class="text-white/60 hover:text-primary font-medium leading-normal" href="#">Coach Directory</a>
+<span class="text-white/40 font-medium leading-normal">/</span>
+<span class="text-white font-medium leading-normal">Jordan Carter</span>
+</div>
+<div class="mt-[-80px] flex w-full flex-col gap-8 @container md:flex-row md:items-start">
+<div class="relative flex-shrink-0">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-40 h-40 border-8 border-background-dark" data-alt="Headshot of Jordan Carter, a career coach" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCnknJ3goDcdlRI_pbFu8pOGR7fSSlYiraj2hAxLjqpBWhS1ucmexjmId8tzDhtZBQtTi-fuJq4ZwyQk-yvwoUGhQpf4H-Ty90lYJ-wcKX4Ut7_rCiYpVelSLm74hh8_00fIjaBNYsEx4wxRPj89I6-r4z17-4sulYVaOq6GKcIiPxQ-ktmzseK98F5Q5zBBWV3y82W_nqVkiEzCt1XIBWBQYs9o8akr2FB0CkxoOOjkGrVjxqCVTuVo1YuF5JCTNtwxF3scJFoaDA')"></div>
+</div>
+<div class="flex flex-col gap-1 pt-12">
+<p class="text-white text-2xl font-bold leading-tight tracking-[-0.015em] sm:text-3xl">Jordan Carter</p>
+<p class="text-white/70 text-base font-normal leading-normal">Executive Career Coach</p>
+<p class="text-white/70 text-base font-normal leading-normal">San Francisco, CA</p>
+</div>
+<div class="w-full flex-1 md:mt-16">
+<div class="group relative aspect-video w-full overflow-hidden rounded-xl bg-black">
+<div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCKmGnEfZp9BG9zLbDBd2My8Q9pUFhdJ6WbmAUOYTAOCwINBSvH__Y1UW5vjQRqDQccKqAJU3exF_ZT2D8fdFwswchCHg5KIJ73WTL5H9CTq5qSRGSXKBn_SSEHVWtLakakosmUqL_JRGX1azE1H_wl4b5a20K1QOvitaibHsoyQ6wvGRQO1--VgdFU8-g7l3q0zKHAC1dyRExPTOFg3t2Ctfks4BMpB00Kz7wurrcix-f54usZAyWw-NimUtVuDu6GKUdSmQo4ilA')"></div>
+<div class="absolute inset-0 flex items-center justify-center bg-black/50 transition-opacity duration-300 group-hover:opacity-100">
+<button class="flex h-16 w-16 cursor-pointer items-center justify-center rounded-full bg-primary/80 text-background-dark backdrop-blur-sm transition-transform duration-300 hover:scale-110 hover:bg-primary">
+<span class="material-symbols-outlined !text-5xl" style="font-variation-settings: 'FILL' 1">play_arrow</span>
+</button>
+</div>
+<div class="absolute bottom-0 left-0 right-0 z-10 bg-gradient-to-t from-black/60 to-transparent p-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+<div class="flex items-center gap-3">
+<button class="text-white hover:text-primary">
+<span class="material-symbols-outlined !text-3xl">play_arrow</span>
+</button>
+<div class="flex flex-1 items-center gap-2">
+<div class="relative h-1.5 w-full flex-1 rounded-full bg-white/20">
+<div class="absolute h-full w-1/4 rounded-full bg-primary"></div>
+<div class="absolute -top-1/2 h-3 w-3 rounded-full bg-primary" style="left: 25%"></div>
+</div>
+</div>
+<span class="text-xs font-medium text-white">1:02 / 4:08</span>
+<button class="text-white hover:text-primary">
+<span class="material-symbols-outlined !text-3xl">volume_up</span>
+</button>
+<button class="text-white hover:text-primary">
+<span class="material-symbols-outlined !text-3xl">fullscreen</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-3">
+<div class="flex flex-col gap-8 lg:col-span-2">
+<div class="rounded-xl border border-white/10 bg-surface-dark p-6">
+<h2 class="text-white text-xl font-bold leading-tight tracking-[-0.015em]">About Jordan</h2>
+<p class="text-white/90 text-base font-normal leading-relaxed mt-4">With over 15 years of experience in Silicon Valley, Jordan specializes in helping tech professionals navigate career transitions and achieve executive leadership roles. His coaching philosophy is rooted in the STAR method, empowering clients to articulate their accomplishments effectively.</p>
+<p class="text-white/90 text-base font-normal leading-relaxed mt-4">He has worked with clients from Google, Meta, and Apple, helping them secure promotions, negotiate higher salaries, and build fulfilling careers. Jordan is a certified professional coach and holds an MBA from Stanford University.</p>
+</div>
+<div class="flex flex-col gap-6 rounded-xl border border-primary/50 bg-primary/10 p-6 sm:flex-row sm:items-center sm:justify-between">
+<div>
+<h3 class="text-xl font-bold text-white">Unlock Your Potential</h3>
+<p class="mt-1 text-white/80">Schedule a free 15-minute consultation to see if we're a good fit.</p>
+</div>
+<button class="flex w-full flex-shrink-0 min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-background-dark text-base font-bold leading-normal tracking-[0.015em] sm:w-auto">
+<span class="truncate">Book a Free Consultation</span>
+</button>
+</div>
+<div class="rounded-xl border border-white/10 bg-surface-dark p-6">
+<h2 class="text-white text-xl font-bold leading-tight tracking-[-0.015em]">Specialties</h2>
+<div class="mt-4 flex flex-wrap gap-2">
+<span class="rounded-full bg-primary/20 px-3 py-1 text-sm font-medium text-primary">Executive Leadership</span>
+<span class="rounded-full bg-primary/20 px-3 py-1 text-sm font-medium text-primary">Tech Careers</span>
+<span class="rounded-full bg-primary/20 px-3 py-1 text-sm font-medium text-primary">Interview Prep</span>
+<span class="rounded-full bg-primary/20 px-3 py-1 text-sm font-medium text-primary">STAR Method</span>
+<span class="rounded-full bg-primary/20 px-3 py-1 text-sm font-medium text-primary">Salary Negotiation</span>
+<span class="rounded-full bg-primary/20 px-3 py-1 text-sm font-medium text-primary">Career Transition</span>
+</div>
+</div>
+<div class="flex flex-col gap-6 rounded-xl border border-white/10 bg-gradient-to-tr from-surface-dark to-transparent p-6 sm:flex-row sm:items-center sm:justify-between">
+<div>
+<h3 class="text-xl font-bold text-white">Ready to Take the Next Step?</h3>
+<p class="mt-1 text-white/80">Browse comprehensive coaching packages designed for your success.</p>
+</div>
+<button class="flex w-full flex-shrink-0 min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-background-dark text-base font-bold leading-normal tracking-[0.015em] sm:w-auto">
+<span class="truncate">Explore Packages</span>
+</button>
+</div>
+<div class="relative rounded-xl border border-white/10 bg-surface-dark p-6">
+<div class="flex flex-wrap items-start justify-between gap-4">
+<div class="flex-1">
+<h2 class="text-white text-xl font-bold leading-tight tracking-[-0.015em]">Client Success Stories</h2>
+<div class="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2">
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined !text-[20px]" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined !text-[20px]" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined !text-[20px]" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined !text-[20px]" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined !text-[20px]" style="font-variation-settings: 'FILL' 1">star_half</span>
+</div>
+<p class="text-white font-bold">4.9</p>
+<p class="text-white/60">(from 82 reviews)</p>
+</div>
+</div>
+</div>
+<div class="mt-6 flex flex-col gap-4 rounded-xl border border-primary/30 bg-primary/10 p-6 text-center sm:flex-row sm:items-center sm:justify-between sm:text-left">
+<div class="flex-1">
+<h3 class="text-xl font-bold text-white">Share Your Success Story</h3>
+<p class="mt-1 text-white/80">Did Jordan help you achieve your career goals? Share your experience to inspire others on their journey.</p>
+</div>
+<button class="flex w-full flex-shrink-0 min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-background-dark text-base font-bold leading-normal tracking-[0.015em] sm:w-auto">
+<span class="truncate">Submit Your Testimonial</span>
+</button>
+</div>
+<div class="mt-6 border-t border-white/10 pt-6">
+<div class="flex flex-col gap-4 sm:flex-row sm:items-end">
+<div class="flex-1">
+<label class="text-sm font-medium text-white/80" for="filter-keyword">Filter by keyword</label>
+<div class="relative mt-1">
+<span class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+<span class="material-symbols-outlined text-white/50"> search </span>
+</span>
+<input class="form-input block w-full rounded-lg border-none bg-white/5 py-2 pl-10 pr-4 text-white/90 placeholder:text-white/60 focus:outline-none focus:ring-1 focus:ring-primary" id="filter-keyword" placeholder="e.g. 'negotiation', 'promotion'" type="text"/>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="flex-1 sm:flex-auto">
+<label class="text-sm font-medium text-white/80" for="filter-type">Type</label>
+<select class="form-select mt-1 block w-full appearance-none rounded-lg border-none bg-white/5 py-2 pl-3 pr-8 text-white/90 focus:outline-none focus:ring-1 focus:ring-primary" id="filter-type">
+<option>All</option>
+<option>Video</option>
+<option>Text</option>
+</select>
+</div>
+<div class="flex-1 sm:flex-auto">
+<label class="text-sm font-medium text-white/80" for="filter-industry">Industry</label>
+<select class="form-select mt-1 block w-full appearance-none rounded-lg border-none bg-white/5 py-2 pl-3 pr-8 text-white/90 focus:outline-none focus:ring-1 focus:ring-primary" id="filter-industry">
+<option>All</option>
+<option>Tech</option>
+<option>Finance</option>
+<option>Healthcare</option>
+</select>
+</div>
+</div>
+</div>
+<div class="mt-4 flex flex-wrap items-center gap-2">
+<span class="text-sm font-medium text-white/80">Popular:</span>
+<button class="rounded-full border border-white/20 bg-transparent px-3 py-1 text-sm text-white/80 hover:bg-white/10">Salary Increase</button>
+<button class="rounded-full border border-primary/80 bg-primary/20 px-3 py-1 text-sm font-semibold text-primary">Product Manager</button>
+<button class="rounded-full border border-white/20 bg-transparent px-3 py-1 text-sm text-white/80 hover:bg-white/10">Interview Prep</button>
+<button class="rounded-full border border-white/20 bg-transparent px-3 py-1 text-sm text-white/80 hover:bg-white/10">Career Transition</button>
+<button class="flex items-center gap-1.5 rounded-full px-3 py-1 text-sm font-semibold text-primary/80 hover:text-primary">
+<span class="material-symbols-outlined text-lg"> close </span>
+                                        Clear Filters
+                                    </button>
+</div>
+</div>
+<div class="mt-6 grid grid-cols-1 gap-6 @md:grid-cols-2">
+<div class="flex flex-col gap-4 rounded-lg bg-white/5 p-4">
+<div class="group relative aspect-video w-full overflow-hidden rounded-lg bg-black">
+<div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBuw2pkniSZjAvA3_Y7fGuYbmZrBeVt3G8INZU4hENbNnbYI8VXxCiaXlfKAtBuQKM1SaOsLNdPkLSjmPa7Z8Qph_JigwABFBNmKOAMzj_grtREwIUWTOqQfeXx6B1d5pmbJk8mrBDqrr_u7p7Tldf6pJrUNijm1ijBobnpzYBJgi2g_R9sxOov51g79RTpbYIcO_BgNeZ-OUGYILwMymITHu0o1VAMQoGcGxvMEaaNRsgfcUKG8wPcR7F191XKthKE36BHPAb2aDw')"></div>
+<div class="absolute inset-0 flex items-center justify-center bg-black/50 transition-opacity duration-300">
+<button class="flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-primary/80 text-background-dark backdrop-blur-sm transition-transform duration-300 hover:scale-110 hover:bg-primary">
+<span class="material-symbols-outlined !text-4xl" style="font-variation-settings: 'FILL' 1">play_arrow</span>
+</button>
+</div>
+<span class="absolute bottom-2 right-2 rounded bg-black/70 px-1.5 py-0.5 text-xs font-medium text-white">1:15</span>
+</div>
+<div>
+<div class="flex items-start justify-between">
+<div class="flex items-start gap-3">
+<div class="size-10 flex-shrink-0 rounded-full bg-purple-500 text-white flex items-center justify-center font-bold">SL</div>
+<div>
+<p class="text-white font-semibold">Sarah L.</p>
+<p class="text-xs text-white/60">Product Director</p>
+</div>
+</div>
+</div>
+<p class="text-white/80 mt-3 text-sm leading-relaxed">"Jordan's guidance was instrumental... He helped me ace my interviews. Highly recommend!"</p>
+</div>
+</div>
+<div class="flex flex-col gap-4 rounded-lg bg-white/5 p-4">
+<div class="group relative aspect-video w-full overflow-hidden rounded-lg bg-black">
+<div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBuw2pkniSZjAvA3_Y7fGuYbmZrBeVt3G8INZU4hENbNnbYI8VXxCiaXlfKAtBuQKM1SaOsLNdPkLSjmPa7Z8Qph_JigwABFBNmKOAMzj_grtREwIUWTOqQfeXx6B1d5pmbJk8mrBDqrr_u7p7Tldf6pJrUNijm1ijBobnpzYBJgi2g_R9sxOov51g79RTpbYIcO_BgNeZ-OUGYILwMymITHu0o1VAMQoGcGxvMEaaNRsgfcUKG8wPcR7F191XKthKE36BHPAb2aDw')"></div>
+<div class="absolute inset-0 flex items-center justify-center bg-black/50 transition-opacity duration-300">
+<button class="flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-primary/80 text-background-dark backdrop-blur-sm transition-transform duration-300 hover:scale-110 hover:bg-primary">
+<span class="material-symbols-outlined !text-4xl" style="font-variation-settings: 'FILL' 1">play_arrow</span>
+</button>
+</div>
+<span class="absolute bottom-2 right-2 rounded bg-black/70 px-1.5 py-0.5 text-xs font-medium text-white">0:58</span>
+</div>
+<div>
+<div class="flex items-start justify-between">
+<div class="flex items-start gap-3">
+<div class="size-10 flex-shrink-0 rounded-full bg-blue-500 text-white flex items-center justify-center font-bold">MB</div>
+<div>
+<p class="text-white font-semibold">Michael B.</p>
+<p class="text-xs text-white/60">Senior Software Engineer</p>
+</div>
+</div>
+</div>
+<p class="text-white/80 mt-3 text-sm leading-relaxed">"I was able to negotiate a 20% salary increase thanks to Jordan. His strategies are practical and effective."</p>
+</div>
+</div>
+<div class="rounded-lg bg-white/5 p-4">
+<div class="flex items-start justify-between">
+<div class="flex items-start gap-3">
+<div class="size-10 flex-shrink-0 rounded-full bg-green-500 text-white flex items-center justify-center font-bold">AK</div>
+<div>
+<p class="text-white font-semibold">Alex K.</p>
+<p class="text-xs text-white/60">UX Designer</p>
+</div>
+</div>
+<div class="flex items-center gap-0.5 text-primary">
+<span class="material-symbols-outlined !text-[16px]" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined !text-[16px]" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined !text-[16px]" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined !text-[16px]" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined !text-[16px]" style="font-variation-settings: 'FILL' 1">star_half</span>
+</div>
+</div>
+<p class="text-white/80 mt-3 text-sm leading-relaxed">"Jordan helped me build a portfolio that truly showcased my skills. I landed my dream job at a top tech company within 3 months of working with him."</p>
+</div>
+<div class="rounded-lg bg-white/5 p-4">
+<div class="flex items-start justify-between">
+<div class="flex items-start gap-3">
+<div class="size-10 flex-shrink-0 rounded-full bg-red-500 text-white flex items-center justify-center font-bold">DC</div>
+<div>
+<p class="text-white font-semibold">David C.</p>
+<p class="text-xs text-white/60">Aspiring Entrepreneur</p>
+</div>
+</div>
+<div class="flex items-center gap-0.5 text-primary">
+<span class="material-symbols-outlined !text-[16px]" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined !text-[16px]" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined !text-[16px]" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined !text-[16px]" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined !text-[16px]" style="font-variation-settings: 'FILL' 1">star</span>
+</div>
+</div>
+<p class="text-white/80 mt-3 text-sm leading-relaxed">"The insights I gained from Jordan were invaluable for my startup pitch. His coaching on executive presence was a game-changer."</p>
+</div>
+</div>
+<div class="mt-6 flex justify-center">
+<button class="flex w-full min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-white/10 text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-white/20 sm:w-auto">
+<span class="truncate">Show All Testimonials</span>
+</button>
+</div>
+</div>
+</div>
+<div class="lg:col-span-1">
+<div class="sticky top-24 flex flex-col gap-6">
+<div class="rounded-xl border border-white/10 bg-surface-dark p-6">
+<div class="flex items-center justify-between">
+<h2 class="text-white text-xl font-bold leading-tight tracking-[-0.015em]">Office Hours</h2>
+<div class="flex items-center gap-2 text-primary">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+<span class="text-sm font-semibold">Available Now</span>
+</div>
+</div>
+<p class="text-white/70 text-sm mt-1">Best times to expect a quick response via direct message.</p>
+<div class="mt-4 space-y-3">
+<div class="flex justify-between items-center">
+<span class="text-white/90 font-medium">Monday</span>
+<span class="text-white/60 text-sm">9:00 AM - 12:00 PM</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-white/90 font-medium">Tuesday</span>
+<span class="text-white/60 text-sm">2:00 PM - 5:00 PM</span>
+</div>
+<div class="flex justify-between items-center rounded-lg bg-primary/10 px-3 py-2 -mx-3">
+<span class="text-primary font-bold">Wednesday</span>
+<span class="text-primary font-bold text-sm">9:00 AM - 12:00 PM</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-white/90 font-medium">Thursday</span>
+<span class="text-white/60 text-sm">2:00 PM - 5:00 PM</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-white/90 font-medium">Friday</span>
+<span class="text-white/60 text-sm">9:00 AM - 11:00 AM</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-white/50 font-medium">Saturday &amp; Sunday</span>
+<span class="text-white/50 text-sm">Unavailable</span>
+</div>
+</div>
+<div class="mt-4 text-center text-xs text-white/60">
+<p>All times are in your local timezone (PDT).</p>
+</div>
+</div>
+<div class="rounded-xl border border-white/10 bg-surface-dark p-6">
+<h2 class="text-white text-xl font-bold leading-tight tracking-[-0.015em]">Book a Session</h2>
+<div class="mt-4">
+<div class="flex items-center justify-between">
+<button class="flex h-9 w-9 cursor-pointer items-center justify-center overflow-hidden rounded-full bg-transparent text-white/60 hover:bg-white/10">
+<span class="material-symbols-outlined text-xl"> chevron_left </span>
+</button>
+<p class="text-center text-sm font-semibold text-white">May 2024</p>
+<button class="flex h-9 w-9 cursor-pointer items-center justify-center overflow-hidden rounded-full bg-transparent text-white/60 hover:bg-white/10">
+<span class="material-symbols-outlined text-xl"> chevron_right </span>
+</button>
+</div>
+<div class="mt-4 grid grid-cols-7 gap-y-2 text-center text-xs text-white/60">
+<div>S</div>
+<div>M</div>
+<div>T</div>
+<div>W</div>
+<div>T</div>
+<div>F</div>
+<div>S</div>
+</div>
+<div class="mt-2 grid grid-cols-7 gap-1">
+<div class="flex items-center justify-center py-1 text-sm text-white/40">28</div>
+<div class="flex items-center justify-center py-1 text-sm text-white/40">29</div>
+<div class="flex items-center justify-center py-1 text-sm text-white/40">30</div>
+<div class="flex items-center justify-center py-1 text-sm text-white">1</div>
+<div class="flex items-center justify-center py-1 text-sm text-white">2</div>
+<div class="flex cursor-not-allowed items-center justify-center rounded-lg py-1 text-sm text-white/40">3</div>
+<div class="flex items-center justify-center py-1 text-sm text-white">4</div>
+<div class="flex items-center justify-center py-1 text-sm text-white">5</div>
+<div class="flex cursor-pointer items-center justify-center rounded-lg py-1 text-sm text-white hover:bg-white/10">6</div>
+<div class="flex cursor-pointer items-center justify-center rounded-lg py-1 text-sm text-white hover:bg-white/10">7</div>
+<div class="flex cursor-pointer items-center justify-center rounded-lg py-1 text-sm text-white hover:bg-white/10">8</div>
+<div class="flex cursor-not-allowed items-center justify-center rounded-lg py-1 text-sm text-white/40">9</div>
+<div class="flex cursor-pointer items-center justify-center rounded-lg py-1 text-sm text-white hover:bg-white/10">10</div>
+<div class="flex cursor-not-allowed items-center justify-center rounded-lg py-1 text-sm text-white/40">11</div>
+<div class="flex cursor-not-allowed items-center justify-center rounded-lg py-1 text-sm text-white/40">12</div>
+<div class="flex cursor-pointer items-center justify-center rounded-lg bg-primary py-1 text-sm font-bold text-background-dark">13</div>
+<div class="flex cursor-pointer items-center justify-center rounded-lg py-1 text-sm text-white hover:bg-white/10">14</div>
+<div class="flex cursor-pointer items-center justify-center rounded-lg py-1 text-sm text-white hover:bg-white/10">15</div>
+<div class="flex cursor-not-allowed items-center justify-center rounded-lg py-1 text-sm text-white/40">16</div>
+<div class="flex cursor-pointer items-center justify-center rounded-lg py-1 text-sm text-white hover:bg-white/10">17</div>
+<div class="flex cursor-not-allowed items-center justify-center rounded-lg py-1 text-sm text-white/40">18</div>
+<div class="flex cursor-not-allowed items-center justify-center rounded-lg py-1 text-sm text-white/40">19</div>
+<div class="flex cursor-pointer items-center justify-center rounded-lg py-1 text-sm text-white hover:bg-white/10">20</div>
+<div class="flex cursor-pointer items-center justify-center rounded-lg py-1 text-sm text-white hover:bg-white/10">21</div>
+<div class="flex cursor-pointer items-center justify-center rounded-lg py-1 text-sm text-white hover:bg-white/10">22</div>
+<div class="flex cursor-not-allowed items-center justify-center rounded-lg py-1 text-sm text-white/40">23</div>
+<div class="flex cursor-pointer items-center justify-center rounded-lg py-1 text-sm text-white hover:bg-white/10">24</div>
+<div class="flex cursor-not-allowed items-center justify-center rounded-lg py-1 text-sm text-white/40">25</div>
+<div class="flex cursor-not-allowed items-center justify-center rounded-lg py-1 text-sm text-white/40">26</div>
+<div class="flex cursor-pointer items-center justify-center rounded-lg py-1 text-sm text-white hover:bg-white/10">27</div>
+<div class="flex cursor-pointer items-center justify-center rounded-lg py-1 text-sm text-white hover:bg-white/10">28</div>
+<div class="flex cursor-pointer items-center justify-center rounded-lg py-1 text-sm text-white hover:bg-white/10">29</div>
+<div class="flex cursor-pointer items-center justify-center rounded-lg py-1 text-sm text-white hover:bg-white/10">30</div>
+<div class="flex cursor-pointer items-center justify-center rounded-lg py-1 text-sm text-white hover:bg-white/10">31</div>
+</div>
+</div>
+<div class="mt-6 border-t border-white/10 pt-4">
+<p class="text-sm font-semibold text-white">Available Times for May 13</p>
+<div class="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-3">
+<button class="cursor-pointer rounded-lg border border-primary bg-primary/20 py-2 text-sm font-semibold text-primary hover:bg-primary/30">9:00 AM</button>
+<button class="cursor-pointer rounded-lg border border-white/20 bg-transparent py-2 text-sm font-semibold text-white hover:bg-white/10">10:00 AM</button>
+<button class="cursor-pointer rounded-lg border border-white/10 bg-white/10 py-2 text-sm text-white/50" disabled="">11:00 AM</button>
+<button class="cursor-pointer rounded-lg border border-white/20 bg-transparent py-2 text-sm font-semibold text-white hover:bg-white/10">1:00 PM</button>
+<button class="cursor-pointer rounded-lg border border-white/10 bg-white/10 py-2 text-sm text-white/50" disabled="">2:00 PM</button>
+<button class="cursor-pointer rounded-lg border border-white/20 bg-transparent py-2 text-sm font-semibold text-white hover:bg-white/10">3:00 PM</button>
+</div>
+</div>
+<div class="mt-6 flex flex-col gap-3">
+<button class="flex w-full min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-4 bg-primary text-background-dark text-base font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Book 9:00 AM Session</span>
+</button>
+<button class="flex w-full min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-4 bg-white/10 text-white text-base font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Message Coach</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<div class="fixed bottom-4 right-4 z-20 w-full max-w-sm" id="chat-widget">
+<div class="flex h-[600px] flex-col overflow-hidden rounded-xl border border-white/10 bg-background-dark shadow-2xl">
+<header class="flex flex-shrink-0 items-center justify-between border-b border-white/10 bg-surface-dark px-4 py-3">
+<div class="flex items-center gap-3">
+<div class="relative">
+<div class="size-10 rounded-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCnknJ3goDcdlRI_pbFu8pOGR7fSSlYiraj2hAxLjqpBWhS1ucmexjmId8tzDhtZBQtTi-fuJq4ZwyQk-yvwoUGhQpf4H-Ty90lYJ-wcKX4Ut7_rCiYpVelSLm74hh8_00fIjaBNYsEx4wxRPj89I6-r4z17-4sulYVaOq6GKcIiPxQ-ktmzseK98F5Q5zBBWV3y82W_nqVkiEzCt1XIBWBQYs9o8akr2FB0CkxoOOjkGrVjxqCVTuVo1YuF5JCTNtwxF3scJFoaDA')"></div>
+<span class="absolute bottom-0 right-0 block h-2.5 w-2.5 rounded-full bg-green-500 ring-2 ring-surface-dark"></span>
+</div>
+<div>
+<h3 class="font-bold text-white">Jordan Carter</h3>
+<p class="text-xs text-white/60">Typically replies in a few hours</p>
+</div>
+</div>
+<div class="flex items-center gap-1">
+<button class="flex h-8 w-8 items-center justify-center rounded-full text-white/60 hover:bg-white/10 hover:text-white">
+<span class="material-symbols-outlined text-xl"> remove </span>
+</button>
+<button class="flex h-8 w-8 items-center justify-center rounded-full text-white/60 hover:bg-white/10 hover:text-white">
+<span class="material-symbols-outlined text-xl"> close </span>
+</button>
+</div>
+</header>
+<main class="flex-1 space-y-6 overflow-y-auto p-4">
+<div class="flex items-start gap-3">
+<div class="size-8 flex-shrink-0 rounded-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCnknJ3goDcdlRI_pbFu8pOGR7fSSlYiraj2hAxLjqpBWhS1ucmexjmId8tzDhtZBQtTi-fuJq4ZwyQk-yvwoUGhQpf4H-Ty90lYJ-wcKX4Ut7_rCiYpVelSLm74hh8_00fIjaBNYsEx4wxRPj89I6-r4z17-4sulYVaOq6GKcIiPxQ-ktmzseK98F5Q5zBBWV3y82W_nqVkiEzCt1XIBWBQYs9o8akr2FB0CkxoOOjkGrVjxqCVTuVo1YuF5JCTNtwxF3scJFoaDA')"></div>
+<div class="flex flex-col items-start gap-1">
+<div class="max-w-xs rounded-lg rounded-tl-none bg-surface-dark px-3 py-2">
+<p class="text-sm leading-relaxed text-white/90">Hi there! Thanks for reaching out. How can I help you with your career goals today?</p>
+</div>
+<span class="text-xs text-white/50">10:30 AM</span>
+</div>
+</div>
+<div class="flex items-start justify-end gap-3">
+<div class="flex flex-col items-end gap-1">
+<div class="max-w-xs rounded-lg rounded-br-none bg-primary/20 px-3 py-2">
+<p class="text-sm leading-relaxed text-white">Hi Jordan, I'm interested in booking a session but had a few questions first. I'm looking to transition into a product management role from a software engineering background.</p>
+</div>
+<span class="text-xs text-white/50">10:32 AM</span>
+</div>
+<div class="size-8 flex-shrink-0 rounded-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBxeQrFchMFXnYlgqVt7W1uta1BdJ_sjWHA23P2S5bdFdskLHe7oIKSPtWfhtj_GO-Gxsser6ouXZCUfpzHSp1OFW_c_bP_suI-PMfNS4ijnXyJRerPw72IgRhv4XUBjFCl3cW_VxDhDhrGvAjVBUj6Z6ZHY7zZrAZIIXnLH_d0g2BMVnKHhSrObdXifg6FWmzOojW-bsFoL94BM0-HkvPtS5MJfFE31IYfEecnG9UnuQ6YXhaNFQy-fXYSLC6kbx5wXuw56-rys1o')"></div>
+</div>
+<div class="flex items-center gap-2">
+<hr class="flex-1 border-white/10"/>
+<span class="text-xs font-medium text-primary">New Messages</span>
+<hr class="flex-1 border-white/10"/>
+</div>
+<div class="flex items-start gap-3">
+<div class="size-8 flex-shrink-0 rounded-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCnknJ3goDcdlRI_pbFu8pOGR7fSSlYiraj2hAxLjqpBWhS1ucmexjmId8tzDhtZBQtTi-fuJq4ZwyQk-yvwoUGhQpf4H-Ty90lYJ-wcKX4Ut7_rCiYpVelSLm74hh8_00fIjaBNYsEx4wxRPj89I6-r4z17-4sulYVaOq6GKcIiPxQ-ktmzseK98F5Q5zBBWV3y82W_nqVkiEzCt1XIBWBQYs9o8akr2FB0CkxoOOjkGrVjxqCVTuVo1YuF5JCTNtwxF3scJFoaDA')"></div>
+<div class="flex flex-col items-start gap-1">
+<div class="max-w-xs rounded-lg rounded-tl-none bg-surface-dark px-3 py-2">
+<p class="text-sm leading-relaxed text-white/90">That's a common transition and one I've helped many clients with. I'd be happy to answer any questions you have. What's on your mind?</p>
+</div>
+<span class="text-xs text-white/50">10:35 AM</span>
+</div>
+</div>
+</main>
+<footer class="flex flex-shrink-0 items-center gap-2 border-t border-white/10 bg-surface-dark px-4 py-3">
+<input class="flex h-10 w-full flex-1 rounded-full border-none bg-white/5 px-4 text-sm text-white/90 placeholder:text-white/60 focus:outline-none focus:ring-1 focus:ring-primary" placeholder="Type your message..." type="text"/>
+<button class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-primary text-background-dark hover:bg-yellow-400">
+<span class="material-symbols-outlined"> send </span>
+</button>
+</footer>
+</div>
+</div>
+</div>
+
+</body></html>

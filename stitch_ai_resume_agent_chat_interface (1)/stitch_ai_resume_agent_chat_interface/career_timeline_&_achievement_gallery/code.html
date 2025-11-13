@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>My Career Timeline</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f2d00d",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#181711",
+                        "card-dark": "#221f10",
+                        "border-dark": "#393728",
+                        "text-main-dark": "#e0e0e0",
+                        "text-secondary-dark": "#bab59c",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+          font-variation-settings:
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 24
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-main-dark">
+<div class="relative flex min-h-screen w-full">
+<!-- SideNavBar -->
+<aside class="flex flex-col w-64 p-4 bg-background-light dark:bg-card-dark border-r border-transparent dark:border-border-dark">
+<div class="flex flex-col justify-between h-full">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-3 p-2">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="Profile picture of Alex Chen" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBX7Qk0i_Vzc4Z6x4B8cjV6Gp9ksEy8d8GGfFnic1mwoxVo6I5ZTHKHbMq6SWfC3NWro6EUKrAQ42QUen6pmv40MKS20UUf2TdAPKxxrgsVnybsfwgDFa7i-AoXeaL2wyIA0T0BlePNTDJGm7niKNJUURT0Amchkrk3xuKBcm_4a6Cv1d64ue5wIDPw64E9gFzU5xuDxT8yow3k7hdmGd2zExKZfgh58li2fsXoBhxp1UKMmZhCQ8Z4OIU39PoTgGi5lwTgM8TqpF4");'></div>
+<div class="flex flex-col">
+<h1 class="text-black dark:text-white text-base font-medium leading-normal">Alex Chen</h1>
+<p class="text-gray-600 dark:text-text-secondary-dark text-sm font-normal leading-normal">Product Manager</p>
+</div>
+</div>
+<nav class="flex flex-col gap-2 mt-4">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-black dark:text-white hover:bg-gray-100 dark:hover:bg-border-dark transition-colors" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<p class="text-sm font-medium leading-normal">Dashboard</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-border-dark text-white" href="#">
+<span class="material-symbols-outlined">timeline</span>
+<p class="text-sm font-medium leading-normal">My Timeline</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-black dark:text-white hover:bg-gray-100 dark:hover:bg-border-dark transition-colors" href="#">
+<span class="material-symbols-outlined">auto_awesome</span>
+<p class="text-sm font-medium leading-normal">AI Resume Writer</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-black dark:text-white hover:bg-gray-100 dark:hover:bg-border-dark transition-colors" href="#">
+<span class="material-symbols-outlined">ads_click</span>
+<p class="text-sm font-medium leading-normal">Goals</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-black dark:text-white hover:bg-gray-100 dark:hover:bg-border-dark transition-colors" href="#">
+<span class="material-symbols-outlined">settings</span>
+<p class="text-sm font-medium leading-normal">Settings</p>
+</a>
+</nav>
+</div>
+<div class="flex flex-col gap-4">
+<button class="flex min-w-[84px] w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-background-dark text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">New Entry</span>
+</button>
+<div class="flex flex-col gap-1">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-black dark:text-white hover:bg-gray-100 dark:hover:bg-border-dark transition-colors" href="#">
+<span class="material-symbols-outlined">help</span>
+<p class="text-sm font-medium leading-normal">Help</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-black dark:text-white hover:bg-gray-100 dark:hover:bg-border-dark transition-colors" href="#">
+<span class="material-symbols-outlined">logout</span>
+<p class="text-sm font-medium leading-normal">Logout</p>
+</a>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 p-8 overflow-y-auto">
+<div class="max-w-7xl mx-auto">
+<!-- PageHeading -->
+<header class="flex flex-wrap justify-between items-center gap-4 mb-8">
+<div class="flex min-w-72 flex-col gap-2">
+<h1 class="text-black dark:text-white text-4xl font-black leading-tight tracking-[-0.033em]">My Career Timeline</h1>
+<p class="text-gray-600 dark:text-text-secondary-dark text-base font-normal leading-normal">Visualize your professional journey, track your growth, and share your highlights.</p>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-border-dark text-white text-sm font-bold leading-normal tracking-[0.015em] gap-2">
+<span class="material-symbols-outlined text-base">ios_share</span>
+<span class="truncate">Share Highlights</span>
+</button>
+</header>
+<!-- Chips/Filters -->
+<div class="flex gap-3 mb-8 overflow-x-auto pb-2">
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-border-dark pl-3 pr-3 text-white">
+<p class="text-sm font-medium leading-normal">All</p>
+</button>
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-card-dark text-white hover:bg-border-dark">
+<p class="text-sm font-medium leading-normal">Jobs</p>
+</button>
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-card-dark text-white hover:bg-border-dark">
+<p class="text-sm font-medium leading-normal">Promotions</p>
+</button>
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-card-dark text-white hover:bg-border-dark">
+<p class="text-sm font-medium leading-normal">Certifications</p>
+</button>
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-card-dark text-white hover:bg-border-dark">
+<p class="text-sm font-medium leading-normal">Awards</p>
+</button>
+</div>
+<!-- Horizontal Timeline -->
+<section class="mb-10">
+<div class="relative w-full overflow-x-auto pb-4">
+<div class="absolute top-5 left-0 right-0 h-0.5 bg-border-dark"></div>
+<div class="flex justify-between min-w-[800px] pt-10">
+<!-- Timeline Item -->
+<div class="flex flex-col items-center relative w-1/5">
+<div class="absolute -top-1.5 size-4 bg-border-dark rounded-full"></div>
+<span class="material-symbols-outlined text-primary -mt-8 text-3xl">work</span>
+<p class="text-sm font-semibold mt-2 text-black dark:text-white">Associate PM</p>
+<p class="text-xs text-gray-600 dark:text-text-secondary-dark">2018</p>
+</div>
+<!-- Timeline Item -->
+<div class="flex flex-col items-center relative w-1/5">
+<div class="absolute -top-1.5 size-4 bg-primary rounded-full ring-4 ring-background-dark"></div>
+<span class="material-symbols-outlined text-primary -mt-8 text-3xl">work</span>
+<p class="text-sm font-semibold mt-2 text-primary">Product Manager</p>
+<p class="text-xs text-gray-600 dark:text-text-secondary-dark">2020</p>
+</div>
+<!-- Timeline Item -->
+<div class="flex flex-col items-center relative w-1/5">
+<div class="absolute -top-1.5 size-4 bg-border-dark rounded-full"></div>
+<span class="material-symbols-outlined text-primary -mt-8 text-3xl">workspace_premium</span>
+<p class="text-sm font-semibold mt-2 text-black dark:text-white">PMP Certified</p>
+<p class="text-xs text-gray-600 dark:text-text-secondary-dark">2021</p>
+</div>
+<!-- Timeline Item -->
+<div class="flex flex-col items-center relative w-1/5">
+<div class="absolute -top-1.5 size-4 bg-border-dark rounded-full"></div>
+<span class="material-symbols-outlined text-primary -mt-8 text-3xl">trending_up</span>
+<p class="text-sm font-semibold mt-2 text-black dark:text-white">Senior PM</p>
+<p class="text-xs text-gray-600 dark:text-text-secondary-dark">2022</p>
+</div>
+<!-- Timeline Item -->
+<div class="flex flex-col items-center relative w-1/5">
+<div class="absolute -top-1.5 size-4 bg-border-dark rounded-full"></div>
+<p class="text-sm font-semibold mt-2 text-black dark:text-white">Present</p>
+</div>
+</div>
+</div>
+</section>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Left Column -->
+<div class="lg:col-span-2 flex flex-col gap-8">
+<!-- SectionHeader -->
+<h2 class="text-black dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em]">Achievement Gallery</h2>
+<!-- Achievement Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="bg-card-dark p-6 rounded-xl border border-border-dark flex flex-col gap-4">
+<div class="flex justify-between items-start">
+<div class="flex flex-col">
+<p class="font-bold text-white">Project Phoenix Lead</p>
+<p class="text-sm text-text-secondary-dark">Q4 2023</p>
+</div>
+<div class="bg-primary/20 text-primary text-xs font-bold px-2 py-1 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">celebration</span>
+<span>AWARD</span>
+</div>
+</div>
+<p class="text-text-secondary-dark text-sm">Led the cross-functional team to launch Project Phoenix, resulting in a 20% increase in user engagement and a 15% uplift in subscription revenue.</p>
+<div class="flex gap-2 flex-wrap">
+<span class="text-xs bg-border-dark text-text-secondary-dark px-2 py-1 rounded">Leadership</span>
+<span class="text-xs bg-border-dark text-text-secondary-dark px-2 py-1 rounded">Product Launch</span>
+<span class="text-xs bg-border-dark text-text-secondary-dark px-2 py-1 rounded">Agile</span>
+</div>
+</div>
+<div class="bg-card-dark p-6 rounded-xl border border-border-dark flex flex-col gap-4">
+<div class="flex justify-between items-start">
+<div class="flex flex-col">
+<p class="font-bold text-white">Mobile App Revamp</p>
+<p class="text-sm text-text-secondary-dark">Q2 2022</p>
+</div>
+</div>
+<p class="text-text-secondary-dark text-sm">Redesigned the user onboarding flow for the mobile app, which decreased user drop-off by 30% and improved App Store ratings from 4.2 to 4.8.</p>
+<div class="flex gap-2 flex-wrap">
+<span class="text-xs bg-border-dark text-text-secondary-dark px-2 py-1 rounded">UI/UX</span>
+<span class="text-xs bg-border-dark text-text-secondary-dark px-2 py-1 rounded">User Research</span>
+<span class="text-xs bg-border-dark text-text-secondary-dark px-2 py-1 rounded">A/B Testing</span>
+</div>
+</div>
+<div class="bg-card-dark p-6 rounded-xl border border-border-dark flex flex-col gap-4">
+<div class="flex justify-between items-start">
+<div class="flex flex-col">
+<p class="font-bold text-white">Top Sales Award</p>
+<p class="text-sm text-text-secondary-dark">Q3 2021</p>
+</div>
+<div class="bg-primary/20 text-primary text-xs font-bold px-2 py-1 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">celebration</span>
+<span>AWARD</span>
+</div>
+</div>
+<p class="text-text-secondary-dark text-sm">Achieved 150% of the sales target for the new enterprise feature suite, securing three major client accounts and generating $1.2M in ARR.</p>
+<div class="flex gap-2 flex-wrap">
+<span class="text-xs bg-border-dark text-text-secondary-dark px-2 py-1 rounded">Sales</span>
+<span class="text-xs bg-border-dark text-text-secondary-dark px-2 py-1 rounded">Negotiation</span>
+</div>
+</div>
+</div>
+<!-- Data Visualizations -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-2">
+<!-- Salary Progression -->
+<div class="bg-card-dark p-6 rounded-xl border border-border-dark">
+<div class="flex items-center gap-2 mb-4">
+<h3 class="font-bold text-white">Salary Progression</h3>
+<span class="material-symbols-outlined text-text-secondary-dark text-base" title="This data is private and only visible to you">lock</span>
+</div>
+<div class="h-48 flex items-end justify-center bg-transparent text-text-secondary-dark" data-alt="A line chart showing an upward trend in salary from 2018 to Present, with key points highlighted at each year.">
+<!-- This is a static representation of a chart -->
+<svg class="text-sm" height="100%" preserveaspectratio="none" viewbox="0 0 300 150" width="100%">
+<line stroke="#393728" stroke-width="1" x1="10" x2="290" y1="140" y2="140"></line>
+<line stroke="#393728" stroke-width="1" x1="10" x2="10" y1="10" y2="140"></line>
+<polyline fill="none" points="30,120 100,90 170,80 240,40" stroke="#f2d00d" stroke-width="2"></polyline>
+<circle cx="30" cy="120" fill="#f2d00d" r="3"></circle>
+<circle cx="100" cy="90" fill="#f2d00d" r="3"></circle>
+<circle cx="170" cy="80" fill="#f2d00d" r="3"></circle>
+<circle cx="240" cy="40" fill="#f2d00d" r="3"></circle>
+<text fill="currentColor" x="25" y="150">2018</text>
+<text fill="currentColor" x="95" y="150">2020</text>
+<text fill="currentColor" x="165" y="150">2022</text>
+<text fill="currentColor" x="235" y="150">2024</text>
+</svg>
+</div>
+</div>
+<!-- Skill Evolution -->
+<div class="bg-card-dark p-6 rounded-xl border border-border-dark">
+<h3 class="font-bold text-white mb-4">Skill Evolution</h3>
+<div class="h-48 flex items-center justify-center bg-transparent text-text-secondary-dark" data-alt="A radar chart visualizing proficiency levels in skills like Product Management, UI/UX, Leadership, Agile, and Data Analysis.">
+<!-- This is a static representation of a chart -->
+<svg height="100%" viewbox="0 0 200 160" width="100%">
+<g transform="translate(100, 80)">
+<polygon fill="none" points="50,0 25,-43.3 -25,-43.3 -50,0 -25,43.3 25,43.3" stroke="#393728"></polygon>
+<polygon fill="none" points="30,0 15,-25.98 -15,-25.98 -30,0 -15,25.98 15,25.98" stroke="#393728"></polygon>
+<polygon fill="#f2d00d" opacity="0.3" points="45,0 15,-39 -35,-20 -40,10 -5,40 30,25" stroke="#f2d00d" stroke-width="2"></polygon>
+</g>
+<text fill="currentColor" font-size="10" text-anchor="middle" x="100" y="20">Leadership</text>
+<text fill="currentColor" font-size="10" text-anchor="middle" x="155" y="65">Agile</text>
+<text fill="currentColor" font-size="10" text-anchor="middle" x="145" y="125">Data</text>
+<text fill="currentColor" font-size="10" text-anchor="middle" x="55" y="125">UI/UX</text>
+<text fill="currentColor" font-size="10" text-anchor="middle" x="45" y="65">Product</text>
+</svg>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column / Goal Tracking -->
+<aside class="lg:col-span-1">
+<div class="bg-card-dark p-6 rounded-xl border border-border-dark sticky top-8">
+<h3 class="text-black dark:text-white text-xl font-bold leading-tight tracking-[-0.015em] mb-6">Career Goals</h3>
+<div class="flex flex-col gap-6">
+<!-- Goal Item -->
+<div class="flex flex-col gap-2">
+<div class="flex justify-between text-sm">
+<p class="font-medium text-white">Get PMP Certification</p>
+<p class="font-bold text-primary">100%</p>
+</div>
+<div class="w-full bg-border-dark rounded-full h-2">
+<div class="bg-primary h-2 rounded-full" style="width: 100%"></div>
+</div>
+</div>
+<!-- Goal Item -->
+<div class="flex flex-col gap-2">
+<div class="flex justify-between text-sm">
+<p class="font-medium text-white">Learn Advanced SQL</p>
+<p class="text-text-secondary-dark">75%</p>
+</div>
+<div class="w-full bg-border-dark rounded-full h-2">
+<div class="bg-primary h-2 rounded-full" style="width: 75%"></div>
+</div>
+</div>
+<!-- Goal Item -->
+<div class="flex flex-col gap-2">
+<div class="flex justify-between text-sm">
+<p class="font-medium text-white">Lead a new product launch</p>
+<p class="text-text-secondary-dark">25%</p>
+</div>
+<div class="w-full bg-border-dark rounded-full h-2">
+<div class="bg-primary h-2 rounded-full" style="width: 25%"></div>
+</div>
+</div>
+<!-- Goal Item -->
+<div class="flex flex-col gap-2">
+<div class="flex justify-between text-sm">
+<p class="font-medium text-white">Speak at a conference</p>
+<p class="text-text-secondary-dark">0%</p>
+</div>
+<div class="w-full bg-border-dark rounded-full h-2">
+<div class="bg-primary h-2 rounded-full" style="width: 0%"></div>
+</div>
+</div>
+</div>
+</div>
+</aside>
+</div>
+</div>
+</main>
+</div>
+</body></html>

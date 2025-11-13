@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CareerDev AI - Promotion Coaching</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#ffd900",
+              "background-light": "#f8f8f5",
+              "background-dark": "#23200f",
+            },
+            fontFamily: {
+              "display": ["Lexend", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      body {
+          background-color: #2C2C2C;}
+      .material-symbols-outlined {
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+      }
+    </style>
+</head>
+<body class="font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col text-[#F5F5F5]">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[#3A3A3A] px-10 py-3">
+<div class="flex items-center gap-4 text-white">
+<div class="size-6 text-primary">
+<span class="material-symbols-outlined !text-3xl">hub</span>
+</div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">CareerDev AI</h2>
+</div>
+<div class="flex flex-1 justify-end gap-8">
+<div class="flex items-center gap-9">
+<a class="text-[#A9A9A9] hover:text-white text-sm font-medium leading-normal" href="#">Dashboard</a>
+<a class="text-primary text-sm font-bold leading-normal" href="#">Promotion Coach</a>
+<a class="text-[#A9A9A9] hover:text-white text-sm font-medium leading-normal" href="#">AI Resume Writer</a>
+<a class="text-[#A9A9A9] hover:text-white text-sm font-medium leading-normal" href="#">Resources</a>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 w-10 bg-[#3A3A3A] text-white gap-2 text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="material-symbols-outlined text-xl">notifications</span>
+</button>
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 w-10 bg-[#3A3A3A] text-white gap-2 text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="material-symbols-outlined text-xl">settings</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB7HT9R9Aws67AgGh3SejndLgi4ru7doF7BmLftBtZ9EZQPvnHo5pG_RtRCHosVv62kIRqba6PBOKpoxtI1O-MSha2ZqAnSNf-La-uaW1TIVAUb0vYuftmH3V5Cn6O8I1EMtljiSOpM_EBeCV97yvUdD1XiQv5rdN3cmScw_4-ndmAbyn2HjX2yrrX-nahbSYtpBpNdLkUZKxruDuRqyutsZjiG9-quSZf-_JgERYK238VuLkZRh5-l0ocYfwTgGDKOdnpzKtIeYJc");'></div>
+</div>
+</div>
+</header>
+<main class="flex-1 px-10 py-8">
+<div class="flex flex-wrap justify-between gap-4 pb-8">
+<h1 class="text-white text-4xl font-black leading-tight tracking-[-0.033em] min-w-72">Promotion Coaching &amp; Salary Negotiation</h1>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<div class="flex flex-col gap-6">
+<div class="bg-[#3A3A3A] rounded-xl p-6">
+<h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] pb-5">Your Path to Senior Software Engineer</h2>
+<div class="grid grid-cols-[32px_1fr] gap-x-4">
+<div class="flex flex-col items-center gap-1 pt-2">
+<span class="material-symbols-outlined text-2xl text-primary">work</span>
+<div class="w-px bg-[#565139] h-full grow"></div>
+</div>
+<div class="flex flex-1 flex-col pb-6">
+<p class="text-white text-base font-medium leading-normal">Current Role: Software Engineer II</p>
+<p class="text-[#A9A9A9] text-sm font-normal leading-normal">Joined: Jan 2022</p>
+</div>
+<div class="flex flex-col items-center gap-1">
+<div class="w-px bg-[#565139] h-full"></div>
+<span class="material-symbols-outlined text-2xl text-primary">check_circle</span>
+<div class="w-px bg-[#565139] h-full grow"></div>
+</div>
+<div class="flex flex-1 flex-col pb-6">
+<p class="text-white text-base font-medium leading-normal">Promotion Readiness Assessment</p>
+<p class="text-[#A9A9A9] text-sm font-normal leading-normal">Status: 85% Ready</p>
+</div>
+<div class="flex flex-col items-center gap-1">
+<div class="w-px bg-[#565139] h-full"></div>
+<span class="material-symbols-outlined text-2xl text-primary">flag</span>
+</div>
+<div class="flex flex-1 flex-col">
+<p class="text-white text-base font-medium leading-normal">Target Role: Senior Software Engineer</p>
+<p class="text-[#A9A9A9] text-sm font-normal leading-normal">Expected: Q4 2024</p>
+</div>
+</div>
+</div>
+<div class="bg-[#3A3A3A] rounded-xl p-6">
+<h3 class="text-white text-lg font-bold leading-tight tracking-[-0.015em] mb-4">Skill Gap Analysis</h3>
+<div class="flex flex-col gap-4">
+<p class="text-[#A9A9A9] text-sm">To reach the senior level, focus on developing these key skills.</p>
+<div class="flex flex-col gap-4">
+<div class="border border-[#4a4a4a] rounded-lg p-4">
+<div class="flex justify-between items-center mb-2">
+<p class="font-medium text-white">System Design &amp; Architecture</p>
+<span class="text-xs text-[#A9A9A9]">70%</span>
+</div>
+<div class="w-full bg-[#2C2C2C] rounded-full h-2">
+<div class="bg-primary h-2 rounded-full" style="width: 70%"></div>
+</div>
+</div>
+<div class="border border-[#4a4a4a] rounded-lg p-4">
+<div class="flex justify-between items-center mb-2">
+<p class="font-medium text-white">Project Leadership &amp; Mentoring</p>
+<span class="text-xs text-[#A9A9A9]">60%</span>
+</div>
+<div class="w-full bg-[#2C2C2C] rounded-full h-2">
+<div class="bg-primary h-2 rounded-full" style="width: 60%"></div>
+</div>
+</div>
+<div class="border border-[#4a4a4a] rounded-lg p-4">
+<div class="flex justify-between items-center mb-2">
+<p class="font-medium text-white">Advanced Cloud Services</p>
+<span class="text-xs text-[#A9A9A9]">85%</span>
+</div>
+<div class="w-full bg-[#2C2C2C] rounded-full h-2">
+<div class="bg-primary h-2 rounded-full" style="width: 85%"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-6 bg-[#3A3A3A] rounded-xl p-6">
+<h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em]">Your Action Plan</h2>
+<div class="flex border-b border-[#4a4a4a]">
+<button class="px-4 py-2 text-sm font-semibold border-b-2 border-primary text-primary">Performance Review</button>
+<button class="px-4 py-2 text-sm font-medium text-[#A9A9A9] border-b-2 border-transparent hover:text-white">Salary Negotiation</button>
+</div>
+<div class="flex flex-col gap-4">
+<h3 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">AI-Generated Achievement Summaries</h3>
+<p class="text-sm text-[#A9A9A9]">Use the STAR method to frame your accomplishments for maximum impact.</p>
+<div class="border border-[#4a4a4a] rounded-lg p-4">
+<p class="font-semibold text-white mb-1">Project Phoenix Lead</p>
+<p class="text-sm text-[#F5F5F5]"><span class="font-bold text-primary">Situation:</span> The checkout process had a 15% cart abandonment rate due to slow performance. <span class="font-bold text-primary">Task:</span> I was tasked with re-architecting the backend service. <span class="font-bold text-primary">Action:</span> I led a team of 3 engineers to migrate the monolith to a microservices architecture. <span class="font-bold text-primary">Result:</span> We reduced latency by 60% and decreased cart abandonment to 5%, boosting revenue by an estimated $200K/quarter.</p>
+</div>
+<div class="border border-[#4a4a4a] rounded-lg p-4">
+<p class="font-semibold text-white mb-1">Onboarding Mentorship Initiative</p>
+<p class="text-sm text-[#F5F5F5]"><span class="font-bold text-primary">Situation:</span> New engineers struggled to get up to speed with our complex codebase. <span class="font-bold text-primary">Task:</span> Create a structured mentorship program. <span class="font-bold text-primary">Action:</span> I designed a 4-week onboarding curriculum and personally mentored two junior engineers. <span class="font-bold text-primary">Result:</span> The new hires I mentored became productive contributors 30% faster than the previous average.</p>
+</div>
+<button class="flex items-center justify-center gap-2 w-full h-12 rounded-lg bg-primary text-black font-bold text-sm hover:bg-yellow-400 transition-colors">
+<span class="material-symbols-outlined text-xl">auto_awesome</span>
+                                Generate More Summaries
+                             </button>
+</div>
+<div class="mt-auto pt-6">
+<button class="flex items-center justify-center gap-2 w-full h-12 rounded-lg bg-primary text-black font-bold text-sm hover:bg-yellow-400 transition-colors">
+<span class="material-symbols-outlined text-xl">event_available</span>
+                                Book a Session with a Career Coach
+                            </button>
+</div>
+</div>
+</div>
+</main>
+</div>
+<div class="absolute inset-0 z-10 flex h-screen w-screen flex-col bg-[#2C2C2C] p-6">
+<header class="flex shrink-0 items-center justify-between pb-4">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary text-3xl">hub</span>
+<h2 class="text-white text-lg font-bold">Negotiation Summary Report</h2>
+</div>
+<div class="flex items-center gap-4">
+<button class="flex items-center justify-center gap-2 rounded-lg border border-[#4a4a4a] bg-[#3A3A3A] px-4 py-2 text-sm font-medium text-white hover:bg-[#4a4a4a]">
+<span class="material-symbols-outlined">replay</span>
+<span>Try Again</span>
+</button>
+<button class="flex items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm font-bold text-black hover:bg-yellow-400">
+<span class="material-symbols-outlined">check_circle</span>
+<span>Return to Dashboard</span>
+</button>
+</div>
+</header>
+<main class="grid flex-1 grid-cols-12 gap-6 overflow-hidden">
+<div class="col-span-7 flex flex-col gap-6 overflow-y-auto pr-2">
+<div class="rounded-xl bg-[#3A3A3A] p-6">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-xl font-bold text-white">Performance Overview</h3>
+<div class="flex items-center gap-2">
+<button class="flex h-8 w-8 items-center justify-center rounded-lg bg-[#4a4a4a] text-white hover:bg-primary hover:text-black">
+<span class="material-symbols-outlined text-base">format_ink_highlighter</span>
+</button>
+<button class="flex h-8 w-8 items-center justify-center rounded-lg bg-[#4a4a4a] text-white hover:bg-primary hover:text-black">
+<span class="material-symbols-outlined text-base">add_comment</span>
+</button>
+<button class="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-black hover:bg-yellow-400">
+<span class="material-symbols-outlined text-base">videocam</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-3 divide-x divide-[#4a4a4a]">
+<div class="flex flex-col items-center justify-center gap-1 px-4 text-center">
+<p class="text-sm text-[#A9A9A9]">Initial Offer</p>
+<p class="text-2xl font-bold text-white">$145,000</p>
+</div>
+<div class="flex flex-col items-center justify-center gap-1 px-4 text-center">
+<p class="text-sm text-[#A9A9A9]">Target Salary</p>
+<p class="text-2xl font-bold text-white">$160,000</p>
+</div>
+<div class="relative flex flex-col items-center justify-center gap-1 rounded-r-lg bg-[#33301a] px-4 text-center">
+<div class="absolute left-0 top-0 h-full w-1 bg-primary"></div>
+<p class="text-sm text-primary">Final Negotiated Salary</p>
+<p class="text-4xl font-black text-primary">$158,500</p>
+<p class="text-xs text-green-400">+9.3% vs Initial</p>
+</div>
+</div>
+</div>
+<div class="rounded-xl bg-[#3A3A3A] p-6">
+<h3 class="mb-4 text-xl font-bold text-white">AI Feedback &amp; Analysis</h3>
+<div class="grid grid-cols-2 gap-6">
+<div>
+<h4 class="mb-3 font-bold text-white">Overall Strategy</h4>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined mt-1 text-primary">military_tech</span>
+<p class="text-sm text-[#F5F5F5]">Your approach was effective. You successfully anchored high, used quantifiable achievements (Project Phoenix) to justify your value, and remained collaborative. Your pacing was excellent, allowing the conversation to flow naturally.</p>
+</div>
+</div>
+<div>
+<h4 class="mb-3 font-bold text-white">Communication Style</h4>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined mt-1 text-primary">record_voice_over</span>
+<p class="text-sm text-[#F5F5F5]">Your tone was confident and professional. You consistently framed your requests positively, focusing on mutual benefit rather than demands. This built good rapport with the hiring manager.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="rounded-xl bg-[#3A3A3A] p-6">
+<h3 class="mb-4 text-xl font-bold text-white">Suggestions for Improvement</h3>
+<div class="space-y-3">
+<div class="relative flex items-start gap-3 rounded-lg border border-[#4a4a4a] p-3">
+<span class="material-symbols-outlined mt-0.5 text-primary">lightbulb</span>
+<p class="text-sm text-[#F5F5F5]"><span class="font-semibold text-white">Handling Objections:</span> When faced with the budget constraint objection, you could have pivoted to exploring non-salary benefits more proactively <span class="bg-primary/20 text-primary-300 rounded px-1">(e.g., signing bonus, professional development budget)</span> as an alternative path to reach your target compensation.</p>
+<div class="absolute -right-3 -top-3 flex">
+<button class="flex h-6 w-6 items-center justify-center rounded-full bg-primary text-black">
+<span class="material-symbols-outlined !text-base">videocam</span>
+</button>
+<button class="ml-1 flex h-6 w-6 items-center justify-center rounded-full bg-primary text-black">
+<span class="material-symbols-outlined !text-base">add_comment</span>
+</button>
+</div>
+</div>
+<div class="flex items-start gap-3 rounded-lg border border-[#4a4a4a] p-3">
+<span class="material-symbols-outlined mt-0.5 text-primary">lightbulb</span>
+<p class="text-sm text-[#F5F5F5]"><span class="font-semibold text-white">Closing Statement:</span> While your closing was good, a stronger final statement reiterating your enthusiasm for the role and the value you'll bring could leave an even more lasting positive impression. A simple "I'm confident I can deliver immediate value and I'm very excited to join the team" can be very powerful.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-span-5 flex flex-col rounded-xl bg-[#3A3A3A]">
+<div class="flex items-center justify-between border-b border-[#4a4a4a] p-4">
+<h3 class="text-xl font-bold text-white">Discussion with Coach</h3>
+<div class="flex items-center gap-2">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-8" data-alt="Coach's profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB7HT9R9Aws67AgGh3SejndLgi4ru7doF7BmLftBtZ9EZQPvnHo5pG_RtRCHosVv62kIRqba6PBOKpoxtI1O-MSha2ZqAnSNf-La-uaW1TIVAUb0vYuftmH3V5Cn6O8I1EMtljiSOpM_EBeCV97yvUdD1XiQv5rdN3cmScw_4-ndmAbyn2HjX2yrrX-nahbSYtpBpNdLkUZKxruDuRqyutsZjiG9-quSZf-_JgERYK238VuLkZRh5-l0ocYfwTgGDKOdnpzKtIeYJc");'></div>
+<p class="text-sm font-medium text-white">Sarah Chen</p>
+</div>
+</div>
+<div class="flex flex-1 flex-col overflow-hidden p-4">
+<div class="flex-1 space-y-4 overflow-y-auto pr-2">
+<div class="flex items-start gap-3">
+<div class="h-8 w-8 shrink-0 rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB7HT9R9Aws67AgGh3SejndLgi4ru7doF7BmLftBtZ9EZQPvnHo5pG_RtRCHosVv62kIRqba6PBOKpoxtI1O-MSha2ZqAnSNf-La-uaW1TIVAUb0vYuftmH3V5Cn6O8I1EMtljiSOpM_EBeCV97yvUdD1XiQv5rdN3cmScw_4-ndmAbyn2HjX2yrrX-nahbSYtpBpNdLkUZKxruDuRqyutsZjiG9-quSZf-_JgERYK238VuLkZRh5-l0ocYfwTgGDKOdnpzKtIeYJc");'></div>
+<div class="flex flex-col items-start gap-1">
+<div class="rounded-lg rounded-tl-none bg-[#4a4a4a] p-3 text-sm">
+<p>Great job on this simulation! You handled the counter-offer perfectly. What are your thoughts on the AI's feedback about handling objections?</p>
+</div>
+<p class="text-xs text-[#A9A9A9]">10:31 AM</p>
+</div>
+</div>
+<div class="flex flex-row-reverse items-start gap-3">
+<div class="h-8 w-8 shrink-0 rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB7HT9R9Aws67AgGh3SejndLgi4ru7doF7BmLftBtZ9EZQPvnHo5pG_RtRCHosVv62kIRqba6PBOKpoxtI1O-MSha2ZqAnSNf-La-uaW1TIVAUb0vYuftmH3V5Cn6O8I1EMtljiSOpM_EBeCV97yvUdD1XiQv5rdN3cmScw_4-ndmAbyn2HjX2yrrX-nahbSYtpBpNdLkUZKxruDuRqyutsZjiG9-quSZf-_JgERYK238VuLkZRh5-l0ocYfwTgGDKOdnpzKtIeYJc");'></div>
+<div class="flex flex-col items-end gap-1">
+<div class="rounded-lg rounded-tr-none bg-primary p-3 text-sm text-black">
+<p>Thanks, Sarah! I agree, I could have been better prepared for the budget pushback. I got a little stuck in the moment.</p>
+</div>
+<p class="text-xs text-[#A9A9A9]">10:32 AM</p>
+</div>
+</div>
+<div class="relative my-4 border-t border-[#565139]">
+<span class="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 bg-[#3A3A3A] px-2 text-xs font-medium text-primary">New Message</span>
+</div>
+<div class="flex items-start gap-3">
+<div class="h-8 w-8 shrink-0 rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB7HT9R9Aws67AgGh3SejndLgi4ru7doF7BmLftBtZ9EZQPvnHo5pG_RtRCHosVv62kIRqba6PBOKpoxtI1O-MSha2ZqAnSNf-La-uaW1TIVAUb0vYuftmH3V5Cn6O8I1EMtljiSOpM_EBeCV97yvUdD1XiQv5rdN3cmScw_4-ndmAbyn2HjX2yrrX-nahbSYtpBpNdLkUZKxruDuRqyutsZjiG9-quSZf-_JgERYK238VuLkZRh5-l0ocYfwTgGDKOdnpzKtIeYJc");'></div>
+<div class="flex flex-col items-start gap-1">
+<div class="rounded-lg rounded-tl-none bg-[#4a4a4a] p-3 text-sm">
+<p>That's very common. Let's brainstorm some alternative benefits you can propose next time. Think about things like extra vacation days, a larger bonus, or even a guaranteed 6-month review.</p>
+</div>
+<div class="mt-2 flex items-start gap-3 rounded-lg border border-primary/50 bg-[#33301a] p-3">
+<span class="material-symbols-outlined mt-0.5 text-primary">add_comment</span>
+<div class="text-sm">
+<p class="font-bold text-white">Comment on "Handling Objections"</p>
+<p class="text-primary/80">"This is a great point. Instead of just accepting the budget constraint, pivoting to these non-salary items shows flexibility and keeps the negotiation moving forward."</p>
+</div>
+</div>
+<div class="mt-2 flex w-full max-w-sm flex-col gap-2 rounded-lg border border-primary/50 bg-[#33301a] p-3">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">videocam</span>
+<p class="text-sm font-bold text-white">Video Feedback on "Handling Objections"</p>
+</div>
+<div class="relative group aspect-video w-full cursor-pointer overflow-hidden rounded-md bg-[#2C2C2C]">
+<div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-5xl text-primary">play_circle</span>
+</div>
+<div class="h-full w-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB7HT9R9Aws67AgGh3SejndLgi4ru7doF7BmLftBtZ9EZQPvnHo5pG_RtRCHosVv62kIRqba6PBOKpoxtI1O-MSha2ZqAnSNf-La-uaW1TIVAUb0vYuftmH3V5Cn6O8I1EMtljiSOpM_EBeCV97yvUdD1XiQv5rdN3cmScw_4-ndmAbyn2HjX2yrrX-nahbSYtpBpNdLkUZKxruDuRqyutsZjiG9-quSZf-_JgERYK238VuLkZRh5-l0ocYfwTgGDKOdnpzKtIeYJc");'></div>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-primary text-black transition-colors hover:bg-yellow-400">
+<span class="material-symbols-outlined text-xl">play_arrow</span>
+</button>
+<div class="flex w-full items-center gap-2">
+<span class="text-xs font-mono text-primary">0:12</span>
+<div class="relative h-1 w-full flex-grow rounded-full bg-primary/30">
+<div class="absolute h-1 w-1/4 rounded-full bg-primary"></div>
+<div class="absolute -top-0.5 ml-[-4px] h-2 w-2 rounded-full bg-white" style="left: 25%"></div>
+</div>
+<span class="text-xs font-mono text-white/50">0:48</span>
+</div>
+</div>
+</div>
+<div class="mt-2 w-full max-w-sm rounded-lg border border-[#4A4A4A] bg-[#2C2C2C] p-3 flex flex-col gap-3">
+<div>
+<p class="text-sm font-medium text-white mb-2">How helpful was this feedback?</p>
+<div class="flex items-center gap-2">
+<div class="flex items-center">
+<button class="material-symbols-outlined text-primary hover:text-yellow-300">star</button>
+<button class="material-symbols-outlined text-primary hover:text-yellow-300">star</button>
+<button class="material-symbols-outlined text-primary hover:text-yellow-300">star</button>
+<button class="material-symbols-outlined text-primary hover:text-yellow-300">star</button>
+<button class="material-symbols-outlined text-[#A9A9A9] hover:text-primary">star</button>
+</div>
+<span class="text-xs text-primary font-bold">(4/5)</span>
+<div class="ml-auto flex items-center gap-2">
+<button class="flex h-7 w-7 items-center justify-center rounded-full bg-[#4A4A4A] text-white hover:bg-[#5a5a5a]">
+<span class="material-symbols-outlined !text-base">thumb_up</span>
+</button>
+<button class="flex h-7 w-7 items-center justify-center rounded-full bg-[#4A4A4A] text-white hover:bg-[#5a5a5a]">
+<span class="material-symbols-outlined !text-base">thumb_down</span>
+</button>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<input class="w-full rounded-md border border-[#4A4A4A] bg-[#3A3A3A] px-3 py-2 text-sm text-white placeholder:text-[#A9A9A9] focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-[#2C2C2C]" placeholder="Add a comment to explain your rating..." type="text"/>
+</div>
+</div>
+<p class="mt-1 text-xs text-[#A9A9A9]">10:35 AM</p>
+</div>
+</div>
+</div>
+<div class="mt-4 flex items-center gap-2 border-t border-[#4a4a4a] pt-4">
+<button class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#4A4A4A] text-white hover:bg-[#5a5a5a]">
+<span class="material-symbols-outlined">videocam</span>
+</button>
+<input class="flex h-10 w-full rounded-lg border-none bg-[#2C2C2C] px-3 py-2 text-sm text-white placeholder:text-[#A9A9A9] focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-[#3A3A3A]" placeholder="Type your message..." type="text"/>
+<button class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary text-black hover:bg-yellow-400">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+</body></html>

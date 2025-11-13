@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Career Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#ffd900",
+            "background-light": "#f8f8f5",
+            "background-dark": "#23200f",
+          },
+          fontFamily: {
+            "display": ["Inter", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-[#181710] font-display">
+<div class="relative flex min-h-screen w-full">
+<!-- SideNavBar -->
+<aside class="flex w-64 flex-col gap-4 border-r border-white/10 bg-[#181710] p-4">
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User avatar of Alex Chen" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAe6sTf49oDsxiPgXruUoOlz_H6K1Wowz1nlaV-RVURX415w-WsAVYAfFD44PoR8T4L0bRCjsE0KtiXFO-f1ZHoCW2UCU1dC6yy7C-geFenFl3PWJBI6zZsSBzv2SHjEw-oCUqUd2q8ylJn1PZI3CDeIP732X_ChydaxenDmDiOd8T6T5q-EbNjTs2jfnpCGE3A_R2zJ8XeIowB_ugKa2hhe39cvD0GPehWbEoGcnNM938gViEI-wE8ELBpsKa1yoGQPDjAz6xp0IM");'></div>
+<div class="flex flex-col">
+<h1 class="text-white text-base font-medium leading-normal">Alex Chen</h1>
+<p class="text-white/60 text-sm font-normal leading-normal">Software Engineer</p>
+</div>
+</div>
+<nav class="flex flex-col gap-2 mt-4 flex-grow">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-[#3a3727]" href="#">
+<span class="material-symbols-outlined text-white text-[24px]">grid_view</span>
+<p class="text-white text-sm font-medium leading-normal">Dashboard</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-white/80 hover:bg-white/5 rounded-lg" href="#">
+<span class="material-symbols-outlined text-white text-[24px]">auto_stories</span>
+<p class="text-sm font-medium leading-normal">My Stories</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-white/80 hover:bg-white/5 rounded-lg" href="#">
+<span class="material-symbols-outlined text-white text-[24px]">description</span>
+<p class="text-sm font-medium leading-normal">Resume Builder</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-white/80 hover:bg-white/5 rounded-lg" href="#">
+<span class="material-symbols-outlined text-white text-[24px]">rocket_launch</span>
+<p class="text-sm font-medium leading-normal">Career Goals</p>
+</a>
+</nav>
+<div class="flex flex-col gap-4">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-[#181710] text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Upgrade Plan</span>
+</button>
+<div class="flex flex-col gap-1">
+<a class="flex items-center gap-3 px-3 py-2 text-white/80 hover:bg-white/5 rounded-lg" href="#">
+<span class="material-symbols-outlined text-white text-[24px]">settings</span>
+<p class="text-sm font-medium leading-normal">Settings</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-white/80 hover:bg-white/5 rounded-lg" href="#">
+<span class="material-symbols-outlined text-white text-[24px]">help</span>
+<p class="text-sm font-medium leading-normal">Help</p>
+</a>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 flex flex-col">
+<div class="flex-grow p-8 flex gap-8">
+<!-- Center Column -->
+<div class="flex-1 flex flex-col gap-6">
+<!-- Page Heading -->
+<header>
+<p class="text-white text-4xl font-black leading-tight tracking-[-0.033em]">Career Dashboard</p>
+<p class="text-white/60 text-base font-normal leading-normal mt-2">Your real-time skill matrix and career progression.</p>
+</header>
+<!-- Chips/Filters -->
+<div class="flex gap-3 flex-wrap">
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#3a3727] pl-3 pr-2">
+<span class="material-symbols-outlined text-white text-[20px]">filter_list</span>
+<p class="text-white text-sm font-medium leading-normal">All Skills</p>
+<span class="material-symbols-outlined text-white text-[20px]">expand_more</span>
+</button>
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#3a3727] pl-3 pr-2">
+<span class="material-symbols-outlined text-white text-[20px]">code</span>
+<p class="text-white text-sm font-medium leading-normal">Technical</p>
+<span class="material-symbols-outlined text-white text-[20px]">expand_more</span>
+</button>
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#3a3727] pl-3 pr-2">
+<span class="material-symbols-outlined text-white text-[20px]">groups</span>
+<p class="text-white text-sm font-medium leading-normal">Leadership</p>
+<span class="material-symbols-outlined text-white text-[20px]">expand_more</span>
+</button>
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#3a3727] pl-3 pr-2">
+<span class="material-symbols-outlined text-white text-[20px]">chat</span>
+<p class="text-white text-sm font-medium leading-normal">Communication</p>
+<span class="material-symbols-outlined text-white text-[20px]">expand_more</span>
+</button>
+</div>
+<!-- Table -->
+<div class="@container">
+<div class="flex overflow-hidden rounded-lg border border-[#565139] bg-[#181710]">
+<table class="w-full">
+<thead>
+<tr class="bg-[#28261b]">
+<th class="px-4 py-3 text-left text-white text-sm font-medium leading-normal">Skill</th>
+<th class="px-4 py-3 text-left text-white text-sm font-medium leading-normal">Story Count</th>
+<th class="px-4 py-3 text-left text-white text-sm font-medium leading-normal">Quality Score</th>
+<th class="px-4 py-3 text-left text-white text-sm font-medium leading-normal">Status</th>
+</tr>
+</thead>
+<tbody>
+<tr class="border-t border-t-[#565139]">
+<td class="h-[72px] px-4 py-2 text-white text-sm font-normal leading-normal">Project Management</td>
+<td class="h-[72px] px-4 py-2 text-white/60 text-sm font-normal leading-normal">5</td>
+<td class="h-[72px] px-4 py-2 text-white/60 text-sm font-normal leading-normal">92%</td>
+<td class="h-[72px] px-4 py-2 text-sm font-normal leading-normal">
+<div class="flex items-center justify-start"><span class="flex items-center justify-center rounded-full bg-green-500/20 px-3 py-1 text-sm font-medium text-green-300">Strong</span></div>
+</td>
+</tr>
+<tr class="border-t border-t-[#565139]">
+<td class="h-[72px] px-4 py-2 text-white text-sm font-normal leading-normal">Data Analysis</td>
+<td class="h-[72px] px-4 py-2 text-white/60 text-sm font-normal leading-normal">2</td>
+<td class="h-[72px] px-4 py-2 text-white/60 text-sm font-normal leading-normal">78%</td>
+<td class="h-[72px] px-4 py-2 text-sm font-normal leading-normal">
+<div class="flex items-center justify-start"><span class="flex items-center justify-center rounded-full bg-yellow-500/20 px-3 py-1 text-sm font-medium text-yellow-300">Developing</span></div>
+</td>
+</tr>
+<tr class="border-t border-t-[#565139]">
+<td class="h-[72px] px-4 py-2 text-white text-sm font-normal leading-normal">Public Speaking</td>
+<td class="h-[72px] px-4 py-2 text-white/60 text-sm font-normal leading-normal">1</td>
+<td class="h-[72px] px-4 py-2 text-white/60 text-sm font-normal leading-normal">65%</td>
+<td class="h-[72px] px-4 py-2 text-sm font-normal leading-normal">
+<div class="flex items-center justify-start"><span class="flex items-center justify-center rounded-full bg-red-500/20 px-3 py-1 text-sm font-medium text-red-300">Weak</span></div>
+</td>
+</tr>
+<tr class="border-t border-t-[#565139]">
+<td class="h-[72px] px-4 py-2 text-white text-sm font-normal leading-normal">Python Programming</td>
+<td class="h-[72px] px-4 py-2 text-white/60 text-sm font-normal leading-normal">8</td>
+<td class="h-[72px] px-4 py-2 text-white/60 text-sm font-normal leading-normal">95%</td>
+<td class="h-[72px] px-4 py-2 text-sm font-normal leading-normal">
+<div class="flex items-center justify-start"><span class="flex items-center justify-center rounded-full bg-primary/20 px-3 py-1 text-sm font-bold text-primary">Skill Up! ✨</span></div>
+</td>
+</tr>
+<tr class="border-t border-t-[#565139]">
+<td class="h-[72px] px-4 py-2 text-white text-sm font-normal leading-normal">Leadership</td>
+<td class="h-[72px] px-4 py-2 text-white/60 text-sm font-normal leading-normal">0</td>
+<td class="h-[72px] px-4 py-2 text-white/60 text-sm font-normal leading-normal">N/A</td>
+<td class="h-[72px] px-4 py-2 text-sm font-normal leading-normal">
+<div class="flex items-center justify-start"><span class="flex items-center justify-center rounded-full bg-red-500/20 px-3 py-1 text-sm font-medium text-red-300">Missing</span></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<!-- Right Sidebar -->
+<aside class="w-80 flex-shrink-0">
+<div class="bg-[#28261b] rounded-xl p-6 h-full flex flex-col gap-6">
+<h3 class="text-lg font-bold text-white">Missing Story Alerts</h3>
+<div class="flex flex-col gap-4">
+<div class="bg-[#3a3727] p-4 rounded-lg flex flex-col gap-3">
+<div class="flex justify-between items-center">
+<h4 class="font-bold text-white">Leadership</h4>
+<p class="text-sm text-white/60">0 / 2</p>
+</div>
+<p class="text-sm text-white/80">Add 2 more stories to strengthen this skill for Senior roles.</p>
+<button class="flex w-full cursor-pointer items-center justify-center rounded-lg h-9 px-3 bg-primary text-[#181710] text-sm font-bold leading-normal">
+<span>Add Story</span>
+</button>
+</div>
+<div class="bg-[#3a3727] p-4 rounded-lg flex flex-col gap-3">
+<div class="flex justify-between items-center">
+<h4 class="font-bold text-white">Public Speaking</h4>
+<p class="text-sm text-white/60">1 / 3</p>
+</div>
+<p class="text-sm text-white/80">Add 2 more stories to showcase your communication skills.</p>
+<button class="flex w-full cursor-pointer items-center justify-center rounded-lg h-9 px-3 bg-primary text-[#181710] text-sm font-bold leading-normal">
+<span>Add Story</span>
+</button>
+</div>
+</div>
+</div>
+</aside>
+</div>
+<!-- Bottom Section - Career Roadmap -->
+<footer class="bg-[#28261b] p-8 border-t border-white/10">
+<h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] mb-8">Your Path to Senior Software Engineer</h2>
+<div class="relative w-full">
+<!-- Progress Bar -->
+<div class="absolute top-1/2 -translate-y-1/2 left-0 w-full h-1 bg-[#3a3727] rounded-full">
+<div class="h-1 bg-primary rounded-full" style="width: 30%;"></div>
+</div>
+<!-- Milestones -->
+<div class="relative flex justify-between items-start">
+<!-- Milestone 1: Current Role -->
+<div class="flex flex-col items-center text-center w-36">
+<div class="flex items-center justify-center bg-primary rounded-full size-6 border-4 border-[#28261b]"></div>
+<p class="mt-3 text-sm font-bold text-primary">Current Role</p>
+<p class="text-xs text-white/60">Software Engineer</p>
+<div class="absolute top-[calc(50%_+_1.5rem)] flex flex-col items-center">
+<div class="w-px h-2 bg-primary"></div>
+<p class="text-xs font-bold text-primary mt-1">You Are Here</p>
+</div>
+</div>
+<!-- Milestone 2: Master Python -->
+<div class="flex flex-col items-center text-center w-36">
+<div class="flex items-center justify-center bg-primary rounded-full size-6 border-4 border-[#28261b]"></div>
+<p class="mt-3 text-sm font-medium text-white">Master Python</p>
+<p class="text-xs text-white/60">8 stories</p>
+</div>
+<!-- Milestone 3: Develop Leadership -->
+<div class="flex flex-col items-center text-center w-36">
+<div class="flex items-center justify-center bg-[#3a3727] rounded-full size-6 border-4 border-[#28261b]"></div>
+<p class="mt-3 text-sm font-medium text-white/80">Develop Leadership</p>
+<p class="text-xs text-white/60">Target: 2 stories</p>
+</div>
+<!-- Milestone 4: Achieve AWS Cert -->
+<div class="flex flex-col items-center text-center w-36">
+<div class="flex items-center justify-center bg-[#3a3727] rounded-full size-6 border-4 border-[#28261b]"></div>
+<p class="mt-3 text-sm font-medium text-white/80">Achieve AWS Cert</p>
+<p class="text-xs text-white/60">Cloud Practitioner</p>
+</div>
+<!-- Milestone 5: Target Role -->
+<div class="flex flex-col items-center text-center w-36">
+<div class="flex items-center justify-center bg-[#3a3727] rounded-full size-6 border-4 border-[#28261b]"></div>
+<p class="mt-3 text-sm font-medium text-white/80">Target Role</p>
+<p class="text-xs text-white/60">Senior Software Engineer</p>
+</div>
+</div>
+</div>
+</footer>
+</main>
+</div>
+</body></html>

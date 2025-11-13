@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Application Details</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f2d00d",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#181711",
+                        "card-dark": "#222222",
+                        "border-dark": "#393728",
+                        "text-primary-dark": "#ffffff",
+                        "text-secondary-dark": "#bab59c",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.75rem",
+                        "xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-dark font-display text-text-primary-dark">
+<div class="flex min-h-screen">
+<!-- SideNavBar -->
+<aside class="w-64 bg-background-dark border-r border-border-dark flex-shrink-0">
+<div class="flex h-full flex-col justify-between p-4">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-3 p-2">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDIGkC1CRuBZJT1u0aXqunJMp3jH3M9F2OIUFBasvRuwTF7F-Yi2W-ds6yo4wesJ2KT0PuCmuR8iU699oArMFrexn6e1iPhs-kGtPGLR7rgsrEzH6wzWJAROPk3X57Hwe6Nw2o_27slq0gCgQU02CFO1N1N1n1qMOR73zvnqp86xg0Ey355WuyOBZiXyIHghy_snExuygZdCeIi4zNjGso6DLKCaKYkSEOgjwULdOgYGrdUBhmT1AhaOuZuOcsykPNqYP4o6FdO3Bc");'></div>
+<div class="flex flex-col">
+<h1 class="text-text-primary-dark text-base font-medium leading-normal">Alex Chen</h1>
+<p class="text-text-secondary-dark text-sm font-normal leading-normal">Job Seeker</p>
+</div>
+</div>
+<nav class="flex flex-col gap-2 mt-4">
+<a class="flex items-center gap-3 px-3 py-2 text-text-secondary-dark hover:bg-border-dark rounded-lg" href="#">
+<span class="material-symbols-outlined text-text-secondary-dark">dashboard</span>
+<p class="text-sm font-medium leading-normal">Dashboard</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-text-secondary-dark hover:bg-border-dark rounded-lg" href="#">
+<span class="material-symbols-outlined text-text-secondary-dark">description</span>
+<p class="text-sm font-medium leading-normal">My Documents</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-border-dark text-text-primary-dark" href="#">
+<span class="material-symbols-outlined text-text-primary-dark" style="font-variation-settings: 'FILL' 1;">work</span>
+<p class="text-sm font-medium leading-normal">Applications</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-text-secondary-dark hover:bg-border-dark rounded-lg" href="#">
+<span class="material-symbols-outlined text-text-secondary-dark">smart_toy</span>
+<p class="text-sm font-medium leading-normal">AI Agent</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-text-secondary-dark hover:bg-border-dark rounded-lg" href="#">
+<span class="material-symbols-outlined text-text-secondary-dark">settings</span>
+<p class="text-sm font-medium leading-normal">Settings</p>
+</a>
+</nav>
+</div>
+<div class="flex flex-col gap-4">
+<button class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-background-dark text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">New Application</span>
+</button>
+<div class="flex flex-col gap-1">
+<a class="flex items-center gap-3 px-3 py-2 text-text-secondary-dark hover:bg-border-dark rounded-lg" href="#">
+<span class="material-symbols-outlined text-text-secondary-dark">help</span>
+<p class="text-sm font-medium leading-normal">Help</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-text-secondary-dark hover:bg-border-dark rounded-lg" href="#">
+<span class="material-symbols-outlined text-text-secondary-dark">logout</span>
+<p class="text-sm font-medium leading-normal">Logout</p>
+</a>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 p-8 overflow-y-auto">
+<div class="max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">
+<div class="lg:col-span-2 flex flex-col gap-6">
+<!-- Breadcrumbs -->
+<div class="flex flex-wrap items-center gap-2">
+<a class="text-text-secondary-dark text-base font-medium leading-normal hover:text-primary" href="#">All Applications</a>
+<span class="text-text-secondary-dark text-base font-medium leading-normal">/</span>
+<span class="text-text-primary-dark text-base font-medium leading-normal">Senior Product Designer</span>
+</div>
+<!-- Page Heading & Actions -->
+<div>
+<div class="flex flex-wrap justify-between items-start gap-4">
+<div class="flex flex-col gap-1">
+<h1 class="text-text-primary-dark text-4xl font-black leading-tight tracking-[-0.033em]">Senior Product Designer</h1>
+<p class="text-text-secondary-dark text-base font-normal leading-normal">Innovatech Solutions - San Francisco, CA</p>
+</div>
+<div class="flex flex-shrink-0 gap-3">
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-background-dark text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Update Status</span>
+</button>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-border-dark text-text-primary-dark text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Edit</span>
+</button>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-transparent text-red-500 hover:bg-red-500/10 text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Withdraw</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Next Steps Card -->
+<div class="bg-card-dark border border-border-dark rounded-xl p-6">
+<h2 class="text-text-primary-dark text-[22px] font-bold leading-tight tracking-[-0.015em] mb-4">Next Steps</h2>
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 bg-background-dark p-4 rounded-lg">
+<div class="flex items-center gap-4">
+<div class="bg-primary/20 text-primary rounded-full p-3 flex items-center justify-center">
+<span class="material-symbols-outlined">quiz</span>
+</div>
+<div>
+<h3 class="font-bold text-text-primary-dark">Prepare for your upcoming interview</h3>
+<p class="text-sm text-text-secondary-dark">Your interview is scheduled for next week. Start preparing now.</p>
+</div>
+</div>
+<button class="flex min-w-[84px] flex-shrink-0 cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-background-dark text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Launch AI Interview Prep</span>
+</button>
+</div>
+</div>
+<!-- Status Timeline & Key Info -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="bg-card-dark border border-border-dark rounded-xl p-6">
+<h2 class="text-text-primary-dark text-lg font-bold leading-tight mb-6">Status History</h2>
+<div class="relative flex flex-col gap-8 pl-4">
+<!-- Timeline line -->
+<div class="absolute left-6 top-2 bottom-2 w-0.5 bg-border-dark"></div>
+<div class="flex items-center gap-4 relative">
+<div class="z-10 flex size-5 items-center justify-center rounded-full bg-primary ring-4 ring-primary/20">
+<div class="size-2 rounded-full bg-background-dark"></div>
+</div>
+<div>
+<p class="font-medium text-text-primary-dark">Interview Scheduled</p>
+<p class="text-sm text-text-secondary-dark">June 24, 2024</p>
+</div>
+</div>
+<div class="flex items-center gap-4 relative">
+<div class="z-10 flex size-5 items-center justify-center rounded-full bg-border-dark">
+<div class="size-2 rounded-full bg-card-dark"></div>
+</div>
+<div>
+<p class="font-medium text-text-primary-dark">Resume Viewed</p>
+<p class="text-sm text-text-secondary-dark">June 20, 2024</p>
+</div>
+</div>
+<div class="flex items-center gap-4 relative">
+<div class="z-10 flex size-5 items-center justify-center rounded-full bg-border-dark">
+<div class="size-2 rounded-full bg-card-dark"></div>
+</div>
+<div>
+<p class="font-medium text-text-primary-dark">Applied</p>
+<p class="text-sm text-text-secondary-dark">June 15, 2024</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-card-dark border border-border-dark rounded-xl p-6">
+<h2 class="text-text-primary-dark text-lg font-bold leading-tight mb-6">Key Information</h2>
+<div class="space-y-4">
+<div class="flex justify-between">
+<span class="text-text-secondary-dark text-sm">Application Date</span>
+<span class="text-text-primary-dark text-sm font-medium">June 15, 2024</span>
+</div>
+<div class="flex justify-between">
+<span class="text-text-secondary-dark text-sm">Application Deadline</span>
+<span class="text-text-primary-dark text-sm font-medium">June 10, 2024</span>
+</div>
+<div class="flex justify-between">
+<span class="text-text-secondary-dark text-sm">Job Source</span>
+<span class="text-text-primary-dark text-sm font-medium">LinkedIn</span>
+</div>
+<div class="flex justify-between">
+<span class="text-text-secondary-dark text-sm">Contact Person</span>
+<span class="text-text-primary-dark text-sm font-medium">Jane Doe</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Documents -->
+<div class="bg-card-dark border border-border-dark rounded-xl p-6">
+<h2 class="text-text-primary-dark text-lg font-bold leading-tight mb-4">Documents</h2>
+<div class="space-y-3">
+<div class="flex items-center justify-between p-3 bg-background-dark rounded-lg">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">description</span>
+<span class="text-sm font-medium text-text-primary-dark">Resume_ProductDesigner_V2.pdf</span>
+</div>
+<button class="text-text-secondary-dark hover:text-primary">
+<span class="material-symbols-outlined">download</span>
+</button>
+</div>
+<div class="flex items-center justify-between p-3 bg-background-dark rounded-lg">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">mail</span>
+<span class="text-sm font-medium text-text-primary-dark">CoverLetter_Innovatech.pdf</span>
+</div>
+<button class="text-text-secondary-dark hover:text-primary">
+<span class="material-symbols-outlined">download</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Messaging Panel -->
+<aside class="lg:col-span-1 bg-card-dark border border-border-dark rounded-xl flex flex-col h-[calc(100vh-4rem)]">
+<div class="p-4 border-b border-border-dark">
+<h2 class="text-lg font-bold text-text-primary-dark">Coach Communication</h2>
+</div>
+<div class="flex-1 p-4 overflow-y-auto space-y-6">
+<!-- Message Received -->
+<div class="flex items-start gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-8" data-alt="Coach profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCEaxZEzTqy_DqKsnhTojtVr8pkWcUHpSoo51UkUtmrP3rdqqq_EZcdfOJWacXCB1YQ7uTKi2XfJFmzwj9DV7D14JuDVuaz2LaYpsx7-qx7Pwo85YMicuTR8PGesLByIKX5zOMyQW6r4eRZj_4pK8gApJi3FrFK2pEHoIPWN8GLrV5GTGRbwmVhPERJpGFak-6ZPVdPOWR-lHqyw4fqc1csNa-9ocYbUR_UiJ0K86kknuJgYPtkGzvn4GH7l4-8XN4tTzpxcRT2qyU");'></div>
+<div class="flex flex-col items-start">
+<div class="bg-background-dark rounded-lg rounded-tl-none p-3 max-w-xs">
+<p class="text-sm text-text-primary-dark">Great news on the interview, Alex! Let's schedule a prep session. How does tomorrow at 2 PM sound?</p>
+</div>
+<span class="text-xs text-text-secondary-dark mt-1">Sarah (Coach) - 10:32 AM</span>
+</div>
+</div>
+<!-- Message Sent -->
+<div class="flex items-start gap-3 flex-row-reverse">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-8" data-alt="User profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAisZQ9Vz9e5Cj65jxG4e0Ub5hvPJL1Q5I0Zy8MvxfY-DPJn44Ahtbx6dk0pGBxwb0BK_KVrVuQEGwgdDZO8j10eUQXDPStju2sksqtMI8RYeGpT1bo7n2P7mag-Lm7MIlrKNhA7dbVoOVSiwl6q5hE5yK0PJ2Mosgu1RS8_qGmk6T-dsvcy3jgo6KmtxCovArd86Gn5gbxsf8av22DgXFYDLRWcnZt4NOErLsVr3NcQWaKgLIivvoD5uovnmXrA0X1MXT1XMEsOYY");'></div>
+<div class="flex flex-col items-end">
+<div class="bg-primary text-background-dark rounded-lg rounded-tr-none p-3 max-w-xs">
+<p class="text-sm">Thanks, Sarah! 2 PM works perfectly for me. Looking forward to it.</p>
+</div>
+<span class="text-xs text-text-secondary-dark mt-1">You - 10:35 AM</span>
+</div>
+</div>
+</div>
+<div class="p-4 border-t border-border-dark mt-auto">
+<div class="relative">
+<input class="w-full bg-background-dark border border-border-dark rounded-lg py-2 pl-4 pr-12 h-12 text-sm text-text-primary-dark placeholder:text-text-secondary-dark focus:ring-primary focus:border-primary" placeholder="Type a message..." type="text"/>
+<button class="absolute inset-y-0 right-0 flex items-center justify-center w-12 text-primary hover:bg-primary/20 rounded-r-lg">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+</aside>
+</div>
+</main>
+</div>
+</body></html>

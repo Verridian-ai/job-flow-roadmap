@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sign Up</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#f2d00d",
+              "background-light": "#f8f8f5",
+              "background-dark": "#221f10",
+              "charcoal-main": "#1A1A1A",
+              "charcoal-form": "#2B2B2B",
+              "off-white": "#F5F5F5",
+              "light-grey": "#AAAAAA",
+              "error-red": "#FF4747",
+            },
+            fontFamily: {
+              "display": ["Lexend", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+      }
+    </style>
+</head>
+<body class="bg-charcoal-main font-display">
+<div class="relative flex min-h-screen w-full flex-col items-center justify-center overflow-x-hidden p-4 sm:p-6 md:p-8">
+<div class="absolute top-8 left-8 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-4xl">auto_awesome</span>
+<span class="text-2xl font-bold text-off-white">CareerCraft</span>
+</div>
+<div class="w-full max-w-md rounded-xl bg-charcoal-form p-8 shadow-2xl">
+<!-- PageHeading -->
+<div class="mb-6 text-center">
+<h1 class="text-off-white text-3xl font-black leading-tight tracking-tight">Create Your Account</h1>
+<p class="text-light-grey mt-2 text-base font-normal leading-normal">Unlock your career potential with an AI-powered resume.</p>
+</div>
+<!-- ButtonGroup for SSO -->
+<div class="flex flex-col gap-3">
+<button class="flex h-12 w-full cursor-pointer items-center justify-center gap-3 overflow-hidden rounded-lg bg-[#3A3A3A] px-4 text-sm font-bold leading-normal text-off-white transition-colors hover:bg-[#4A4A4A]">
+<svg class="h-5 w-5" fill="none" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21.818 10.0455C21.818 9.36364 21.7273 8.77273 21.6364 8.18182H12.2727V11.8182H17.7273C17.5455 12.9545 16.9545 13.9091 16.0455 14.5909V17.0455H18.9545C20.6818 15.4545 21.818 13.0000 21.818 10.0455Z" fill="#4285F4"></path><path d="M12.2727 22.0000C15.1818 22.0000 17.5909 21.0455 18.9545 19.5455L16.0455 17.0455C15.0909 17.7273 13.8182 18.1818 12.2727 18.1818C9.54545 18.1818 7.22727 16.3182 6.45455 13.8182H3.45455V16.3636C4.81818 19.6818 8.27273 22.0000 12.2727 22.0000Z" fill="#34A853"></path><path d="M6.45455 13.8182C6.18182 13.0909 6.00000 12.3182 6.00000 11.5000C6.00000 10.6818 6.18182 9.90909 6.45455 9.18182V6.63636H3.45455C2.68182 8.13636 2.18182 9.77273 2.18182 11.5000C2.18182 13.2273 2.68182 14.8636 3.45455 16.3636L6.45455 13.8182Z" fill="#FBBC05"></path><path d="M12.2727 4.81818C13.9091 4.81818 15.3182 5.36364 16.4545 6.45455L19.0455 3.86364C17.5909 2.45455 15.1818 1.63636 12.2727 1.63636C8.27273 1.63636 4.81818 4.00000 3.45455 7.31818L6.45455 9.81818C7.22727 7.31818 9.54545 5.45455 12.2727 5.45455" fill="#EA4335"></path></svg>
+<span class="truncate">Sign Up with Google</span>
+</button>
+<button class="flex h-12 w-full cursor-pointer items-center justify-center gap-3 overflow-hidden rounded-lg bg-[#3A3A3A] px-4 text-sm font-bold leading-normal text-off-white transition-colors hover:bg-[#4A4A4A]">
+<svg class="h-5 w-5" fill="none" viewbox="0 0 21 21" xmlns="http://www.w3.org/2000/svg"><path d="M9.9515 1.103h10.003v10.003H9.9515V1.103z" fill="#F25022"></path><path d="M1.05 1.103h8.01v10.003H1.05V1.103z" fill="#00A4EF"></path><path d="M9.9515 12.001h10.003v10.003H9.9515V12.001z" fill="#7FBA00"></path><path d="M1.05 12.001h8.01v10.003H1.05V12.001z" fill="#FFB900"></path></svg>
+<span class="truncate">Sign Up with Microsoft</span>
+</button>
+<button class="flex h-12 w-full cursor-pointer items-center justify-center gap-3 overflow-hidden rounded-lg bg-[#3A3A3A] px-4 text-sm font-bold leading-normal text-off-white transition-colors hover:bg-[#4A4A4A]">
+<svg class="h-5 w-5" fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19.181 13.918c-.313.136-1.042.473-1.632.473-.655 0-1.282-.363-2.128-.363-.909 0-1.636.363-2.127.363-.491 0-1.282-.364-2.182-.364-.873 0-1.564.364-2.155.364-.59 0-1.281-.309-1.872-.51-.982-.363-2.155-1.118-2.155-2.881 0-1.936 1.427-3.272 2.882-3.272.782 0 1.455.454 2.018.454.591 0 1.255-.454 2.128-.454s1.427.427 2.018.427c.563 0 1.39-.454 2.154-.454 1.391 0 2.746 1.364 2.746 3.145 0 1.145-.591 2.072-1.337 2.581zm-6.273-7.554c.2-.027.682-2.1 2.546-2.127.109 1.545-1.118 2.672-1.818 2.672-.464 0-.81-.272-1.091-.427.109.027.245-.055.363-.118z"></path></svg>
+<span class="truncate">Sign Up with Apple</span>
+</button>
+</div>
+<!-- MetaText OR Separator -->
+<div class="my-6 flex items-center gap-4">
+<div class="h-px flex-1 bg-[#4A4A4A]"></div>
+<p class="text-light-grey text-sm font-normal leading-normal">OR</p>
+<div class="h-px flex-1 bg-[#4A4A4A]"></div>
+</div>
+<!-- Form -->
+<form action="#" class="flex flex-col gap-4" method="POST">
+<!-- Full Name -->
+<div>
+<label class="block text-off-white text-sm font-medium leading-normal pb-2" for="full-name">Full Name</label>
+<input autocomplete="name" class="form-input block w-full rounded-lg border-2 border-[#4A4A4A] bg-[#3A3A3A] px-4 py-3 text-off-white placeholder:text-light-grey focus:border-primary focus:ring-primary h-12" id="full-name" name="full-name" placeholder="Enter your full name" required="" type="text"/>
+</div>
+<!-- Email Address with Error Example -->
+<div>
+<label class="block text-off-white text-sm font-medium leading-normal pb-2" for="email">Email Address</label>
+<input autocomplete="email" class="form-input block w-full rounded-lg border-2 border-error-red bg-[#3A3A3A] px-4 py-3 text-off-white placeholder:text-light-grey focus:border-primary focus:ring-primary h-12" id="email" name="email" placeholder="Enter your email address" required="" type="email" value="invalid-email"/>
+<p class="mt-2 text-xs text-error-red">Please enter a valid email address.</p>
+</div>
+<!-- Password -->
+<div class="relative">
+<label class="block text-off-white text-sm font-medium leading-normal pb-2" for="password">Password</label>
+<input autocomplete="new-password" class="form-input block w-full rounded-lg border-2 border-[#4A4A4A] bg-[#3A3A3A] px-4 py-3 text-off-white placeholder:text-light-grey focus:border-primary focus:ring-primary h-12" id="password" name="password" placeholder="Enter your password" required="" type="password"/>
+<button class="absolute inset-y-0 right-0 top-9 flex items-center pr-3 text-light-grey hover:text-off-white" type="button">
+<span class="material-symbols-outlined h-5 w-5">visibility_off</span>
+</button>
+</div>
+<!-- Confirm Password -->
+<div class="relative">
+<label class="block text-off-white text-sm font-medium leading-normal pb-2" for="confirm-password">Confirm Password</label>
+<input autocomplete="new-password" class="form-input block w-full rounded-lg border-2 border-[#4A4A4A] bg-[#3A3A3A] px-4 py-3 text-off-white placeholder:text-light-grey focus:border-primary focus:ring-primary h-12" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required="" type="password"/>
+<button class="absolute inset-y-0 right-0 top-9 flex items-center pr-3 text-light-grey hover:text-off-white" type="button">
+<span class="material-symbols-outlined h-5 w-5">visibility_off</span>
+</button>
+</div>
+<!-- Checkbox -->
+<div class="flex items-start pt-2">
+<div class="flex h-6 items-center">
+<input class="h-4 w-4 rounded border-[#4A4A4A] bg-[#3A3A3A] text-primary focus:ring-primary focus:ring-offset-charcoal-form" id="terms-and-privacy" name="terms-and-privacy" type="checkbox"/>
+</div>
+<div class="ml-3 text-sm leading-6">
+<label class="text-light-grey" for="terms-and-privacy">I agree to the <a class="font-medium text-primary hover:underline" href="#">Terms of Service</a> and <a class="font-medium text-primary hover:underline" href="#">Privacy Policy</a>.</label>
+</div>
+</div>
+<!-- Submit Button -->
+<div class="pt-4">
+<button class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-primary h-12 px-4 text-background-dark text-base font-bold leading-normal transition-opacity hover:opacity-90" type="submit">
+<span class="truncate">Create Account</span>
+</button>
+</div>
+</form>
+<!-- Secondary Link -->
+<div class="mt-6 text-center">
+<p class="text-sm text-light-grey">
+                    Already have an account?
+                    <a class="font-semibold leading-6 text-primary hover:underline" href="#">Log In</a>
+</p>
+</div>
+</div>
+</div>
+</body></html>
