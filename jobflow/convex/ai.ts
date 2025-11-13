@@ -301,7 +301,7 @@ Difficulty: Easy, Medium, Hard`;
     ];
 
     const response = await callOpenRouter(messages);
-    
+
     try {
       const jsonMatch = response.match(/\[[\s\S]*\]/);
       if (jsonMatch) {
@@ -311,6 +311,72 @@ Difficulty: Easy, Medium, Hard`;
       throw new Error("No valid JSON found in response");
     } catch (error) {
       throw new Error(`Failed to parse interview questions: ${error}`);
+    }
+  },
+});
+
+export const scoreStarStory = action({
+  args: {
+    title: v.string(),
+    situation: v.string(),
+    task: v.string(),
+    action: v.string(),
+    result: v.string(),
+    skills: v.array(v.string()),
+  },
+  handler: async (ctx, args) => {
+    const prompt = `You are an expert career coach evaluating a STAR story for quality. Analyze the following STAR story and provide detailed scoring:
+
+TITLE: ${args.title}
+SITUATION: ${args.situation}
+TASK: ${args.task}
+ACTION: ${args.action}
+RESULT: ${args.result}
+SKILLS: ${args.skills.join(", ")}
+
+Evaluate the story on these criteria:
+1. Completeness (0-100): Are all STAR components well-developed?
+2. Impact (0-100): Does the result show measurable impact?
+3. Clarity (0-100): Is the story clear and well-structured?
+4. Overall Quality (0-100): Overall effectiveness of the story
+
+Return ONLY a JSON object with this structure:
+{
+  "qualityScore": 85,
+  "completenessScore": 90,
+  "impactScore": 80,
+  "clarityScore": 85,
+  "suggestions": "Consider adding specific metrics to the result. The action section could be more specific about your individual contributions versus team efforts. Overall, this is a strong story that demonstrates leadership and technical skills."
+}`;
+
+    const messages: OpenRouterMessage[] = [
+      {
+        role: "system",
+        content: "You are an expert career coach specializing in the STAR method. Evaluate STAR stories objectively and provide constructive feedback. Return only valid JSON.",
+      },
+      {
+        role: "user",
+        content: prompt,
+      },
+    ];
+
+    const response = await callOpenRouter(messages);
+
+    try {
+      const jsonMatch = response.match(/\{[\s\S]*\}/);
+      if (jsonMatch) {
+        const parsed = JSON.parse(jsonMatch[0]);
+        return {
+          qualityScore: parsed.qualityScore || 0,
+          completenessScore: parsed.completenessScore || 0,
+          impactScore: parsed.impactScore || 0,
+          clarityScore: parsed.clarityScore || 0,
+          suggestions: parsed.suggestions || "",
+        };
+      }
+      throw new Error("No valid JSON found in response");
+    } catch (error) {
+      throw new Error(`Failed to parse story scoring: ${error}`);
     }
   },
 });

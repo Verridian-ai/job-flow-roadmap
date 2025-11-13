@@ -4,11 +4,23 @@ import { api } from '../../convex/_generated/api';
 import Navbar from '../components/Navbar';
 import Sidebar from '../components/Sidebar';
 import StarStoryCard from '../components/StarStoryCard';
-import { Plus, Search } from 'lucide-react';
+import { Plus, Search, Filter } from 'lucide-react';
+
+const CATEGORIES = [
+  'Leadership',
+  'Technical',
+  'Problem Solving',
+  'Communication',
+  'Teamwork',
+  'Innovation',
+  'Project Management',
+  'Other'
+];
 
 export default function StarStories() {
   const [showForm, setShowForm] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState<string>('');
   const [formData, setFormData] = useState({
     title: '',
     situation: '',
@@ -16,6 +28,7 @@ export default function StarStories() {
     action: '',
     result: '',
     skills: '',
+    category: 'Other',
   });
 
   const starStories = useQuery(api.starStories.listByUser);
@@ -34,14 +47,17 @@ export default function StarStories() {
       action: '',
       result: '',
       skills: '',
+      category: 'Other',
     });
     setShowForm(false);
   };
 
-  const filteredStories = starStories?.filter(story =>
-    story.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    story.skills.some(skill => skill.toLowerCase().includes(searchTerm.toLowerCase()))
-  );
+  const filteredStories = starStories?.filter(story => {
+    const matchesSearch = story.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      story.skills.some(skill => skill.toLowerCase().includes(searchTerm.toLowerCase()));
+    const matchesCategory = !selectedCategory || story.category === selectedCategory;
+    return matchesSearch && matchesCategory;
+  });
 
   return (
     <div className="min-h-screen bg-gray-900 text-white">
@@ -54,7 +70,7 @@ export default function StarStories() {
             <div className="flex items-center justify-between mb-8">
               <div>
                 <h1 className="text-3xl font-bold mb-2">STAR Stories</h1>
-                <p className="text-gray-400">Document your achievements and experiences</p>
+                <p className="text-gray-400">Document your achievements and experiences using the STAR method</p>
               </div>
               <button
                 onClick={() => setShowForm(!showForm)}
@@ -65,9 +81,9 @@ export default function StarStories() {
               </button>
             </div>
 
-            {/* Search */}
-            <div className="mb-6">
-              <div className="relative">
+            {/* Search and Filter */}
+            <div className="mb-6 flex gap-4">
+              <div className="flex-1 relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
                   type="text"
@@ -77,6 +93,19 @@ export default function StarStories() {
                   className="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-yellow-500 text-white"
                 />
               </div>
+              <div className="relative">
+                <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <select
+                  value={selectedCategory}
+                  onChange={(e) => setSelectedCategory(e.target.value)}
+                  className="pl-10 pr-8 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-yellow-500 text-white appearance-none cursor-pointer"
+                >
+                  <option value="">All Categories</option>
+                  {CATEGORIES.map(cat => (
+                    <option key={cat} value={cat}>{cat}</option>
+                  ))}
+                </select>
+              </div>
             </div>
 
             {/* Create Form */}
@@ -84,20 +113,38 @@ export default function StarStories() {
               <div className="bg-gray-800 rounded-lg border border-gray-700 p-6 mb-8">
                 <h2 className="text-xl font-semibold mb-4">Create New STAR Story</h2>
                 <form onSubmit={handleSubmit} className="space-y-4">
-                  <div>
-                    <label className="block text-sm font-medium mb-2">Title</label>
-                    <input
-                      type="text"
-                      required
-                      value={formData.title}
-                      onChange={(e) => setFormData({ ...formData, title: e.target.value })}
-                      className="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-yellow-500 text-white"
-                      placeholder="e.g., Led migration to microservices"
-                    />
+                  <div className="grid grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-sm font-medium mb-2">Title *</label>
+                      <input
+                        type="text"
+                        required
+                        value={formData.title}
+                        onChange={(e) => setFormData({ ...formData, title: e.target.value })}
+                        className="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-yellow-500 text-white"
+                        placeholder="e.g., Led migration to microservices"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium mb-2">Category *</label>
+                      <select
+                        required
+                        value={formData.category}
+                        onChange={(e) => setFormData({ ...formData, category: e.target.value })}
+                        className="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-yellow-500 text-white"
+                      >
+                        {CATEGORIES.map(cat => (
+                          <option key={cat} value={cat}>{cat}</option>
+                        ))}
+                      </select>
+                    </div>
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium mb-2">Situation</label>
+                    <label className="block text-sm font-medium mb-2">
+                      Situation *
+                      <span className="text-gray-400 font-normal ml-2">(What was the context?)</span>
+                    </label>
                     <textarea
                       required
                       value={formData.situation}
@@ -108,7 +155,10 @@ export default function StarStories() {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium mb-2">Task</label>
+                    <label className="block text-sm font-medium mb-2">
+                      Task *
+                      <span className="text-gray-400 font-normal ml-2">(What needed to be done?)</span>
+                    </label>
                     <textarea
                       required
                       value={formData.task}
@@ -119,7 +169,10 @@ export default function StarStories() {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium mb-2">Action</label>
+                    <label className="block text-sm font-medium mb-2">
+                      Action *
+                      <span className="text-gray-400 font-normal ml-2">(What did YOU do?)</span>
+                    </label>
                     <textarea
                       required
                       value={formData.action}
@@ -130,7 +183,10 @@ export default function StarStories() {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium mb-2">Result</label>
+                    <label className="block text-sm font-medium mb-2">
+                      Result *
+                      <span className="text-gray-400 font-normal ml-2">(What was the outcome?)</span>
+                    </label>
                     <textarea
                       required
                       value={formData.result}
@@ -170,6 +226,15 @@ export default function StarStories() {
               </div>
             )}
 
+            {/* Info Box */}
+            <div className="bg-blue-500/10 border border-blue-500/30 rounded-lg p-4 mb-6">
+              <h3 className="text-blue-400 font-semibold mb-2">About STAR Stories</h3>
+              <p className="text-sm text-gray-300">
+                The STAR method helps you structure accomplishments: <strong>S</strong>ituation (context), <strong>T</strong>ask (challenge), <strong>A</strong>ction (what you did), <strong>R</strong>esult (outcome).
+                Click the sparkle icon on any story to get AI-powered quality scoring and suggestions for improvement.
+              </p>
+            </div>
+
             {/* Stories List */}
             <div className="grid gap-6">
               {filteredStories && filteredStories.length > 0 ? (
@@ -178,8 +243,12 @@ export default function StarStories() {
                 ))
               ) : (
                 <div className="text-center py-16 bg-gray-800 rounded-lg border border-gray-700">
-                  <p className="text-gray-400 text-lg">No STAR stories yet.</p>
-                  <p className="text-gray-500 mt-2">Start documenting your achievements!</p>
+                  <p className="text-gray-400 text-lg">
+                    {searchTerm || selectedCategory ? 'No stories match your filters.' : 'No STAR stories yet.'}
+                  </p>
+                  <p className="text-gray-500 mt-2">
+                    {searchTerm || selectedCategory ? 'Try adjusting your search or filters.' : 'Start documenting your achievements!'}
+                  </p>
                 </div>
               )}
             </div>

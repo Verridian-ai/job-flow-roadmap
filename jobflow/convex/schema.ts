@@ -39,6 +39,11 @@ export default defineSchema({
     result: v.string(),
     skills: v.array(v.string()),
     category: v.string(),
+    qualityScore: v.optional(v.number()),
+    aiSuggestions: v.optional(v.string()),
+    completenessScore: v.optional(v.number()),
+    impactScore: v.optional(v.number()),
+    clarityScore: v.optional(v.number()),
     createdAt: v.number(),
     updatedAt: v.number(),
   })
