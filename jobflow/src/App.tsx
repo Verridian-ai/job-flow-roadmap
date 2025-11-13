@@ -13,12 +13,26 @@ import Marketplace from './pages/Marketplace';
 import Sessions from './pages/Sessions';
 import Settings from './pages/Settings';
 import CoachDashboard from './pages/CoachDashboard';
+import Login from './pages/Login';
+import SSOOptions from './pages/SSOOptions';
+import ForgotPassword from './pages/ForgotPassword';
+import ResetPassword from './pages/ResetPassword';
+import PlanSelect from './pages/PlanSelect';
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<Landing />} />
-      
+
+      {/* Authentication Routes */}
+      <Route path="/login" element={<Login />} />
+      <Route path="/sso-options" element={<SSOOptions />} />
+      <Route path="/forgot-password" element={<ForgotPassword />} />
+      <Route path="/reset-password" element={<ResetPassword />} />
+
+      {/* Pricing & Payment Routes */}
+      <Route path="/pricing" element={<PlanSelect />} />
+
       <Route
         path="/dashboard"
         element={
