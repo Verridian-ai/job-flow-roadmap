@@ -18,6 +18,10 @@ import SSOOptions from './pages/SSOOptions';
 import ForgotPassword from './pages/ForgotPassword';
 import ResetPassword from './pages/ResetPassword';
 import PlanSelect from './pages/PlanSelect';
+import AIResumeChat from './pages/AIResumeChat';
+import STARMemoryBank from './pages/STARMemoryBank';
+import AutomatedResumeGen from './pages/AutomatedResumeGen';
+import AIInterviewPrep from './pages/AIInterviewPrep';
 
 function App() {
   return (
@@ -200,7 +204,63 @@ function App() {
           </>
         }
       />
-      
+
+      <Route
+        path="/ai-resume-chat"
+        element={
+          <>
+            <SignedIn>
+              <AIResumeChat />
+            </SignedIn>
+            <SignedOut>
+              <RedirectToSignIn />
+            </SignedOut>
+          </>
+        }
+      />
+
+      <Route
+        path="/star-memory-bank"
+        element={
+          <>
+            <SignedIn>
+              <STARMemoryBank />
+            </SignedIn>
+            <SignedOut>
+              <RedirectToSignIn />
+            </SignedOut>
+          </>
+        }
+      />
+
+      <Route
+        path="/resume-generator"
+        element={
+          <>
+            <SignedIn>
+              <AutomatedResumeGen />
+            </SignedIn>
+            <SignedOut>
+              <RedirectToSignIn />
+            </SignedOut>
+          </>
+        }
+      />
+
+      <Route
+        path="/interview-prep"
+        element={
+          <>
+            <SignedIn>
+              <AIInterviewPrep />
+            </SignedIn>
+            <SignedOut>
+              <RedirectToSignIn />
+            </SignedOut>
+          </>
+        }
+      />
+
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );
