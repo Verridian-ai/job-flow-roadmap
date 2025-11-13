@@ -296,6 +296,111 @@ export const getTask = query({
   },
 });
 
+// Mark task as completed (coach action)
+export const completeTask = mutation({
+  args: {
+    taskId: v.id("verificationTasks"),
+    feedback: v.optional(v.string()),
+  },
+  handler: async (ctx, args) => {
+    const identity = await ctx.auth.getUserIdentity();
+    if (!identity) {
+      throw new Error("Unauthorized");
+    }
+
+    const user = await ctx.db
+      .query("users")
+      .withIndex("by_auth_id", (q) => q.eq("authId", identity.subject))
+      .unique();
+
+    if (!user) {
+      throw new Error("User not found");
+    }
+
+    const task = await ctx.db.get(args.taskId);
+    if (!task) {
+      throw new Error("Task not found");
+    }
+
+    // Verify user is the assigned coach
+    if (!task.assignedCoachId) {
+      throw new Error("No coach assigned to this task");
+    }
+
+    const coach = await ctx.db.get(task.assignedCoachId);
+    if (!coach || coach.userId !== user._id) {
+      throw new Error("Unauthorized - only the assigned coach can complete this task");
+    }
+
+    if (task.status !== "in_progress" && task.status !== "assigned") {
+      throw new Error("Task must be in progress to be completed");
+    }
+
+    const now = Date.now();
+
+    // Update task status
+    await ctx.db.patch(args.taskId, {
+      status: "completed",
+      completedAt: now,
+      feedback: args.feedback,
+      updatedAt: now,
+    });
+
+    return { taskId: args.taskId };
+  },
+});
+
+// Start working on a task (coach action)
+export const startTask = mutation({
+  args: {
+    taskId: v.id("verificationTasks"),
+  },
+  handler: async (ctx, args) => {
+    const identity = await ctx.auth.getUserIdentity();
+    if (!identity) {
+      throw new Error("Unauthorized");
+    }
+
+    const user = await ctx.db
+      .query("users")
+      .withIndex("by_auth_id", (q) => q.eq("authId", identity.subject))
+      .unique();
+
+    if (!user) {
+      throw new Error("User not found");
+    }
+
+    const task = await ctx.db.get(args.taskId);
+    if (!task) {
+      throw new Error("Task not found");
+    }
+
+    // Verify user is the assigned coach
+    if (!task.assignedCoachId) {
+      throw new Error("No coach assigned to this task");
+    }
+
+    const coach = await ctx.db.get(task.assignedCoachId);
+    if (!coach || coach.userId !== user._id) {
+      throw new Error("Unauthorized - only the assigned coach can start this task");
+    }
+
+    if (task.status !== "assigned") {
+      throw new Error("Task must be assigned to start working on it");
+    }
+
+    const now = Date.now();
+
+    // Update task status
+    await ctx.db.patch(args.taskId, {
+      status: "in_progress",
+      updatedAt: now,
+    });
+
+    return { taskId: args.taskId };
+  },
+});
+
 // Update task status
 export const updateTaskStatus = mutation({
   args: {
