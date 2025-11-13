@@ -243,7 +243,12 @@ export const generateWithAI = mutation({
       updatedAt: now,
     });
 
-    return resumeId;
+    return {
+      resumeId,
+      content: resumeContent,
+      atsScore: atsAnalysis.score || 0,
+      atsAnalysis: atsAnalysis,
+    };
   },
 });
 
