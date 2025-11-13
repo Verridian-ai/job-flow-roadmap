@@ -32,10 +32,11 @@
 ### US-AUTH-003: Session Management
 - [x] ⏳ Pending
 - [x] 🔄 Started: Agent-1
-- [ ] ✅ Complete: Agent-___
+- [x] ✅ Complete: Agent-1
 - **Priority**: P0
 - **Points**: 5
 - **Worktree**: `worktrees/agent1-auth-session`
+- **PR**: https://github.com/Verridian-ai/job-flow-roadmap/pull/17
 
 ### US-AUTH-004: Password Reset Flow
 - [ ] ⏳ Pending
@@ -54,16 +55,17 @@
 - **Worktree**: `worktrees/agent1-auth-2fa`
 
 ### US-AUTH-006: Role-Based Access Control
-- [ ] ⏳ Pending
-- [ ] 🔄 Started: Agent-___
-- [ ] ✅ Complete: Agent-___
+- [x] ⏳ Pending
+- [x] 🔄 Started: Agent-1
+- [x] ✅ Complete: Agent-1
 - **Priority**: P0
 - **Points**: 3
 - **Worktree**: `worktrees/agent1-auth-rbac`
+- **PR**: https://github.com/Verridian-ai/job-flow-roadmap/pull/21
 
 ### US-AUTH-007: Row-Level Security
-- [ ] ⏳ Pending
-- [ ] 🔄 Started: Agent-___
+- [x] ⏳ Pending
+- [x] 🔄 Started: Agent-1
 - [ ] ✅ Complete: Agent-___
 - **Priority**: P0
 - **Points**: 3
@@ -355,10 +357,11 @@
 ### US-INT-007: Session Booking
 - [x] ⏳ Pending
 - [x] 🔄 Started: Agent-3
-- [ ] ✅ Complete: Agent-___
+- [x] ✅ Complete: Agent-3
 - **Priority**: P0
 - **Points**: 5
 - **Worktree**: `worktrees/agent3-session-booking`
+- **PR**: https://github.com/Verridian-ai/job-flow-roadmap/pull/14
 
 ### US-INT-008: Video Call Integration
 - [ ] ⏳ Pending
@@ -480,12 +483,14 @@
 ### US-MARK-001: Marketplace Infrastructure
 - [ ] ⏳ Pending
 - [ ] 🔄 Started: Agent-___
+- **PR**: https://github.com/Verridian-ai/job-flow-roadmap/pull/16
 - [ ] ✅ Complete: Agent-___
 - **Priority**: P0
 - **Points**: 8
 - **Worktree**: `worktrees/agent4-marketplace-infra`
 
 ### US-MARK-002: Task Creation & Posting
+- **PR**: https://github.com/Verridian-ai/job-flow-roadmap/pull/20
 - [ ] ⏳ Pending
 - [ ] 🔄 Started: Agent-___
 - [ ] ✅ Complete: Agent-___
@@ -497,15 +502,17 @@
 - [ ] ⏳ Pending
 - [ ] 🔄 Started: Agent-___
 - [ ] ✅ Complete: Agent-___
+- **PR**: https://github.com/Verridian-ai/job-flow-roadmap/pull/20
 - **Priority**: P0
 - **Points**: 8
 - **Worktree**: `worktrees/agent4-marketplace-bidding`
 
 ### US-MARK-004: Bid Selection & Assignment
-- [ ] ⏳ Pending
+- [x] ⏳ Pending
 - [ ] 🔄 Started: Agent-___
 - [ ] ✅ Complete: Agent-___
 - **Priority**: P0
+- **PR**: https://github.com/Verridian-ai/job-flow-roadmap/pull/21
 - **Points**: 5
 - **Worktree**: `worktrees/agent4-marketplace-assignment`
 
@@ -608,6 +615,7 @@
 - [x] ⏳ Pending
 - [ ] 🔄 Started: Agent-___
 - [ ] ✅ Complete: Agent-___
+- **PR**: https://github.com/Verridian-ai/job-flow-roadmap/pull/15
 - **Priority**: P0
 - **Points**: 5
 - **Worktree**: `worktrees/agent4-payment-subscriptions`
@@ -675,12 +683,13 @@
 - **Worktree**: `worktrees/agent5-infra-websocket`
 
 ### INFRA-004: OpenRouter AI Integration
-- [ ] ⏳ Pending
-- [ ] 🔄 Started: Agent-___
-- [ ] ✅ Complete: Agent-___
+- [x] ⏳ Pending
+- [x] 🔄 Started: Agent-5
+- [x] ✅ Complete: Agent-5
 - **Priority**: P0
 - **Points**: 8
 - **Worktree**: `worktrees/agent5-infra-ai`
+- **PR**: https://github.com/Verridian-ai/job-flow-roadmap/pull/19
 
 ### TEST-001: Unit Tests
 - [ ] ⏳ Pending
@@ -717,10 +726,11 @@
 ### SEC-001: Security Implementation
 - [x] ⏳ Pending
 - [x] 🔄 Started: Agent-5
-- [ ] ✅ Complete: Agent-___
+- [x] ✅ Complete: Agent-5
 - **Priority**: P0
 - **Points**: 8
 - **Worktree**: `worktrees/agent5-security`
+- **PR**: https://github.com/Verridian-ai/job-flow-roadmap/pull/13
 
 ### DEPLOY-001: Production Deployment
 - [ ] ⏳ Pending
