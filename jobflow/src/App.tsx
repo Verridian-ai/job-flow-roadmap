@@ -47,7 +47,12 @@ import SalaryNegotiator from './pages/coaching/SalaryNegotiator';
 import SessionBooking from './pages/SessionBooking';
 import SessionPrep from './pages/SessionPrep';
 import SessionFollowup from './pages/SessionFollowup';
-function App() {
+import NetworkingHub from './pages/networking/NetworkingHub';
+import MyNetwork from './pages/networking/MyNetwork';
+import ConnectionRequests from './pages/networking/ConnectionRequests';
+import SocialFeed from './pages/networking/SocialFeed';
+import CreatePost from './pages/networking/CreatePost';
+import Groups from './pages/networking/Groups';function App() {
   return (
     <Routes>
       <Route path="/" element={<Landing />} />
@@ -493,7 +498,12 @@ path="/help"
           <>
             <SignedIn>
               <HelpCenter />
-            </SignedIn>
+
+path="/networking"
+        element={
+          <>
+            <SignedIn>
+              <NetworkingHub />            </SignedIn>
             <SignedOut>
               <RedirectToSignIn />
             </SignedOut>
@@ -502,12 +512,17 @@ path="/help"
       />
 
       <Route
-        path="/help/videos"
+path="/help/videos"
         element={
           <>
             <SignedIn>
               <VideoTutorials />
-            </SignedIn>
+
+path="/networking/my-network"
+        element={
+          <>
+            <SignedIn>
+              <MyNetwork />            </SignedIn>
             <SignedOut>
               <RedirectToSignIn />
             </SignedOut>
@@ -516,12 +531,17 @@ path="/help"
       />
 
       <Route
-        path="/billing"
+path="/billing"
         element={
           <>
             <SignedIn>
               <BillingPortal />
-            </SignedIn>
+
+path="/networking/requests"
+        element={
+          <>
+            <SignedIn>
+              <ConnectionRequests />            </SignedIn>
             <SignedOut>
               <RedirectToSignIn />
             </SignedOut>
@@ -530,12 +550,17 @@ path="/help"
       />
 
       <Route
-        path="/receipt/:receiptId"
+path="/receipt/:receiptId"
         element={
           <>
             <SignedIn>
               <PaymentReceipt />
-            </SignedIn>
+
+path="/networking/feed"
+        element={
+          <>
+            <SignedIn>
+              <SocialFeed />            </SignedIn>
             <SignedOut>
               <RedirectToSignIn />
             </SignedOut>
@@ -544,12 +569,17 @@ path="/help"
       />
 
       <Route
-        path="/privacy"
+path="/privacy"
         element={
           <>
             <SignedIn>
               <PrivacyDashboard />
-            </SignedIn>
+
+path="/networking/create-post"
+        element={
+          <>
+            <SignedIn>
+              <CreatePost />            </SignedIn>
             <SignedOut>
               <RedirectToSignIn />
             </SignedOut>
@@ -558,12 +588,17 @@ path="/help"
       />
 
       <Route
-        path="/coach/credentials"
+path="/coach/credentials"
         element={
           <>
             <SignedIn>
               <CredentialVerification />
-            </SignedIn>
+
+path="/networking/groups"
+        element={
+          <>
+            <SignedIn>
+              <Groups />            </SignedIn>
             <SignedOut>
               <RedirectToSignIn />
             </SignedOut>
@@ -571,6 +606,7 @@ path="/help"
         }
       />
 
+<<<<<<< HEAD
       <Route
         path="/coach/verify-id"
         element={
@@ -590,6 +626,8 @@ path="/session-followup"
         }
       />
 
+=======
+>>>>>>> d6f06c33 (feat: UI Sprint 2 - Professional Networking & Social Features (P2))
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );
