@@ -1,6 +1,7 @@
-import { FileText, Download, Trash2, Calendar } from 'lucide-react';
+import { FileText, Download, Trash2, Calendar, Edit3, Palette, GitBranch, Target } from 'lucide-react';
 import { useMutation } from 'convex/react';
 import { api } from '../../convex/_generated/api';
+import { Link } from 'react-router-dom';
 
 interface Resume {
   _id: string;
@@ -59,20 +60,52 @@ export default function ResumeCard({ resume }: Props) {
         </p>
       </div>
 
-      <div className="flex gap-2">
-        <button
-          onClick={handleDownload}
-          className="flex-1 px-4 py-2 bg-yellow-500 text-gray-900 rounded-lg font-semibold hover:bg-yellow-400 transition inline-flex items-center justify-center gap-2"
-        >
-          <Download className="w-4 h-4" />
-          Download
-        </button>
-        <button
-          onClick={handleDelete}
-          className="px-4 py-2 bg-red-500/20 text-red-500 rounded-lg font-semibold hover:bg-red-500/30 transition inline-flex items-center gap-2"
-        >
-          <Trash2 className="w-4 h-4" />
-        </button>
+      <div className="space-y-2">
+        <div className="grid grid-cols-2 gap-2">
+          <Link
+            to={`/resume-refinement?id=${resume._id}`}
+            className="px-3 py-2 bg-blue-500/20 text-blue-400 rounded-lg text-sm font-semibold hover:bg-blue-500/30 transition inline-flex items-center justify-center gap-2"
+          >
+            <Edit3 className="w-4 h-4" />
+            Edit
+          </Link>
+          <Link
+            to={`/resume-templates?id=${resume._id}`}
+            className="px-3 py-2 bg-purple-500/20 text-purple-400 rounded-lg text-sm font-semibold hover:bg-purple-500/30 transition inline-flex items-center justify-center gap-2"
+          >
+            <Palette className="w-4 h-4" />
+            Templates
+          </Link>
+          <Link
+            to={`/resume-versions?id=${resume._id}`}
+            className="px-3 py-2 bg-green-500/20 text-green-400 rounded-lg text-sm font-semibold hover:bg-green-500/30 transition inline-flex items-center justify-center gap-2"
+          >
+            <GitBranch className="w-4 h-4" />
+            Versions
+          </Link>
+          <Link
+            to={`/ats-optimization?id=${resume._id}`}
+            className="px-3 py-2 bg-yellow-500/20 text-yellow-400 rounded-lg text-sm font-semibold hover:bg-yellow-500/30 transition inline-flex items-center justify-center gap-2"
+          >
+            <Target className="w-4 h-4" />
+            ATS
+          </Link>
+        </div>
+        <div className="flex gap-2">
+          <button
+            onClick={handleDownload}
+            className="flex-1 px-4 py-2 bg-gray-700 text-white rounded-lg font-semibold hover:bg-gray-600 transition inline-flex items-center justify-center gap-2"
+          >
+            <Download className="w-4 h-4" />
+            Download
+          </button>
+          <button
+            onClick={handleDelete}
+            className="px-4 py-2 bg-red-500/20 text-red-500 rounded-lg font-semibold hover:bg-red-500/30 transition inline-flex items-center gap-2"
+          >
+            <Trash2 className="w-4 h-4" />
+          </button>
+        </div>
       </div>
     </div>
   );
