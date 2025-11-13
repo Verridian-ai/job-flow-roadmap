@@ -111,6 +111,33 @@ export const list = query({
   },
 });
 
+// Get sessions by coach
+export const listByCoach = query({
+  args: {
+    coachId: v.id("coaches"),
+  },
+  handler: async (ctx, args) => {
+    return await ctx.db
+      .query("sessions")
+      .withIndex("by_coach", (q) => q.eq("coachId", args.coachId))
+      .collect();
+  },
+});
+
+// Get a single session by ID
+export const get = query({
+  args: {
+    id: v.id("sessions"),
+  },
+  handler: async (ctx, args) => {
+    const session = await ctx.db.get(args.id);
+    if (!session) {
+      throw new Error("Session not found");
+    }
+    return session;
+  },
+});
+
 // Update a session
 export const update = mutation({
   args: {
