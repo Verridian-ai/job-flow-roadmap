@@ -29,22 +29,25 @@
 - **Worktree**: `worktrees/agent1-auth-registration`
 - **PR**: https://github.com/Verridian-ai/job-flow-roadmap/pull/12
 
-### US-AUTH-003: Session Management
+### US-AUTH-003: Login Screen with SSO
 - [x] ⏳ Pending
-- [x] 🔄 Started: Agent-1
-- [x] ✅ Complete: Agent-1
+- [x] 🔄 Started: Agent-UI1
+- [x] ✅ Complete: Agent-UI1
 - **Priority**: P0
 - **Points**: 5
-- **Worktree**: `worktrees/agent1-auth-session`
-- **PR**: https://github.com/Verridian-ai/job-flow-roadmap/pull/17
+- **Worktree**: `worktrees/ui-agent1-auth-payment`
+- **PR**: https://github.com/Verridian-ai/job-flow-roadmap/pull/24
+- **Screens**: Login, SSO Options
 
 ### US-AUTH-004: Password Reset Flow
-- [ ] ⏳ Pending
-- [ ] 🔄 Started: Agent-___
-- [ ] ✅ Complete: Agent-___
+- [x] ⏳ Pending
+- [x] 🔄 Started: Agent-UI1
+- [x] ✅ Complete: Agent-UI1
 - **Priority**: P1
 - **Points**: 3
-- **Worktree**: `worktrees/agent1-auth-password`
+- **Worktree**: `worktrees/ui-agent1-auth-payment`
+- **PR**: https://github.com/Verridian-ai/job-flow-roadmap/pull/24
+- **Screens**: Forgot Password, Reset Password
 
 ### US-AUTH-005: Two-Factor Authentication
 - [ ] ⏳ Pending
@@ -585,23 +588,25 @@
 
 ## Epic 8: Payment & Subscriptions (8 stories, 34 points)
 
-### US-PAY-001: Stripe Integration
+### US-PAY-001: Plan Selection & Pricing UI
 - [x] ⏳ Pending
-- [x] 🔄 Started: Agent-4
-- [x] ✅ Complete: Agent-4
+- [x] 🔄 Started: Agent-UI1
+- [x] ✅ Complete: Agent-UI1
 - **Priority**: P0
 - **Points**: 8
-- **Worktree**: `worktrees/agent4-payment-stripe`
-- **PR**: https://github.com/Verridian-ai/job-flow-roadmap/pull/3
+- **Worktree**: `worktrees/ui-agent1-auth-payment`
+- **PR**: https://github.com/Verridian-ai/job-flow-roadmap/pull/24
+- **Screens**: Plan Select with 4 tiers (Free, Premium, Professional, Coaching)
 
-### US-PAY-002: Stripe Connect (Coach Payouts)
+### US-PAY-002: 3D Secure Authentication UI
 - [x] ⏳ Pending
-- [x] 🔄 Started: Agent-4
-- [x] ✅ Complete: Agent-4
+- [x] 🔄 Started: Agent-UI1
+- [x] ✅ Complete: Agent-UI1
 - **Priority**: P0
 - **Points**: 8
-- **Worktree**: `worktrees/agent4-payment-connect`
-- **PR**: https://github.com/Verridian-ai/job-flow-roadmap/pull/9
+- **Worktree**: `worktrees/ui-agent1-auth-payment`
+- **PR**: https://github.com/Verridian-ai/job-flow-roadmap/pull/24
+- **Component**: ThreeDSecure with 6-digit code verification
 
 ### US-PAY-003: Escrow Payment System
 - [x] ⏳ Pending
