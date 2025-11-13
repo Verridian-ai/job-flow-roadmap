@@ -6,6 +6,10 @@ import StarStories from './pages/StarStories';
 import ResumeBuilder from './pages/ResumeBuilder';
 import Resumes from './pages/Resumes';
 import Jobs from './pages/Jobs';
+import JobTracking from './pages/JobTracking';
+import JobMatchExplorer from './pages/JobMatchExplorer';
+import ApplicationDetail from './pages/ApplicationDetail';
+import CoverLetterGenerator from './pages/CoverLetterGenerator';
 import CoachDirectory from './pages/CoachDirectory';
 import CoachProfile from './pages/CoachProfile';
 import CoachOnboarding from './pages/CoachOnboarding';
@@ -127,7 +131,63 @@ function App() {
           </>
         }
       />
-      
+
+      <Route
+        path="/jobs/tracking"
+        element={
+          <>
+            <SignedIn>
+              <JobTracking />
+            </SignedIn>
+            <SignedOut>
+              <RedirectToSignIn />
+            </SignedOut>
+          </>
+        }
+      />
+
+      <Route
+        path="/jobs/explore"
+        element={
+          <>
+            <SignedIn>
+              <JobMatchExplorer />
+            </SignedIn>
+            <SignedOut>
+              <RedirectToSignIn />
+            </SignedOut>
+          </>
+        }
+      />
+
+      <Route
+        path="/jobs/:jobId"
+        element={
+          <>
+            <SignedIn>
+              <ApplicationDetail />
+            </SignedIn>
+            <SignedOut>
+              <RedirectToSignIn />
+            </SignedOut>
+          </>
+        }
+      />
+
+      <Route
+        path="/cover-letter"
+        element={
+          <>
+            <SignedIn>
+              <CoverLetterGenerator />
+            </SignedIn>
+            <SignedOut>
+              <RedirectToSignIn />
+            </SignedOut>
+          </>
+        }
+      />
+
       <Route
         path="/coaches"
         element={
