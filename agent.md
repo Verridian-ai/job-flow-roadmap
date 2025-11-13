@@ -21,16 +21,17 @@
 - **PR**: https://github.com/Verridian-ai/job-flow-roadmap/pull/7
 
 ### US-AUTH-002: User Registration Flow
-- [ ] ⏳ Pending
-- [ ] 🔄 Started: Agent-___
-- [ ] ✅ Complete: Agent-___
+- [x] ⏳ Pending
+- [x] 🔄 Started: Agent-1
+- [x] ✅ Complete: Agent-1
 - **Priority**: P0
 - **Points**: 5
 - **Worktree**: `worktrees/agent1-auth-registration`
+- **PR**: https://github.com/Verridian-ai/job-flow-roadmap/pull/12
 
 ### US-AUTH-003: Session Management
-- [ ] ⏳ Pending
-- [ ] 🔄 Started: Agent-___
+- [x] ⏳ Pending
+- [x] 🔄 Started: Agent-1
 - [ ] ✅ Complete: Agent-___
 - **Priority**: P0
 - **Points**: 5
@@ -134,12 +135,13 @@
 - **PR**: https://github.com/Verridian-ai/job-flow-roadmap/pull/1
 
 ### US-RES-002: STAR Story Management
-- [ ] ⏳ Pending
-- [ ] 🔄 Started: Agent-___
-- [ ] ✅ Complete: Agent-___
+- [x] ⏳ Pending
+- [x] 🔄 Started: Agent-2
+- [x] ✅ Complete: Agent-2
 - **Priority**: P0
 - **Points**: 3
 - **Worktree**: `worktrees/agent2-resume-star-manage`
+- **PR**: https://github.com/Verridian-ai/job-flow-roadmap/pull/new/agent2/star-story-management
 
 ### US-RES-003: AI Resume Generation
 - [ ] ⏳ Pending
@@ -211,8 +213,8 @@
 - **Worktree**: `worktrees/agent2-job-save`
 
 ### US-JOB-004: Application Kanban Board
-- [ ] ⏳ Pending
-- [ ] 🔄 Started: Agent-___
+- [x] ⏳ Pending
+- [x] 🔄 Started: Agent-2
 - [ ] ✅ Complete: Agent-___
 - **Priority**: P0
 - **Points**: 5
@@ -334,12 +336,13 @@
 - **PR**: https://github.com/Verridian-ai/job-flow-roadmap/pull/2
 
 ### US-INT-005: Coach Profile Pages
-- [ ] ⏳ Pending
-- [ ] 🔄 Started: Agent-___
-- [ ] ✅ Complete: Agent-___
+- [x] ⏳ Pending
+- [x] 🔄 Started: Agent-3
+- [x] ✅ Complete: Agent-3
 - **Priority**: P0
 - **Points**: 3
 - **Worktree**: `worktrees/agent3-coach-profile`
+- **PR**: https://github.com/Verridian-ai/job-flow-roadmap/pull/10
 
 ### US-INT-006: Coach Search & Filters
 - [ ] ⏳ Pending
@@ -350,8 +353,8 @@
 - **Worktree**: `worktrees/agent3-coach-search`
 
 ### US-INT-007: Session Booking
-- [ ] ⏳ Pending
-- [ ] 🔄 Started: Agent-___
+- [x] ⏳ Pending
+- [x] 🔄 Started: Agent-3
 - [ ] ✅ Complete: Agent-___
 - **Priority**: P0
 - **Points**: 5
@@ -593,15 +596,16 @@
 - **PR**: https://github.com/Verridian-ai/job-flow-roadmap/pull/9
 
 ### US-PAY-003: Escrow Payment System
-- [ ] ⏳ Pending
-- [ ] 🔄 Started: Agent-___
+- [x] ⏳ Pending
+- [x] 🔄 Started: Agent-4
 - [ ] ✅ Complete: Agent-___
 - **Priority**: P0
+- **PR**: https://github.com/Verridian-ai/job-flow-roadmap/pull/11
 - **Points**: 5
 - **Worktree**: `worktrees/agent4-payment-escrow`
 
 ### US-PAY-004: Subscription Plans
-- [ ] ⏳ Pending
+- [x] ⏳ Pending
 - [ ] 🔄 Started: Agent-___
 - [ ] ✅ Complete: Agent-___
 - **Priority**: P0
@@ -711,8 +715,8 @@
 - **Worktree**: `worktrees/agent5-perf-optimize`
 
 ### SEC-001: Security Implementation
-- [ ] ⏳ Pending
-- [ ] 🔄 Started: Agent-___
+- [x] ⏳ Pending
+- [x] 🔄 Started: Agent-5
 - [ ] ✅ Complete: Agent-___
 - **Priority**: P0
 - **Points**: 8
