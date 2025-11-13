@@ -42,7 +42,11 @@ import CoachProfileEditor from './pages/coach/CoachProfileEditor';
 import ClientOverview from './pages/coach/ClientOverview';
 import SharedWorkspace from './pages/coach/SharedWorkspace';
 import PortfolioBuilder from './pages/coach/PortfolioBuilder';
-
+import PromotionCoaching from './pages/coaching/PromotionCoaching';
+import SalaryNegotiator from './pages/coaching/SalaryNegotiator';
+import SessionBooking from './pages/SessionBooking';
+import SessionPrep from './pages/SessionPrep';
+import SessionFollowup from './pages/SessionFollowup';
 function App() {
   return (
     <Routes>
@@ -408,12 +412,17 @@ function App() {
       />
 
       <Route
-        path="/ai-resume-chat"
+path="/ai-resume-chat"
         element={
           <>
             <SignedIn>
               <AIResumeChat />
-            </SignedIn>
+
+path="/coaching/promotion"
+        element={
+          <>
+            <SignedIn>
+              <PromotionCoaching />            </SignedIn>
             <SignedOut>
               <RedirectToSignIn />
             </SignedOut>
@@ -422,12 +431,17 @@ function App() {
       />
 
       <Route
-        path="/star-memory-bank"
+path="/star-memory-bank"
         element={
           <>
             <SignedIn>
               <STARMemoryBank />
-            </SignedIn>
+
+path="/coaching/salary-negotiation"
+        element={
+          <>
+            <SignedIn>
+              <SalaryNegotiator />            </SignedIn>
             <SignedOut>
               <RedirectToSignIn />
             </SignedOut>
@@ -436,12 +450,17 @@ function App() {
       />
 
       <Route
-        path="/resume-generator"
+path="/resume-generator"
         element={
           <>
             <SignedIn>
               <AutomatedResumeGen />
-            </SignedIn>
+
+path="/session-booking"
+        element={
+          <>
+            <SignedIn>
+              <SessionBooking />            </SignedIn>
             <SignedOut>
               <RedirectToSignIn />
             </SignedOut>
@@ -450,12 +469,17 @@ function App() {
       />
 
       <Route
-        path="/interview-prep"
+path="/interview-prep"
         element={
           <>
             <SignedIn>
               <AIInterviewPrep />
-            </SignedIn>
+
+path="/session-prep"
+        element={
+          <>
+            <SignedIn>
+              <SessionPrep />            </SignedIn>
             <SignedOut>
               <RedirectToSignIn />
             </SignedOut>
@@ -464,7 +488,7 @@ function App() {
       />
 
       <Route
-        path="/help"
+path="/help"
         element={
           <>
             <SignedIn>
@@ -553,7 +577,12 @@ function App() {
           <>
             <SignedIn>
               <DigitalIDVerification />
-            </SignedIn>
+
+path="/session-followup"
+        element={
+          <>
+            <SignedIn>
+              <SessionFollowup />            </SignedIn>
             <SignedOut>
               <RedirectToSignIn />
             </SignedOut>
