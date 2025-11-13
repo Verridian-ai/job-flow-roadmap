@@ -151,7 +151,7 @@ export const get = query({
   },
 });
 
-// Get a single coach profile with user data
+// Get a single coach profile with user data (combined object)
 export const getById = query({
   args: {
     id: v.string(),
@@ -173,6 +173,29 @@ export const getById = query({
       verified: coach.verificationStatus === "approved",
       specialties: coach.specialty,
       yearsExperience: parseInt(coach.experience) || 0,
+    };
+  },
+});
+
+// Get a coach profile with user details (separate objects)
+export const getWithUser = query({
+  args: {
+    id: v.id("coaches"),
+  },
+  handler: async (ctx, args) => {
+    const coach = await ctx.db.get(args.id);
+    if (!coach) {
+      throw new Error("Coach not found");
+    }
+
+    const user = await ctx.db.get(coach.userId);
+    if (!user) {
+      throw new Error("User not found");
+    }
+
+    return {
+      coach,
+      user,
     };
   },
 });
