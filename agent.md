@@ -131,8 +131,48 @@
 
 ## Epic 3: AI Resume & STAR Stories (7 stories, 34 points)
 
-### US-RES-001: STAR Story Creation
-- [ ] ⏳ Pending
+### US-RESUME-001: STAR Story Quick Add (UI)
+- [x] ⏳ Pending
+- [x] 🔄 Started: Agent-UI2
+- [x] ✅ Complete: Agent-UI2
+- **Priority**: P0
+- **Points**: 3
+- **Worktree**: `worktrees/ui-agent2-ai-features`
+- **PR**: https://github.com/Verridian-ai/job-flow-roadmap/pull/25
+- **Component**: `jobflow/src/components/STARQuickAdd.tsx`
+
+### US-RESUME-002: AI Resume Agent Chat Interface (UI)
+- [x] ⏳ Pending
+- [x] 🔄 Started: Agent-UI2
+- [x] ✅ Complete: Agent-UI2
+- **Priority**: P0
+- **Points**: 8
+- **Worktree**: `worktrees/ui-agent2-ai-features`
+- **PR**: https://github.com/Verridian-ai/job-flow-roadmap/pull/25
+- **Page**: `jobflow/src/pages/AIResumeChat.tsx`
+
+### US-RESUME-003: STAR Story Memory Bank (UI)
+- [x] ⏳ Pending
+- [x] 🔄 Started: Agent-UI2
+- [x] ✅ Complete: Agent-UI2
+- **Priority**: P0
+- **Points**: 5
+- **Worktree**: `worktrees/ui-agent2-ai-features`
+- **PR**: https://github.com/Verridian-ai/job-flow-roadmap/pull/25
+- **Page**: `jobflow/src/pages/STARMemoryBank.tsx`
+
+### US-RESUME-004: Automated Resume Generation Dashboard (UI)
+- [x] ⏳ Pending
+- [x] 🔄 Started: Agent-UI2
+- [x] ✅ Complete: Agent-UI2
+- **Priority**: P0
+- **Points**: 8
+- **Worktree**: `worktrees/ui-agent2-ai-features`
+- **PR**: https://github.com/Verridian-ai/job-flow-roadmap/pull/25
+- **Page**: `jobflow/src/pages/AutomatedResumeGen.tsx`
+
+### US-RES-001: STAR Story Creation (Backend)
+- [x] ⏳ Pending
 - [x] 🔄 Started: Agent-2
 - [x] ✅ Complete: Agent-2
 - **Priority**: P0
@@ -140,7 +180,7 @@
 - **Worktree**: `worktrees/agent2-resume-star-create`
 - **PR**: https://github.com/Verridian-ai/job-flow-roadmap/pull/1
 
-### US-RES-002: STAR Story Management
+### US-RES-002: STAR Story Management (Backend)
 - [x] ⏳ Pending
 - [x] 🔄 Started: Agent-2
 - [x] ✅ Complete: Agent-2
@@ -149,8 +189,8 @@
 - **Worktree**: `worktrees/agent2-resume-star-manage`
 - **PR**: https://github.com/Verridian-ai/job-flow-roadmap/pull/new/agent2/star-story-management
 
-### US-RES-003: AI Resume Generation
-- [ ] ⏳ Pending
+### US-RES-003: AI Resume Generation (Backend)
+- [x] ⏳ Pending
 - [x] 🔄 Started: Agent-2
 - [x] ✅ Complete: Agent-2
 - **Priority**: P0
@@ -310,7 +350,17 @@
 
 ## Epic 5: Interview & Coaching (10 stories, 34 points)
 
-### US-INT-001: Interview Preparation Module
+### US-INTERVIEW-002: AI Interview Preparation Flow (UI)
+- [x] ⏳ Pending
+- [x] 🔄 Started: Agent-UI2
+- [x] ✅ Complete: Agent-UI2
+- **Priority**: P0
+- **Points**: 13
+- **Worktree**: `worktrees/ui-agent2-ai-features`
+- **PR**: https://github.com/Verridian-ai/job-flow-roadmap/pull/25
+- **Page**: `jobflow/src/pages/AIInterviewPrep.tsx`
+
+### US-INT-001: Interview Preparation Module (Backend)
 - [ ] ⏳ Pending
 - [ ] 🔄 Started: Agent-___
 - [ ] ✅ Complete: Agent-___
