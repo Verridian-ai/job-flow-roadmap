@@ -1,13 +1,14 @@
 import { Link, useLocation } from 'react-router-dom';
-import { 
-  LayoutDashboard, 
-  Star, 
-  FileText, 
-  Briefcase, 
-  Users, 
-  Shield, 
-  Calendar, 
-  Settings 
+import {
+  LayoutDashboard,
+  Star,
+  FileText,
+  Briefcase,
+  Users,
+  Shield,
+  Calendar,
+  Settings,
+  Network,
 } from 'lucide-react';
 
 export default function Sidebar() {
@@ -19,6 +20,7 @@ export default function Sidebar() {
     { path: '/resume-builder', label: 'Resume Builder', icon: FileText },
     { path: '/resumes', label: 'My Resumes', icon: FileText },
     { path: '/jobs', label: 'Job Tracker', icon: Briefcase },
+    { path: '/networking', label: 'Networking Hub', icon: Network },
     { path: '/coaches', label: 'Find Coaches', icon: Users },
     { path: '/marketplace', label: 'Marketplace', icon: Shield },
     { path: '/sessions', label: 'Sessions', icon: Calendar },

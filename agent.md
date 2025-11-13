@@ -29,22 +29,25 @@
 - **Worktree**: `worktrees/agent1-auth-registration`
 - **PR**: https://github.com/Verridian-ai/job-flow-roadmap/pull/12
 
-### US-AUTH-003: Session Management
+### US-AUTH-003: Login Screen with SSO
 - [x] ⏳ Pending
-- [x] 🔄 Started: Agent-1
-- [x] ✅ Complete: Agent-1
+- [x] 🔄 Started: Agent-UI1
+- [x] ✅ Complete: Agent-UI1
 - **Priority**: P0
 - **Points**: 5
-- **Worktree**: `worktrees/agent1-auth-session`
-- **PR**: https://github.com/Verridian-ai/job-flow-roadmap/pull/17
+- **Worktree**: `worktrees/ui-agent1-auth-payment`
+- **PR**: https://github.com/Verridian-ai/job-flow-roadmap/pull/24
+- **Screens**: Login, SSO Options
 
 ### US-AUTH-004: Password Reset Flow
-- [ ] ⏳ Pending
-- [ ] 🔄 Started: Agent-___
-- [ ] ✅ Complete: Agent-___
+- [x] ⏳ Pending
+- [x] 🔄 Started: Agent-UI1
+- [x] ✅ Complete: Agent-UI1
 - **Priority**: P1
 - **Points**: 3
-- **Worktree**: `worktrees/agent1-auth-password`
+- **Worktree**: `worktrees/ui-agent1-auth-payment`
+- **PR**: https://github.com/Verridian-ai/job-flow-roadmap/pull/24
+- **Screens**: Forgot Password, Reset Password
 
 ### US-AUTH-005: Two-Factor Authentication
 - [ ] ⏳ Pending
@@ -128,8 +131,48 @@
 
 ## Epic 3: AI Resume & STAR Stories (7 stories, 34 points)
 
-### US-RES-001: STAR Story Creation
-- [ ] ⏳ Pending
+### US-RESUME-001: STAR Story Quick Add (UI)
+- [x] ⏳ Pending
+- [x] 🔄 Started: Agent-UI2
+- [x] ✅ Complete: Agent-UI2
+- **Priority**: P0
+- **Points**: 3
+- **Worktree**: `worktrees/ui-agent2-ai-features`
+- **PR**: https://github.com/Verridian-ai/job-flow-roadmap/pull/25
+- **Component**: `jobflow/src/components/STARQuickAdd.tsx`
+
+### US-RESUME-002: AI Resume Agent Chat Interface (UI)
+- [x] ⏳ Pending
+- [x] 🔄 Started: Agent-UI2
+- [x] ✅ Complete: Agent-UI2
+- **Priority**: P0
+- **Points**: 8
+- **Worktree**: `worktrees/ui-agent2-ai-features`
+- **PR**: https://github.com/Verridian-ai/job-flow-roadmap/pull/25
+- **Page**: `jobflow/src/pages/AIResumeChat.tsx`
+
+### US-RESUME-003: STAR Story Memory Bank (UI)
+- [x] ⏳ Pending
+- [x] 🔄 Started: Agent-UI2
+- [x] ✅ Complete: Agent-UI2
+- **Priority**: P0
+- **Points**: 5
+- **Worktree**: `worktrees/ui-agent2-ai-features`
+- **PR**: https://github.com/Verridian-ai/job-flow-roadmap/pull/25
+- **Page**: `jobflow/src/pages/STARMemoryBank.tsx`
+
+### US-RESUME-004: Automated Resume Generation Dashboard (UI)
+- [x] ⏳ Pending
+- [x] 🔄 Started: Agent-UI2
+- [x] ✅ Complete: Agent-UI2
+- **Priority**: P0
+- **Points**: 8
+- **Worktree**: `worktrees/ui-agent2-ai-features`
+- **PR**: https://github.com/Verridian-ai/job-flow-roadmap/pull/25
+- **Page**: `jobflow/src/pages/AutomatedResumeGen.tsx`
+
+### US-RES-001: STAR Story Creation (Backend)
+- [x] ⏳ Pending
 - [x] 🔄 Started: Agent-2
 - [x] ✅ Complete: Agent-2
 - **Priority**: P0
@@ -137,7 +180,7 @@
 - **Worktree**: `worktrees/agent2-resume-star-create`
 - **PR**: https://github.com/Verridian-ai/job-flow-roadmap/pull/1
 
-### US-RES-002: STAR Story Management
+### US-RES-002: STAR Story Management (Backend)
 - [x] ⏳ Pending
 - [x] 🔄 Started: Agent-2
 - [x] ✅ Complete: Agent-2
@@ -146,8 +189,8 @@
 - **Worktree**: `worktrees/agent2-resume-star-manage`
 - **PR**: https://github.com/Verridian-ai/job-flow-roadmap/pull/new/agent2/star-story-management
 
-### US-RES-003: AI Resume Generation
-- [ ] ⏳ Pending
+### US-RES-003: AI Resume Generation (Backend)
+- [x] ⏳ Pending
 - [x] 🔄 Started: Agent-2
 - [x] ✅ Complete: Agent-2
 - **Priority**: P0
@@ -320,7 +363,17 @@
 
 ## Epic 5: Interview & Coaching (10 stories, 34 points)
 
-### US-INT-001: Interview Preparation Module
+### US-INTERVIEW-002: AI Interview Preparation Flow (UI)
+- [x] ⏳ Pending
+- [x] 🔄 Started: Agent-UI2
+- [x] ✅ Complete: Agent-UI2
+- **Priority**: P0
+- **Points**: 13
+- **Worktree**: `worktrees/ui-agent2-ai-features`
+- **PR**: https://github.com/Verridian-ai/job-flow-roadmap/pull/25
+- **Page**: `jobflow/src/pages/AIInterviewPrep.tsx`
+
+### US-INT-001: Interview Preparation Module (Backend)
 - [ ] ⏳ Pending
 - [ ] 🔄 Started: Agent-___
 - [ ] ✅ Complete: Agent-___
@@ -598,23 +651,25 @@
 
 ## Epic 8: Payment & Subscriptions (8 stories, 34 points)
 
-### US-PAY-001: Stripe Integration
+### US-PAY-001: Plan Selection & Pricing UI
 - [x] ⏳ Pending
-- [x] 🔄 Started: Agent-4
-- [x] ✅ Complete: Agent-4
+- [x] 🔄 Started: Agent-UI1
+- [x] ✅ Complete: Agent-UI1
 - **Priority**: P0
 - **Points**: 8
-- **Worktree**: `worktrees/agent4-payment-stripe`
-- **PR**: https://github.com/Verridian-ai/job-flow-roadmap/pull/3
+- **Worktree**: `worktrees/ui-agent1-auth-payment`
+- **PR**: https://github.com/Verridian-ai/job-flow-roadmap/pull/24
+- **Screens**: Plan Select with 4 tiers (Free, Premium, Professional, Coaching)
 
-### US-PAY-002: Stripe Connect (Coach Payouts)
+### US-PAY-002: 3D Secure Authentication UI
 - [x] ⏳ Pending
-- [x] 🔄 Started: Agent-4
-- [x] ✅ Complete: Agent-4
+- [x] 🔄 Started: Agent-UI1
+- [x] ✅ Complete: Agent-UI1
 - **Priority**: P0
 - **Points**: 8
-- **Worktree**: `worktrees/agent4-payment-connect`
-- **PR**: https://github.com/Verridian-ai/job-flow-roadmap/pull/9
+- **Worktree**: `worktrees/ui-agent1-auth-payment`
+- **PR**: https://github.com/Verridian-ai/job-flow-roadmap/pull/24
+- **Component**: ThreeDSecure with 6-digit code verification
 
 ### US-PAY-003: Escrow Payment System
 - [x] ⏳ Pending
