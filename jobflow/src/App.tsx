@@ -8,6 +8,7 @@ import Resumes from './pages/Resumes';
 import Jobs from './pages/Jobs';
 import CoachDirectory from './pages/CoachDirectory';
 import CoachProfile from './pages/CoachProfile';
+import CoachOnboarding from './pages/CoachOnboarding';
 import Marketplace from './pages/Marketplace';
 import Sessions from './pages/Sessions';
 import Settings from './pages/Settings';
@@ -129,7 +130,21 @@ function App() {
           </>
         }
       />
-      
+
+      <Route
+        path="/coach/onboarding"
+        element={
+          <>
+            <SignedIn>
+              <CoachOnboarding />
+            </SignedIn>
+            <SignedOut>
+              <RedirectToSignIn />
+            </SignedOut>
+          </>
+        }
+      />
+
       <Route
         path="/marketplace"
         element={

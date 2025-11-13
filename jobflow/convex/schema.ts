@@ -13,6 +13,7 @@ export default defineSchema({
     phone: v.optional(v.string()),
     location: v.optional(v.string()),
     twoFactorEnabled: v.boolean(),
+    stripeCustomerId: v.optional(v.string()),
     privacySettings: v.object({
       profileVisible: v.boolean(),
       emailVisible: v.boolean(),
@@ -39,6 +40,11 @@ export default defineSchema({
     result: v.string(),
     skills: v.array(v.string()),
     category: v.string(),
+    qualityScore: v.optional(v.number()),
+    aiSuggestions: v.optional(v.string()),
+    completenessScore: v.optional(v.number()),
+    impactScore: v.optional(v.number()),
+    clarityScore: v.optional(v.number()),
     createdAt: v.number(),
     updatedAt: v.number(),
   })
@@ -305,4 +311,26 @@ export default defineSchema({
     .index("by_sender", ["senderId"])
     .index("by_receiver", ["receiverId"])
     .index("by_conversation", ["senderId", "receiverId"]),
+
+  payouts: defineTable({
+    coachId: v.id("coaches"),
+    taskId: v.optional(v.id("verificationTasks")),
+    sessionId: v.optional(v.id("sessions")),
+    amount: v.number(),
+    platformFee: v.number(),
+    status: v.union(
+      v.literal("pending"),
+      v.literal("paid"),
+      v.literal("failed"),
+      v.literal("cancelled")
+    ),
+    stripeTransferId: v.optional(v.string()),
+    stripePayoutId: v.optional(v.string()),
+    createdAt: v.number(),
+    paidAt: v.optional(v.number()),
+  })
+    .index("by_coach", ["coachId"])
+    .index("by_status", ["status"])
+    .index("by_task", ["taskId"])
+    .index("by_session", ["sessionId"]),
 });

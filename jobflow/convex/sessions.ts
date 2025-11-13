@@ -48,6 +48,52 @@ export const create = mutation({
   },
 });
 
+// Request a coaching session (for simple booking without specific time)
+export const request = mutation({
+  args: {
+    coachId: v.string(),
+    type: v.string(),
+    duration: v.number(),
+    notes: v.optional(v.string()),
+  },
+  handler: async (ctx, args) => {
+    const identity = await ctx.auth.getUserIdentity();
+    if (!identity) {
+      throw new Error("Unauthorized");
+    }
+
+    const user = await ctx.db
+      .query("users")
+      .withIndex("by_auth_id", (q) => q.eq("authId", identity.subject))
+      .unique();
+
+    if (!user) {
+      throw new Error("User not found");
+    }
+
+    // Verify coach exists
+    const coach = await ctx.db.get(args.coachId as any);
+    if (!coach) {
+      throw new Error("Coach not found");
+    }
+
+    const now = Date.now();
+    // Create a session with a placeholder time (to be scheduled later)
+    const sessionId = await ctx.db.insert("sessions", {
+      userId: user._id,
+      coachId: args.coachId as any,
+      scheduledTime: now,
+      duration: args.duration,
+      status: "scheduled",
+      notes: args.notes || `Session type: ${args.type}`,
+      createdAt: now,
+      updatedAt: now,
+    });
+
+    return sessionId;
+  },
+});
+
 // List all sessions for the current user (as job seeker or coach)
 export const list = query({
   args: {
@@ -175,5 +221,72 @@ export const update = mutation({
     });
 
     return args.id;
+  },
+});
+
+// Get a session by ID
+export const get = query({
+  args: {
+    id: v.id("sessions"),
+  },
+  handler: async (ctx, args) => {
+    const identity = await ctx.auth.getUserIdentity();
+    if (!identity) {
+      throw new Error("Unauthorized");
+    }
+
+    const user = await ctx.db
+      .query("users")
+      .withIndex("by_auth_id", (q) => q.eq("authId", identity.subject))
+      .unique();
+
+    if (!user) {
+      throw new Error("User not found");
+    }
+
+    const session = await ctx.db.get(args.id);
+    if (!session) {
+      throw new Error("Session not found");
+    }
+
+    // Verify user owns this session or is the coach
+    let isAuthorized = session.userId === user._id;
+
+    if (!isAuthorized && user.role === "coach") {
+      const coachProfile = await ctx.db
+        .query("coaches")
+        .withIndex("by_user", (q) => q.eq("userId", user._id))
+        .unique();
+
+      if (coachProfile && session.coachId === coachProfile._id) {
+        isAuthorized = true;
+      }
+    }
+
+    if (!isAuthorized) {
+      throw new Error("Unauthorized");
+    }
+
+    return session;
+  },
+});
+
+// Confirm payment for session
+export const confirmPayment = mutation({
+  args: {
+    sessionId: v.id("sessions"),
+  },
+  handler: async (ctx, args) => {
+    const session = await ctx.db.get(args.sessionId);
+    if (!session) {
+      throw new Error("Session not found");
+    }
+
+    await ctx.db.patch(args.sessionId, {
+      status: "scheduled",
+      updatedAt: Date.now(),
+    });
+
+    return args.sessionId;
   },
 });

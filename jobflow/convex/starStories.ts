@@ -1,5 +1,6 @@
 import { v } from "convex/values";
 import { mutation, query } from "./_generated/server";
+import { api } from "./_generated/api";
 
 // Create a new STAR story
 export const create = mutation({
@@ -195,6 +196,108 @@ export const deleteStory = mutation({
 
     await ctx.db.delete(args.id);
     return { success: true };
+  },
+});
+
+// Score STAR story with AI
+export const scoreWithAI = mutation({
+  args: {
+    id: v.id("starStories"),
+  },
+  handler: async (ctx, args) => {
+    const identity = await ctx.auth.getUserIdentity();
+    if (!identity) {
+      throw new Error("Unauthorized");
+    }
+
+    const user = await ctx.db
+      .query("users")
+      .withIndex("by_auth_id", (q) => q.eq("authId", identity.subject))
+      .unique();
+
+    if (!user) {
+      throw new Error("User not found");
+    }
+
+    const story = await ctx.db.get(args.id);
+    if (!story) {
+      throw new Error("Story not found");
+    }
+
+    // Row-level security: ensure user owns this story
+    if (story.userId !== user._id) {
+      throw new Error("Unauthorized");
+    }
+
+    // Call AI action to score the story
+    const scoring = await ctx.runAction(api.ai.scoreStarStory, {
+      title: story.title,
+      situation: story.situation,
+      task: story.task,
+      action: story.action,
+      result: story.result,
+      skills: story.skills,
+    });
+
+    // Update story with AI scores
+    await ctx.db.patch(args.id, {
+      qualityScore: scoring.qualityScore,
+      completenessScore: scoring.completenessScore,
+      impactScore: scoring.impactScore,
+      clarityScore: scoring.clarityScore,
+      aiSuggestions: scoring.suggestions,
+      updatedAt: Date.now(),
+    });
+
+    return scoring;
+  },
+});
+
+// Duplicate a STAR story
+export const duplicate = mutation({
+  args: {
+    id: v.id("starStories"),
+  },
+  handler: async (ctx, args) => {
+    const identity = await ctx.auth.getUserIdentity();
+    if (!identity) {
+      throw new Error("Unauthorized");
+    }
+
+    const user = await ctx.db
+      .query("users")
+      .withIndex("by_auth_id", (q) => q.eq("authId", identity.subject))
+      .unique();
+
+    if (!user) {
+      throw new Error("User not found");
+    }
+
+    const story = await ctx.db.get(args.id);
+    if (!story) {
+      throw new Error("Story not found");
+    }
+
+    // Row-level security: ensure user owns this story
+    if (story.userId !== user._id) {
+      throw new Error("Unauthorized");
+    }
+
+    const now = Date.now();
+    const newStoryId = await ctx.db.insert("starStories", {
+      userId: user._id,
+      title: `${story.title} (Copy)`,
+      situation: story.situation,
+      task: story.task,
+      action: story.action,
+      result: story.result,
+      skills: story.skills,
+      category: story.category,
+      createdAt: now,
+      updatedAt: now,
+    });
+
+    return newStoryId;
   },
 });
 
