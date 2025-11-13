@@ -12,12 +12,13 @@
 ## Epic 1: Authentication & Security (8 stories, 34 points)
 
 ### US-AUTH-001: WorkOS SSO Integration (Google/Microsoft)
-- [ ] ⏳ Pending
-- [ ] 🔄 Started: Agent-___
-- [ ] ✅ Complete: Agent-___
+- [x] ⏳ Pending
+- [x] 🔄 Started: Agent-1
+- [x] ✅ Complete: Agent-1
 - **Priority**: P0
 - **Points**: 8
 - **Worktree**: `worktrees/agent1-auth-sso`
+- **PR**: https://github.com/Verridian-ai/job-flow-roadmap/pull/7
 
 ### US-AUTH-002: User Registration Flow
 - [ ] ⏳ Pending
@@ -125,11 +126,12 @@
 
 ### US-RES-001: STAR Story Creation
 - [ ] ⏳ Pending
-- [ ] 🔄 Started: Agent-___
-- [ ] ✅ Complete: Agent-___
+- [x] 🔄 Started: Agent-2
+- [x] ✅ Complete: Agent-2
 - **Priority**: P0
 - **Points**: 5
 - **Worktree**: `worktrees/agent2-resume-star-create`
+- **PR**: https://github.com/Verridian-ai/job-flow-roadmap/pull/1
 
 ### US-RES-002: STAR Story Management
 - [ ] ⏳ Pending
@@ -141,11 +143,12 @@
 
 ### US-RES-003: AI Resume Generation
 - [ ] ⏳ Pending
-- [ ] 🔄 Started: Agent-___
-- [ ] ✅ Complete: Agent-___
+- [x] 🔄 Started: Agent-2
+- [x] ✅ Complete: Agent-2
 - **Priority**: P0
 - **Points**: 13
 - **Worktree**: `worktrees/agent2-resume-ai-generation`
+- **PR**: https://github.com/Verridian-ai/job-flow-roadmap/pull/5
 
 ### US-RES-004: ATS Score Calculator
 - [ ] ⏳ Pending
@@ -324,12 +327,11 @@
 - **Worktree**: `worktrees/agent3-interview-questions`
 
 ### US-INT-004: Coach Directory
-- [ ] ⏳ Pending
-- [ ] 🔄 Started: Agent-___
-- [ ] ✅ Complete: Agent-___
+- [x] ✅ Complete: Agent-3
 - **Priority**: P0
 - **Points**: 5
 - **Worktree**: `worktrees/agent3-coach-directory`
+- **PR**: https://github.com/Verridian-ai/job-flow-roadmap/pull/2
 
 ### US-INT-005: Coach Profile Pages
 - [ ] ⏳ Pending
@@ -384,12 +386,11 @@
 ## Epic 6: Coach Platform & Profiles (35 stories, 89 points)
 
 ### US-COACH-001: Coach Onboarding
-- [ ] ⏳ Pending
-- [ ] 🔄 Started: Agent-___
-- [ ] ✅ Complete: Agent-___
+- [x] ✅ Complete: Agent-3
 - **Priority**: P0
 - **Points**: 5
 - **Worktree**: `worktrees/agent3-coach-onboarding`
+- **PR**: https://github.com/Verridian-ai/job-flow-roadmap/pull/6
 
 ### US-COACH-002: Coach Profile Builder
 - [ ] ⏳ Pending
@@ -574,16 +575,17 @@
 ## Epic 8: Payment & Subscriptions (8 stories, 34 points)
 
 ### US-PAY-001: Stripe Integration
-- [ ] ⏳ Pending
-- [ ] 🔄 Started: Agent-___
-- [ ] ✅ Complete: Agent-___
+- [x] ⏳ Pending
+- [x] 🔄 Started: Agent-4
+- [x] ✅ Complete: Agent-4
 - **Priority**: P0
 - **Points**: 8
 - **Worktree**: `worktrees/agent4-payment-stripe`
+- **PR**: https://github.com/Verridian-ai/job-flow-roadmap/pull/3
 
 ### US-PAY-002: Stripe Connect (Coach Payouts)
-- [ ] ⏳ Pending
-- [ ] 🔄 Started: Agent-___
+- [x] ⏳ Pending
+- [x] 🔄 Started: Agent-4
 - [ ] ✅ Complete: Agent-___
 - **Priority**: P0
 - **Points**: 8
@@ -643,19 +645,21 @@
 
 ### INFRA-001: Convex Database Schema
 - [ ] ⏳ Pending
-- [ ] 🔄 Started: Agent-___
-- [ ] ✅ Complete: Agent-___
+- [x] 🔄 Started: Agent-5
+- [x] ✅ Complete: Agent-5
 - **Priority**: P0
 - **Points**: 13
 - **Worktree**: `worktrees/agent5-infra-convex`
+- **PR**: https://github.com/Verridian-ai/job-flow-roadmap/pull/4
 
 ### INFRA-002: Frontend Component Library
 - [ ] ⏳ Pending
-- [ ] 🔄 Started: Agent-___
-- [ ] ✅ Complete: Agent-___
+- [x] 🔄 Started: Agent-5
+- [x] ✅ Complete: Agent-5
 - **Priority**: P0
 - **Points**: 8
 - **Worktree**: `worktrees/agent5-infra-components`
+- **PR**: https://github.com/Verridian-ai/job-flow-roadmap/pull/8
 
 ### INFRA-003: Real-time WebSocket Features
 - [ ] ⏳ Pending
