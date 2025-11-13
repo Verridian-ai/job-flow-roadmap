@@ -246,3 +246,30 @@ export const search = query({
     return coaches;
   },
 });
+
+// Get coach profile for current user
+export const getByCurrentUser = query({
+  args: {},
+  handler: async (ctx) => {
+    const identity = await ctx.auth.getUserIdentity();
+    if (!identity) {
+      return null;
+    }
+
+    const user = await ctx.db
+      .query("users")
+      .withIndex("by_auth_id", (q) => q.eq("authId", identity.subject))
+      .unique();
+
+    if (!user) {
+      return null;
+    }
+
+    const coach = await ctx.db
+      .query("coaches")
+      .withIndex("by_user", (q) => q.eq("userId", user._id))
+      .unique();
+
+    return coach;
+  },
+});
