@@ -199,13 +199,14 @@
 - **Points**: 5
 - **Worktree**: `worktrees/agent2-job-board`
 
-### US-JOB-002: Job Search & Filters
-- [ ] ⏳ Pending
-- [ ] 🔄 Started: Agent-___
-- [ ] ✅ Complete: Agent-___
-- **Priority**: P1
+### US-JOB-002: Job Match Explorer
+- [x] ⏳ Pending
+- [x] 🔄 Started: Agent-UI3
+- [x] ✅ Complete: Agent-UI3
+- **Priority**: P0
 - **Points**: 3
-- **Worktree**: `worktrees/agent2-job-search`
+- **Worktree**: `worktrees/ui-agent3-job-tracking`
+- **PR**: https://github.com/Verridian-ai/job-flow-roadmap/pull/27
 
 ### US-JOB-003: Save Job Postings
 - [ ] ⏳ Pending
@@ -223,21 +224,23 @@
 - **Points**: 5
 - **Worktree**: `worktrees/agent2-job-kanban`
 
-### US-JOB-005: Application Status Tracking
-- [ ] ⏳ Pending
-- [ ] 🔄 Started: Agent-___
-- [ ] ✅ Complete: Agent-___
+### US-JOB-005: Job Tracking & Management Dashboard
+- [x] ⏳ Pending
+- [x] 🔄 Started: Agent-UI3
+- [x] ✅ Complete: Agent-UI3
 - **Priority**: P0
 - **Points**: 3
-- **Worktree**: `worktrees/agent2-job-status`
+- **Worktree**: `worktrees/ui-agent3-job-tracking`
+- **PR**: https://github.com/Verridian-ai/job-flow-roadmap/pull/27
 
-### US-JOB-006: Application Notes & Documents
-- [ ] ⏳ Pending
-- [ ] 🔄 Started: Agent-___
-- [ ] ✅ Complete: Agent-___
-- **Priority**: P1
+### US-JOB-006: Application Detail View
+- [x] ⏳ Pending
+- [x] 🔄 Started: Agent-UI3
+- [x] ✅ Complete: Agent-UI3
+- **Priority**: P0
 - **Points**: 3
-- **Worktree**: `worktrees/agent2-job-notes`
+- **Worktree**: `worktrees/ui-agent3-job-tracking`
+- **PR**: https://github.com/Verridian-ai/job-flow-roadmap/pull/27
 
 ### US-JOB-007: Interview Scheduling
 - [ ] ⏳ Pending
@@ -302,6 +305,16 @@
 - **Priority**: P2
 - **Points**: 2
 - **Worktree**: `worktrees/agent2-job-alerts`
+
+### US-JOB-015: Cover Letter Generator (Additional Feature)
+- [x] ⏳ Pending
+- [x] 🔄 Started: Agent-UI3
+- [x] ✅ Complete: Agent-UI3
+- **Priority**: P1
+- **Points**: 5
+- **Worktree**: `worktrees/ui-agent3-job-tracking`
+- **PR**: https://github.com/Verridian-ai/job-flow-roadmap/pull/27
+- **Note**: AI-powered cover letter generation with STAR story integration, multiple tone options, and export functionality
 
 ---
 
