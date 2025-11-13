@@ -53,7 +53,15 @@ import ConnectionRequests from './pages/networking/ConnectionRequests';
 import SocialFeed from './pages/networking/SocialFeed';
 import CreatePost from './pages/networking/CreatePost';
 import Groups from './pages/networking/Groups';function App() {
-  return (
+import KnowledgeHub from './pages/knowledge/KnowledgeHub';
+import NotesHub from './pages/knowledge/NotesHub';
+import DocumentManager from './pages/knowledge/DocumentManager';
+import KnowledgeGraph from './pages/knowledge/KnowledgeGraph';
+import AICommandCenter from './pages/admin/AICommandCenter';
+import AdminDashboard from './pages/admin/AdminDashboard';
+import UserManagement from './pages/admin/UserManagement';
+import Roadmap from './pages/Roadmap';
+function App() {  return (
     <Routes>
       <Route path="/" element={<Landing />} />
 
@@ -428,7 +436,13 @@ path="/coaching/promotion"
           <>
             <SignedIn>
               <PromotionCoaching />            </SignedIn>
-            <SignedOut>
+
+path="/knowledge"
+        element={
+          <>
+            <SignedIn>
+              <KnowledgeHub />
+            </SignedIn>            <SignedOut>
               <RedirectToSignIn />
             </SignedOut>
           </>
@@ -447,7 +461,13 @@ path="/coaching/salary-negotiation"
           <>
             <SignedIn>
               <SalaryNegotiator />            </SignedIn>
-            <SignedOut>
+
+path="/knowledge/notes"
+        element={
+          <>
+            <SignedIn>
+              <NotesHub />
+            </SignedIn>            <SignedOut>
               <RedirectToSignIn />
             </SignedOut>
           </>
@@ -466,7 +486,13 @@ path="/session-booking"
           <>
             <SignedIn>
               <SessionBooking />            </SignedIn>
-            <SignedOut>
+
+path="/knowledge/notes/new"
+        element={
+          <>
+            <SignedIn>
+              <NotesHub />
+            </SignedIn>            <SignedOut>
               <RedirectToSignIn />
             </SignedOut>
           </>
@@ -485,7 +511,13 @@ path="/session-prep"
           <>
             <SignedIn>
               <SessionPrep />            </SignedIn>
-            <SignedOut>
+
+path="/knowledge/documents"
+        element={
+          <>
+            <SignedIn>
+              <DocumentManager />
+            </SignedIn>            <SignedOut>
               <RedirectToSignIn />
             </SignedOut>
           </>
@@ -504,7 +536,13 @@ path="/networking"
           <>
             <SignedIn>
               <NetworkingHub />            </SignedIn>
-            <SignedOut>
+
+path="/knowledge/graph"
+        element={
+          <>
+            <SignedIn>
+              <KnowledgeGraph />
+            </SignedIn>            <SignedOut>
               <RedirectToSignIn />
             </SignedOut>
           </>
@@ -523,7 +561,13 @@ path="/networking/my-network"
           <>
             <SignedIn>
               <MyNetwork />            </SignedIn>
-            <SignedOut>
+
+path="/admin"
+        element={
+          <>
+            <SignedIn>
+              <AdminDashboard />
+            </SignedIn>            <SignedOut>
               <RedirectToSignIn />
             </SignedOut>
           </>
@@ -542,7 +586,13 @@ path="/networking/requests"
           <>
             <SignedIn>
               <ConnectionRequests />            </SignedIn>
-            <SignedOut>
+
+path="/admin/ai-command"
+        element={
+          <>
+            <SignedIn>
+              <AICommandCenter />
+            </SignedIn>            <SignedOut>
               <RedirectToSignIn />
             </SignedOut>
           </>
@@ -561,7 +611,13 @@ path="/networking/feed"
           <>
             <SignedIn>
               <SocialFeed />            </SignedIn>
-            <SignedOut>
+
+path="/admin/users"
+        element={
+          <>
+            <SignedIn>
+              <UserManagement />
+            </SignedIn>            <SignedOut>
               <RedirectToSignIn />
             </SignedOut>
           </>
@@ -580,14 +636,20 @@ path="/networking/create-post"
           <>
             <SignedIn>
               <CreatePost />            </SignedIn>
-            <SignedOut>
+
+path="/roadmap"
+        element={
+          <>
+            <SignedIn>
+              <Roadmap />
+            </SignedIn>            <SignedOut>
               <RedirectToSignIn />
             </SignedOut>
           </>
         }
       />
 
-      <Route
+<Route
 path="/coach/credentials"
         element={
           <>
@@ -626,9 +688,8 @@ path="/session-followup"
         }
       />
 
-=======
 >>>>>>> d6f06c33 (feat: UI Sprint 2 - Professional Networking & Social Features (P2))
-      <Route path="*" element={<Navigate to="/" replace />} />
+=======      <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );
 }
