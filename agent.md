@@ -586,10 +586,11 @@
 ### US-PAY-002: Stripe Connect (Coach Payouts)
 - [x] ⏳ Pending
 - [x] 🔄 Started: Agent-4
-- [ ] ✅ Complete: Agent-___
+- [x] ✅ Complete: Agent-4
 - **Priority**: P0
 - **Points**: 8
 - **Worktree**: `worktrees/agent4-payment-connect`
+- **PR**: https://github.com/Verridian-ai/job-flow-roadmap/pull/9
 
 ### US-PAY-003: Escrow Payment System
 - [ ] ⏳ Pending
